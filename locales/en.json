@@ -1,6 +1,19 @@
 {
   "contact_us": "Contact Us",
+  "about_us": "About Us",
   "main_page": "Main Page",
+  "site_pages": "Site Pages",
   "alarms": "Alarms",
-  "movies": "Movies"
+  "movies": "Movies",
+  "submit" : "Submit",
+  "name&lastname": "Name and Lastname",
+  "email": "Email",
+  "phone": "Phone",
+  "validation": {
+    "name_required": "Name is required",
+    "email_required": "Email is required",
+    "email_invalid": "Enter a valid email",
+    "phone_required": "Phone number is required",
+    "phone_length": "Phone number must be at least 11 characters"
+  }
 }

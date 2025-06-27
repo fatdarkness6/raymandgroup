@@ -13,7 +13,6 @@
             </template>
           </q-img>
         </div>
-
         <q-tabs
           v-model="tab"
           active-color="black"
@@ -45,12 +44,7 @@
             exact
           />
         </q-tabs>
-        <q-tabs class="contact-us text-h2 rounded-10" router>
-          <q-route-tab class="no-margin text-black" to="/contact-us">
-            <h6 class="no-margin">ارتباط با ما</h6>
-          </q-route-tab>
-        </q-tabs>
-        <q-btn-dropdown color="white" label="🌐" flat>
+        <q-btn-dropdown color="black" label="lan" flat>
           <q-list>
             <q-item
               v-for="loc in locales"
@@ -73,26 +67,26 @@
     <q-footer class="custom-footer">
       <div class="animated-wave-bg" aria-hidden="true"></div>
       <div
-        class="wrapper spacing flex justify-between footer-content"
-        dir="rtl"
+        class="wrapper spacing flex justify-between footer-content row reverse"
       >
-        <div class="submit-form flex column">
+        <div class="submit-form flex column" style="width: 200px">
           <q-form @submit="submit">
             <q-input
               v-model="name as string"
-              label="نام و نام خانوادگی"
+              :label="$t('name&lastname')"
               :error="!!nameError"
               :error-message="nameError"
               :input-style="{
                 color: 'white',
                 fontWeight: 'bold',
+                direction: directionOfElement(locale),
               }"
               label-color="white"
               :dark="true"
             />
             <q-input
               v-model="email as string"
-              label="ایمیل"
+              :label="$t('email')"
               :error="!!emailError"
               :error-message="emailError"
               label-color="white"
@@ -100,22 +94,30 @@
             />
             <q-input
               v-model="phoneNumber as string"
-              label="شماره تلفن"
+              :label="$t('phone')"
               :error="!!phoneNumberError"
               :error-message="phoneNumberError"
               label-color="white"
               :dark="true"
             />
-            <q-btn type="submit" label="ارسال" color="accent" />
+            <q-btn type="submit" :label="$t('submit')" color="accent" />
           </q-form>
         </div>
-        <div class="site-map flex column">
-          <span style="font-size: 17px">صفحه هات سایت</span>
-          <NuxtLink to="/" class="custom-link">صفحه اصلی</NuxtLink>
-          <NuxtLink to="/about" class="custom-link">درباره ما</NuxtLink>
-          <NuxtLink to="/contact-us" class="custom-link">ارتباط با ما</NuxtLink>
-          <NuxtLink to="/alarms" class="custom-link">آلارم ها</NuxtLink>
-          <NuxtLink to="/movies" class="custom-link">فیلم ها</NuxtLink>
+        <div class="site-map flex column justify-center items-center">
+          <span style="font-size: 17px">{{ $t("site_pages") }}</span>
+          <NuxtLink to="/" class="custom-link">{{ $t("main_page") }}</NuxtLink>
+          <NuxtLink to="/about" class="custom-link">{{
+            $t("about_us")
+          }}</NuxtLink>
+          <NuxtLink to="/contact-us" class="custom-link">{{
+            $t("contact_us")
+          }}</NuxtLink>
+          <NuxtLink to="/alarms" class="custom-link">{{
+            $t("alarms")
+          }}</NuxtLink>
+          <NuxtLink to="/movies" class="custom-link">{{
+            $t("movies")
+          }}</NuxtLink>
         </div>
         <div class="extra-details flex column justify-center items-center">
           <div class="image">
@@ -130,7 +132,7 @@
             </q-img>
           </div>
           <div class="details">
-            <p class="custom-text">
+            <p class="custom-text" :dir="directionOfElement(locale)">
               Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eum
               numquam earum totam facilis doloribus unde magni repellat
               repudiandae! Rem, impedit perferendis? Quam repudiandae ab vero,
@@ -201,11 +203,19 @@
 
 <script setup lang="ts">
 import { useForm, useField } from "vee-validate";
-import { schema } from "~/modules/defaultLayout";
+import { defaultLayoutSchema } from "~/utils/defaultLayoutSchema";
+const { locales, setLocale, t, locale } = useI18n();
 
 // Initialize form with validation schema
-const { handleSubmit, errors } = useForm({
-  validationSchema: schema,
+// const { handleSubmit, errors } = useForm({
+//   validationSchema: defaultLayoutSchema(t),
+// });
+
+const validationSchema = computed(() => defaultLayoutSchema(t));
+
+// ✅ useForm with reactive schema
+const { handleSubmit } = useForm({
+  validationSchema,
 });
 
 // Define fields
@@ -218,11 +228,10 @@ const { value: phoneNumber, errorMessage: phoneNumberError } =
 const submit = handleSubmit((values) => {
   console.log("Form submitted:", values);
 });
-const tab = ref<string>("mails");
-const { locale, locales, setLocale, t } = useI18n();
 
-function switchLanguage(lang: string) {
-  console.log(lang);
+const tab = ref<string>("mails");
+
+function switchLanguage(lang: any) {
   setLocale(lang);
 }
 </script>
@@ -288,7 +297,7 @@ function switchLanguage(lang: string) {
     transform: translateX(-50%);
   }
   100% {
-    transform: translateX(0%);
+    transform: translateX(0);
   }
 }
 .copyright-text {
