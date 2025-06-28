@@ -13,12 +13,7 @@
             </template>
           </q-img>
         </div>
-        <q-tabs
-          v-model="tab"
-          active-color="black"
-          class="text-blue-grey-10"
-          router
-        >
+        <q-tabs v-model="tab" active-color="black" class="white" router>
           <q-route-tab
             name="mails"
             icon="mail"
@@ -44,7 +39,7 @@
             exact
           />
         </q-tabs>
-        <q-btn-dropdown color="black" label="lan" flat>
+        <q-btn-dropdown color="white" :label="locale" flat :auto-close="true">
           <q-list>
             <q-item
               v-for="loc in locales"
@@ -59,7 +54,7 @@
       </div>
     </q-header>
 
-    <q-page-container>
+    <q-page-container class="container-spacing">
       <main>
         <slot />
       </main>
@@ -90,6 +85,11 @@
               :error="!!emailError"
               :error-message="emailError"
               label-color="white"
+              :input-style="{
+                color: 'white',
+                fontWeight: 'bold',
+                direction: directionOfElement(locale),
+              }"
               :dark="true"
             />
             <q-input
@@ -98,6 +98,11 @@
               :error="!!phoneNumberError"
               :error-message="phoneNumberError"
               label-color="white"
+              :input-style="{
+                color: 'white',
+                fontWeight: 'bold',
+                direction: directionOfElement(locale),
+              }"
               :dark="true"
             />
             <q-btn type="submit" :label="$t('submit')" color="accent" />
@@ -206,11 +211,6 @@ import { useForm, useField } from "vee-validate";
 import { defaultLayoutSchema } from "~/utils/defaultLayoutSchema";
 const { locales, setLocale, t, locale } = useI18n();
 
-// Initialize form with validation schema
-// const { handleSubmit, errors } = useForm({
-//   validationSchema: defaultLayoutSchema(t),
-// });
-
 const validationSchema = computed(() => defaultLayoutSchema(t));
 
 // ✅ useForm with reactive schema
@@ -238,7 +238,7 @@ function switchLanguage(lang: any) {
 
 <style scoped>
 .header {
-  background: rgba(160, 213, 250, 0.4);
+  background: rgba(133, 202, 255, 0.5);
   border-radius: 20px;
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
@@ -304,7 +304,9 @@ function switchLanguage(lang: any) {
   text-align: center;
   margin-top: 20px;
 }
-
+.container-spacing {
+  padding-top: 0 !important;
+}
 .footer-content,
 .submit-form,
 .site-map,
