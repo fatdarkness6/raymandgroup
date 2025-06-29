@@ -2,6 +2,10 @@
     max-width: 1200px;
     margin: 0 auto ;
 }
+.wrapper-2 {
+    max-width: 1300px;
+    margin: 0 auto ;
+}
 .rounded-10 {
     border-radius: 10px;
 }
@@ -22,4 +26,73 @@ body {
 }
 .gap-30 {
     gap: 30px;
+}
+.overlay {
+  padding: 2rem;
+  border-radius: 1rem;
+  background-color: rgba(255, 255, 255, 0.2); 
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+  transition: all 0.3s ease;
+  color: #0f172a;
+}
+
+/* 🔷 Blue Overlay */
+.overlay-blue {
+  background-color: rgba(3, 169, 244, 0.2);
+}
+.overlay-blue h3 {
+  color: #ffffff;
+}
+.overlay-blue p {
+  color: #fafafa; /* light gray-blue */
+}
+
+/* 🌿 Green Overlay */
+.overlay-green {
+  background-color: rgba(16, 185, 129, 0.2);
+}
+.overlay-green h3 {
+  color: #ffffff;
+}
+.overlay-green p {
+  color: #f5f5f5; /* minty white-green */
+}
+
+/* 💜 Purple Overlay */
+.overlay-purple {
+  background-color: rgba(139, 92, 246, 0.2);
+}
+.overlay-purple h3 {
+  color: #ffffff;
+}
+.overlay-purple p {
+  color: #fafafa; /* lavender-ish */
+}
+
+/* 🌞 Amber Overlay */
+.overlay-amber {
+  background-color: rgba(251, 191, 36, 0.25);
+}
+.overlay-amber h3 {
+  color: #1e293b;
+}
+.overlay-amber p {
+  color: #ffffff; /* slate text */
+}
+
+/* 💬 Slate Overlay */
+.overlay-slate {
+  background-color: rgba(30, 41, 59, 0.4);
+}
+.overlay-slate h3 {
+  color: #ffffff;
+}
+.overlay-slate p {
+  color: #ffffff; /* cool gray */
+}
+.z-index {
+    z-index: 1000;
+    position: relative;
 }

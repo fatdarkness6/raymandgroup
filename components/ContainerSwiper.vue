@@ -12,8 +12,10 @@
         modifier: 1,
         slideShadows: true,
       }"
-      :pagination="true"
       :modules="modules"
+      :pagination="{
+        clickable: true,
+      }"
       class="mySwiper"
     >
       <SwiperSlide v-for="(slide, index) in props.images" :key="index">

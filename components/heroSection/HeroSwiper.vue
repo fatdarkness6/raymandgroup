@@ -2,6 +2,10 @@
   <div class="hero-section">
     <Swiper
       :modules="[Autoplay, Pagination]"
+      :pagination="{
+        clickable: true,
+      }"
+      direction="vertical"
       :loop="true"
       :autoplay="{
         delay: 5000,

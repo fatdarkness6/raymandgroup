@@ -1,12 +1,21 @@
 <template>
   <q-layout view="hHh lpR fff">
-    <q-header elevated reveal class="q-mt-md q-px-md wrapper header">
+    <q-header elevated reveal class="q-pa-md wrapper-2 header">
+      <div class="animation-header">
+        <div class="stars"></div>
+        <div class="shooting-star"></div>
+        <div class="shooting-star"></div>
+        <div class="shooting-star"></div>
+        <div class="shooting-star"></div>
+        <div class="shooting-star"></div>
+      </div>
       <div class="flex flex-row items-center justify-between">
         <div class="logo">
           <q-img
             src="/images/logo-test.jpg"
             spinner-color="primary"
-            style="height: 90px; width: 90px"
+            style="height: 70px; width: 70px"
+            class="logo-img"
           >
             <template v-slot:loading>
               <q-spinner-gears color="white" />
@@ -60,7 +69,11 @@
       </main>
     </q-page-container>
     <q-footer class="custom-footer">
-      <div class="animated-wave-bg" aria-hidden="true"></div>
+      <div class="animated-wave-bg" aria-hidden="true">
+        <div class="wave"></div>
+        <div class="wave"></div>
+        <div class="wave"></div>
+      </div>
       <div
         class="wrapper spacing flex justify-between footer-content row reverse"
       >
@@ -240,10 +253,12 @@ function switchLanguage(lang: any) {
 .header {
   background: rgba(133, 202, 255, 0.5);
   border-radius: 20px;
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
   overflow: hidden;
-  margin-top: 20px;
+  background: linear-gradient(to bottom, #0b0b2b, #1b2735 70%, #090a0f);
+  margin-top: 10px;
+}
+.header .logo-img {
+  border-radius: 50%;
 }
 .custom-footer {
   background-color: rgb(0, 0, 0);
@@ -277,29 +292,38 @@ function switchLanguage(lang: any) {
   z-index: 11111;
 }
 .animated-wave-bg {
+  margin: auto;
+  font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+  overflow: auto;
+  background: linear-gradient(
+    315deg,
+    rgba(101, 0, 94, 1) 3%,
+    rgba(60, 132, 206, 1) 38%,
+    rgba(48, 238, 226, 1) 68%,
+    rgba(255, 25, 25, 1) 98%
+  );
+  animation: gradient 25s ease infinite;
+  background-size: 400% 400%;
+  background-attachment: fixed;
   position: absolute;
   bottom: 0;
   left: 0;
-  width: 200%; /* double width for smooth horizontal animation */
+  width: 100%;
   height: 100%;
-  background: url("../public/images/test.svg") repeat-x;
-  animation: waveAnimation 30s ease-in-out infinite;
-  opacity: 0.5;
-  pointer-events: none;
-  z-index: 0;
 }
 
-@keyframes waveAnimation {
+@keyframes gradient {
   0% {
-    transform: translateX(0);
+    background-position: 0% 0%;
   }
   50% {
-    transform: translateX(-50%);
+    background-position: 100% 100%;
   }
   100% {
-    transform: translateX(0);
+    background-position: 0% 0%;
   }
 }
+/* ```````````````````````````````````````````````` */
 .copyright-text {
   text-align: center;
   margin-top: 20px;

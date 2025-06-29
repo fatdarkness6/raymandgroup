@@ -39,6 +39,6 @@ export default defineNuxtConfig({
     lazy: true,
     vueI18n: './i18n.config.ts'
   },
-  modules:['nuxt-quasar-ui', 'nuxt-swiper', '@nuxt/image', '@nuxtjs/i18n'],
-  css: ['swiper/css', 'swiper/css/navigation', 'swiper/css/pagination','swiper/css/effect-coverflow', '@/assets/css/main.css',],
+  modules:['nuxt-quasar-ui', 'nuxt-swiper', '@nuxt/image', '@nuxtjs/i18n', '@vueuse/motion/nuxt'],
+  css: ['swiper/css', 'swiper/css/navigation', 'swiper/css/pagination','swiper/css/effect-coverflow', '@/assets/css/main.css', '@/assets/css/pagination-bullet.css', '@/assets/css/header-animations.css'],
 })
