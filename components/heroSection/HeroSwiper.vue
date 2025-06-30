@@ -14,7 +14,7 @@
       ref="swiperRef"
       class="hero-swiper"
     >
-      <SwiperSlide v-for="(image, i) in images" :key="i">
+      <SwiperSlide v-for="(image, i) in props.images" :key="i">
         <div class="slide">
           <q-img :src="image.image" class="slide-image" />
           <div class="slide-overlay" />
@@ -29,12 +29,13 @@
 import { Swiper, SwiperSlide } from "swiper/vue";
 import { Autoplay, Pagination } from "swiper/modules";
 
-const images = [
-  { image: "/images/swiper1.jpg", title: "Slide 1" },
-  { image: "/images/swiper2.jpg", title: "Slide 2" },
-  { image: "/images/swiper3.jpg", title: "Slide 3" },
-  { image: "/images/swiper4.jpg", title: "Slide 4" },
-];
+type Image = {
+  image?: string;
+  title: string;
+};
+const props = defineProps<{
+  images: Image[];
+}>();
 </script>
 
 <style scoped>
@@ -72,7 +73,7 @@ const images = [
   z-index: 1;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.2);
+  background-color: rgba(0, 0, 0, 0.3);
 }
 
 .slide-title {

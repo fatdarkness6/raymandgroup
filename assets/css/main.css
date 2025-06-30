@@ -96,3 +96,17 @@ body {
     z-index: 1000;
     position: relative;
 }
+.my-card {
+  border-radius: 1rem;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  text-align: center;
+}
+.my-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+}
+
+.custom-icon-header {
+  font-size: 17px;
+}

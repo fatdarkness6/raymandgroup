@@ -25,7 +25,7 @@
         <q-tabs v-model="tab" active-color="black" class="white" router>
           <q-route-tab
             name="mails"
-            icon="mail"
+            icon="fa-solid fa-people-roof"
             :label="$t('main_page')"
             to="/salam"
             class="rounded-10"
@@ -33,7 +33,7 @@
           />
           <q-route-tab
             name="alarms"
-            icon="alarm"
+            icon="fa-solid fa-user-doctor"
             :label="$t('alarms')"
             to="/alarms"
             class="rounded-10"
@@ -41,7 +41,7 @@
           />
           <q-route-tab
             name="movies"
-            icon="movie"
+            icon="fa-solid fa-star-of-life"
             :label="$t('movies')"
             to="/movies"
             class="rounded-10"
@@ -75,7 +75,7 @@
         <div class="wave"></div>
       </div>
       <div
-        class="wrapper spacing flex justify-between footer-content row reverse"
+        class="wrapper-2 q-py-xl flex justify-between footer-content row reverse items-start"
       >
         <div class="submit-form flex column" style="width: 200px">
           <q-form @submit="submit">
@@ -122,7 +122,7 @@
           </q-form>
         </div>
         <div class="site-map flex column justify-center items-center">
-          <span style="font-size: 17px">{{ $t("site_pages") }}</span>
+          <span class="text-h6">{{ $t("site_pages") }}</span>
           <NuxtLink to="/" class="custom-link">{{ $t("main_page") }}</NuxtLink>
           <NuxtLink to="/about" class="custom-link">{{
             $t("about_us")
@@ -136,6 +136,33 @@
           <NuxtLink to="/movies" class="custom-link">{{
             $t("movies")
           }}</NuxtLink>
+        </div>
+        <div class="social-media flex column items-center gap-10">
+          <div class="text-h6">Social Media</div>
+          <a class="instagram">
+            <span class="custom-text q-pr-sm">Instagram</span>
+            <font-awesome-icon :icon="['fab', 'instagram']" />
+          </a>
+          <a class="facebook">
+            <span class="custom-text q-pr-sm">Facebook</span>
+            <font-awesome-icon :icon="['fab', 'facebook']" />
+          </a>
+          <a class="twitter">
+            <span class="custom-text q-pr-sm">Twitter</span>
+            <font-awesome-icon :icon="['fab', 'twitter']" />
+          </a>
+          <a class="linkedin">
+            <span class="custom-text q-pr-sm">LinkedIn</span>
+            <font-awesome-icon :icon="['fab', 'linkedin']" />
+          </a>
+          <a class="youtube">
+            <span class="custom-text q-pr-sm">Youtube</span>
+            <font-awesome-icon :icon="['fab', 'youtube']" />
+          </a>
+          <a class="tiktok">
+            <span class="custom-text q-pr-sm">Tiktok</span>
+            <font-awesome-icon :icon="['fab', 'tiktok']" />
+          </a>
         </div>
         <div class="extra-details flex column justify-center items-center">
           <div class="image">
@@ -157,16 +184,6 @@
               magni in cupiditate culpa consectetur!
             </p>
           </div>
-          <div class="social-media flex">
-            <q-img
-              src="/images/instagram.avif"
-              style="width: 20px; height: 20px"
-            />
-            <q-img
-              src="/images/Telegram.webp"
-              style="width: 20px; height: 20px"
-            />
-          </div>
         </div>
       </div>
       <p class="copyright-text">
@@ -176,7 +193,7 @@
           href="https://github.com/fatdarkness6"
           target="_blank"
           rel="noopener"
-          class="github-link"
+          class="github-link text-white"
         >
           fatdarkness6
         </a>
@@ -187,26 +204,26 @@
         vertical-actions-align="left"
         color="primary"
         glossy
-        icon="phone"
+        icon="fa-solid fa-comment"
         direction="up"
       >
         <q-fab-action
           label-position="right"
-          color="primary"
-          icon="mail"
+          color="negative"
+          icon="fa-solid fa-envelope"
           label="Email"
         />
         <q-fab-action
           label-position="right"
-          color="secondary"
-          icon="alarm"
-          label="Alarm"
+          color="positive"
+          icon="fa-solid fa-phone"
+          label="Phone"
         />
         <q-fab-action
           label-position="right"
-          color="orange"
-          icon="airplay"
-          label="Airplay"
+          color="secondary"
+          icon="fa-brands fa-instagram"
+          label="Instagram"
         />
         <q-fab-action
           label-position="right"
@@ -244,8 +261,8 @@ const submit = handleSubmit((values) => {
 
 const tab = ref<string>("mails");
 
-function switchLanguage(lang: any) {
-  setLocale(lang);
+async function switchLanguage(lang: any) {
+  await setLocale(lang);
 }
 </script>
 
@@ -263,9 +280,6 @@ function switchLanguage(lang: any) {
 .custom-footer {
   background-color: rgb(0, 0, 0);
   overflow: hidden;
-}
-.spacing {
-  padding: 30px 0 30px 0;
 }
 .custom-text {
   width: 300px;
@@ -327,6 +341,7 @@ function switchLanguage(lang: any) {
 .copyright-text {
   text-align: center;
   margin-top: 20px;
+  position: relative;
 }
 .container-spacing {
   padding-top: 0 !important;
