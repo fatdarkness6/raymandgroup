@@ -6,6 +6,9 @@
     max-width: 1300px;
     margin: 0 auto ;
 }
+.hero-section {
+  height: 90vh;
+}
 .rounded-10 {
     border-radius: 10px;
 }

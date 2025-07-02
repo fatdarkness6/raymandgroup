@@ -1,12 +1,32 @@
 <template>
   <div>
-    <HeroSectionHeroSwiper :images="images" />
+    <div class="hero-section">
+      <CommonSwiperComponent :swiperAttrs="heroSwiperAttrs" :images="images">
+        <template v-slot="{ image, title }">
+          <div class="slide">
+            <q-img :src="image" class="slide-image" />
+            <div class="slide-overlay" />
+            <h3 class="slide-title">{{ title }}</h3>
+          </div>
+        </template>
+      </CommonSwiperComponent>
+    </div>
     <div class="wrapper">
       <div
         class="container-1 q-my-xl flex no-wrap justify-between items-center"
       >
         <div class="img">
-          <ContainerSwiper :images="images" />
+          <div class="coverflow-container">
+            <CommonSwiperComponent
+              :swiperAttrs="container1Attrs"
+              :images="images"
+              :slideClass="'swiper-1'"
+            >
+              <template v-slot="{ image }">
+                <q-img :src="image" class="slide-image" />
+              </template>
+            </CommonSwiperComponent>
+          </div>
         </div>
         <div class="info" :dir="directionOfElement(locale)">
           <CommonElementAnimation
@@ -182,6 +202,11 @@
   </div>
 </template>
 <script setup lang="ts">
+import { Autoplay, Pagination, EffectCoverflow } from "swiper/modules";
+const modules = ref({
+  heroSwiper: [Autoplay, Pagination],
+  container1Swiper: [EffectCoverflow, Pagination],
+});
 const { locale, t } = useI18n();
 
 const loremTexts = [t("lorem")];
@@ -212,6 +237,37 @@ const contents = [
     description: "Real-time monitoring of critical patient vitals.",
   },
 ];
+
+const heroSwiperAttrs = {
+  modules: modules.value.heroSwiper,
+  pagination: {
+    clickable: true,
+  },
+  direction: "vertical",
+  loop: "true",
+  autoplay: {
+    delay: 5000,
+    disableOnInteraction: false,
+  },
+  class: "hero-swiper",
+};
+const container1Attrs = {
+  effect: "coverflow",
+  grabCursor: "true",
+  centeredSlides: "true",
+  slidesPerView: "auto",
+  coverflowEffect: {
+    rotate: 50,
+    stretch: 0,
+    depth: 100,
+    modifier: 1,
+    slideShadows: true,
+  },
+  modules: modules.value.container1Swiper,
+  pagination: {
+    clickable: true,
+  },
+};
 </script>
 <style lang="css" scoped>
 .info {
