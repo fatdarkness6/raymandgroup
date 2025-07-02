@@ -39,58 +39,47 @@ body {
 }
 
 /* 🔷 Blue Overlay */
-.overlay-blue {
+.overlay-color-1 {
   background-color: rgba(3, 169, 244, 0.2);
 }
-.overlay-blue h3 {
+.overlay-color-1 h3 {
   color: #ffffff;
 }
-.overlay-blue p {
-  color: #fafafa; /* light gray-blue */
+.overlay-color-1 p {
+  color: #fafafa;
 }
 
 /* 🌿 Green Overlay */
-.overlay-green {
+.overlay-color-2 {
   background-color: rgba(16, 185, 129, 0.2);
 }
-.overlay-green h3 {
+.overlay-color-2 h3 {
   color: #ffffff;
 }
-.overlay-green p {
-  color: #f5f5f5; /* minty white-green */
+.overlay-color-2 p {
+  color: #f5f5f5;
 }
 
 /* 💜 Purple Overlay */
-.overlay-purple {
+.overlay-color-3 {
   background-color: rgba(139, 92, 246, 0.2);
 }
-.overlay-purple h3 {
+.overlay-color-3 h3 {
   color: #ffffff;
 }
-.overlay-purple p {
-  color: #fafafa; /* lavender-ish */
-}
-
-/* 🌞 Amber Overlay */
-.overlay-amber {
-  background-color: rgba(251, 191, 36, 0.25);
-}
-.overlay-amber h3 {
-  color: #1e293b;
-}
-.overlay-amber p {
-  color: #ffffff; /* slate text */
+.overlay-color-3 p {
+  color: #fafafa;
 }
 
 /* 💬 Slate Overlay */
-.overlay-slate {
+.overlay-color-4 {
   background-color: rgba(30, 41, 59, 0.4);
 }
-.overlay-slate h3 {
+.overlay-color-4 h3 {
   color: #ffffff;
 }
-.overlay-slate p {
-  color: #ffffff; /* cool gray */
+.overlay-color-4 p {
+  color: #ffffff;
 }
 .z-index {
     z-index: 1000;

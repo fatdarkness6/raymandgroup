@@ -9,120 +9,64 @@
           <ContainerSwiper :images="images" />
         </div>
         <div class="info" :dir="directionOfElement(locale)">
-          <MotionGroup :duration="600" preset="slideVisibleRight">
-            <Motion delay="0">
+          <CommonElementAnimation
+            duration="600"
+            preset="slideVisibleOnceRight"
+            :number-of-loops="3"
+            :delay="200"
+          >
+            <template>
               <p>{{ loremTexts[0] }}</p>
-            </Motion>
-            <Motion delay="200">
-              <p>{{ loremTexts[0] }}</p>
-            </Motion>
-            <Motion delay="400">
-              <p>{{ loremTexts[0] }}</p>
-            </Motion>
-          </MotionGroup>
+            </template>
+          </CommonElementAnimation>
         </div>
       </div>
     </div>
     <div class="container-2 q-my-xl q-py-xl">
       <div class="wrapper">
-        <MotionGroup :duration="600">
-          <Motion
-            :delay="0"
-            preset="slideVisibleOnceLeft"
-            style="display: flex; justify-content: end"
-          >
-            <div class="text-1 overlay overlay-blue c-text text-center">
-              <h3>medical equipment</h3>
+        <CommonElementAnimation
+          duration="600"
+          :preset="['slideVisibleOnceRight', 'slideVisibleOnceLeft']"
+          :items="contents"
+          :delay="200"
+          :motion-class="(i) => (detectEvenNumber(i) ? '' : 'flex justify-end')"
+        >
+          <template v-slot="{ item, i }">
+            <div
+              :class="`text-1 overlay q-my-md overlay-color-${i} c-text text-center`"
+            >
+              <h3>{{ item.title }}</h3>
               <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae
-                quas, amet minima quisquam non in doloremque laboriosam, commodi
-                enim necessitatibus, officiis impedit. Maxime dolorem, optio
-                fugit sapiente blanditiis cupiditate? Quidem?
+                {{ item.description }}
               </p>
             </div>
-          </Motion>
-          <Motion :delay="300" preset="slideVisibleOnceRight">
-            <div class="text-2 overlay overlay-green c-text text-center">
-              <h3>medical equipment</h3>
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae
-                quas, amet minima quisquam non in doloremque laboriosam, commodi
-                enim necessitatibus, officiis impedit. Maxime dolorem, optio
-                fugit sapiente blanditiis cupiditate? Quidem?
-              </p>
-            </div>
-          </Motion>
-          <Motion
-            :delay="600"
-            preset="slideVisibleOnceLeft"
-            style="display: flex; justify-content: end"
-          >
-            <div class="text-3 overlay overlay-purple c-text text-center">
-              <h3>medical equipment</h3>
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae
-                quas, amet minima quisquam non in doloremque laboriosam, commodi
-                enim necessitatibus, officiis impedit. Maxime dolorem, optio
-                fugit sapiente blanditiis cupiditate? Quidem?
-              </p>
-            </div>
-          </Motion>
-          <Motion :delay="900" preset="slideVisibleOnceLeft">
-            <div class="text-3 overlay overlay-slate c-text text-center">
-              <h3>medical equipment</h3>
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae
-                quas, amet minima quisquam non in doloremque laboriosam, commodi
-                enim necessitatibus, officiis impedit. Maxime dolorem, optio
-                fugit sapiente blanditiis cupiditate? Quidem?
-              </p>
-            </div>
-          </Motion>
-        </MotionGroup>
+          </template>
+        </CommonElementAnimation>
       </div>
     </div>
     <div class="container-3 q-my-xl">
       <div class="wrapper">
         <div class="flex column items-center gap-20">
-          <div class="part1 flex no-wrap gap-20 justify-center">
-            <MotionGroup :duration="600">
-              <Motion preset="slideVisibleLeft">
+          <div
+            v-for="i in 2"
+            :key="i"
+            :class="`part${i} flex no-wrap gap-20 justify-center`"
+          >
+            <CommonElementAnimation
+              duration="600"
+              :preset="['slideVisibleOnceRight', 'slideVisibleOnceLeft']"
+              :numberOfLoops="2"
+              :delay="300"
+            >
+              <template v-slot="{ i }">
                 <q-card class="symbol-card">
                   <q-img src="/icons/doctor-1.jpg" class="custoom-img" />
                   <q-card-section>
                     <p :dir="directionOfElement(locale)">{{ loremTexts[0] }}</p>
                   </q-card-section>
                 </q-card>
-              </Motion>
-              <Motion preset="slideVisibleRight">
-                <q-card class="symbol-card">
-                  <q-img src="/icons/doctor-1.jpg" class="custoom-img" />
-                  <q-card-section>
-                    <p :dir="directionOfElement(locale)">{{ loremTexts[0] }}</p>
-                  </q-card-section>
-                </q-card>
-              </Motion>
-            </MotionGroup>
-          </div>
-          <div class="part2 flex no-wrap gap-20 justify-between">
-            <MotionGroup :duration="600">
-              <Motion preset="slideVisibleRight" delay="400">
-                <q-card class="symbol-card">
-                  <q-img src="/icons/doctor-1.jpg" class="custoom-img" />
-                  <q-card-section>
-                    <p :dir="directionOfElement(locale)">{{ loremTexts[0] }}</p>
-                  </q-card-section>
-                </q-card>
-              </Motion>
-              <Motion preset="slideVisibleLeft" delay="400">
-                <q-card class="symbol-card">
-                  <q-img src="/icons/doctor-1.jpg" class="custoom-img" />
-                  <q-card-section>
-                    <p :dir="directionOfElement(locale)">{{ loremTexts[0] }}</p>
-                  </q-card-section>
-                </q-card>
-              </Motion>
-            </MotionGroup>
+              </template>
+            </CommonElementAnimation>
           </div>
         </div>
       </div>
@@ -151,10 +95,15 @@
     <div class="container-5 q-my-xl q-py-xl">
       <div class="wrapper-2">
         <div class="flex justify-between items-center gap-20 no-wrap z-index">
-          <MotionGroup duration="2000">
-            <Motion preset="slideVisibleOnceLeft" delay="0">
+          <CommonElementAnimation
+            duration="2000"
+            preset="slideVisibleOnceLeft"
+            :numberOfLoops="3"
+            :delay="300"
+          >
+            <template v-slot="{ i }">
               <q-card class="my-card" :bordered="true">
-                <q-img src="/images/i-3.jpg" />
+                <q-img :src="`/images/i-${i + 2}.jpg`" />
                 <q-card-section>
                   <div class="text-h6">Our Changing Planet</div>
                   <div class="text-subtitle2">by John Doe</div>
@@ -163,32 +112,8 @@
                   <div>{{ loremTexts[0] }}</div>
                 </q-card-section>
               </q-card>
-            </Motion>
-            <Motion preset="slideVisibleOnceLeft" delay="200">
-              <q-card class="my-card" :bordered="true">
-                <q-img src="/images/i-4.jpg" />
-                <q-card-section>
-                  <div class="text-h6">Our Changing Planet</div>
-                  <div class="text-subtitle2">by John Doe</div>
-                </q-card-section>
-                <q-card-section>
-                  <div>{{ loremTexts[0] }}</div>
-                </q-card-section>
-              </q-card>
-            </Motion>
-            <Motion preset="slideVisibleOnceLeft" delay="400">
-              <q-card class="my-card" :bordered="true">
-                <q-img src="/images/i-5.jpg" />
-                <q-card-section>
-                  <div class="text-h6">Our Changing Planet</div>
-                  <div class="text-subtitle2">by John Doe</div>
-                </q-card-section>
-                <q-card-section>
-                  <div>{{ loremTexts[0] }}</div>
-                </q-card-section>
-              </q-card>
-            </Motion>
-          </MotionGroup>
+            </template>
+          </CommonElementAnimation>
         </div>
       </div>
     </div>
@@ -205,25 +130,25 @@
             <h2>Our new Products</h2>
           </Motion>
           <div class="products">
-            <MotionGroup duration="2000">
-              <Motion
-                v-for="(items, i) in container_6_card"
-                :key="i"
-                :preset="
+            <CommonElementAnimation
+              duration="2000"
+              :preset="['slideVisibleOnceLeft', 'slideVisibleOnceRight']"
+              :numberOfLoops="5"
+              :delay="300"
+              :motion-class="
+                (i) =>
                   detectEvenNumber(i)
-                    ? 'slideVisibleOnceLeft'
-                    : 'slideVisibleOnceRight'
-                "
-                :delay="i * 100"
-                class="flex items-center q-mt-xl"
-                :class="detectEvenNumber(i) ? 'justify-start' : 'justify-end'"
-              >
+                    ? 'flex justify-start'
+                    : 'flex justify-end'
+              "
+            >
+              <template v-slot="{ i }">
                 <div
                   class="flex items-center justify-between"
                   :class="detectEvenNumber(i) ? '' : 'row reverse'"
                 >
                   <q-card class="my-card" :bordered="true">
-                    <q-img :src="`/images/i-${i + 1}.jpg`" />
+                    <q-img :src="`/images/i-${i}.jpg`" />
                     <q-card-section>
                       <div class="text-h6">Our Changing Planet</div>
                       <div class="text-subtitle2">by John Doe</div>
@@ -234,8 +159,8 @@
                   </q-card>
                   <div class="text-h3 text-white">Random things</div>
                 </div>
-              </Motion>
-            </MotionGroup>
+              </template>
+            </CommonElementAnimation>
           </div>
         </div>
       </div>
@@ -259,8 +184,6 @@
 <script setup lang="ts">
 const { locale, t } = useI18n();
 
-const container_6_card = Array.from({ length: 5 });
-
 const loremTexts = [t("lorem")];
 
 const images = [
@@ -269,6 +192,25 @@ const images = [
   { image: "/images/i-3.jpg", title: "swipe3" },
   { image: "/images/i-4.jpg", title: "swipe4" },
   { image: "/images/i-5.jpg", title: "swipe5" },
+];
+
+const contents = [
+  {
+    title: "X-ray Machines",
+    description: "Advanced imaging technology with high precision output.",
+  },
+  {
+    title: "Surgical Tools",
+    description: "Designed for precision and durability during operations.",
+  },
+  {
+    title: "Patient Monitors",
+    description: "Real-time monitoring of critical patient vitals.",
+  },
+  {
+    title: "Patient dsdsdsds",
+    description: "Real-time monitoring of critical patient vitals.",
+  },
 ];
 </script>
 <style lang="css" scoped>
