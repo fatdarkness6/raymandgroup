@@ -101,24 +101,28 @@
               :input-style="{
                 color: 'white',
                 fontWeight: 'bold',
-                direction: directionOfElement(locale),
               }"
               :dark="true"
             />
             <q-input
-              v-model="phoneNumber as string"
+              v-model="phone as string"
               :label="$t('phone')"
-              :error="!!phoneNumberError"
-              :error-message="phoneNumberError"
+              :error="!!phoneError"
+              :error-message="phoneError"
               label-color="white"
               :input-style="{
                 color: 'white',
                 fontWeight: 'bold',
-                direction: directionOfElement(locale),
               }"
               :dark="true"
             />
-            <q-btn type="submit" :label="$t('submit')" color="accent" />
+            <q-btn
+              type="submit"
+              :label="$t('submit')"
+              color="accent"
+              :loading="loading"
+              class="q-mt-sm"
+            />
           </q-form>
         </div>
         <div class="site-map flex column justify-center items-center">
@@ -232,34 +236,90 @@
           label="Map"
         />
       </q-fab>
+      <q-dialog v-model="showSuccessDialog">
+        <q-card
+          class="bg-white text-black q-pa-lg"
+          style="min-width: 350px; max-width: 90vw; border-radius: 12px"
+        >
+          <!-- Icon + Title -->
+          <div class="row items-center q-mb-md" style="gap: 12px">
+            <q-icon name="fas fa-check-circle" size="36px" color="green" />
+            <div class="text-h5 text-weight-bold" style="user-select: none">
+              Message Sent
+            </div>
+          </div>
+
+          <!-- Message -->
+          <q-card-section class="text-body1" style="line-height: 1.6">
+            Thank you for contacting us. We’ll get back to you as soon as
+            possible.
+          </q-card-section>
+
+          <!-- Actions -->
+          <q-card-actions align="right" class="q-pt-sm">
+            <q-btn flat label="Close" color="primary" v-close-popup rounded />
+          </q-card-actions>
+        </q-card>
+      </q-dialog>
     </div>
   </q-layout>
 </template>
 
 <script setup lang="ts">
 import { useForm, useField } from "vee-validate";
+import { useFormContact } from "~/composable/useFormContact";
+import { useNotify } from "~/composable/useNotify";
 import { defaultLayoutSchema } from "~/utils/defaultLayoutSchema";
 const { locales, setLocale, t, locale } = useI18n();
 
 const validationSchema = computed(() => defaultLayoutSchema(t));
 
+const { submitForm } = useFormContact();
+const { error } = useNotify();
 // ✅ useForm with reactive schema
-const { handleSubmit } = useForm({
+const { handleSubmit, resetForm } = useForm({
   validationSchema,
 });
+
+const tab = ref<string>("mails");
+const loading = ref<boolean>(false);
+const showSuccessDialog = ref(false);
+const canSubmit = ref(true);
+const cooldownTime = 100000;
 
 // Define fields
 const { value: name, errorMessage: nameError } = useField("name");
 const { value: email, errorMessage: emailError } = useField("email");
-const { value: phoneNumber, errorMessage: phoneNumberError } =
-  useField("phoneNumber");
+const { value: phone, errorMessage: phoneError } = useField("phone");
 
 // Submit handler
 const submit = handleSubmit((values) => {
-  console.log("Form submitted:", values);
-});
+  if (!canSubmit.value) {
+    error("Please wait before submitting again.");
+    return;
+  }
 
-const tab = ref<string>("mails");
+  canSubmit.value = false; // block new submits
+  loading.value = true;
+
+  submitForm(values)
+    .then((response) => {
+      if (response.status === 200) {
+        showSuccessDialog.value = true;
+        resetForm();
+      }
+    })
+    .catch(() => {
+      error("Something went wrong.");
+    })
+    .finally(() => {
+      loading.value = false;
+      // Start cooldown timer to re-enable submit button
+      setTimeout(() => {
+        canSubmit.value = true;
+      }, cooldownTime);
+    });
+});
 
 async function switchLanguage(lang: any) {
   await setLocale(lang);

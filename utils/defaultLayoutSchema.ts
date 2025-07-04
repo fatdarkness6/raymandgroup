@@ -6,11 +6,11 @@ export const defaultLayoutSchema = (t: (key: string) => string) => {
     name: yup.string().required(t('validation.name_required')),
     email: yup
       .string()
-      .email(t('validation.invalid_email'))
+      .email(t('validation.email_invalid'))
       .required(t('validation.email_required')),
-    phoneNumber: yup
+    phone: yup
       .string()
       .required(t('validation.phone_required'))
-      .min(11, t('validation.phone_too_short')),
+      .min(11, t('validation.phone_length')),
   });
 };

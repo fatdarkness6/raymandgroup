@@ -1,9 +1,15 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   compatibilityDate: '2025-05-15',
+  runtimeConfig: {
+    public: {
+      recaptchaSiteKey: process.env.NUXT_PUBLIC_RECAPTCHA_SITE_KEY || ''
+    }
+  },
   devtools: { enabled: true },
    quasar: {
     lang: 'fa-IR',
+    plugins: ['Notify'],
     cssAddon: true,
     iconSet: 'fontawesome-v6',
   extras: {
