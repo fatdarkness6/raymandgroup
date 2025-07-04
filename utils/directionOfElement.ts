@@ -1,9 +1,4 @@
-export function directionOfElement(lan : string) {
-    let direction
-    if (lan === 'fa') {
-      direction =  'rtl'
-    } else {
-      direction =  'ltr'
-    }
-    return direction
+export function directionOfElement(lan: string | Ref<string> | undefined): string {
+  const langValue = typeof lan === 'string' ? lan : lan?.value;
+  return langValue === 'fa' ? 'rtl' : 'ltr';
 }

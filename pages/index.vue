@@ -28,15 +28,15 @@
             </CommonSwiperComponent>
           </div>
         </div>
-        <div class="info" :dir="directionOfElement(locale)">
+        <div class="info">
           <CommonElementAnimation
             duration="600"
             preset="slideVisibleOnceRight"
             :number-of-loops="3"
             :delay="200"
           >
-            <template>
-              <p>{{ loremTexts[0] }}</p>
+            <template v-slot="{ i }">
+              <p :dir="directionOfElement(local)">{{ loremTexts[0] }}</p>
             </template>
           </CommonElementAnimation>
         </div>
@@ -82,7 +82,7 @@
                 <q-card class="symbol-card">
                   <q-img src="/icons/doctor-1.jpg" class="custoom-img" />
                   <q-card-section>
-                    <p :dir="directionOfElement(locale)">{{ loremTexts[0] }}</p>
+                    <p>{{ loremTexts[0] }}</p>
                   </q-card-section>
                 </q-card>
               </template>
@@ -96,7 +96,7 @@
         <div class="flex justify-between items-center no-wrap z-index">
           <Motion preset="slideVisibleOnceLeft" duration="800">
             <div class="text">
-              <h6 style="color: white" :dir="directionOfElement(locale)">
+              <h6 style="color: white" :dir="directionOfElement(local)">
                 {{ loremTexts[0] }}
               </h6>
             </div>
@@ -151,7 +151,7 @@
           </Motion>
           <div class="products">
             <CommonElementAnimation
-              duration="2000"
+              duration="600"
               :preset="['slideVisibleOnceLeft', 'slideVisibleOnceRight']"
               :numberOfLoops="5"
               :delay="300"
@@ -193,7 +193,33 @@
           </Motion>
           <Motion preset="popVisibleOnce" duration="800">
             <div class="swiper-container q-mt-xl">
-              <Container5Swiper :images="images" />
+              <CommonSwiperComponent
+                :images="images"
+                :swiperAttrs="mainAttrs"
+                slideClass="main-swiper q-mb-sm"
+                isMainWithThumbs
+                :linkedThumbsSwiper="thumbsSwiper"
+              >
+                <template v-slot="{ image, title }">
+                  <div class="slide">
+                    <q-img :src="image" class="slide-image" />
+                    <div class="text-overlay"></div>
+                    <h5 class="slide-title text-h4">{{ title }}</h5>
+                  </div>
+                </template>
+              </CommonSwiperComponent>
+              <CommonSwiperComponent
+                :images="images"
+                :swiperAttrs="thumbAttrs"
+                slideClass="secondary-swiper"
+                @swiper="setThumbsSwiper"
+              >
+                <template v-slot="{ image }">
+                  <div class="slide">
+                    <q-img :src="image" class="slide-image" />
+                  </div>
+                </template>
+              </CommonSwiperComponent>
             </div>
           </Motion>
         </div>
@@ -202,7 +228,14 @@
   </div>
 </template>
 <script setup lang="ts">
-import { Autoplay, Pagination, EffectCoverflow } from "swiper/modules";
+import {
+  Autoplay,
+  Pagination,
+  EffectCoverflow,
+  FreeMode,
+  Navigation,
+  Thumbs,
+} from "swiper/modules";
 const modules = ref({
   heroSwiper: [Autoplay, Pagination],
   container1Swiper: [EffectCoverflow, Pagination],
@@ -210,6 +243,33 @@ const modules = ref({
 const { locale, t } = useI18n();
 
 const loremTexts = [t("lorem")];
+
+const thumbsSwiper = ref(null);
+
+const setThumbsSwiper = (swiper: any) => {
+  thumbsSwiper.value = swiper;
+};
+
+const mainAttrs = {
+  modules: [FreeMode, Navigation, Thumbs, Autoplay],
+  navigation: true,
+  loop: true,
+  autoplay: {
+    delay: 5000,
+    disableOnInteraction: false,
+  },
+  spaceBetween: 10,
+};
+
+const thumbAttrs = {
+  modules: [FreeMode, Navigation, Thumbs, Autoplay],
+  slidesPerView: 4,
+  watchSlidesProgress: true,
+  spaceBetween: 10,
+  freeMode: true,
+};
+
+const local = locale.value;
 
 const images = [
   { image: "/images/i-1.jpg", title: "swipe1" },

@@ -48,3 +48,41 @@
   width: 500px;
   height: 600px;
 }
+.main-swiper .slide-image {
+  height: 500px;
+}
+.secondary-swiper .slide-image {
+  height: 200px;
+  object-fit: cover;
+}
+
+.secondary-swiper .swiper-slide {
+  position: relative;
+  opacity: 0.5;
+  transition: opacity 0.3s ease;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.secondary-swiper .swiper-slide-thumb-active {
+  opacity: 1;
+}
+:is(.main-swiper, .secondary-swiper) .slide-title {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #fff;
+  z-index: 2;
+}
+.main-swiper .text-overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.3);
+  border-radius: 8px;
+  z-index: 1;
+}
