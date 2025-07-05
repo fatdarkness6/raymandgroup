@@ -2,6 +2,10 @@
     max-width: 1200px;
     margin: 0 auto ;
 }
+.wrapper , .wrapper-2 {
+   padding-left: 2rem;
+   padding-right: 2rem;
+}
 .wrapper-2 {
     max-width: 1300px;
     margin: 0 auto ;
@@ -85,7 +89,7 @@ body {
   color: #ffffff;
 }
 .z-index {
-    z-index: 1000;
+    z-index: 100000;
     position: relative;
 }
 .my-card {
@@ -101,4 +105,66 @@ body {
 
 .custom-icon-header {
   font-size: 17px;
+}
+
+.berger-button {
+  display: none;
+}
+
+.menu-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 998;
+}
+
+/* Sidebar styling */
+.sidebar-menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 250px;
+  height: 100vh;
+  background: white;
+  box-shadow: 2px 0 12px rgba(0, 0, 0, 0.2);
+  z-index: 999999;
+  padding-top: 60px; /* space for header if any */
+  overflow-y: auto;
+}
+
+/* Fade in/out overlay */
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.3s ease;
+}
+.fade-enter-from,
+.fade-leave-to {
+  opacity: 0;
+}
+
+/* Slide-in/out sidebar */
+.slide-left-enter-active {
+  animation: slideIn 0.3s forwards;
+}
+.slide-left-leave-active {
+  animation: slideOut 0.3s forwards;
+}
+@keyframes slideIn {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+@keyframes slideOut {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-100%);
+  }
 }

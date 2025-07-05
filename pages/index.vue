@@ -13,7 +13,7 @@
     </div>
     <div class="wrapper">
       <div
-        class="container-1 q-my-xl flex no-wrap justify-between items-center"
+        class="container-1 q-my-xl flex justify-between items-center gap-20 q-px-md-xl"
       >
         <div class="img">
           <div class="coverflow-container">
@@ -55,7 +55,7 @@
             <div
               :class="`text-1 overlay q-my-md overlay-color-${i} c-text text-center`"
             >
-              <h3>{{ item.title }}</h3>
+              <h3 class="custom-h3">{{ item.title }}</h3>
               <p>
                 {{ item.description }}
               </p>
@@ -77,6 +77,7 @@
               :preset="['slideVisibleOnceRight', 'slideVisibleOnceLeft']"
               :numberOfLoops="2"
               :delay="300"
+              motionClass="flex justify-center"
             >
               <template v-slot="{ i }">
                 <q-card class="symbol-card">
@@ -93,20 +94,21 @@
     </div>
     <div class="container-4 q-my-xl q-py-xl">
       <div class="wrapper">
-        <div class="flex justify-between items-center no-wrap z-index">
-          <Motion preset="slideVisibleOnceLeft" duration="800">
+        <div class="flex justify-between items-center z-index no-wrap con-4">
+          <Motion preset="slideVisibleOnceLeft" duration="800" class="res-flex">
             <div class="text">
               <h6 style="color: white" :dir="directionOfElement(local)">
                 {{ loremTexts[0] }}
               </h6>
             </div>
           </Motion>
-          <Motion preset="slideVisibleOnceBottom" duration="800">
+          <Motion
+            preset="slideVisibleOnceBottom"
+            duration="800"
+            class="res-flex"
+          >
             <div class="img-motion">
-              <q-img
-                src="/images/doctor-equipment.jpg"
-                style="width: 600px; height: 600px"
-              />
+              <q-img src="/images/doctor-equipment.jpg" class="custom-img" />
             </div>
           </Motion>
         </div>
@@ -114,12 +116,15 @@
     </div>
     <div class="container-5 q-my-xl q-py-xl">
       <div class="wrapper-2">
-        <div class="flex justify-between items-center gap-20 no-wrap z-index">
+        <div
+          class="flex justify-between items-center gap-20 no-wrap z-index father"
+        >
           <CommonElementAnimation
             duration="2000"
             preset="slideVisibleOnceLeft"
             :numberOfLoops="3"
             :delay="300"
+            motionClass="size"
           >
             <template v-slot="{ i }">
               <q-card class="my-card" :bordered="true">
@@ -303,7 +308,6 @@ const heroSwiperAttrs = {
   pagination: {
     clickable: true,
   },
-  direction: "vertical",
   loop: "true",
   autoplay: {
     delay: 5000,
@@ -375,6 +379,10 @@ const container1Attrs = {
 }
 .container-4 .img-motion {
   animation: up-down 2s ease-in-out infinite;
+}
+.container-4 .img-motion .custom-img {
+  width: 400px;
+  height: 400px;
 }
 @keyframes up-down {
   0% {

@@ -1,6 +1,6 @@
 <template>
-  <q-layout view="hHh lpR fff">
-    <q-header elevated reveal class="q-pa-md wrapper-2 header">
+  <q-layout view="hHh lpR fff" style="overflow: hidden">
+    <q-header elevated reveal class="q-pa-md wrapper-2 header z-top">
       <div class="animation-header">
         <div class="stars"></div>
         <div class="shooting-star"></div>
@@ -10,6 +10,15 @@
         <div class="shooting-star"></div>
       </div>
       <div class="flex flex-row items-center justify-between">
+        <div class="berger-button">
+          <q-btn
+            flat
+            dense
+            round
+            icon="fa-solid fa-bars"
+            @click="leftDrawerOpen = !leftDrawerOpen"
+          />
+        </div>
         <div class="logo">
           <q-img
             src="/images/logo-test.jpg"
@@ -22,7 +31,13 @@
             </template>
           </q-img>
         </div>
-        <q-tabs v-model="tab" active-color="black" class="white" router>
+        <q-tabs
+          v-model="tab"
+          dense
+          active-color="black"
+          class="white header-tabs"
+          router
+        >
           <q-route-tab
             name="mails"
             icon="fa-solid fa-people-roof"
@@ -44,12 +59,18 @@
             icon="fa-solid fa-star-of-life"
             :label="$t('movies')"
             to="/movies"
-            class="rounded-10"
+            class="rounded-10 text-sm"
             exact
           />
         </q-tabs>
-        <q-btn-dropdown color="white" :label="locale" flat :auto-close="true">
-          <q-list>
+        <q-btn-dropdown
+          color="white"
+          :label="locale"
+          flat
+          :auto-close="true"
+          content-class="z-max"
+        >
+          <q-list content-class="z-max">
             <q-item
               v-for="loc in locales"
               :key="loc.code"
@@ -62,7 +83,6 @@
         </q-btn-dropdown>
       </div>
     </q-header>
-
     <q-page-container class="container-spacing">
       <main>
         <slot />
@@ -262,6 +282,30 @@
         </q-card>
       </q-dialog>
     </div>
+    <transition name="fade">
+      <div
+        v-if="leftDrawerOpen"
+        class="menu-overlay"
+        @click="leftDrawerOpen = false"
+      ></div>
+    </transition>
+
+    <!-- Sidebar Menu -->
+    <transition name="slide-left">
+      <nav v-if="leftDrawerOpen" class="sidebar-menu">
+        <q-list>
+          <q-item clickable @click="navigateTo('/home')">
+            <q-item-section>Home</q-item-section>
+          </q-item>
+          <q-item clickable @click="navigateTo('/about')">
+            <q-item-section>About</q-item-section>
+          </q-item>
+          <q-item clickable @click="navigateTo('/contact')">
+            <q-item-section>Contact</q-item-section>
+          </q-item>
+        </q-list>
+      </nav>
+    </transition>
   </q-layout>
 </template>
 
@@ -285,6 +329,7 @@ const tab = ref<string>("mails");
 const loading = ref<boolean>(false);
 const showSuccessDialog = ref(false);
 const canSubmit = ref(true);
+const leftDrawerOpen = ref(false);
 const cooldownTime = 100000;
 
 // Define fields
