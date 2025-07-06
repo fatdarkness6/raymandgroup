@@ -104,7 +104,7 @@
             class="flex justify-center column items-center q-form-m"
           >
             <q-input
-              v-model="name as string"
+              v-model="name"
               :label="$t('name&lastname')"
               :error="!!nameError"
               :error-message="nameError"
@@ -118,7 +118,7 @@
               class="full-width-res"
             />
             <q-input
-              v-model="email as string"
+              v-model="email"
               :label="$t('email')"
               :error="!!emailError"
               :error-message="emailError"
@@ -131,7 +131,7 @@
               class="full-width-res"
             />
             <q-input
-              v-model="phone as string"
+              v-model="phone"
               :label="$t('phone')"
               :error="!!phoneError"
               :error-message="phoneError"
@@ -340,9 +340,9 @@ const leftDrawerOpen = ref(false);
 const cooldownTime = 100000;
 
 // Define fields
-const { value: name, errorMessage: nameError } = useField("name");
-const { value: email, errorMessage: emailError } = useField("email");
-const { value: phone, errorMessage: phoneError } = useField("phone");
+const { value: name, errorMessage: nameError } = useField<string>("name");
+const { value: email, errorMessage: emailError } = useField<string>("email");
+const { value: phone, errorMessage: phoneError } = useField<string>("phone");
 
 // Submit handler
 const submit = handleSubmit((values) => {
