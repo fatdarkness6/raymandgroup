@@ -220,11 +220,11 @@
               <CommonSwiperComponent
                 :images="images"
                 :swiperAttrs="thumbAttrs"
-                slideClass="secondary-swiper"
+                slideClass="secondary-swiper "
                 @swiper="setThumbsSwiper"
               >
                 <template v-slot="{ image }">
-                  <div class="slide">
+                  <div class="slide swiper-7">
                     <q-img :src="image" class="slide-image" />
                   </div>
                 </template>

@@ -10,7 +10,7 @@
         <div class="shooting-star"></div>
       </div>
       <div class="flex flex-row items-center justify-between">
-        <div class="berger-button">
+        <div class="berger-button" style="width: 80px">
           <q-btn
             flat
             dense
@@ -19,7 +19,7 @@
             @click="leftDrawerOpen = !leftDrawerOpen"
           />
         </div>
-        <div class="logo">
+        <div class="logo" style="width: 80px">
           <q-img
             src="/images/logo-test.jpg"
             spinner-color="primary"
@@ -69,6 +69,7 @@
           flat
           :auto-close="true"
           content-class="z-index-2"
+          style="width: 80px"
         >
           <q-list content-class="z-index-2">
             <q-item
@@ -228,6 +229,31 @@
           fatdarkness6
         </a>
       </p>
+      <q-dialog v-model="showSuccessDialog">
+        <q-card
+          class="bg-white text-black q-pa-lg"
+          style="min-width: 350px; max-width: 90vw; border-radius: 12px"
+        >
+          <!-- Icon + Title -->
+          <div class="row items-center q-mb-md" style="gap: 12px">
+            <q-icon name="fas fa-check-circle" size="36px" color="green" />
+            <div class="text-h5 text-weight-bold" style="user-select: none">
+              Message Sent
+            </div>
+          </div>
+
+          <!-- Message -->
+          <q-card-section class="text-body1" style="line-height: 1.6">
+            Thank you for contacting us. We’ll get back to you as soon as
+            possible.
+          </q-card-section>
+
+          <!-- Actions -->
+          <q-card-actions align="right" class="q-pt-sm">
+            <q-btn flat label="Close" color="primary" v-close-popup rounded />
+          </q-card-actions>
+        </q-card>
+      </q-dialog>
     </q-footer>
     <div class="select-methodes">
       <q-fab
@@ -262,31 +288,6 @@
           label="Map"
         />
       </q-fab>
-      <q-dialog v-model="showSuccessDialog">
-        <q-card
-          class="bg-white text-black q-pa-lg"
-          style="min-width: 350px; max-width: 90vw; border-radius: 12px"
-        >
-          <!-- Icon + Title -->
-          <div class="row items-center q-mb-md" style="gap: 12px">
-            <q-icon name="fas fa-check-circle" size="36px" color="green" />
-            <div class="text-h5 text-weight-bold" style="user-select: none">
-              Message Sent
-            </div>
-          </div>
-
-          <!-- Message -->
-          <q-card-section class="text-body1" style="line-height: 1.6">
-            Thank you for contacting us. We’ll get back to you as soon as
-            possible.
-          </q-card-section>
-
-          <!-- Actions -->
-          <q-card-actions align="right" class="q-pt-sm">
-            <q-btn flat label="Close" color="primary" v-close-popup rounded />
-          </q-card-actions>
-        </q-card>
-      </q-dialog>
     </div>
     <transition name="fade">
       <div
@@ -413,9 +414,22 @@ async function switchLanguage(lang: any) {
 }
 .select-methodes {
   position: fixed;
-  bottom: 25px;
-  left: 25px;
+  bottom: 45px;
+  left: 10px;
   z-index: 11111;
+  animation: scale 2s ease-in-out infinite;
+  animation-delay: 0.5s;
+}
+@keyframes scale {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
 }
 .animated-wave-bg {
   margin: auto;

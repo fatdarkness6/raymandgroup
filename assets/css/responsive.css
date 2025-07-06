@@ -117,3 +117,21 @@
         font-size:12px;
     }
 }
+@media (max-width: 530px) {
+  .q-form-m {
+    margin-bottom: 0px;
+  }
+  .footer-content {
+    flex-direction: column;
+    justify-content: center;
+    gap: 70px;
+  }
+}
+@media (max-width: 450px) {
+      .container-1 .img .swiper-1 {
+        height: 400px;
+      }
+      .container-7 .swiper-7 {
+        height: 130px;
+      }
+}
