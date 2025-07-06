@@ -56,7 +56,7 @@
               :class="`text-1 overlay q-my-md overlay-color-${i} c-text text-center`"
             >
               <h3 class="custom-h3">{{ item.title }}</h3>
-              <p>
+              <p class="custom-p">
                 {{ item.description }}
               </p>
             </div>
@@ -97,7 +97,11 @@
         <div class="flex justify-between items-center z-index no-wrap con-4">
           <Motion preset="slideVisibleOnceLeft" duration="800" class="res-flex">
             <div class="text">
-              <h6 style="color: white" :dir="directionOfElement(local)">
+              <h6
+                class="custom-h6"
+                style="color: white"
+                :dir="directionOfElement(local)"
+              >
                 {{ loremTexts[0] }}
               </h6>
             </div>
@@ -152,7 +156,7 @@
       <div class="wrapper-2">
         <div class="introduction z-index text-center text-white">
           <Motion preset="slideVisibleOnceTop" duration="800">
-            <h2>Our new Products</h2>
+            <h2 class="custom-h2">Our new Products</h2>
           </Motion>
           <div class="products">
             <CommonElementAnimation
@@ -169,7 +173,7 @@
             >
               <template v-slot="{ i }">
                 <div
-                  class="flex items-center justify-between"
+                  class="flex items-center justify-between res"
                   :class="detectEvenNumber(i) ? '' : 'row reverse'"
                 >
                   <q-card class="my-card" :bordered="true">

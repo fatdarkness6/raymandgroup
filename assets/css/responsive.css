@@ -39,8 +39,24 @@
   .container-5 .father .size {
     width: 80%;
   }
+  .custom-footer .site-map {
+    display: none;
+  }
 }
-
+@media (max-width : 820px) {
+  .footer-content .submit-form {
+    width: 100% !important;
+  }
+  .footer-content .custom-button {
+    width: 50% !important;
+  }
+  .full-width-res {
+    width: 100%;
+  }
+  .q-form-m {
+    margin-bottom: 50px;
+  }
+}
 @media (max-width: 720px) { 
     .container-1 .img {
         max-width: 500px;
@@ -49,11 +65,37 @@
     .container-1 .swiper-1 {
         width: auto;
     }
+    .container-2 .custom-h3 {
+      margin: 5px 0;
+      font-size: 20px;
+    }
+    .container-2 .custom-p {
+      font-size: 14px;
+    }
     .container-3 :is(.part1 , .part2)  {
         flex-wrap: wrap;
     }
     .container-3 :is(.part1 .symbol-card , .part2 .symbol-card) {
         width: 80%;
+    }
+    .container-4 .custom-h6 {
+      font-size: 17px;
+    }
+    .container-6  .custom-h2 {
+      font-size:40px ;
+    }
+    .container-6 .text-h3.text-white {
+      display: none;
+    }
+    .container-6 .res {
+      justify-content: center;
+      margin-bottom: 30px;
+    }
+    .container-6 .my-card {
+      width: 80% !important;
+    }
+    .container-7 .text-h2 {
+      font-size: 40px;
     }
 }
 

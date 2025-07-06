@@ -1,6 +1,6 @@
 <template>
   <q-layout view="hHh lpR fff" style="overflow: hidden">
-    <q-header elevated reveal class="q-pa-md wrapper-2 header z-top">
+    <q-header elevated reveal class="q-pa-md wrapper-2 header">
       <div class="animation-header">
         <div class="stars"></div>
         <div class="shooting-star"></div>
@@ -68,9 +68,9 @@
           :label="locale"
           flat
           :auto-close="true"
-          content-class="z-max"
+          content-class="z-index-2"
         >
-          <q-list content-class="z-max">
+          <q-list content-class="z-index-2">
             <q-item
               v-for="loc in locales"
               :key="loc.code"
@@ -98,7 +98,10 @@
         class="wrapper-2 q-py-xl flex justify-between footer-content row reverse items-start"
       >
         <div class="submit-form flex column" style="width: 200px">
-          <q-form @submit="submit">
+          <q-form
+            @submit="submit"
+            class="flex justify-center column items-center q-form-m"
+          >
             <q-input
               v-model="name as string"
               :label="$t('name&lastname')"
@@ -111,6 +114,7 @@
               }"
               label-color="white"
               :dark="true"
+              class="full-width-res"
             />
             <q-input
               v-model="email as string"
@@ -123,6 +127,7 @@
                 fontWeight: 'bold',
               }"
               :dark="true"
+              class="full-width-res"
             />
             <q-input
               v-model="phone as string"
@@ -135,13 +140,14 @@
                 fontWeight: 'bold',
               }"
               :dark="true"
+              class="full-width-res"
             />
             <q-btn
               type="submit"
               :label="$t('submit')"
               color="accent"
               :loading="loading"
-              class="q-mt-sm"
+              class="q-mt-sm custom-button"
             />
           </q-form>
         </div>
@@ -378,6 +384,7 @@ async function switchLanguage(lang: any) {
   overflow: hidden;
   background: linear-gradient(to bottom, #0b0b2b, #1b2735 70%, #090a0f);
   margin-top: 10px;
+  z-index: 999999;
 }
 .header .logo-img {
   border-radius: 50%;

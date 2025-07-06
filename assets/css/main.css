@@ -89,7 +89,11 @@ body {
   color: #ffffff;
 }
 .z-index {
-    z-index: 100000;
+    z-index: 10000;
+    position: relative;
+}
+.z-index-2 {
+    z-index: 10000000;
     position: relative;
 }
 .my-card {
