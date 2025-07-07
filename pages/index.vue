@@ -49,11 +49,18 @@
           :preset="['slideVisibleOnceRight', 'slideVisibleOnceLeft']"
           :items="contents"
           :delay="200"
-          :motion-class="(i) => (detectEvenNumber(i) ? '' : 'flex justify-end')"
+          :motion-class="
+            (i) =>
+              `${
+                detectEvenNumber(i)
+                  ? 'container-2-animation-z '
+                  : 'flex justify-end container-2-animation-z'
+              } `
+          "
         >
           <template v-slot="{ item, i }">
             <div
-              :class="`text-1 overlay q-my-md overlay-color-${i} c-text text-center`"
+              :class="`text-1 overlay q-my-md overlay-color-${i} c-text text-center z-max`"
             >
               <h3 class="custom-h3">{{ item.title }}</h3>
               <p class="custom-p">

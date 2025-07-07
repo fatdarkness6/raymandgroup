@@ -284,8 +284,8 @@
         <q-fab-action
           label-position="right"
           color="accent"
-          icon="room"
-          label="Map"
+          icon="fa-brands fa-tiktok"
+          label="Tiktok"
         />
       </q-fab>
     </div>
@@ -300,14 +300,36 @@
     <!-- Sidebar Menu -->
     <transition name="slide-left">
       <nav v-if="leftDrawerOpen" class="sidebar-menu">
-        <q-list>
-          <q-item clickable @click="navigateTo('/home')">
-            <q-item-section>Home</q-item-section>
+        <!-- Close Button -->
+        <div class="menu-header">
+          <q-btn
+            flat
+            round
+            dense
+            icon="fa-solid fa-xmark"
+            class="close-btn"
+            @click="leftDrawerOpen = false"
+          />
+        </div>
+
+        <!-- Menu Items -->
+        <q-list class="menu-list">
+          <q-item clickable @click="navigateTo('/home')" class="menu-item">
+            <q-item-section avatar>
+              <q-icon name="fa-solid fa-house" />
+            </q-item-section>
+            <q-item-section color="primary">Home</q-item-section>
           </q-item>
-          <q-item clickable @click="navigateTo('/about')">
+          <q-item clickable @click="navigateTo('/about')" class="menu-item">
+            <q-item-section avatar>
+              <q-icon name="fa-solid fa-circle-info" />
+            </q-item-section>
             <q-item-section>About</q-item-section>
           </q-item>
-          <q-item clickable @click="navigateTo('/contact')">
+          <q-item clickable @click="navigateTo('/contact')" class="menu-item">
+            <q-item-section avatar>
+              <q-icon name="fa-solid fa-envelope" />
+            </q-item-section>
             <q-item-section>Contact</q-item-section>
           </q-item>
         </q-list>
@@ -417,19 +439,6 @@ async function switchLanguage(lang: any) {
   bottom: 45px;
   left: 10px;
   z-index: 11111;
-  animation: scale 2s ease-in-out infinite;
-  animation-delay: 0.5s;
-}
-@keyframes scale {
-  0% {
-    transform: scale(1);
-  }
-  50% {
-    transform: scale(1.2);
-  }
-  100% {
-    transform: scale(1);
-  }
 }
 .animated-wave-bg {
   margin: auto;
