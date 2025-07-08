@@ -319,7 +319,7 @@ const heroSwiperAttrs = {
   pagination: {
     clickable: true,
   },
-  loop: "true",
+  loop: true,
   autoplay: {
     delay: 5000,
     disableOnInteraction: false,
@@ -328,8 +328,8 @@ const heroSwiperAttrs = {
 };
 const container1Attrs = {
   effect: "coverflow",
-  grabCursor: "true",
-  centeredSlides: "true",
+  grabCursor: true,
+  centeredSlides: true,
   slidesPerView: "auto",
   coverflowEffect: {
     rotate: 50,
