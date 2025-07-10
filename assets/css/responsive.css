@@ -135,7 +135,7 @@
         height: 130px;
       }
       .container-2 {
-        background-image: url("/public/images/i-1-mobile.jpg") !important;
+        background-image: url("/public/images/i-1-mobile.webp") !important;
         background-attachment:unset !important;
         position: relative;
       }
@@ -154,7 +154,7 @@
         position: relative;
       }
       .container-4 {
-        background-image: url("/public/images/i-2-mobile.jpg") !important;
+        background-image: url("/public/images/i-2-mobile.webp") !important;
         background-attachment:unset !important;
       }
 }

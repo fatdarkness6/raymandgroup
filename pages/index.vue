@@ -4,7 +4,7 @@
       <CommonSwiperComponent :swiperAttrs="heroSwiperAttrs" :images="images">
         <template v-slot="{ image, title }">
           <div class="slide">
-            <q-img :src="image" class="slide-image" />
+            <q-img loading="lazy" :src="image" class="slide-image" />
             <div class="slide-overlay" />
             <h3 class="slide-title">{{ title }}</h3>
           </div>
@@ -23,7 +23,7 @@
               :slideClass="'swiper-1'"
             >
               <template v-slot="{ image }">
-                <q-img :src="image" class="slide-image" />
+                <q-img loading="lazy" :src="image" class="slide-image" />
               </template>
             </CommonSwiperComponent>
           </div>
@@ -88,7 +88,11 @@
             >
               <template v-slot="{ i }">
                 <q-card class="symbol-card">
-                  <q-img src="/icons/doctor-1.jpg" class="custoom-img" />
+                  <q-img
+                    loading="lazy"
+                    src="/icons/doctor-1.jpg"
+                    class="custoom-img"
+                  />
                   <q-card-section>
                     <p>{{ loremTexts[0] }}</p>
                   </q-card-section>
@@ -119,7 +123,11 @@
             class="res-flex"
           >
             <div class="img-motion">
-              <q-img src="/images/doctor-equipment.jpg" class="custom-img" />
+              <q-img
+                loading="lazy"
+                src="/images/doctor-equipment.png"
+                class="custom-img"
+              />
             </div>
           </Motion>
         </div>
@@ -139,7 +147,7 @@
           >
             <template v-slot="{ i }">
               <q-card class="my-card" :bordered="true">
-                <q-img :src="`/images/i-${i + 2}.jpg`" />
+                <q-img loading="lazy" :src="`/images/i-${i + 2}.webp`" />
                 <q-card-section>
                   <div class="text-h6">Our Changing Planet</div>
                   <div class="text-subtitle2">by John Doe</div>
@@ -184,7 +192,7 @@
                   :class="detectEvenNumber(i) ? '' : 'row reverse'"
                 >
                   <q-card class="my-card" :bordered="true">
-                    <q-img :src="`/images/i-${i}.jpg`" />
+                    <q-img loading="lazy" :src="`/images/i-${i}.webp`" />
                     <q-card-section>
                       <div class="text-h6">Our Changing Planet</div>
                       <div class="text-subtitle2">by John Doe</div>
@@ -218,7 +226,7 @@
               >
                 <template v-slot="{ image, title }">
                   <div class="slide">
-                    <q-img :src="image" class="slide-image" />
+                    <q-img loading="lazy" :src="image" class="slide-image" />
                     <div class="text-overlay"></div>
                     <h5 class="slide-title text-h4">{{ title }}</h5>
                   </div>
@@ -232,7 +240,7 @@
               >
                 <template v-slot="{ image }">
                   <div class="slide swiper-7">
-                    <q-img :src="image" class="slide-image" />
+                    <q-img loading="lazy" :src="image" class="slide-image" />
                   </div>
                 </template>
               </CommonSwiperComponent>
@@ -288,11 +296,11 @@ const thumbAttrs = {
 const local = locale.value;
 
 const images = [
-  { image: "/images/i-1.jpg", title: "swipe1" },
-  { image: "/images/i-2.jpg", title: "swipe2" },
-  { image: "/images/i-3.jpg", title: "swipe3" },
-  { image: "/images/i-4.jpg", title: "swipe4" },
-  { image: "/images/i-5.jpg", title: "swipe5" },
+  { image: "/images/i-1.webp", title: "swipe1" },
+  { image: "/images/i-2.webp", title: "swipe2" },
+  { image: "/images/i-3.webp", title: "swipe3" },
+  { image: "/images/i-4.webp", title: "swipe4" },
+  { image: "/images/i-5.webp", title: "swipe5" },
 ];
 
 const contents = [
@@ -350,7 +358,7 @@ const container1Attrs = {
 }
 .container-2 {
   position: relative;
-  background-image: url("/public/images/i-1.jpg");
+  background-image: url("/public/images/i-1.webp");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -371,7 +379,7 @@ const container1Attrs = {
   width: 50%;
 }
 .container-4 {
-  background-image: url("/public/images/i-2.jpg");
+  background-image: url("/public/images/i-2.webp");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;

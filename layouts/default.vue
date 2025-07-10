@@ -19,9 +19,9 @@
             @click="leftDrawerOpen = !leftDrawerOpen"
           />
         </div>
-        <div class="logo" style="width: 80px">
+        <router-link to="/" class="logo" style="width: 80px">
           <q-img
-            src="/images/logo-test.jpg"
+            src="/images/logo-test.webp"
             spinner-color="primary"
             style="height: 70px; width: 70px"
             class="logo-img"
@@ -30,7 +30,7 @@
               <q-spinner-gears color="white" />
             </template>
           </q-img>
-        </div>
+        </router-link>
         <q-tabs
           v-model="tab"
           dense
@@ -198,7 +198,7 @@
         <div class="extra-details flex column justify-center items-center">
           <div class="image">
             <q-img
-              src="/images/logo-test.jpg"
+              src="/images/logo-test.webp"
               spinner-color="primary"
               style="height: 90px; width: 90px"
             >
