@@ -4,7 +4,12 @@
       <CommonSwiperComponent :swiperAttrs="heroSwiperAttrs" :images="images">
         <template v-slot="{ image, title }">
           <div class="slide">
-            <q-img loading="lazy" :src="image" class="slide-image" />
+            <q-img
+              loading="lazy"
+              :src="image"
+              class="slide-image"
+              fetchpriority="high"
+            />
             <div class="slide-overlay" />
             <h3 class="slide-title">{{ title }}</h3>
           </div>
@@ -23,7 +28,12 @@
               :slideClass="'swiper-1'"
             >
               <template v-slot="{ image }">
-                <q-img loading="lazy" :src="image" class="slide-image" />
+                <q-img
+                  loading="lazy"
+                  :src="image"
+                  class="slide-image"
+                  fetchpriority="high"
+                />
               </template>
             </CommonSwiperComponent>
           </div>
@@ -92,6 +102,7 @@
                     loading="lazy"
                     src="/icons/doctor-1.jpg"
                     class="custoom-img"
+                    fetchpriority="high"
                   />
                   <q-card-section>
                     <p>{{ loremTexts[0] }}</p>
@@ -127,6 +138,7 @@
                 loading="lazy"
                 src="/images/doctor-equipment.png"
                 class="custom-img"
+                fetchpriority="high"
               />
             </div>
           </Motion>
@@ -147,7 +159,11 @@
           >
             <template v-slot="{ i }">
               <q-card class="my-card" :bordered="true">
-                <q-img loading="lazy" :src="`/images/i-${i + 2}.webp`" />
+                <q-img
+                  loading="lazy"
+                  :src="`/images/i-${i + 2}.webp`"
+                  fetchpriority="high"
+                />
                 <q-card-section>
                   <div class="text-h6">Our Changing Planet</div>
                   <div class="text-subtitle2">by John Doe</div>
@@ -192,7 +208,11 @@
                   :class="detectEvenNumber(i) ? '' : 'row reverse'"
                 >
                   <q-card class="my-card" :bordered="true">
-                    <q-img loading="lazy" :src="`/images/i-${i}.webp`" />
+                    <q-img
+                      loading="lazy"
+                      :src="`/images/i-${i}.webp`"
+                      fetchpriority="high"
+                    />
                     <q-card-section>
                       <div class="text-h6">Our Changing Planet</div>
                       <div class="text-subtitle2">by John Doe</div>
@@ -226,7 +246,12 @@
               >
                 <template v-slot="{ image, title }">
                   <div class="slide">
-                    <q-img loading="lazy" :src="image" class="slide-image" />
+                    <q-img
+                      loading="lazy"
+                      :src="image"
+                      class="slide-image"
+                      fetchpriority="high"
+                    />
                     <div class="text-overlay"></div>
                     <h5 class="slide-title text-h4">{{ title }}</h5>
                   </div>
@@ -240,7 +265,12 @@
               >
                 <template v-slot="{ image }">
                   <div class="slide swiper-7">
-                    <q-img loading="lazy" :src="image" class="slide-image" />
+                    <q-img
+                      loading="lazy"
+                      :src="image"
+                      class="slide-image"
+                      fetchpriority="high"
+                    />
                   </div>
                 </template>
               </CommonSwiperComponent>

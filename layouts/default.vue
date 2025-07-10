@@ -23,6 +23,7 @@
           <q-img
             src="/images/logo-test.webp"
             spinner-color="primary"
+            fetchpriority="high"
             style="height: 70px; width: 70px"
             class="logo-img"
           >
@@ -200,6 +201,7 @@
             <q-img
               src="/images/logo-test.webp"
               spinner-color="primary"
+              fetchpriority="high"
               style="height: 90px; width: 90px"
             >
               <template v-slot:loading>
