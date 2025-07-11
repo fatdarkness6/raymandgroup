@@ -6,6 +6,13 @@ export default defineNuxtConfig({
       recaptchaSiteKey: process.env.NUXT_PUBLIC_RECAPTCHA_SITE_KEY || ''
     }
   },
+   googleFonts: {
+    families: {
+      'Nunito+Sans': [300, 400, 600, 700] // you can choose the weights you want
+    },
+    display: 'swap',  // good for performance
+    download: true    // self-host fonts for privacy and speed
+  },
   devtools: { enabled: true },
    quasar: {
     lang: 'fa-IR',
@@ -49,7 +56,7 @@ export default defineNuxtConfig({
     lazy: true,
     vueI18n: './i18n.config.ts'
   },
-  modules:['nuxt-quasar-ui', 'nuxt-swiper', '@nuxt/image', '@nuxtjs/i18n', '@vueuse/motion/nuxt'],
+  modules:['nuxt-quasar-ui', 'nuxt-swiper', '@nuxt/image', '@nuxtjs/i18n', '@vueuse/motion/nuxt', '@nuxtjs/google-fonts'],
   css: ['swiper/css', 'swiper/css/navigation', 'swiper/css/pagination','swiper/css/effect-coverflow', '@/assets/css/main.css' , '@/assets/css/swiperStyles.css', '@/assets/css/pagination-bullet.css', '@/assets/css/header-animations.css','@/assets/css/responsive.css', '@fortawesome/fontawesome-svg-core/styles.css'],
    build: {
     transpile: [

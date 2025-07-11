@@ -1,6 +1,6 @@
 <template>
   <q-layout view="hHh lpR fff" style="overflow: hidden">
-    <q-header elevated reveal class="q-pa-md wrapper-2 header">
+    <q-header elevated reveal class="q-pa-md wrapper header">
       <div class="animation-header">
         <div class="stars"></div>
         <div class="shooting-star"></div>
@@ -97,7 +97,7 @@
         <div class="wave"></div>
       </div>
       <div
-        class="wrapper-2 q-py-xl flex justify-between footer-content row reverse items-start"
+        class="wrapper q-py-xl flex justify-between footer-content row reverse items-start"
       >
         <div class="submit-form flex column" style="width: 200px">
           <q-form

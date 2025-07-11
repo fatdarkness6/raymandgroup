@@ -1,148 +1,220 @@
 <template>
-  <div>
-    <div class="hero-section">
-      <CommonSwiperComponent :swiperAttrs="heroSwiperAttrs" :images="images">
-        <template v-slot="{ image, title }">
-          <div class="slide">
-            <q-img
-              loading="lazy"
-              :src="image"
-              class="slide-image"
-              fetchpriority="high"
-            />
-            <div class="slide-overlay" />
-            <h3 class="slide-title">{{ title }}</h3>
-          </div>
-        </template>
-      </CommonSwiperComponent>
-    </div>
-    <div class="wrapper">
-      <div
-        class="container-1 q-my-xl flex justify-between items-center gap-20 q-px-md-xl"
-      >
-        <div class="img">
-          <div class="coverflow-container">
-            <CommonSwiperComponent
-              :swiperAttrs="container1Attrs"
-              :images="images"
-              :slideClass="'swiper-1'"
-            >
-              <template v-slot="{ image }">
-                <q-img
-                  loading="lazy"
-                  :src="image"
-                  class="slide-image"
-                  fetchpriority="high"
-                />
-              </template>
-            </CommonSwiperComponent>
-          </div>
+  <div class="wrapper">
+    <div class="hero-section flex q-mt-xl">
+      <div class="introduction space-between-each-sections flex column gap-20">
+        <div class="part1">
+          <h1 class="no-margin text-weight-medium">
+            Explore Innovative Solutions for Laboratory Management
+          </h1>
         </div>
-        <div class="info">
-          <CommonElementAnimation
-            duration="600"
-            preset="slideVisibleOnceRight"
-            :number-of-loops="3"
-            :delay="200"
+        <div class="part2">
+          <p class="text-body1 text-weight-regular">
+            Welcome to our platform, where we showcase three pioneering
+            companies in laboratory management, equipment manufacturing, and
+            virtual healthcare solutions. Discover how each company is
+            transforming the industry with cutting-edge technology and
+            exceptional services.
+          </p>
+        </div>
+        <div class="part3 flex items-center gap-10">
+          <q-btn push color="primary" no-caps padding="10px 20px"
+            >Learn More</q-btn
           >
-            <template v-slot="{ i }">
-              <p :dir="directionOfElement(local)">{{ loremTexts[0] }}</p>
-            </template>
-          </CommonElementAnimation>
+          <q-btn push no-caps padding="10px 20px">Sign Up</q-btn>
         </div>
       </div>
-    </div>
-    <div class="container-2 q-my-xl q-py-xl">
-      <div class="wrapper">
-        <CommonElementAnimation
-          duration="600"
-          :preset="['slideVisibleOnceRight', 'slideVisibleOnceLeft']"
-          :items="contents"
-          :delay="200"
-          :motion-class="
-            (i) =>
-              `${
-                detectEvenNumber(i)
-                  ? 'container-2-animation-z '
-                  : 'flex justify-end container-2-animation-z'
-              } `
-          "
+      <div class="img flex justify-center items-center gap-20 overflow-hidden">
+        <div
+          class="part1 flex column justify-center items-center gap-15 scroll-animation"
         >
-          <template v-slot="{ item, i }">
-            <div
-              :class="`text-1 overlay q-my-md overlay-color-${i} c-text text-center z-max`"
-            >
-              <h3 class="custom-h3">{{ item.title }}</h3>
-              <p class="custom-p">
-                {{ item.description }}
-              </p>
-            </div>
-          </template>
-        </CommonElementAnimation>
+          <q-img
+            v-for="(item, index) in [...images, ...images]"
+            :key="'part1-' + index"
+            :src="item.image"
+            class="hero-img rounded-10"
+          />
+        </div>
+        <div
+          class="part2 flex column justify-center items-center gap-15 scroll-animation-reverse"
+        >
+          <q-img
+            v-for="(item, index) in [...images, ...images]"
+            :key="'part2-' + index"
+            :src="item.image"
+            class="hero-img rounded-10"
+          />
+        </div>
       </div>
     </div>
-    <div class="container-3 q-my-xl">
-      <div class="wrapper">
-        <div class="flex column items-center gap-20">
+    <div class="how-it-works-section space-between-each-sections">
+      <div
+        class="introduction flex column justify-center items-center q-my-xl gap-20"
+      >
+        <div class="text-subtitle1 text-weight-bolder">Explore</div>
+        <div class="text-h2 text-weight-medium">
+          Discover Our Three Companies
+        </div>
+        <div class="text-body1 text-weight-medium">
+          Navigate easily to learn about our offerings.
+        </div>
+      </div>
+      <div
+        class="about-3-companies flex justify-center items-center gap-20 no-wrap"
+      >
+        <q-card class="custom-card w-45 q-pl-md my-card" :bordered="true">
           <div
-            v-for="i in 2"
-            :key="i"
-            :class="`part${i} flex no-wrap gap-20 justify-center`"
+            class="flex justify-between items-center gap-20 no-wrap full-height"
           >
-            <CommonElementAnimation
-              duration="600"
-              :preset="['slideVisibleOnceRight', 'slideVisibleOnceLeft']"
-              :numberOfLoops="2"
-              :delay="300"
-              motionClass="flex justify-center"
-            >
-              <template v-slot="{ i }">
-                <q-card class="symbol-card">
-                  <q-img
-                    loading="lazy"
-                    src="/icons/doctor-1.jpg"
-                    class="custoom-img"
-                    fetchpriority="high"
-                  />
-                  <q-card-section>
-                    <p>{{ loremTexts[0] }}</p>
-                  </q-card-section>
-                </q-card>
-              </template>
-            </CommonElementAnimation>
+            <div class="part1 w-50">
+              <q-card-section class="flex column gap-20">
+                <div class="text-subtitle2 text-weight-bold">Access</div>
+                <div class="text-h4 text-weight-medium">
+                  Stay Updated with Latest News
+                </div>
+                <div class="text-h6 text-weight-light">
+                  Get the latest updates on our companies.
+                </div>
+                <div class="learn-more flex items-center gap-10">
+                  <div class="text-h6 text-weight-bold">Learn More</div>
+                  <q-icon name="fa-solid fa-angle-right" size="20px" />
+                </div>
+              </q-card-section>
+            </div>
+            <div class="part2 w-50 full-height">
+              <q-img src="/images/i-1.webp" class="full-width full-height" />
+            </div>
+          </div>
+        </q-card>
+        <q-card :bordered="true" class="w-25 custom-card my-card">
+          <div class="q-px-md">
+            <q-card-section class="flex column gap-20">
+              <div class="text-subtitle2 text-weight-bold">Engage</div>
+              <div class="text-h4 text-weight-medium">Company Features</div>
+              <div class="text-h6 text-weight-light">
+                Discover unique solutions from each of our companies.
+              </div>
+              <div class="learn-more flex items-center gap-10">
+                <div class="text-h6 text-weight-bold">Learn More</div>
+                <q-icon name="fa-solid fa-angle-right" size="20px" />
+              </div>
+            </q-card-section>
+          </div>
+          <q-img src="/images/i-2.webp" class="full-width custom-img" />
+        </q-card>
+        <q-card :bordered="true" class="w-25 custom-card my-card">
+          <div class="q-px-md">
+            <q-card-section class="flex column gap-20">
+              <div class="text-subtitle2 text-weight-bold">Innovate</div>
+              <div class="text-h4 text-weight-medium">
+                User-Friendly Navigation
+              </div>
+              <div class="text-h6 text-weight-light">
+                Easily find what you need on our platform.
+              </div>
+              <div class="learn-more flex items-center gap-10">
+                <div class="text-h6 text-weight-bold">Sign Up</div>
+                <q-icon name="fa-solid fa-angle-right" size="20px" />
+              </div>
+            </q-card-section>
+          </div>
+          <q-img src="/images/i-3.webp" class="full-width custom-img" />
+        </q-card>
+      </div>
+    </div>
+    <div
+      class="container-2 space-between-each-sections flex justify-between items-center no-wrap gap-90"
+    >
+      <div class="part1 flex column gap-20 w-50">
+        <div class="text-subtitle1 text-weight-bolder">Innovative</div>
+        <div class="text-h2 no-margin text-weight-medium">
+          Revolutionizing Laboratory Management for Efficiency
+        </div>
+        <div class="text-body1 text-weight-regular w-80">
+          Our first company specializes in cutting-edge laboratory management
+          systems that streamline operations and enhance productivity. With
+          user-friendly interfaces and robust data management features, we
+          empower labs to operate more efficiently than ever.
+        </div>
+        <div class="learn-more flex items-center gap-10">
+          <q-btn push no-caps padding="10px 20px">Learn More</q-btn>
+          <div class="explore flex items-center gap-10">
+            <span class="text-subtitle1">Explore</span>
+            <q-icon name="fa-solid fa-angle-right" />
           </div>
         </div>
       </div>
+      <div class="part2 w-50">
+        <q-img
+          src="/images/i-4.webp"
+          class="rounded-10"
+          width="650px"
+          height="650px"
+        />
+      </div>
     </div>
-    <div class="container-4 q-my-xl q-py-xl">
-      <div class="wrapper">
-        <div class="flex justify-between items-center z-index no-wrap con-4">
-          <Motion preset="slideVisibleOnceLeft" duration="800" class="res-flex">
-            <div class="text">
-              <h6
-                class="custom-h6"
-                style="color: white"
-                :dir="directionOfElement(local)"
-              >
-                {{ loremTexts[0] }}
-              </h6>
-            </div>
-          </Motion>
-          <Motion
-            preset="slideVisibleOnceBottom"
-            duration="800"
-            class="res-flex"
-          >
-            <div class="img-motion">
-              <q-img
-                loading="lazy"
-                src="/images/doctor-equipment.png"
-                class="custom-img"
-                fetchpriority="high"
-              />
-            </div>
-          </Motion>
+    <div
+      class="container-3 space-between-each-sections flex justify-between items-center no-wrap gap-90"
+    >
+      <div class="part1 flex column gap-20 w-50">
+        <div class="text-h2 no-margin text-weight-medium">
+          Leading Provider of Innovative Laboratory Equipment and Solutions
         </div>
+        <div class="text-body1 text-weight-regular w-80">
+          Our company excels in the manufacturing and importing of high-quality
+          laboratory equipment tailored to meet diverse research needs. With a
+          commitment to innovation and reliability, we offer a wide range of
+          products designed to enhance laboratory efficiency and accuracy.
+        </div>
+      </div>
+      <div class="part2 w-50">
+        <q-img
+          src="/images/i-5.webp"
+          class="rounded-10"
+          width="650px"
+          height="650px"
+        />
+      </div>
+    </div>
+    <div
+      class="container-4 space-between-each-sections flex justify-between items-center no-wrap gap-90"
+    >
+      <div class="part1 flex column gap-30 w-50">
+        <div class="text-h2 no-margin text-weight-medium">
+          Transforming Healthcare: Virtual Reality Solutions for Modern Medical
+          Needs
+        </div>
+        <div class="text-body1 text-weight-regular w-80">
+          Our innovative approach integrates virtual reality technology into
+          healthcare, enabling patients to engage with their medical needs from
+          the comfort of home. Experience seamless online consultations and task
+          completion as if you were physically present at the doctor's office.
+        </div>
+        <div class="virtual-home flex no-wrap items-center gap-10">
+          <div class="part1 flex column gap-20">
+            <q-icon name="fa-solid fa-suitcase-medical" size="40px" />
+            <div class="text-h6 text-weight-bold">Virtual Consultations</div>
+            <div class="text-body1 text-weight-regular">
+              Connect with healthcare professionals through immersive virtual
+              experiences tailored to your needs.
+            </div>
+          </div>
+          <div class="part2 flex column gap-20">
+            <q-icon name="fa-solid fa-house-medical" size="40px" />
+            <div class="text-h6 text-weight-bold">Virtual Consultations</div>
+            <div class="text-body1 text-weight-regular">
+              Connect with healthcare professionals through immersive virtual
+              experiences tailored to your needs.
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="part2 w-50">
+        <q-img
+          src="/images/i-1.webp"
+          class="rounded-10"
+          width="650px"
+          height="650px"
+        />
       </div>
     </div>
     <div class="container-5 q-my-xl q-py-xl">
@@ -331,6 +403,11 @@ const images = [
   { image: "/images/i-3.webp", title: "swipe3" },
   { image: "/images/i-4.webp", title: "swipe4" },
   { image: "/images/i-5.webp", title: "swipe5" },
+  { image: "/images/i-1.webp", title: "swipe1" },
+  { image: "/images/i-2.webp", title: "swipe2" },
+  { image: "/images/i-3.webp", title: "swipe3" },
+  { image: "/images/i-4.webp", title: "swipe4" },
+  { image: "/images/i-5.webp", title: "swipe5" },
 ];
 
 const contents = [
@@ -386,52 +463,34 @@ const container1Attrs = {
 .info {
   width: 50%;
 }
-.container-2 {
-  position: relative;
-  background-image: url("/public/images/i-1.webp");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
+.hero-section {
+  height: 100vh;
+  overflow: hidden;
 }
-.custoom-img {
-  width: 100px;
-  height: 100px;
-  border-radius: 50%;
-}
-.container-3 :is(.symbol-1, .symbol-2) {
-  width: 40%;
-}
-.container-3 p {
-  line-height: 40px;
-}
-.c-text {
+.hero-section :is(.introduction, .img) {
   width: 50%;
+  overflow: hidden;
 }
-.container-4 {
-  background-image: url("/public/images/i-2.webp");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
+.hero-section .introduction .part2 {
+  width: 85%;
+}
+.hero-section .introduction .part2 p {
+  line-height: 30px;
+}
+.hero-section .hero-img {
+  width: 300px;
+  height: 350px;
+}
+.how-it-works-section .custom-card {
+  height: 500px;
   position: relative;
 }
-.container-4::after {
-  content: "";
+.how-it-works-section .custom-img {
   position: absolute;
-  top: 0;
+  bottom: 0;
   left: 0;
   width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.3);
-  z-index: 1;
-}
-.container-4 .img-motion {
-  animation: up-down 2s ease-in-out infinite;
-}
-.container-4 .img-motion .custom-img {
-  width: 400px;
-  height: 400px;
+  height: 40%;
 }
 @keyframes up-down {
   0% {
@@ -471,10 +530,10 @@ const container1Attrs = {
   line-height: 1.6;
 }
 
-.container-5 .my-card {
+/* .container-5 .my-card {
   width: 100%;
   height: 100%;
-}
+} */
 
 .container-6 {
   position: relative;
