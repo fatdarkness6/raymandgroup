@@ -2,28 +2,38 @@
   <div class="wrapper">
     <div class="hero-section flex q-mt-xl">
       <div class="introduction space-between-each-sections flex column gap-20">
-        <div class="part1">
-          <h1 class="no-margin text-weight-medium">
-            Explore Innovative Solutions for Laboratory Management
-          </h1>
-        </div>
-        <div class="part2">
-          <p class="text-body1 text-weight-regular">
-            Welcome to our platform, where we showcase three pioneering
-            companies in laboratory management, equipment manufacturing, and
-            virtual healthcare solutions. Discover how each company is
-            transforming the industry with cutting-edge technology and
-            exceptional services.
-          </p>
-        </div>
-        <div class="part3 flex items-center gap-10">
-          <q-btn push color="primary" no-caps padding="10px 20px"
-            >Learn More</q-btn
-          >
-          <q-btn push no-caps padding="10px 20px">Sign Up</q-btn>
-        </div>
+        <MotionGroup>
+          <Motion delay="0" preset="slideVisibleOnceTop" duration="600">
+            <div class="part1">
+              <h1 class="no-margin text-weight-medium">
+                Explore Innovative Solutions for Laboratory Management
+              </h1>
+            </div>
+          </Motion>
+          <Motion delay="200" preset="slideVisibleOnceLeft" duration="600">
+            <div class="part2">
+              <p class="text-body1 text-weight-regular">
+                Welcome to our platform, where we showcase three pioneering
+                companies in laboratory management, equipment manufacturing, and
+                virtual healthcare solutions. Discover how each company is
+                transforming the industry with cutting-edge technology and
+                exceptional services.
+              </p>
+            </div>
+          </Motion>
+          <Motion delay="400" preset="slideVisibleOnceLeft" duration="600">
+            <div class="part3 flex items-center gap-10">
+              <q-btn push color="primary" no-caps padding="10px 20px"
+                >Learn More</q-btn
+              >
+              <q-btn push no-caps padding="10px 20px">Sign Up</q-btn>
+            </div>
+          </Motion>
+        </MotionGroup>
       </div>
-      <div class="img flex justify-center items-center gap-20 overflow-hidden">
+      <div
+        class="img flex justify-center items-center gap-20 overflow-hidden animation-img"
+      >
         <div
           class="part1 flex column justify-center items-center gap-15 scroll-animation"
         >
@@ -50,350 +60,420 @@
       <div
         class="introduction flex column justify-center items-center q-my-xl gap-20"
       >
-        <div class="text-subtitle1 text-weight-bolder">Explore</div>
-        <div class="text-h2 text-weight-medium">
-          Discover Our Three Companies
-        </div>
-        <div class="text-body1 text-weight-medium">
-          Navigate easily to learn about our offerings.
-        </div>
+        <MotionGroup preset="slideVisibleOnceTop">
+          <Motion delay="0" duration="600">
+            <div class="text-subtitle1 text-weight-bolder">Explore</div>
+          </Motion>
+          <Motion delay="200" duration="600">
+            <div class="text-h2 text-weight-medium">
+              Discover Our Three Companies
+            </div>
+          </Motion>
+          <Motion delay="400" duration="600">
+            <div class="text-body1 text-weight-medium">
+              Navigate easily to learn about our offerings.
+            </div>
+          </Motion>
+        </MotionGroup>
       </div>
       <div
         class="about-3-companies flex justify-center items-center gap-20 no-wrap"
       >
-        <q-card class="custom-card w-45 q-pl-md my-card" :bordered="true">
-          <div
-            class="flex justify-between items-center gap-20 no-wrap full-height"
-          >
-            <div class="part1 w-50">
-              <q-card-section class="flex column gap-20">
-                <div class="text-subtitle2 text-weight-bold">Access</div>
-                <div class="text-h4 text-weight-medium">
-                  Stay Updated with Latest News
+        <MotionGroup preset="slideVisibleOnceLeft" duration="600">
+          <Motion delay="0" class="w-45">
+            <q-card class="custom-card q-pl-md my-card" :bordered="true">
+              <div
+                class="flex justify-between items-center gap-20 no-wrap full-height"
+              >
+                <div class="part1 w-50">
+                  <q-card-section class="flex column gap-20">
+                    <div class="text-subtitle2 text-weight-bold">Access</div>
+                    <div class="text-h4 text-weight-medium">
+                      Stay Updated with Latest News
+                    </div>
+                    <div class="text-h6 text-weight-light">
+                      Get the latest updates on our companies.
+                    </div>
+                    <div class="learn-more flex items-center gap-10">
+                      <div class="text-h6 text-weight-bold">Learn More</div>
+                      <q-icon name="fa-solid fa-angle-right" size="20px" />
+                    </div>
+                  </q-card-section>
                 </div>
-                <div class="text-h6 text-weight-light">
-                  Get the latest updates on our companies.
-                </div>
-                <div class="learn-more flex items-center gap-10">
-                  <div class="text-h6 text-weight-bold">Learn More</div>
-                  <q-icon name="fa-solid fa-angle-right" size="20px" />
-                </div>
-              </q-card-section>
-            </div>
-            <div class="part2 w-50 full-height">
-              <q-img src="/images/i-1.webp" class="full-width full-height" />
-            </div>
-          </div>
-        </q-card>
-        <q-card :bordered="true" class="w-25 custom-card my-card">
-          <div class="q-px-md">
-            <q-card-section class="flex column gap-20">
-              <div class="text-subtitle2 text-weight-bold">Engage</div>
-              <div class="text-h4 text-weight-medium">Company Features</div>
-              <div class="text-h6 text-weight-light">
-                Discover unique solutions from each of our companies.
+                <q-img src="/images/i-1.webp" class="custom-img2" />
               </div>
-              <div class="learn-more flex items-center gap-10">
-                <div class="text-h6 text-weight-bold">Learn More</div>
-                <q-icon name="fa-solid fa-angle-right" size="20px" />
+            </q-card>
+          </Motion>
+          <Motion delay="200" class="w-25">
+            <q-card :bordered="true" class="custom-card my-card">
+              <div class="q-px-md">
+                <q-card-section class="flex column gap-20">
+                  <div class="text-subtitle2 text-weight-bold">Engage</div>
+                  <div class="text-h4 text-weight-medium">Company Features</div>
+                  <div class="text-h6 text-weight-light">
+                    Discover unique solutions from each of our companies.
+                  </div>
+                  <div class="learn-more flex items-center gap-10">
+                    <div class="text-h6 text-weight-bold">Learn More</div>
+                    <q-icon name="fa-solid fa-angle-right" size="20px" />
+                  </div>
+                </q-card-section>
               </div>
-            </q-card-section>
-          </div>
-          <q-img src="/images/i-2.webp" class="full-width custom-img" />
-        </q-card>
-        <q-card :bordered="true" class="w-25 custom-card my-card">
-          <div class="q-px-md">
-            <q-card-section class="flex column gap-20">
-              <div class="text-subtitle2 text-weight-bold">Innovate</div>
-              <div class="text-h4 text-weight-medium">
-                User-Friendly Navigation
+              <q-img src="/images/i-2.webp" class="full-width custom-img" />
+            </q-card>
+          </Motion>
+          <Motion delay="400" class="w-25">
+            <q-card :bordered="true" class="custom-card my-card">
+              <div class="q-px-md">
+                <q-card-section class="flex column gap-20">
+                  <div class="text-subtitle2 text-weight-bold">Innovate</div>
+                  <div class="text-h4 text-weight-medium">
+                    User-Friendly Navigation
+                  </div>
+                  <div class="text-h6 text-weight-light">
+                    Easily find what you need on our platform.
+                  </div>
+                  <div class="learn-more flex items-center gap-10">
+                    <div class="text-h6 text-weight-bold">Sign Up</div>
+                    <q-icon name="fa-solid fa-angle-right" size="20px" />
+                  </div>
+                </q-card-section>
               </div>
-              <div class="text-h6 text-weight-light">
-                Easily find what you need on our platform.
-              </div>
-              <div class="learn-more flex items-center gap-10">
-                <div class="text-h6 text-weight-bold">Sign Up</div>
-                <q-icon name="fa-solid fa-angle-right" size="20px" />
-              </div>
-            </q-card-section>
-          </div>
-          <q-img src="/images/i-3.webp" class="full-width custom-img" />
-        </q-card>
+              <q-img src="/images/i-3.webp" class="full-width custom-img" />
+            </q-card>
+          </Motion>
+        </MotionGroup>
       </div>
     </div>
     <div
       class="container-2 space-between-each-sections flex justify-between items-center no-wrap gap-90"
     >
       <div class="part1 flex column gap-20 w-50">
-        <div class="text-subtitle1 text-weight-bolder">Innovative</div>
-        <div class="text-h2 no-margin text-weight-medium">
-          Revolutionizing Laboratory Management for Efficiency
-        </div>
-        <div class="text-body1 text-weight-regular w-80">
-          Our first company specializes in cutting-edge laboratory management
-          systems that streamline operations and enhance productivity. With
-          user-friendly interfaces and robust data management features, we
-          empower labs to operate more efficiently than ever.
-        </div>
-        <div class="learn-more flex items-center gap-10">
-          <q-btn push no-caps padding="10px 20px">Learn More</q-btn>
-          <div class="explore flex items-center gap-10">
-            <span class="text-subtitle1">Explore</span>
-            <q-icon name="fa-solid fa-angle-right" />
-          </div>
-        </div>
+        <MotionGroup preset="slideVisibleOnceLeft" duration="600">
+          <Motion delay="0">
+            <div class="text-subtitle1 text-weight-bolder">Innovative</div>
+          </Motion>
+          <Motion delay="200">
+            <div class="text-h2 no-margin text-weight-medium">
+              Revolutionizing Laboratory Management for Efficiency
+            </div>
+          </Motion>
+          <Motion delay="400">
+            <div class="text-body1 text-weight-regular w-80">
+              Our first company specializes in cutting-edge laboratory
+              management systems that streamline operations and enhance
+              productivity. With user-friendly interfaces and robust data
+              management features, we empower labs to operate more efficiently
+              than ever.
+            </div>
+          </Motion>
+          <Motion delay="600">
+            <div class="learn-more flex items-center gap-10">
+              <q-btn push no-caps padding="10px 20px">Learn More</q-btn>
+              <div class="explore flex items-center gap-10">
+                <span class="text-subtitle1">Explore</span>
+                <q-icon name="fa-solid fa-angle-right" />
+              </div>
+            </div>
+          </Motion>
+        </MotionGroup>
       </div>
       <div class="part2 w-50">
-        <q-img
-          src="/images/i-4.webp"
-          class="rounded-10"
-          width="650px"
-          height="650px"
-        />
+        <Motion preset="popVisibleOnce" duration="1000">
+          <q-img
+            src="/images/i-4.webp"
+            class="rounded-10"
+            width="650px"
+            height="650px"
+          />
+        </Motion>
       </div>
     </div>
     <div
       class="container-3 space-between-each-sections flex justify-between items-center no-wrap gap-90"
     >
       <div class="part1 flex column gap-20 w-50">
-        <div class="text-h2 no-margin text-weight-medium">
-          Leading Provider of Innovative Laboratory Equipment and Solutions
-        </div>
-        <div class="text-body1 text-weight-regular w-80">
-          Our company excels in the manufacturing and importing of high-quality
-          laboratory equipment tailored to meet diverse research needs. With a
-          commitment to innovation and reliability, we offer a wide range of
-          products designed to enhance laboratory efficiency and accuracy.
-        </div>
+        <MotionGroup preset="slideVisibleOnceLeft" duration="600">
+          <Motion>
+            <div class="text-h2 no-margin text-weight-medium">
+              Leading Provider of Innovative Laboratory Equipment and Solutions
+            </div>
+          </Motion>
+          <Motion delay="200">
+            <div class="text-body1 text-weight-regular w-80">
+              Our company excels in the manufacturing and importing of
+              high-quality laboratory equipment tailored to meet diverse
+              research needs. With a commitment to innovation and reliability,
+              we offer a wide range of products designed to enhance laboratory
+              efficiency and accuracy.
+            </div>
+          </Motion>
+        </MotionGroup>
       </div>
       <div class="part2 w-50">
-        <q-img
-          src="/images/i-5.webp"
-          class="rounded-10"
-          width="650px"
-          height="650px"
-        />
+        <Motion preset="popVisibleOnce" duration="800">
+          <q-img
+            src="/images/i-5.webp"
+            class="rounded-10"
+            width="650px"
+            height="650px"
+          />
+        </Motion>
       </div>
     </div>
     <div
       class="container-4 space-between-each-sections flex justify-between items-center no-wrap gap-90"
     >
       <div class="part1 flex column gap-30 w-50">
-        <div class="text-h2 no-margin text-weight-medium">
-          Transforming Healthcare: Virtual Reality Solutions for Modern Medical
-          Needs
-        </div>
-        <div class="text-body1 text-weight-regular w-80">
-          Our innovative approach integrates virtual reality technology into
-          healthcare, enabling patients to engage with their medical needs from
-          the comfort of home. Experience seamless online consultations and task
-          completion as if you were physically present at the doctor's office.
-        </div>
+        <MotionGroup preset="slideVisibleOnceLeft" duration="600">
+          <Motion>
+            <div class="text-h2 no-margin text-weight-medium">
+              Transforming Healthcare: Virtual Reality Solutions for Modern
+              Medical Needs
+            </div>
+          </Motion>
+          <Motion delay="200">
+            <div class="text-body1 text-weight-regular w-80">
+              Our innovative approach integrates virtual reality technology into
+              healthcare, enabling patients to engage with their medical needs
+              from the comfort of home. Experience seamless online consultations
+              and task completion as if you were physically present at the
+              doctor's office.
+            </div>
+          </Motion>
+        </MotionGroup>
         <div class="virtual-home flex no-wrap items-center gap-10">
-          <div class="part1 flex column gap-20">
-            <q-icon name="fa-solid fa-suitcase-medical" size="40px" />
-            <div class="text-h6 text-weight-bold">Virtual Consultations</div>
-            <div class="text-body1 text-weight-regular">
-              Connect with healthcare professionals through immersive virtual
-              experiences tailored to your needs.
-            </div>
-          </div>
-          <div class="part2 flex column gap-20">
-            <q-icon name="fa-solid fa-house-medical" size="40px" />
-            <div class="text-h6 text-weight-bold">Virtual Consultations</div>
-            <div class="text-body1 text-weight-regular">
-              Connect with healthcare professionals through immersive virtual
-              experiences tailored to your needs.
-            </div>
-          </div>
+          <MotionGroup preset="slideVisibleOnceLeft" duration="600">
+            <Motion delay="400">
+              <div class="part1 flex column gap-20">
+                <q-icon name="fa-solid fa-suitcase-medical" size="40px" />
+                <div class="text-h6 text-weight-bold">
+                  Virtual Consultations
+                </div>
+                <div class="text-body1 text-weight-regular">
+                  Connect with healthcare professionals through immersive
+                  virtual experiences tailored to your needs.
+                </div>
+              </div>
+            </Motion>
+            <Motion delay="600">
+              <div class="part2 flex column gap-20">
+                <q-icon name="fa-solid fa-house-medical" size="40px" />
+                <div class="text-h6 text-weight-bold">
+                  Virtual Consultations
+                </div>
+                <div class="text-body1 text-weight-regular">
+                  Connect with healthcare professionals through immersive
+                  virtual experiences tailored to your needs.
+                </div>
+              </div>
+            </Motion>
+          </MotionGroup>
         </div>
       </div>
       <div class="part2 w-50">
-        <q-img
-          src="/images/i-1.webp"
-          class="rounded-10"
-          width="650px"
-          height="650px"
-        />
+        <Motion preset="popVisibleOnce" duration="1200">
+          <q-img
+            src="/images/i-1.webp"
+            class="rounded-10"
+            width="650px"
+            height="650px"
+          />
+        </Motion>
       </div>
     </div>
-    <div class="container-5 q-my-xl q-py-xl">
-      <div class="wrapper-2">
-        <div
-          class="flex justify-between items-center gap-20 no-wrap z-index father"
-        >
-          <CommonElementAnimation
-            duration="2000"
-            preset="slideVisibleOnceLeft"
-            :numberOfLoops="3"
-            :delay="300"
-            motionClass="size"
+    <div class="container-5 space-between-each-sections q-py-xl">
+      <Motion preset="popVisibleOnce" duration="600">
+        <q-card class="q-pl-md my-card custom-card" :bordered="true">
+          <div
+            class="flex justify-between items-center gap-20 no-wrap full-height"
           >
-            <template v-slot="{ i }">
-              <q-card class="my-card" :bordered="true">
-                <q-img
-                  loading="lazy"
-                  :src="`/images/i-${i + 2}.webp`"
-                  fetchpriority="high"
-                />
-                <q-card-section>
-                  <div class="text-h6">Our Changing Planet</div>
-                  <div class="text-subtitle2">by John Doe</div>
-                </q-card-section>
-                <q-card-section>
-                  <div>{{ loremTexts[0] }}</div>
-                </q-card-section>
-              </q-card>
-            </template>
-          </CommonElementAnimation>
-        </div>
-      </div>
+            <div class="part1 w-50">
+              <q-card-section class="flex column gap-20">
+                <MotionGroup preset="slideVisibleOnceLeft" duration="600">
+                  <Motion delay="400">
+                    <div class="text-h3 text-weight-medium">
+                      Discover Our Innovative Solutions
+                    </div>
+                  </Motion>
+                  <Motion delay="600">
+                    <div class="text-subtitle1 text-weight-regular w-70">
+                      Explore our companies and stay updated with the latest
+                      advancements in laboratory and healthcare technology.
+                    </div>
+                  </Motion>
+                </MotionGroup>
+              </q-card-section>
+              <q-card-section class="part3 flex items-center gap-10">
+                <Motion delay="800" preset="rollVisibleOnceLeft" duration="600">
+                  <q-btn push color="primary" no-caps padding="10px 20px"
+                    >Learn More</q-btn
+                  >
+                </Motion>
+                <Motion
+                  delay="1000"
+                  preset="rollVisibleOnceRight"
+                  duration="600"
+                >
+                  <q-btn push no-caps padding="10px 20px">Sign Up</q-btn>
+                </Motion>
+              </q-card-section>
+            </div>
+            <q-img src="/images/i-1.webp" class="custom-img2 w-50" />
+          </div>
+        </q-card>
+      </Motion>
     </div>
     <div class="container-6 q-my-xl q-py-xl">
-      <div class="animation">
-        <div class="bg"></div>
+      <!-- <div class="animation"> -->
+      <!-- <div class="bg"></div>
         <div class="bg bg2"></div>
         <div class="bg bg3"></div>
-        <div class="content"></div>
-      </div>
-      <div class="wrapper-2">
-        <div class="introduction z-index text-center text-white">
-          <Motion preset="slideVisibleOnceTop" duration="800">
-            <h2 class="custom-h2">Our new Products</h2>
+        <div class="content"></div> -->
+      <!-- </div> -->
+      <div
+        class="introduction flex column justify-center items-center q-my-xl q-py-xl gap-20"
+      >
+        <MotionGroup preset="slideVisibleOnceTop" duration="600">
+          <Motion>
+            <div class="text-subtitle1 text-weight-bolder">Blog</div>
           </Motion>
-          <div class="products">
-            <CommonElementAnimation
-              duration="600"
-              :preset="['slideVisibleOnceLeft', 'slideVisibleOnceRight']"
-              :numberOfLoops="5"
-              :delay="300"
-              :motion-class="
-                (i) =>
-                  detectEvenNumber(i)
-                    ? 'flex justify-start'
-                    : 'flex justify-end'
-              "
-            >
-              <template v-slot="{ i }">
-                <div
-                  class="flex items-center justify-between res"
-                  :class="detectEvenNumber(i) ? '' : 'row reverse'"
-                >
-                  <q-card class="my-card" :bordered="true">
-                    <q-img
-                      loading="lazy"
-                      :src="`/images/i-${i}.webp`"
-                      fetchpriority="high"
-                    />
-                    <q-card-section>
-                      <div class="text-h6">Our Changing Planet</div>
-                      <div class="text-subtitle2">by John Doe</div>
-                    </q-card-section>
-                    <q-card-section>
-                      <div>{{ loremTexts[0] }}</div>
-                    </q-card-section>
-                  </q-card>
-                  <div class="text-h3 text-white">Random things</div>
-                </div>
-              </template>
-            </CommonElementAnimation>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="container-7 q-my-xl q-py-xl">
-      <div class="wrapper">
-        <div class="introduction z-index text-black text-center">
-          <Motion preset="slideVisibleOnceTop" duration="800">
-            <div class="text-h2">Our plan for future</div>
+          <Motion delay="200">
+            <div class="text-h2 text-weight-medium">Latest Company Updates</div>
           </Motion>
-          <Motion preset="popVisibleOnce" duration="800">
-            <div class="swiper-container q-mt-xl">
-              <CommonSwiperComponent
-                :images="images"
-                :swiperAttrs="mainAttrs"
-                slideClass="main-swiper q-mb-sm"
-                isMainWithThumbs
-                :linkedThumbsSwiper="thumbsSwiper"
-              >
-                <template v-slot="{ image, title }">
-                  <div class="slide">
-                    <q-img
-                      loading="lazy"
-                      :src="image"
-                      class="slide-image"
-                      fetchpriority="high"
-                    />
-                    <div class="text-overlay"></div>
-                    <h5 class="slide-title text-h4">{{ title }}</h5>
-                  </div>
-                </template>
-              </CommonSwiperComponent>
-              <CommonSwiperComponent
-                :images="images"
-                :swiperAttrs="thumbAttrs"
-                slideClass="secondary-swiper "
-                @swiper="setThumbsSwiper"
-              >
-                <template v-slot="{ image }">
-                  <div class="slide swiper-7">
-                    <q-img
-                      loading="lazy"
-                      :src="image"
-                      class="slide-image"
-                      fetchpriority="high"
-                    />
-                  </div>
-                </template>
-              </CommonSwiperComponent>
+          <Motion delay="400">
+            <div class="text-body1 text-weight-medium">
+              Stay informed with our latest news and insights.
             </div>
           </Motion>
-        </div>
+        </MotionGroup>
+      </div>
+      <div class="flex items-center gap-20 justify-center no-wrap">
+        <MotionGroup preset="slideVisibleOnceLeft" duration="600">
+          <Motion delay="200" class="w-33">
+            <q-card :bordered="true" class="my-card">
+              <q-img src="/images/i-3.webp" class="full-width" />
+              <div class="q-px-md">
+                <q-card-section class="flex column gap-20 q-mt-lg">
+                  <div class="text-subtitle2 text-weight-bold">News</div>
+                  <div class="text-h4 text-weight-medium">
+                    Innovations in Laboratory Management Systems
+                  </div>
+                  <div class="text-h6 text-weight-light">
+                    Discover how our systems enhance lab efficiency and
+                    accuracy.
+                  </div>
+                  <div class="reporter flex items-center gap-10">
+                    <div class="part1">
+                      <q-img
+                        src="/images/i-3.webp"
+                        style="width: 50px; height: 50px; border-radius: 50%"
+                      />
+                    </div>
+                    <div class="part2 flex column">
+                      <div class="text-subtitle1 text-weight-bold">
+                        John Doe
+                      </div>
+                      <div class="time flex items-center gap-10">
+                        <div class="text-subtitle2">11 Jan 2022</div>
+                        <span>•</span>
+                        <div class="text-subtitle2">5 min read</div>
+                      </div>
+                    </div>
+                  </div>
+                </q-card-section>
+              </div>
+            </q-card>
+          </Motion>
+          <Motion delay="400" class="w-33">
+            <q-card :bordered="true" class="my-card">
+              <q-img src="/images/i-2.webp" class="full-width" />
+              <div class="q-px-md">
+                <q-card-section class="flex column gap-20 q-mt-lg">
+                  <div class="text-subtitle2 text-weight-bold">Update</div>
+                  <div class="text-h4 text-weight-medium">
+                    New Laboratory Equipment Launch
+                  </div>
+                  <div class="text-h6 text-weight-light">
+                    Explore our latest range of cutting-edge lab equipment.
+                  </div>
+                  <div class="reporter flex items-center gap-10">
+                    <div class="part1">
+                      <q-img
+                        src="/images/i-3.webp"
+                        style="width: 50px; height: 50px; border-radius: 50%"
+                      />
+                    </div>
+                    <div class="part2 flex column">
+                      <div class="text-subtitle1 text-weight-bold">
+                        John Doe
+                      </div>
+                      <div class="time flex items-center gap-10">
+                        <div class="text-subtitle2">11 Jan 2022</div>
+                        <span>•</span>
+                        <div class="text-subtitle2">5 min read</div>
+                      </div>
+                    </div>
+                  </div>
+                </q-card-section>
+              </div>
+            </q-card>
+          </Motion>
+          <Motion delay="600" class="w-33">
+            <q-card :bordered="true" class="my-card">
+              <q-img src="/images/i-1.webp" class="full-width" />
+              <div class="q-px-md">
+                <q-card-section class="flex column gap-20 q-mt-lg">
+                  <div class="text-subtitle2 text-weight-bold">
+                    Announcement
+                  </div>
+                  <div class="text-h4 text-weight-medium">
+                    Virtual Reality in Healthcare
+                  </div>
+                  <div class="text-h6 text-weight-light">
+                    Transforming patient care with innovative virtual reality
+                    solutions.
+                  </div>
+                  <div class="reporter flex items-center gap-10">
+                    <div class="part1">
+                      <q-img
+                        src="/images/i-3.webp"
+                        style="width: 50px; height: 50px; border-radius: 50%"
+                      />
+                    </div>
+                    <div class="part2 flex column">
+                      <div class="text-subtitle1 text-weight-bold">
+                        John Doe
+                      </div>
+                      <div class="time flex items-center gap-10">
+                        <div class="text-subtitle2">11 Jan 2022</div>
+                        <span>•</span>
+                        <div class="text-subtitle2">5 min read</div>
+                      </div>
+                    </div>
+                  </div>
+                </q-card-section>
+              </div>
+            </q-card>
+          </Motion>
+        </MotionGroup>
+      </div>
+      <div class="full-width flex justify-center items-center">
+        <Motion duration="600" preset="slideVisibleOnceBottom">
+          <q-btn push no-caps padding="15px 30px" class="q-mt-xl flex">
+            View all
+          </q-btn>
+        </Motion>
       </div>
     </div>
+    <div class="container-7 q-my-xl q-py-xl"></div>
   </div>
 </template>
 <script setup lang="ts">
-import {
-  Autoplay,
-  Pagination,
-  EffectCoverflow,
-  FreeMode,
-  Navigation,
-  Thumbs,
-} from "swiper/modules";
-const modules = ref({
-  heroSwiper: [Autoplay, Pagination],
-  container1Swiper: [EffectCoverflow, Pagination],
-});
+import { MotionGroup } from "#components";
 const { locale, t } = useI18n();
 
 const loremTexts = [t("lorem")];
-
-const thumbsSwiper = ref(null);
-
-const setThumbsSwiper = (swiper: any) => {
-  thumbsSwiper.value = swiper;
-};
-
-const mainAttrs = {
-  modules: [FreeMode, Navigation, Thumbs, Autoplay],
-  navigation: true,
-  loop: true,
-  autoplay: {
-    delay: 5000,
-    disableOnInteraction: false,
-  },
-  spaceBetween: 10,
-};
-
-const thumbAttrs = {
-  modules: [FreeMode, Navigation, Thumbs, Autoplay],
-  slidesPerView: 4,
-  watchSlidesProgress: true,
-  spaceBetween: 10,
-  freeMode: true,
-};
 
 const local = locale.value;
 
@@ -409,62 +489,17 @@ const images = [
   { image: "/images/i-4.webp", title: "swipe4" },
   { image: "/images/i-5.webp", title: "swipe5" },
 ];
-
-const contents = [
-  {
-    title: "X-ray Machines",
-    description: "Advanced imaging technology with high precision output.",
-  },
-  {
-    title: "Surgical Tools",
-    description: "Designed for precision and durability during operations.",
-  },
-  {
-    title: "Patient Monitors",
-    description: "Real-time monitoring of critical patient vitals.",
-  },
-  {
-    title: "Patient dsdsdsds",
-    description: "Real-time monitoring of critical patient vitals.",
-  },
-];
-
-const heroSwiperAttrs = {
-  modules: modules.value.heroSwiper,
-  pagination: {
-    clickable: true,
-  },
-  loop: true,
-  autoplay: {
-    delay: 5000,
-    disableOnInteraction: false,
-  },
-  class: "hero-swiper",
-};
-const container1Attrs = {
-  effect: "coverflow",
-  grabCursor: true,
-  centeredSlides: true,
-  slidesPerView: "auto",
-  coverflowEffect: {
-    rotate: 50,
-    stretch: 0,
-    depth: 100,
-    modifier: 1,
-    slideShadows: true,
-  },
-  modules: modules.value.container1Swiper,
-  pagination: {
-    clickable: true,
-  },
-};
 </script>
 <style lang="css" scoped>
 .info {
   width: 50%;
 }
 .hero-section {
-  height: 100vh;
+  height: auto;
+  overflow: hidden;
+}
+.animation-img {
+  height: 900px;
   overflow: hidden;
 }
 .hero-section :is(.introduction, .img) {
@@ -491,6 +526,13 @@ const container1Attrs = {
   left: 0;
   width: 100%;
   height: 40%;
+}
+.how-it-works-section .custom-img2 {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 50%;
+  height: 100%;
 }
 @keyframes up-down {
   0% {
@@ -539,16 +581,6 @@ const container1Attrs = {
   position: relative;
   overflow: hidden;
 }
-.container-6::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: black;
-  opacity: 0.4;
-}
 .container-6 .bg {
   animation: slide 5s ease-in-out infinite alternate;
   background-image: linear-gradient(-60deg, #6c3 50%, #09f 50%);
@@ -577,10 +609,5 @@ const container1Attrs = {
   100% {
     transform: translateX(25%);
   }
-}
-
-.container-6 .my-card {
-  width: 40%;
-  color: black;
 }
 </style>
