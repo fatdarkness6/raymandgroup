@@ -3,9 +3,9 @@
     <div class="hero-section flex q-mt-xl">
       <div class="introduction space-between-each-sections flex column gap-20">
         <MotionGroup>
-          <Motion delay="0" preset="slideVisibleOnceTop" duration="600">
+          <Motion delay="0" preset="slideVisibleOnceLeft" duration="600">
             <div class="part1">
-              <h1 class="no-margin text-weight-medium">
+              <h1 :class="`no-margin text-weight-medium res-h1`">
                 Explore Innovative Solutions for Laboratory Management
               </h1>
             </div>
