@@ -53,8 +53,8 @@ body {
 .w-35 {
   width: 35%;
 }
-.w-33{
-  width: 33%;
+.w-32{
+  width: 32%;
 }
 .w-30 {
   width: 30%;
@@ -270,3 +270,15 @@ body {
 .hero-section   .scroll-animation-reverse:hover {
   animation-play-state: paused;
 }
+.hero-section .animation-img {
+  position: relative;
+}
+.hero-section .animation-img::after {
+    content:"" ;
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    height: 30%;
+    width: 100%;
+    background: linear-gradient(to bottom, transparent, #ffffff);
+  }
