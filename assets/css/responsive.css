@@ -45,11 +45,11 @@
     align-items: center;
     gap: 50px;
   }
-  .hero-section :is(.part1 , .part2):is(.scroll-animation , .scroll-animation-reverse) {
+  .hero-section :is(.part1 , .part2 , .part3):is(.scroll-animation , .scroll-animation-reverse) {
     flex-direction: row;
     flex-wrap: nowrap;
   }
-  .hero-section .part1.scroll-animation {
+  .hero-section :is(.part1 , .part3).scroll-animation {
     animation: scroll-animation 20s linear infinite;
     position: relative;
   }
@@ -82,11 +82,11 @@
 }
 .hero-section .animation-img {
   justify-content: unset !important;
-  height: 520px !important;
+  height: 490px !important;
 }
 .hero-section .hero-img {
-    width: 280px !important;
-    height: 240px !important;
+    width: 200px !important;
+    height: 150px !important;
 }
 .hero-section .scroll-animation:hover,
 .hero-section   .scroll-animation-reverse:hover {

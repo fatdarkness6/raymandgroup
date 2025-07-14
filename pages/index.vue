@@ -35,24 +35,30 @@
         class="img flex justify-center items-center gap-20 overflow-hidden animation-img"
       >
         <div
-          class="part1 flex column justify-center items-center gap-15 scroll-animation"
+          v-for="(_, index) in 3"
+          :class="`part${
+            index + 1
+          } flex column justify-center items-center gap-15 ${
+            detectEvenNumber(index)
+              ? 'scroll-animation'
+              : 'scroll-animation-reverse'
+          } `"
         >
-          <q-img
-            v-for="(item, index) in [...images, ...images]"
-            :key="'part1-' + index"
-            :src="item.image"
-            class="hero-img rounded-10"
-          />
-        </div>
-        <div
-          class="part2 flex column justify-center items-center gap-15 scroll-animation-reverse"
-        >
-          <q-img
-            v-for="(item, index) in [...images, ...images]"
-            :key="'part2-' + index"
-            :src="item.image"
-            class="hero-img rounded-10"
-          />
+          <div
+            class="infor rounded-10"
+            v-for="(items, index) in [...images, ...images]"
+          >
+            <q-img
+              :key="'part1-' + index"
+              :src="items.image"
+              class="hero-img rounded-10"
+            />
+            <div
+              class="text-h6 text-weight-medium ab-text-center text-white z-index"
+            >
+              {{ items.title }}
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -157,7 +163,7 @@
         </MotionGroup>
       </div>
     </div>
-    <div
+    <!-- <div
       class="container-2 space-between-each-sections flex justify-between items-center no-wrap gap-90"
     >
       <div class="part1 flex column gap-20 w-50">
@@ -292,8 +298,8 @@
           />
         </Motion>
       </div>
-    </div>
-    <div class="container-5 space-between-each-sections q-py-xl">
+    </div> -->
+    <!-- <div class="container-5 space-between-each-sections q-py-xl">
       <Motion preset="popVisibleOnce" duration="600">
         <q-card class="q-pa-md my-card custom-card" :bordered="true">
           <div class="full-height">
@@ -332,7 +338,7 @@
           </div>
         </q-card>
       </Motion>
-    </div>
+    </div> -->
     <div class="container-6 q-my-xl q-py-xl">
       <!-- <div class="animation"> -->
       <!-- <div class="bg"></div>
@@ -505,6 +511,20 @@ const images = [
 .info {
   width: 50%;
 }
+.infor {
+  position: relative;
+}
+.infor::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1;
+  border-radius: 10px;
+}
 .hero-section {
   height: auto;
   overflow: hidden;
@@ -524,8 +544,8 @@ const images = [
   line-height: 30px;
 }
 .hero-section .hero-img {
-  width: 300px;
-  height: 350px;
+  width: 200px;
+  height: 250px;
 }
 .how-it-works-section .custom-card {
   height: 500px;
