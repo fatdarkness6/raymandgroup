@@ -32,7 +32,7 @@
         </MotionGroup>
       </div>
       <div
-        class="img flex justify-center items-center gap-20 overflow-hidden animation-img"
+        class="img flex justify-center items-center gap-10 overflow-hidden animation-img"
       >
         <div
           v-for="(_, index) in 3"
@@ -62,28 +62,45 @@
         </div>
       </div>
     </div>
-    <div class="how-it-works-section space-between-each-sections">
+  </div>
+  <div class="how-it-works-section space-between-each-sections q-py-xl">
+    <div class="v-bg">
+      <video class="v-pc" autoplay muted loop playsinline>
+        <source src="/public/videos/background-video.mp4" type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
+      <video class="mobile-v" autoplay muted loop playsinline>
+        <source
+          src="/public/videos/background-video-mobile.mp4"
+          type="video/mp4"
+        />
+        Your browser does not support the video tag.
+      </video>
+    </div>
+    <div
+      class="introduction flex column justify-center items-center gap-20 q-mb-xl relative z-max"
+    >
+      <MotionGroup preset="slideVisibleOnceTop">
+        <Motion delay="0" duration="600">
+          <div class="text-subtitle1 text-weight-bolder text-white">
+            Explore
+          </div>
+        </Motion>
+        <Motion delay="200" duration="600">
+          <div class="text-h2 text-weight-medium res-h2 text-white">
+            Discover Our Three Companies
+          </div>
+        </Motion>
+        <Motion delay="400" duration="600">
+          <div class="text-body1 text-weight-medium text-white">
+            Navigate easily to learn about our offerings.
+          </div>
+        </Motion>
+      </MotionGroup>
+    </div>
+    <div class="">
       <div
-        class="introduction flex column justify-center items-center q-my-xl gap-20"
-      >
-        <MotionGroup preset="slideVisibleOnceTop">
-          <Motion delay="0" duration="600">
-            <div class="text-subtitle1 text-weight-bolder">Explore</div>
-          </Motion>
-          <Motion delay="200" duration="600">
-            <div class="text-h2 text-weight-medium res-h2">
-              Discover Our Three Companies
-            </div>
-          </Motion>
-          <Motion delay="400" duration="600">
-            <div class="text-body1 text-weight-medium">
-              Navigate easily to learn about our offerings.
-            </div>
-          </Motion>
-        </MotionGroup>
-      </div>
-      <div
-        class="about-3-companies flex justify-center items-center gap-20 no-wrap"
+        class="wrapper flex justify-center items-center gap-20 about-3-companies relative z-max no-wrap"
       >
         <MotionGroup preset="slideVisibleOnceLeft" duration="600">
           <Motion delay="0" class="w-45 about-1">
@@ -163,7 +180,8 @@
         </MotionGroup>
       </div>
     </div>
-    <!-- <div
+  </div>
+  <!-- <div
       class="container-2 space-between-each-sections flex justify-between items-center no-wrap gap-90"
     >
       <div class="part1 flex column gap-20 w-50">
@@ -299,7 +317,7 @@
         </Motion>
       </div>
     </div> -->
-    <!-- <div class="container-5 space-between-each-sections q-py-xl">
+  <!-- <div class="container-5 space-between-each-sections q-py-xl">
       <Motion preset="popVisibleOnce" duration="600">
         <q-card class="q-pa-md my-card custom-card" :bordered="true">
           <div class="full-height">
@@ -339,6 +357,7 @@
         </q-card>
       </Motion>
     </div> -->
+  <div class="wrapper">
     <div class="container-6 q-my-xl q-py-xl">
       <!-- <div class="animation"> -->
       <!-- <div class="bg"></div>
@@ -521,13 +540,14 @@ const images = [
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 0.3);
   z-index: 1;
   border-radius: 10px;
 }
 .hero-section {
   height: auto;
   overflow: hidden;
+  position: relative;
 }
 .animation-img {
   height: 900px;
@@ -546,6 +566,9 @@ const images = [
 .hero-section .hero-img {
   width: 200px;
   height: 250px;
+}
+.how-it-works-section {
+  position: relative;
 }
 .how-it-works-section .custom-card {
   height: 500px;
@@ -640,5 +663,20 @@ const images = [
   100% {
     transform: translateX(25%);
   }
+}
+
+.v-bg::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.3);
+  z-index: 1;
+  border-radius: 10px;
+}
+.mobile-v {
+  display: none;
 }
 </style>
