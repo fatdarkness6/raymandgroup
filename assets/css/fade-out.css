@@ -1,0 +1,16 @@
+.hero-section .animation-img {
+-webkit-mask-image: linear-gradient(180deg, transparent 0%, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 1) 70%, transparent 95%);
+
+  /* 👇 Only apply the gradient on the bottom 30% of the element */
+  /* mask-size: 100% 30%; */
+  -webkit-mask-size: 100% 100%;
+
+  mask-repeat: no-repeat;
+  -webkit-mask-repeat: no-repeat;
+
+  mask-position: bottom;
+  -webkit-mask-position: bottom;
+}
+.hero-section .animation-img .fade-out {
+  
+}

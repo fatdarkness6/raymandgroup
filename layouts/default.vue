@@ -100,10 +100,7 @@
         class="wrapper q-py-xl flex justify-between footer-content row reverse items-start"
       >
         <div class="submit-form flex column" style="width: 200px">
-          <q-form
-            @submit="submit"
-            class="flex justify-center column items-center q-form-m"
-          >
+          <q-form @submit="submit" class="flex justify-center column q-form-m">
             <q-input
               v-model="name"
               :label="$t('name&lastname')"
@@ -144,13 +141,15 @@
               :dark="true"
               class="full-width-res"
             />
-            <q-btn
-              type="submit"
-              :label="$t('submit')"
-              color="accent"
-              :loading="loading"
-              class="q-mt-sm custom-button"
-            />
+            <div class="btn full-width flex justify-center">
+              <q-btn
+                type="submit"
+                :label="$t('submit')"
+                color="accent"
+                :loading="loading"
+                class="q-mt-sm custom-button full-width"
+              />
+            </div>
           </q-form>
         </div>
         <div class="site-map flex column justify-center items-center">

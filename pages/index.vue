@@ -1,4 +1,7 @@
 <template>
+  <ul class="box-area">
+    <li v-for="items in 10" :key="items"></li>
+  </ul>
   <div class="wrapper">
     <div class="hero-section flex q-mt-xl">
       <div class="introduction space-between-each-sections flex column gap-20">
@@ -32,8 +35,9 @@
         </MotionGroup>
       </div>
       <div
-        class="img flex justify-center items-center gap-10 overflow-hidden animation-img"
+        class="img flex justify-center items-center gap-10 overflow-hidden animation-img relative"
       >
+        <div class="fade-out"></div>
         <div
           v-for="(_, index) in 3"
           :class="`part${
