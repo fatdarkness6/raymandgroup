@@ -58,7 +58,7 @@
     position: relative;
   }
   .hero-section .animation-img {
-    -webkit-mask-image: linear-gradient(90deg, transparent 0%, rgba(0, 0, 0, 1) 6%, rgba(0, 0, 0, 1) 94%, transparent 100%);
+    -webkit-mask-image: linear-gradient(90deg, transparent 0%, rgba(0, 0, 0, 1) 6%, rgba(0, 0, 0, 1) 94%, transparent 100%) !important;
   }
   .hero-section .part2.scroll-animation-reverse {
     animation: scroll-animation-reverse 20s linear infinite;
