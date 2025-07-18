@@ -1,0 +1,20 @@
+{
+  "contact_us": "Kontakt",
+  "about_us": "Über uns",
+  "main_page": "Startseite",
+  "gpo": "Ausrüstung",
+  "synLab": "Labor",
+  "vHospital": "Virtuell",
+  "site_pages": "Seitenübersicht",
+  "submit": "Absenden",
+  "name&lastname": "Vor- und Nachname",
+  "email": "E-Mail",
+  "phone": "Telefon",
+  "validation": {
+    "name_required": "Name ist erforderlich",
+    "email_required": "E-Mail ist erforderlich",
+    "email_invalid": "Bitte eine gültige E-Mail-Adresse eingeben",
+    "phone_required": "Telefonnummer ist erforderlich",
+    "phone_length": "Telefonnummer muss mindestens 11 Zeichen haben"
+  }
+}

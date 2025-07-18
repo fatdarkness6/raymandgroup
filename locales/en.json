@@ -2,9 +2,10 @@
   "contact_us": "Contact Us",
   "about_us": "About Us",
   "main_page": "Main Page",
+  "gpo": "G.P.O",
+  "synLab": "Syn Lab",
+  "vHospital": "VHospital",
   "site_pages": "Site Pages",
-  "tech": "Tech",
-  "movies": "Movies",
   "submit" : "Submit",
   "name&lastname": "Name and Lastname",
   "email": "Email",
@@ -15,6 +16,5 @@
     "email_invalid": "Enter a valid email",
     "phone_required": "Phone number is required",
     "phone_length": "Phone number must be at least 11 characters"
-  },
-  "lorem": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+  }
 }

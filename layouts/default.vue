@@ -34,7 +34,6 @@
           no-caps
         >
           <q-route-tab
-            name="mails"
             icon="fa-solid fa-people-roof"
             :label="$t('main_page')"
             to="/salam"
@@ -42,17 +41,22 @@
             exact
           />
           <q-route-tab
-            name="alarms"
+            icon="fa-solid fa-people-roof"
+            :label="$t('gpo')"
+            to="/salam"
+            class="rounded-10"
+            exact
+          />
+          <q-route-tab
             icon="fa-solid fa-user-doctor"
-            :label="$t('tech')"
+            :label="$t('synLab')"
             to="/alarms"
             class="rounded-10"
             exact
           />
           <q-route-tab
-            name="movies"
             icon="fa-solid fa-star-of-life"
-            :label="$t('movies')"
+            :label="$t('vHospital')"
             to="/movies"
             class="rounded-10 text-sm"
             exact
@@ -124,6 +128,7 @@
             />
             <q-input
               v-model="phone"
+              mask="#### #### ####"
               :label="$t('phone')"
               :error="!!phoneError"
               :error-message="phoneError"
@@ -141,7 +146,7 @@
                 :label="$t('submit')"
                 color="accent"
                 :loading="loading"
-                class="q-mt-sm custom-button full-width"
+                class="q-mt-md custom-button full-width"
               />
             </div>
           </q-form>
@@ -432,11 +437,7 @@ async function switchLanguage(lang: any) {
   transform: translateX(-100%);
   opacity: 0;
 }
-.copyright-text {
-  text-align: center;
-  margin-top: 20px;
-  position: relative;
-}
+
 .container-spacing {
   padding-top: 0 !important;
 }
