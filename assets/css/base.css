@@ -1,0 +1,18 @@
+body {
+  font-family: "Nunito Sans", sans-serif;
+  overflow-x: hidden;
+  background-color: #3b82f62b;
+}
+.wrapper {
+  max-width: 1500px;
+  margin: 0 auto;
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+.z-index {
+  z-index: 10000;
+}
+.z-index-2 {
+  z-index: 10000000;
+  position: relative;
+}

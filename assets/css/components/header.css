@@ -1,0 +1,17 @@
+.header {
+  background: rgba(133, 202, 255, 0.5);
+  border-radius: 20px;
+  overflow: hidden;
+  background: linear-gradient(to bottom, #0b0b2b, #1b2735 70%, #090a0f);
+  margin-top: 10px;
+  z-index: 999999;
+}
+.header .logo-img {
+  border-radius: 50%;
+}
+.custom-icon-header {
+  font-size: 17px;
+}
+.berger-button {
+  display: none;
+}

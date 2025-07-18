@@ -1,14 +1,7 @@
 <template>
   <q-layout view="hHh lpR fff" style="overflow: hidden">
     <q-header elevated reveal class="q-pa-md wrapper header">
-      <div class="animation-header">
-        <div class="stars"></div>
-        <div class="shooting-star"></div>
-        <div class="shooting-star"></div>
-        <div class="shooting-star"></div>
-        <div class="shooting-star"></div>
-        <div class="shooting-star"></div>
-      </div>
+      <AnimationHeader />
       <div class="flex flex-row items-center justify-between">
         <div class="berger-button" style="width: 80px">
           <q-btn
@@ -21,7 +14,7 @@
         </div>
         <router-link to="/" class="logo" style="width: 80px">
           <q-img
-            src="/images/logo-test.webp"
+            src="/images/logo-test.svg"
             spinner-color="primary"
             fetchpriority="high"
             style="height: 70px; width: 70px"
@@ -38,6 +31,7 @@
           active-color="black"
           class="white header-tabs"
           router
+          no-caps
         >
           <q-route-tab
             name="mails"
@@ -50,7 +44,7 @@
           <q-route-tab
             name="alarms"
             icon="fa-solid fa-user-doctor"
-            :label="$t('alarms')"
+            :label="$t('tech')"
             to="/alarms"
             class="rounded-10"
             exact
@@ -198,7 +192,7 @@
         <div class="extra-details flex column justify-center items-center">
           <div class="image">
             <q-img
-              src="/images/logo-test.webp"
+              src="/images/logo-test.svg"
               spinner-color="primary"
               fetchpriority="high"
               style="height: 90px; width: 90px"
@@ -290,14 +284,6 @@
         />
       </q-fab>
     </div>
-    <transition name="fade">
-      <div
-        v-if="leftDrawerOpen"
-        class="menu-overlay"
-        @click="leftDrawerOpen = false"
-      ></div>
-    </transition>
-
     <!-- Sidebar Menu -->
     <transition name="slide-left">
       <nav v-if="leftDrawerOpen" class="sidebar-menu">
@@ -350,7 +336,6 @@ const validationSchema = computed(() => defaultLayoutSchema(t));
 
 const { submitForm } = useFormContact();
 const { error } = useNotify();
-// ✅ useForm with reactive schema
 const { handleSubmit, resetForm } = useForm({
   validationSchema,
 });
@@ -374,7 +359,7 @@ const submit = handleSubmit((values) => {
     return;
   }
 
-  canSubmit.value = false; // block new submits
+  canSubmit.value = false;
   loading.value = true;
 
   submitForm(values)
@@ -389,7 +374,6 @@ const submit = handleSubmit((values) => {
     })
     .finally(() => {
       loading.value = false;
-      // Start cooldown timer to re-enable submit button
       setTimeout(() => {
         canSubmit.value = true;
       }, cooldownTime);
@@ -402,78 +386,52 @@ async function switchLanguage(lang: any) {
 </script>
 
 <style scoped>
-.header {
-  background: rgba(133, 202, 255, 0.5);
-  border-radius: 20px;
-  overflow: hidden;
-  background: linear-gradient(to bottom, #0b0b2b, #1b2735 70%, #090a0f);
-  margin-top: 10px;
-  z-index: 999999;
-}
-.header .logo-img {
-  border-radius: 50%;
-}
-.custom-footer {
-  background-color: rgb(0, 0, 0);
-  overflow: hidden;
-}
-.custom-text {
-  width: 300px;
-  font-size: 14px;
-  font-weight: bold;
-  color: white;
-  text-align: center;
-}
-.custom-link {
-  margin-top: 10px;
-  color: rgba(255, 255, 255, 0.719);
-  text-decoration: none;
-  transition: all 0.3s ease-in-out;
-}
-.custom-link:hover {
-  color: white;
-  font-weight: bold;
-  text-decoration: underline;
-}
+@import "@/assets/css/components/header.css";
+@import "@/assets/css/components/footer.css";
+@import "@/assets/css/components/Animation/headerAndFooterAnimation.css";
 .select-methodes {
   position: fixed;
   bottom: 45px;
   left: 10px;
   z-index: 11111;
 }
-.animated-wave-bg {
-  margin: auto;
-  font-family: -apple-system, BlinkMacSystemFont, sans-serif;
-  overflow: auto;
-  background: linear-gradient(
-    315deg,
-    rgba(101, 0, 94, 1) 3%,
-    rgba(60, 132, 206, 1) 38%,
-    rgba(48, 238, 226, 1) 68%,
-    rgba(255, 25, 25, 1) 98%
-  );
-  animation: gradient 25s ease infinite;
-  background-size: 400% 400%;
-  background-attachment: fixed;
-  position: absolute;
-  bottom: 0;
+.sidebar-menu {
+  position: fixed;
+  top: 0;
   left: 0;
   width: 100%;
-  height: 100%;
+  height: 100vh;
+  background: linear-gradient(135deg, #f0f4ff, #ffffff);
+  box-shadow: 4px 0 16px rgba(0, 0, 0, 0.15);
+  z-index: 9999999;
+  padding-top: 60px;
+  overflow-y: auto;
+  border-right: 1px solid #ddd;
+  transition: all 0.3s ease;
+}
+.slide-left-enter-from {
+  transform: translateX(-100%);
+  opacity: 0;
+}
+.slide-left-enter-active {
+  transition: all 0.3s ease;
+}
+.slide-left-enter-to {
+  transform: translateX(0);
+  opacity: 1;
 }
 
-@keyframes gradient {
-  0% {
-    background-position: 0% 0%;
-  }
-  50% {
-    background-position: 100% 100%;
-  }
-  100% {
-    background-position: 0% 0%;
-  }
+.slide-left-leave-from {
+  transform: translateX(0);
+  opacity: 1;
 }
-/* ```````````````````````````````````````````````` */
+.slide-left-leave-active {
+  transition: all 0.3s ease;
+}
+.slide-left-leave-to {
+  transform: translateX(-100%);
+  opacity: 0;
+}
 .copyright-text {
   text-align: center;
   margin-top: 20px;
@@ -488,5 +446,42 @@ async function switchLanguage(lang: any) {
 .extra-details {
   position: relative;
   z-index: 1;
+}
+.menu-list {
+  padding: 0 8px;
+}
+.menu-header {
+  display: flex;
+  justify-content: flex-end;
+  padding: 12px 16px 0 16px;
+  position: sticky;
+  top: 0;
+  background: inherit;
+  z-index: 1;
+}
+
+.close-btn {
+  color: #333;
+  transition: transform 0.2s ease;
+}
+.close-btn:hover {
+  transform: rotate(45deg);
+}
+
+.menu-item {
+  border-radius: 12px;
+  margin-bottom: 6px;
+  padding: 10px 12px;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.menu-item:hover {
+  background-color: #e0e7ff;
+  transform: scale(1.02);
+  cursor: pointer;
+}
+
+.menu-item q-icon {
+  color: #3b82f6;
 }
 </style>

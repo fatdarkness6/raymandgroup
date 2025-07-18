@@ -3,19 +3,19 @@
   height: 1px;
   position: absolute;
   background: white;
-  box-shadow: 2vw 5vh 2px white, 10vw 8vh 2px white, 15vw 15vh 1px white,
-    22vw 22vh 1px white, 28vw 12vh 2px white, 32vw 32vh 1px white,
-    38vw 18vh 2px white, 42vw 35vh 1px white, 48vw 25vh 2px white,
-    53vw 42vh 1px white, 58vw 15vh 2px white, 63vw 38vh 1px white,
-    68vw 28vh 2px white, 73vw 45vh 1px white, 78vw 32vh 2px white,
-    83vw 48vh 1px white, 88vw 20vh 2px white, 93vw 52vh 1px white,
-    98vw 35vh 2px white, 5vw 60vh 1px white, 12vw 65vh 2px white,
-    18vw 72vh 1px white, 25vw 78vh 2px white, 30vw 85vh 1px white,
-    35vw 68vh 2px white, 40vw 82vh 1px white, 45vw 92vh 2px white,
-    50vw 75vh 1px white, 55vw 88vh 2px white, 60vw 95vh 1px white,
-    65vw 72vh 2px white, 70vw 85vh 1px white, 75vw 78vh 2px white,
-    80vw 92vh 1px white, 85vw 82vh 2px white, 90vw 88vh 1px white,
-    95vw 75vh 2px white;
+  box-shadow: 2vw 5vh 2px white, 10vw 8vh 2px white, 15vw 12vh 1px white,
+    22vw 10vh 1px white, 28vw 6vh 2px white, 32vw 9vh 1px white,
+    38vw 3vh 2px white, 42vw 13vh 1px white, 48vw 7vh 2px white,
+    53vw 4vh 1px white, 58vw 6vh 2px white, 63vw 5vh 1px white,
+    68vw 9vh 2px white, 73vw 8vh 1px white, 78vw 10vh 2px white,
+    83vw 6vh 1px white, 88vw 11vh 2px white, 93vw 3vh 1px white,
+    98vw 12vh 2px white, 5vw 9vh 1px white, 12vw 4vh 2px white,
+    18vw 10vh 1px white, 25vw 6vh 2px white, 30vw 13vh 1px white,
+    35vw 5vh 2px white, 40vw 8vh 1px white, 45vw 14vh 2px white,
+    50vw 9vh 1px white, 55vw 7vh 2px white, 60vw 12vh 1px white,
+    65vw 11vh 2px white, 70vw 6vh 1px white, 75vw 8vh 2px white,
+    80vw 9vh 1px white, 85vw 7vh 2px white, 90vw 10vh 1px white,
+    95vw 13vh 2px white;
   animation: twinkle 8s infinite linear;
 }
 
@@ -48,10 +48,10 @@
 @keyframes twinkle {
   0%,
   100% {
-    opacity: 0.8;
+    opacity: 1;
   }
   50% {
-    opacity: 0.4;
+    opacity: 0.8;
   }
 }
 
@@ -65,8 +65,6 @@
     opacity: 0;
   }
 }
-
-/* Additional twinkling stars with different animation timing */
 .animation-header .stars::after {
   content: "";
   position: absolute;
@@ -81,4 +79,36 @@
     27vw 88vh 1px white, 35vw 72vh 2px white, 43vw 85vh 1px white,
     51vw 92vh 2px white, 59vw 78vh 1px white;
   animation: twinkle 6s infinite linear reverse;
+}
+.animated-wave-bg {
+  margin: auto;
+  font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+  overflow: auto;
+  background: linear-gradient(
+    315deg,
+    rgba(101, 0, 94, 1) 3%,
+    rgba(60, 132, 206, 1) 38%,
+    rgba(48, 238, 226, 1) 68%,
+    rgba(255, 25, 25, 1) 98%
+  );
+  animation: gradient 25s ease infinite;
+  background-size: 400% 400%;
+  background-attachment: fixed;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 0%;
+  }
+  50% {
+    background-position: 100% 100%;
+  }
+  100% {
+    background-position: 0% 0%;
+  }
 }

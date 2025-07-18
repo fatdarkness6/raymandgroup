@@ -1,0 +1,22 @@
+.custom-footer {
+  background-color: rgb(0, 0, 0);
+  overflow: hidden;
+}
+.custom-text {
+  width: 300px;
+  font-size: 14px;
+  font-weight: bold;
+  color: white;
+  text-align: center;
+}
+.custom-link {
+  margin-top: 10px;
+  color: rgba(255, 255, 255, 0.719);
+  text-decoration: none;
+  transition: all 0.3s ease-in-out;
+}
+.custom-link:hover {
+  color: white;
+  font-weight: bold;
+  text-decoration: underline;
+}
