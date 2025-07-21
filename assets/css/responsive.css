@@ -139,14 +139,14 @@
   .container-5 .custom-img2 {
     display: none;
   }
-}
-
-@media (max-width: 600px) {
   .header {
     padding-left: 5px;
     padding-right: 5px;
   }
   .header .header-tabs {
+    display: none;
+  }
+  .login-btn-none {
     display: none;
   }
   .berger-button {
@@ -158,6 +158,9 @@
   .header .header-tabs .q-tab__label {
     font-size: 12px;
   }
+}
+
+@media (max-width: 600px) {
   .container-6 .w-32:nth-child(1),
   .container-6 .w-32:nth-child(2),
   .container-6 .w-32:nth-child(3) {
@@ -165,6 +168,9 @@
   }
 }
 @media (max-width: 560px) {
+  .error-massage.text404 {
+    font-size: 17px;
+  }
   .footer-content {
     flex-direction: column;
     justify-content: center;

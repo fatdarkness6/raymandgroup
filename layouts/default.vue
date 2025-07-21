@@ -12,75 +12,89 @@
             @click="leftDrawerOpen = !leftDrawerOpen"
           />
         </div>
-        <router-link to="/" class="logo" style="width: 80px">
-          <q-img
-            src="/images/logo-test.svg"
-            spinner-color="primary"
-            fetchpriority="high"
-            style="height: 70px; width: 70px"
-            class="logo-img"
-          >
-            <template v-slot:loading>
-              <q-spinner-gears color="white" />
-            </template>
-          </q-img>
-        </router-link>
-        <q-tabs
-          v-model="tab"
-          dense
-          active-color="black"
-          class="white header-tabs"
-          router
-          no-caps
-        >
-          <q-route-tab
-            icon="fa-solid fa-people-roof"
-            :label="$t('main_page')"
-            to="/salam"
-            class="rounded-10"
-            exact
-          />
-          <q-route-tab
-            icon="fa-solid fa-people-roof"
-            :label="$t('gpo')"
-            to="/salam"
-            class="rounded-10"
-            exact
-          />
-          <q-route-tab
-            icon="fa-solid fa-user-doctor"
-            :label="$t('synLab')"
-            to="/alarms"
-            class="rounded-10"
-            exact
-          />
-          <q-route-tab
-            icon="fa-solid fa-star-of-life"
-            :label="$t('vHospital')"
-            to="/movies"
-            class="rounded-10 text-sm"
-            exact
-          />
-        </q-tabs>
-        <q-btn-dropdown
-          color="white"
-          :label="locale"
-          flat
-          :auto-close="true"
-          content-class="z-index-2"
-          style="width: 80px"
-        >
-          <q-list content-class="z-index-2">
-            <q-item
-              v-for="loc in locales"
-              :key="loc.code"
-              clickable
-              @click="switchLanguage(loc.code)"
+        <div class="flex items-center">
+          <router-link to="/" class="logo" style="width: 80px">
+            <q-img
+              src="/images/logo-test.svg"
+              spinner-color="primary"
+              fetchpriority="high"
+              style="height: 70px; width: 70px"
+              class="logo-img"
             >
-              <q-item-section>{{ loc.name }}</q-item-section>
-            </q-item>
-          </q-list>
-        </q-btn-dropdown>
+              <template v-slot:loading>
+                <q-spinner-gears color="white" />
+              </template>
+            </q-img>
+          </router-link>
+          <q-tabs
+            v-model="tab"
+            dense
+            active-color="white"
+            class="white header-tabs"
+            router
+            no-caps
+          >
+            <q-route-tab
+              icon="fa-solid fa-people-roof"
+              :label="$t('home_page')"
+              to="/"
+              class="rounded-10"
+              exact
+            />
+            <q-route-tab
+              icon="fa-solid fa-people-roof"
+              :label="$t('gpo')"
+              to="/salam"
+              class="rounded-10"
+              exact
+            />
+            <q-route-tab
+              icon="fa-solid fa-user-doctor"
+              :label="$t('synLab')"
+              to="/alarms"
+              class="rounded-10"
+              exact
+            />
+            <q-route-tab
+              icon="fa-solid fa-star-of-life"
+              :label="$t('vHospital')"
+              to="/movies"
+              class="rounded-10 text-sm"
+              exact
+            />
+          </q-tabs>
+        </div>
+        <div class="login-button flex items-center gap-10">
+          <q-btn
+            class="login-btn-none"
+            q-btn
+            to="/"
+            color="primary"
+            push
+            no-caps
+            padding="10px 20px"
+            >Login</q-btn
+          >
+          <q-btn-dropdown
+            color="white"
+            :label="locale"
+            flat
+            :auto-close="true"
+            content-class="z-index-2"
+            style="width: 80px"
+          >
+            <q-list content-class="z-index-2">
+              <q-item
+                v-for="loc in locales"
+                :key="loc.code"
+                clickable
+                @click="switchLanguage(loc.code)"
+              >
+                <q-item-section>{{ loc.name }}</q-item-section>
+              </q-item>
+            </q-list>
+          </q-btn-dropdown>
+        </div>
       </div>
     </q-header>
     <q-page-container class="container-spacing">
@@ -305,8 +319,8 @@
         </div>
 
         <!-- Menu Items -->
-        <q-list class="menu-list">
-          <q-item clickable @click="navigateTo('/home')" class="menu-item">
+        <q-list class="menu-list" @click="leftDrawerOpen = false">
+          <q-item clickable @click="navigateTo('/')" class="menu-item">
             <q-item-section avatar>
               <q-icon name="fa-solid fa-house" />
             </q-item-section>
