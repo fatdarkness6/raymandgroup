@@ -221,18 +221,6 @@
     transform: translateX(25%);
   }
 }
-
-.v-bg::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.3);
-  z-index: 1;
-  border-radius: 10px;
-}
 .mobile-v {
   display: none;
 }
@@ -301,16 +289,4 @@
 }
 .about-3-companies {
   position: relative;
-}
-.v-bg {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-}
-.v-bg video {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
 }
