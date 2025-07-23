@@ -29,7 +29,9 @@
               <q-btn push color="primary" no-caps padding="10px 20px"
                 >Learn More</q-btn
               >
-              <q-btn push no-caps padding="10px 20px">Sign Up</q-btn>
+              <q-btn to="/login?form=sign-up" push no-caps padding="10px 20px"
+                >Sign Up</q-btn
+              >
             </div>
           </Motion>
         </MotionGroup>
