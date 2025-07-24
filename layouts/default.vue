@@ -306,7 +306,14 @@
     <!-- Sidebar Menu -->
     <transition name="slide-left">
       <nav v-if="leftDrawerOpen" class="sidebar-menu">
-        <!-- Close Button -->
+        <div class="background">
+          <span class="ball"></span>
+          <span class="ball"></span>
+          <span class="ball"></span>
+          <span class="ball"></span>
+          <span class="ball"></span>
+          <span class="ball"></span>
+        </div>
         <div class="menu-header">
           <q-btn
             flat
@@ -320,23 +327,43 @@
 
         <!-- Menu Items -->
         <q-list class="menu-list" @click="leftDrawerOpen = false">
-          <q-item clickable @click="navigateTo('/')" class="menu-item">
+          <q-item
+            clickable
+            @click="navigateTo('/')"
+            class="menu-item flex items-center"
+          >
             <q-item-section avatar>
-              <q-icon name="fa-solid fa-house" />
+              <q-icon name="fa-solid fa-house" size="30px" />
             </q-item-section>
-            <q-item-section color="primary">Home</q-item-section>
+            <q-item-section class="text-h6"><div>Home</div></q-item-section>
           </q-item>
-          <q-item clickable @click="navigateTo('/about')" class="menu-item">
+          <q-item
+            clickable
+            @click="navigateTo('/login?form=login')"
+            class="menu-item flex items-center"
+          >
             <q-item-section avatar>
-              <q-icon name="fa-solid fa-circle-info" />
+              <q-icon name="fa-solid fa-user" size="30px" />
             </q-item-section>
-            <q-item-section>About</q-item-section>
+            <q-item-section class="text-h6" color="primary"
+              >Login</q-item-section
+            >
+          </q-item>
+          <q-item
+            clickable
+            @click="navigateTo('/about')"
+            class="menu-item flex items-center"
+          >
+            <q-item-section avatar>
+              <q-icon name="fa-solid fa-circle-info" size="30px" />
+            </q-item-section>
+            <q-item-section class="text-h6">About</q-item-section>
           </q-item>
           <q-item clickable @click="navigateTo('/contact')" class="menu-item">
             <q-item-section avatar>
-              <q-icon name="fa-solid fa-envelope" />
+              <q-icon name="fa-solid fa-envelope" size="30px" />
             </q-item-section>
-            <q-item-section>Contact</q-item-section>
+            <q-item-section class="text-h6">Contact</q-item-section>
           </q-item>
         </q-list>
       </nav>
@@ -408,6 +435,8 @@ async function switchLanguage(lang: any) {
 @import "@/assets/css/components/header.css";
 @import "@/assets/css/components/footer.css";
 @import "@/assets/css/components/Animation/headerAndFooterAnimation.css";
+@import "@/assets/css/components/Animation/sidebarMenu.css";
+
 .select-methodes {
   position: fixed;
   bottom: 45px;
@@ -473,6 +502,7 @@ async function switchLanguage(lang: any) {
   top: 0;
   background: inherit;
   z-index: 1;
+  background: transparent;
 }
 
 .close-btn {
