@@ -68,7 +68,7 @@
           <q-btn
             class="login-btn-none"
             q-btn
-            to="/login"
+            to="/login?form=login"
             color="primary"
             push
             no-caps

@@ -49,9 +49,7 @@ function addClassAccordingToQuery(value: any) {
   }
 }
 
-onMounted(() => {
-  addClassAccordingToQuery(route.query.form as string);
-});
+addClassAccordingToQuery(route.query.form as string);
 </script>
 <style scoped>
 @import "@/assets/css/pages/login.css";

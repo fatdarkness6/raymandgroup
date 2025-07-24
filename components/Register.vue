@@ -71,7 +71,7 @@
         Already have an account?
         <span
           style="cursor: pointer"
-          @click="$router.push({ query: { form: 'Login' } })"
+          @click="$router.push({ query: { form: 'login' } })"
           class="text-weight-bolder text-blue-9"
           >Login</span
         >
