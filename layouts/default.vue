@@ -13,19 +13,19 @@
           />
         </div>
         <div class="flex items-center">
-          <router-link to="/" class="logo" style="width: 80px">
+          <div class="logo-moon-wrapper q-mr-sm">
             <q-img
               src="/images/logo-test.svg"
               spinner-color="primary"
               fetchpriority="high"
-              style="height: 70px; width: 70px"
+              style="height: 65px; width: 65px"
               class="logo-img"
             >
               <template v-slot:loading>
                 <q-spinner-gears color="white" />
               </template>
             </q-img>
-          </router-link>
+          </div>
           <q-tabs
             v-model="tab"
             dense
@@ -35,29 +35,29 @@
             no-caps
           >
             <q-route-tab
-              icon="fa-solid fa-people-roof"
-              :label="$t('home_page')"
+              icon="fa-solid fa-house"
+              :label="$t('header.home-page')"
               to="/"
               class="rounded-10"
               exact
             />
             <q-route-tab
               icon="fa-solid fa-people-roof"
-              :label="$t('gpo')"
+              :label="$t('header.gpo')"
               to="/salam"
               class="rounded-10"
               exact
             />
             <q-route-tab
               icon="fa-solid fa-user-doctor"
-              :label="$t('synLab')"
+              :label="$t('header.synLab')"
               to="/alarms"
               class="rounded-10"
               exact
             />
             <q-route-tab
               icon="fa-solid fa-star-of-life"
-              :label="$t('vHospital')"
+              :label="$t('header.vHospital')"
               to="/movies"
               class="rounded-10 text-sm"
               exact
@@ -115,7 +115,7 @@
           <q-form @submit="submit" class="flex justify-center column q-form-m">
             <q-input
               v-model="name"
-              :label="$t('name&lastname')"
+              :label="$t('common.name&lastname')"
               :error="!!nameError"
               :error-message="nameError"
               :input-style="{
@@ -129,7 +129,7 @@
             />
             <q-input
               v-model="email"
-              :label="$t('email')"
+              :label="$t('common.email')"
               :error="!!emailError"
               :error-message="emailError"
               label-color="white"
@@ -143,7 +143,7 @@
             <q-input
               v-model="phone"
               mask="#### #### ####"
-              :label="$t('phone')"
+              :label="$t('common.phone')"
               :error="!!phoneError"
               :error-message="phoneError"
               label-color="white"
@@ -157,7 +157,7 @@
             <div class="btn full-width flex justify-center">
               <q-btn
                 type="submit"
-                :label="$t('submit')"
+                :label="$t('common.submit')"
                 color="accent"
                 :loading="loading"
                 class="q-mt-md custom-button full-width"
@@ -166,19 +166,24 @@
           </q-form>
         </div>
         <div class="site-map flex column justify-center items-center">
-          <span class="text-h6">{{ $t("site_pages") }}</span>
-          <NuxtLink to="/" class="custom-link">{{ $t("main_page") }}</NuxtLink>
+          <span class="text-h6">{{ $t("footer.site_pages") }}</span>
+          <NuxtLink to="/" class="custom-link">{{
+            $t("header.home-page")
+          }}</NuxtLink>
           <NuxtLink to="/about" class="custom-link">{{
-            $t("about_us")
+            $t("header.about_us")
           }}</NuxtLink>
           <NuxtLink to="/contact-us" class="custom-link">{{
-            $t("contact_us")
+            $t("header.contact_us")
           }}</NuxtLink>
           <NuxtLink to="/alarms" class="custom-link">{{
-            $t("alarms")
+            $t("header.gpo")
           }}</NuxtLink>
           <NuxtLink to="/movies" class="custom-link">{{
-            $t("movies")
+            $t("header.synLab")
+          }}</NuxtLink>
+          <NuxtLink to="/movies" class="custom-link">{{
+            $t("header.vHospital")
           }}</NuxtLink>
         </div>
         <div class="social-media flex column items-center gap-10">
@@ -327,6 +332,7 @@
 
         <!-- Menu Items -->
         <q-list class="menu-list" @click="leftDrawerOpen = false">
+          <!-- Home -->
           <q-item
             clickable
             @click="navigateTo('/')"
@@ -335,7 +341,9 @@
             <q-item-section avatar>
               <q-icon name="fa-solid fa-house" size="30px" />
             </q-item-section>
-            <q-item-section class="text-h6"><div>Home</div></q-item-section>
+            <q-item-section class="text-h6">
+              <div>{{ $t("home_page") }}</div>
+            </q-item-section>
           </q-item>
           <q-item
             clickable
@@ -345,11 +353,11 @@
             <q-item-section avatar>
               <q-icon name="fa-solid fa-user" size="30px" />
             </q-item-section>
-            <q-item-section class="text-h6" color="primary"
-              >Login</q-item-section
-            >
+            <q-item-section class="text-h6">
+              <div>Login</div>
+            </q-item-section>
           </q-item>
-          <q-item
+          <!-- <q-item
             clickable
             @click="navigateTo('/about')"
             class="menu-item flex items-center"
@@ -357,13 +365,57 @@
             <q-item-section avatar>
               <q-icon name="fa-solid fa-circle-info" size="30px" />
             </q-item-section>
-            <q-item-section class="text-h6">About</q-item-section>
-          </q-item>
-          <q-item clickable @click="navigateTo('/contact')" class="menu-item">
+            <q-item-section class="text-h6">
+              <div>About</div>
+            </q-item-section>
+          </q-item> -->
+          <!-- <q-item
+            clickable
+            @click="navigateTo('/contact')"
+            class="menu-item flex items-center"
+          >
             <q-item-section avatar>
               <q-icon name="fa-solid fa-envelope" size="30px" />
             </q-item-section>
-            <q-item-section class="text-h6">Contact</q-item-section>
+            <q-item-section class="text-h6">
+              <div>Contact</div>
+            </q-item-section>
+          </q-item> -->
+          <q-item
+            clickable
+            @click="navigateTo('/salam')"
+            class="menu-item flex items-center"
+          >
+            <q-item-section avatar>
+              <q-icon name="fa-solid fa-people-roof" size="30px" />
+            </q-item-section>
+            <q-item-section class="text-h6">
+              <div>{{ $t("gpo") }}</div>
+            </q-item-section>
+          </q-item>
+          <q-item
+            clickable
+            @click="navigateTo('/alarms')"
+            class="menu-item flex items-center"
+          >
+            <q-item-section avatar>
+              <q-icon name="fa-solid fa-user-doctor" size="30px" />
+            </q-item-section>
+            <q-item-section class="text-h6">
+              <div>{{ $t("synLab") }}</div>
+            </q-item-section>
+          </q-item>
+          <q-item
+            clickable
+            @click="navigateTo('/movies')"
+            class="menu-item flex items-center"
+          >
+            <q-item-section avatar>
+              <q-icon name="fa-solid fa-star-of-life" size="30px" />
+            </q-item-section>
+            <q-item-section class="text-h6">
+              <div>{{ $t("vHospital") }}</div>
+            </q-item-section>
           </q-item>
         </q-list>
       </nav>

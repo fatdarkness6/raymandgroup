@@ -1,10 +1,14 @@
 {
+  "home_page": {
+    "hero-sec1": "A new transformation in laboratories and health services Based on strategic technology in Raymand Holding",
+    "hero-sec2": "",
+    "gpo": "Ausrüstung",
+    "synLab": "Labor",
+    "vHospital": "Virtuell"
+  },
   "contact_us": "Kontakt",
   "about_us": "Über uns",
-  "home_page": "Startseite",
-  "gpo": "Ausrüstung",
-  "synLab": "Labor",
-  "vHospital": "Virtuell",
+
   "site_pages": "Seitenübersicht",
   "submit": "Absenden",
   "name&lastname": "Vor- und Nachname",

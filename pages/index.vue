@@ -8,30 +8,23 @@
         <MotionGroup>
           <Motion delay="0" preset="slideVisibleOnceLeft" duration="600">
             <div class="part1">
-              <h1 :class="`no-margin text-weight-medium res-h1`">
-                Explore Innovative Solutions for Laboratory Management
-              </h1>
+              <h2 :class="`no-margin text-weight-medium res-h1`">
+                {{ tran[0] }}
+              </h2>
             </div>
           </Motion>
           <Motion delay="200" preset="slideVisibleOnceLeft" duration="600">
             <div class="part2">
               <p class="text-body1 text-weight-regular">
-                Welcome to our platform, where we showcase three pioneering
-                companies in laboratory management, equipment manufacturing, and
-                virtual healthcare solutions. Discover how each company is
-                transforming the industry with cutting-edge technology and
-                exceptional services.
+                {{ tran[1] }}
               </p>
             </div>
           </Motion>
           <Motion delay="400" preset="slideVisibleOnceLeft" duration="600">
-            <div class="part3 flex items-center gap-10">
-              <q-btn push color="primary" no-caps padding="10px 20px"
-                >Learn More</q-btn
-              >
-              <q-btn to="/login?form=sign-up" push no-caps padding="10px 20px"
-                >Sign Up</q-btn
-              >
+            <div class="part3">
+              <q-btn push color="primary" no-caps padding="10px 20px">{{
+                tran[5]
+              }}</q-btn>
             </div>
           </Motion>
         </MotionGroup>
@@ -39,7 +32,6 @@
       <div
         class="img flex justify-center items-center gap-10 overflow-hidden animation-img relative"
       >
-        <div class="fade-out"></div>
         <div
           v-for="(_, index) in 3"
           :class="`part${
@@ -83,72 +75,52 @@
         Your browser does not support the video tag.
       </video>
     </div>
-    <div
-      class="introduction flex column justify-center items-center gap-20 q-mb-xl relative z-max"
-    >
-      <MotionGroup preset="slideVisibleOnceTop">
-        <Motion delay="0" duration="600">
-          <div class="text-subtitle1 text-weight-bolder text-white">
-            Explore
-          </div>
-        </Motion>
-        <Motion delay="200" duration="600">
-          <div class="text-h2 text-weight-medium res-h2 text-white">
-            Discover Our Three Companies
-          </div>
-        </Motion>
-        <Motion delay="400" duration="600">
-          <div class="text-body1 text-weight-medium text-white">
-            Navigate easily to learn about our offerings.
-          </div>
-        </Motion>
-      </MotionGroup>
+    <div class="wrapper">
+      <div
+        class="introduction flex column justify-center items-center text-center gap-20 q-mb-xl relative z-max"
+      >
+        <MotionGroup preset="slideVisibleOnceTop">
+          <Motion delay="0" duration="600">
+            <div class="text-subtitle1 text-weight-bolder text-white">
+              Explore
+            </div>
+          </Motion>
+          <Motion delay="200" duration="600">
+            <div class="text-h2 text-weight-medium res-h2 text-white">
+              {{ tran[6] }}
+            </div>
+          </Motion>
+          <Motion delay="400" duration="600">
+            <div
+              class="text-body1 text-weight-medium text-white"
+              style="max-width: 1500px; width: 100%"
+            >
+              {{ tran[7] }}
+            </div>
+          </Motion>
+        </MotionGroup>
+      </div>
     </div>
     <div class="">
       <div
         class="wrapper flex justify-center items-center gap-20 about-3-companies relative z-max no-wrap"
       >
         <MotionGroup preset="slideVisibleOnceLeft" duration="600">
-          <Motion delay="0" class="w-45 about-1">
-            <q-card class="custom-card q-pl-md my-card" :bordered="true">
-              <div
-                class="flex justify-between items-center gap-20 no-wrap full-height"
-              >
-                <div class="part1 w-50">
-                  <q-card-section
-                    class="flex column gap-20 how-it-works-section-q"
-                  >
-                    <div class="text-subtitle2 text-weight-bold">Access</div>
-                    <div class="text-h4 res-h4 text-weight-medium">
-                      Stay Updated with Latest News
-                    </div>
-                    <div class="text-h6 res-h6 text-weight-light">
-                      Get the latest updates on our companies.
-                    </div>
-                    <div class="learn-more flex items-center gap-10">
-                      <div class="text-h6 res-h6 text-weight-bold">
-                        Learn More
-                      </div>
-                      <q-icon name="fa-solid fa-angle-right" size="20px" />
-                    </div>
-                  </q-card-section>
-                </div>
-                <q-img src="/images/i-1.webp" class="custom-img2" />
-              </div>
-            </q-card>
-          </Motion>
-          <Motion delay="200" class="w-25 about-2">
+          <Motion delay="200" class="w-45 about-2">
             <q-card :bordered="true" class="custom-card my-card">
               <div class="q-px-md">
                 <q-card-section
-                  class="flex column gap-20 how-it-works-section-q"
+                  class="flex column gap-10 how-it-works-section-q full-width relative z-max text-white text-weight-md"
                 >
-                  <div class="text-subtitle2 text-weight-bold">Engage</div>
                   <div class="text-h4 res-h4 text-weight-medium">
-                    Company Features
+                    {{ tran[3] }}
                   </div>
-                  <div class="text-h6 res-h6 text-weight-light">
-                    Discover unique solutions from each of our companies.
+                  <div
+                    v-for="(_, index) in 7"
+                    :key="index"
+                    class="text-caption"
+                  >
+                    {{ tran[index + 11] }}
                   </div>
                   <div class="learn-more flex items-center gap-10">
                     <div class="text-h6 res-h6 text-weight-bold">
@@ -158,14 +130,47 @@
                   </div>
                 </q-card-section>
               </div>
-              <q-img src="/images/i-2.webp" class="full-width custom-img" />
+              <q-img src="/images/i-2.webp" class="custom-img2" />
             </q-card>
           </Motion>
-          <Motion delay="400" class="w-25 about-3">
+          <Motion delay="0" class="w-30 about-1">
+            <q-card class="custom-card q-pl-sm my-card" :bordered="true">
+              <div
+                class="flex justify-between items-center gap-20 no-wrap full-height"
+              >
+                <div class="part1">
+                  <q-card-section
+                    class="flex column gap-20 how-it-works-section-q full-width relative z-max text-white text-weight-md"
+                  >
+                    <div class="text-h4 res-h4 text-weight-medium">
+                      {{ tran[2] }}
+                    </div>
+                    <div class="text-caption">
+                      {{ tran[8] }}
+                    </div>
+                    <div class="text-caption">
+                      {{ tran[9] }}
+                    </div>
+                    <div class="text-caption">
+                      {{ tran[10] }}
+                    </div>
+                    <div class="learn-more flex items-center gap-10">
+                      <div class="text-body1 res-h6 text-weight-bold">
+                        {{ tran[5] }}
+                      </div>
+                      <q-icon name="fa-solid fa-angle-right" size="20px" />
+                    </div>
+                  </q-card-section>
+                </div>
+                <q-img src="/images/i-1.webp" class="custom-img2" />
+              </div>
+            </q-card>
+          </Motion>
+          <Motion delay="400" class="w-30 about-3">
             <q-card :bordered="true" class="custom-card my-card">
               <div class="q-px-md">
                 <q-card-section
-                  class="flex column gap-20 how-it-works-section-q"
+                  class="flex column gap-20 how-it-works-section-q relative z-max text-white"
                 >
                   <div class="text-subtitle2 text-weight-bold">Innovate</div>
                   <div class="text-h4 res-h4 text-weight-medium">
@@ -180,7 +185,7 @@
                   </div>
                 </q-card-section>
               </div>
-              <q-img src="/images/i-3.webp" class="full-width custom-img" />
+              <q-img src="/images/i-3.webp" class="custom-img2" />
             </q-card>
           </Motion>
         </MotionGroup>
@@ -271,7 +276,29 @@
 <script setup lang="ts">
 const { locale, t } = useI18n();
 
-const loremTexts = [t("lorem")];
+const tran = [
+  t("home_page.hero-sec1"),
+  t("home_page.hero-sec2"),
+  t("home_page.raymand1"),
+  t("home_page.raymand2"),
+  t("home_page.raymand3"),
+  t("common.learn-more"),
+  t("home_page.discover.discover-text"),
+  t("home_page.discover.discover-intro"),
+  t("home_page.discover.raymand1-des1"),
+  t("home_page.discover.raymand1-des2"),
+  t("home_page.discover.raymand1-des3"),
+  t("home_page.discover.raymand2-des1"),
+  t("home_page.discover.raymand2-des2"),
+  t("home_page.discover.raymand2-des3"),
+  t("home_page.discover.raymand2-des4"),
+  t("home_page.discover.raymand2-des5"),
+  t("home_page.discover.raymand2-des6"),
+  t("home_page.discover.raymand2-des7"),
+  t("home_page.discover.raymand3-des1"),
+  t("home_page.discover.raymand3-des2"),
+  t("home_page.discover.raymand3-des3"),
+];
 
 const local = locale.value;
 

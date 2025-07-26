@@ -1,20 +1,48 @@
 {
-  "contact_us": "Contact Us",
-  "about_us": "About Us",
-  "home_page": "Main Page",
-  "gpo": "G.P.O",
-  "synLab": "Syn Lab",
-  "vHospital": "VHospital",
-  "site_pages": "Site Pages",
-  "submit" : "Submit",
-  "name&lastname": "Name and Lastname",
-  "email": "Email",
-  "phone": "Phone",
-  "validation": {
-    "name_required": "Name is required",
-    "email_required": "Email is required",
-    "email_invalid": "Enter a valid email",
-    "phone_required": "Phone number is required",
-    "phone_length": "Phone number must be at least 11 characters"
+  "home_page": {
+    "hero-sec1": "A new transformation in laboratories and health services Based on strategic technology in Raymand Holding",
+    "hero-sec2": "Raymand Group was founded with the aim of creating an integrated and technology-driven ecosystem in the supply chain, management, and service delivery. At Raymand Group, we strive to bring about a transformation in the current standards of health and laboratory services in the country through a systematic, scientific, and value-oriented approach. By leveraging advanced technologies and modern management strategies, we aim to develop a localized model of the world's best practices in laboratory service management, specialized equipment supply chains, and health management in Iran.",
+    "raymand1": "Raymand Tajhiz Company",
+    "raymand2": "Raymand System Azma Company",
+    "raymand3": "Raymand System Tajhiz Company",
+    "discover": {
+      "discover-text": "Organizational Structure of the Holding",
+      "discover-intro": "Raymand Group consists of three companies, each driven by the core motivation to transform the conventional systems in their respective fields. By relying on innovative methods and modern technologies, they aim to find solutions to the existing challenges in the country’s laboratories (both industrial and clinical) and health sector.",
+      "raymand1-des1": "Supply, import, and production of laboratory equipment and consumables based on GPO principles and value chain",
+      "raymand1-des2": "The supply chain and import arm for specialized equipment from global brands",
+      "raymand1-des3": "By utilizing the GPO model, this company enables cost reduction and efficiency improvement in the supply chain for laboratory centers across the country — including industrial, research, and clinical labs.",
+      "raymand2-des1": "Smart management and implementation of quality assurance systems for specialized, research, and clinical laboratories",
+      "raymand2-des2": "Implementation and auditing of international standards such as GPI, ISO 17025, and ISO 15189",
+      "raymand2-des3": "Designing the process structure of laboratories, developing SOPs, and training human resources",
+      "raymand2-des4": "Consulting on the purchase, installation, calibration, and validation of equipment",
+      "raymand2-des5": "Management of resources, including human resources, consumables, and capacity planning for laboratory service production",
+      "raymand2-des6": "Enhancing productivity, accuracy, and effectiveness in laboratory performance",
+      "raymand2-des7": "Sales of laboratory services and provision of laboratory services Offering research services"
+    }
+  },
+  "header": {
+    "home-page": "Home",
+    "gpo": "G.P.O",
+    "synLab": "Syn Lab",
+    "vHospital": "VHospital",
+    "contact_us": "Contact Us",
+    "about_us": "About Us"
+  },
+  "common": {
+    "submit": "Submit",
+    "name&lastname": "Name and Lastname",
+    "email": "Email",
+    "phone": "Phone",
+    "learn-more": "Learn More"
+  },
+  "footer": {
+    "site_pages": "Site Pages",
+    "validation": {
+      "name_required": "Name is required",
+      "email_required": "Email is required",
+      "email_invalid": "Enter a valid email",
+      "phone_required": "Phone number is required",
+      "phone_length": "Phone number must be at least 11 characters"
+    }
   }
 }
