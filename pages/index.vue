@@ -54,7 +54,7 @@
             <div
               class="text-h6 text-weight-medium ab-text-center text-white z-index"
             >
-              {{ items.title }}
+              {{ detectEvenNumber(index) ? items.title : items.slogan }}
             </div>
           </div>
         </div>
@@ -123,8 +123,8 @@
                     {{ tran[index + 11] }}
                   </div>
                   <div class="learn-more flex items-center gap-10">
-                    <div class="text-h6 res-h6 text-weight-bold">
-                      Learn More
+                    <div class="text-body1 res-h6 text-weight-bold">
+                      {{ tran[5] }}
                     </div>
                     <q-icon name="fa-solid fa-angle-right" size="20px" />
                   </div>
@@ -172,15 +172,20 @@
                 <q-card-section
                   class="flex column gap-20 how-it-works-section-q relative z-max text-white"
                 >
-                  <div class="text-subtitle2 text-weight-bold">Innovate</div>
                   <div class="text-h4 res-h4 text-weight-medium">
-                    User-Friendly Navigation
+                    {{ tran[4] }}
                   </div>
-                  <div class="text-h6 res-h6 text-weight-light">
-                    Easily find what you need on our platform.
+                  <div
+                    v-for="(_, index) in 7"
+                    :key="index"
+                    class="text-caption"
+                  >
+                    {{ tran[index + 18] }}
                   </div>
                   <div class="learn-more flex items-center gap-10">
-                    <div class="text-h6 res-h6 text-weight-bold">Sign Up</div>
+                    <div class="text-body1 res-h6 text-weight-bold">
+                      {{ tran[5] }}
+                    </div>
                     <q-icon name="fa-solid fa-angle-right" size="20px" />
                   </div>
                 </q-card-section>
@@ -232,9 +237,9 @@
                   <div class="text-h4 text-weight-medium res-h4">
                     {{ item.title }}
                   </div>
-                  <div class="text-h6 text-weight-light res-h6">
+                  <!-- <div class="text-h6 text-weight-light res-h6">
                     {{ item.description }}
-                  </div>
+                  </div> -->
                   <div class="reporter flex items-center gap-10">
                     <div class="part1">
                       <q-img
@@ -298,27 +303,36 @@ const tran = [
   t("home_page.discover.raymand3-des1"),
   t("home_page.discover.raymand3-des2"),
   t("home_page.discover.raymand3-des3"),
+  t("home_page.discover.raymand3-des4"),
+  t("home_page.discover.raymand3-des5"),
+  t("home_page.news.title1"),
+  t("home_page.news.title2"),
+  t("home_page.news.title3"),
+  t("home_page.slogan1"),
+  t("home_page.slogan2"),
+  t("home_page.slogan3"),
 ];
 
-const local = locale.value;
+// const local = locale.value;
 
 const images = [
-  { image: "/images/i-1.webp", title: "swipe1" },
-  { image: "/images/i-2.webp", title: "swipe2" },
-  { image: "/images/i-3.webp", title: "swipe3" },
-  { image: "/images/i-4.webp", title: "swipe4" },
-  { image: "/images/i-5.webp", title: "swipe5" },
-  { image: "/images/i-1.webp", title: "swipe1" },
-  { image: "/images/i-2.webp", title: "swipe2" },
-  { image: "/images/i-3.webp", title: "swipe3" },
-  { image: "/images/i-4.webp", title: "swipe4" },
-  { image: "/images/i-5.webp", title: "swipe5" },
+  { image: "/images/i-1.webp", title: "swipe1", slogan: tran[26] },
+  { image: "/images/i-2.webp", title: "swipe2", slogan: tran[26] },
+  { image: "/images/i-3.webp", title: "swipe3", slogan: tran[26] },
+  { image: "/images/i-4.webp", title: "swipe4", slogan: tran[26] },
+  { image: "/images/i-5.webp", title: "swipe5", slogan: tran[27] },
+  { image: "/images/i-1.webp", title: "swipe1", slogan: tran[27] },
+  { image: "/images/i-2.webp", title: "swipe2", slogan: tran[27] },
+  { image: "/images/i-3.webp", title: "swipe3", slogan: tran[28] },
+  { image: "/images/i-4.webp", title: "swipe4", slogan: tran[28] },
+  { image: "/images/i-5.webp", title: "swipe5", slogan: tran[28] },
+  { image: "/images/i-1.webp", title: "swipe1", slogan: tran[28] },
 ];
 const news = [
   {
     image: "/images/i-3.webp",
-    subject: "News",
-    title: "Innovations in Laboratory Management Systems",
+    subject: tran[2],
+    title: tran[23],
     description:
       "Discover how our systems enhance lab efficiency and accuracy.",
     reporter: {
@@ -331,8 +345,8 @@ const news = [
   },
   {
     image: "/images/i-2.webp",
-    subject: "Update",
-    title: "New Laboratory Equipment Launch",
+    subject: tran[3],
+    title: tran[24],
     description: "Explore our latest range of cutting-edge lab equipment.",
     reporter: {
       image: "/images/i-2.webp",
@@ -344,8 +358,8 @@ const news = [
   },
   {
     image: "/images/i-2.webp",
-    subject: "Announcement",
-    title: "Virtual Reality in Healthcare",
+    subject: tran[4],
+    title: tran[25],
     description:
       "Transforming patient care with innovative virtual reality solutions",
     reporter: {

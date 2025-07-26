@@ -17,8 +17,21 @@
       "raymand2-des4": "Consulting on the purchase, installation, calibration, and validation of equipment",
       "raymand2-des5": "Management of resources, including human resources, consumables, and capacity planning for laboratory service production",
       "raymand2-des6": "Enhancing productivity, accuracy, and effectiveness in laboratory performance",
-      "raymand2-des7": "Sales of laboratory services and provision of laboratory services Offering research services"
-    }
+      "raymand2-des7": "Sales of laboratory services and provision of laboratory services Offering research services",
+      "raymand3-des1": "Smart management of health services based on new technologies",
+      "raymand3-des2": "Transformation in processes",
+      "raymand3-des3": "Providing smart solutions for all health units",
+      "raymand3-des4": "Designing operational models and organizational structures",
+      "raymand3-des5": "Virtual hospital and innovative transformations in pre-hospital, in-hospital, and post-hospital services"
+    },
+    "news": {
+      "title1": "Companies that joined us",
+      "title2": "Laboratories that joined us",
+      "title3": "Centers that joined us"
+    },
+    "slogan1": "Precision in Every Pulse",
+    "slogan2": "Innovating Diagnostics, Empowering Labs",
+    "slogan3": "Engineering Tomorrow’s Health Solutions"
   },
   "header": {
     "home-page": "Home",

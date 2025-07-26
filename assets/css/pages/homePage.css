@@ -133,7 +133,7 @@
   position: relative;
 }
 .how-it-works-section .custom-card {
-  height: 550px;
+  height: 600px;
   position: relative;
 }
 .how-it-works-section .custom-img {
@@ -298,11 +298,11 @@
   }
 }
 .scroll-animation {
-  animation: scrollUp 25s linear infinite;
+  animation: scrollUp 65s linear infinite;
 }
 
 .scroll-animation-reverse {
-  animation: scrollDown 25s linear infinite;
+  animation: scrollDown 65s linear infinite;
 }
 
 .hero-section .scroll-animation:hover,

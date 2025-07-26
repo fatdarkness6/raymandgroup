@@ -33,23 +33,23 @@
 definePageMeta({ layout: false });
 
 const setClass = ref<any>(false);
-const route = useRoute();
+// const route = useRoute();
 
-watch(
-  () => route.query.form,
-  (newVal, old) => {
-    addClassAccordingToQuery(newVal);
-  }
-);
-function addClassAccordingToQuery(value: any) {
-  if (value === "sign-up") {
-    setClass.value = true;
-  } else {
-    setClass.value = false;
-  }
-}
+// watch(
+//   () => route.query.form,
+//   (newVal, old) => {
+//     addClassAccordingToQuery(newVal);
+//   }
+// );
+// function addClassAccordingToQuery(value: any) {
+//   if (value === "sign-up") {
+//     setClass.value = true;
+//   } else {
+//     setClass.value = false;
+//   }
+// }
 
-addClassAccordingToQuery(route.query.form as string);
+// addClassAccordingToQuery(route.query.form as string);
 </script>
 <style scoped>
 @import "@/assets/css/pages/login.css";

@@ -52,15 +52,6 @@
       <q-btn q-btn to="/login" color="primary" push no-caps padding="10px 20px"
         >Login</q-btn
       >
-      <div class="text-center text-weight-md">
-        Don't have an account?
-        <span
-          style="cursor: pointer"
-          @click="$router.push({ query: { form: 'sign-up' } })"
-          class="text-weight-bolder text-blue-9"
-          >Register</span
-        >
-      </div>
     </q-card-section>
   </q-card>
 </template>
