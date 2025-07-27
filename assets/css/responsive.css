@@ -15,11 +15,14 @@
 @media (max-width: 1330px) {
   .res-h1 {
     font-size: 40px;
-    line-height: 3rem;
+    line-height: 3rem !important;
   }
   .hero-section .hero-img {
     width: 160px !important;
     height: 200px !important;
+  }
+  .hero-section .custom-text {
+    font-size: 15px;
   }
 }
 @media (max-width: 1140px) {
@@ -73,7 +76,7 @@
     ) !important;
   }
   .hero-section .part2.scroll-animation-reverse {
-    animation: scroll-animation-reverse 20s linear infinite;
+    animation: scroll-animation-reverse 30s linear infinite;
   }
   .hero-section :is(.introduction, .img) {
     width: 100% !important;
@@ -95,7 +98,7 @@
   }
   .res-h1 {
     font-size: 5rem !important;
-    line-height: 5rem;
+    line-height: 5rem !important;
   }
   .how-it-works-section .about-3-companies {
     flex-wrap: wrap;
@@ -123,6 +126,10 @@
   }
   .v-pc {
     display: none !important;
+  }
+  .res-h1 {
+    font-size: 3rem !important;
+    line-height: 3rem;
   }
 }
 @media (max-width: 720px) {
@@ -155,9 +162,8 @@
   .header .header-tabs .q-tab__label {
     font-size: 12px;
   }
-  .res-h1 {
-    font-size: 3rem !important;
-    line-height: 3rem;
+  .res-h2 {
+    font-size: 3rem;
   }
 }
 
@@ -181,7 +187,7 @@
     width: 100%;
   }
   .res-h2 {
-    font-size: 3rem;
+    font-size: 2rem;
   }
   .about-3-companies .part1.w-50 {
     width: 100%;
@@ -192,6 +198,10 @@
   .container-4 .virtual-home {
     flex-direction: column;
     gap: 40px;
+  }
+  .res-h1 {
+    font-size: 2rem !important;
+    line-height: 3rem !important;
   }
 }
 @media (max-width: 450px) {

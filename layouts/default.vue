@@ -342,7 +342,7 @@
               <q-icon name="fa-solid fa-house" size="30px" />
             </q-item-section>
             <q-item-section class="text-h6">
-              <div>{{ $t("home_page") }}</div>
+              <div>{{ $t("header.home-page") }}</div>
             </q-item-section>
           </q-item>
           <q-item
@@ -390,7 +390,7 @@
               <q-icon name="fa-solid fa-people-roof" size="30px" />
             </q-item-section>
             <q-item-section class="text-h6">
-              <div>{{ $t("gpo") }}</div>
+              <div>{{ $t("header.gpo") }}</div>
             </q-item-section>
           </q-item>
           <q-item
@@ -402,7 +402,7 @@
               <q-icon name="fa-solid fa-user-doctor" size="30px" />
             </q-item-section>
             <q-item-section class="text-h6">
-              <div>{{ $t("synLab") }}</div>
+              <div>{{ $t("header.synLab") }}</div>
             </q-item-section>
           </q-item>
           <q-item
@@ -414,7 +414,7 @@
               <q-icon name="fa-solid fa-star-of-life" size="30px" />
             </q-item-section>
             <q-item-section class="text-h6">
-              <div>{{ $t("vHospital") }}</div>
+              <div>{{ $t("header.vHospital") }}</div>
             </q-item-section>
           </q-item>
         </q-list>

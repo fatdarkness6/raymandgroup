@@ -298,11 +298,11 @@
   }
 }
 .scroll-animation {
-  animation: scrollUp 65s linear infinite;
+  animation: scrollUp 40s linear infinite;
 }
 
 .scroll-animation-reverse {
-  animation: scrollDown 65s linear infinite;
+  animation: scrollDown 40s linear infinite;
 }
 
 .hero-section .scroll-animation:hover,

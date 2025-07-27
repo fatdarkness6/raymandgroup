@@ -1,24 +1,64 @@
 {
   "home_page": {
-    "hero-sec1": "A new transformation in laboratories and health services Based on strategic technology in Raymand Holding",
-    "hero-sec2": "",
-    "gpo": "Ausrüstung",
-    "synLab": "Labor",
-    "vHospital": "Virtuell"
+    "hero-sec1": "Eine neue Transformation in Laboren und Gesundheitsdiensten basierend auf strategischer Technologie in der Raymand Holding",
+    "hero-sec2": "Die Raymand-Gruppe wurde mit dem Ziel gegründet, ein integriertes und technologiegestütztes Ökosystem in der Lieferkette, dem Management und der Dienstleistungserbringung zu schaffen. Wir streben danach, durch einen systematischen, wissenschaftlichen und werteorientierten Ansatz die aktuellen Standards der Gesundheits- und Labordienstleistungen im Land zu transformieren. Durch den Einsatz fortschrittlicher Technologien und moderner Managementstrategien wollen wir ein lokalisiertes Modell der besten globalen Praktiken in der Laborserviceverwaltung, der Lieferkette für Spezialgeräte und dem Gesundheitsmanagement im Iran entwickeln.",
+    "raymand1": "Raymand Tajhiz GmbH",
+    "raymand2": "Raymand System Azma GmbH",
+    "raymand3": "Raymand System Tajhiz GmbH",
+    "discover": {
+      "discover-text": "Organisationsstruktur der Holding",
+      "discover-intro": "Die Raymand-Gruppe besteht aus drei Unternehmen, die jeweils das Ziel verfolgen, konventionelle Systeme in ihren Bereichen zu transformieren. Mit innovativen Methoden und modernen Technologien versuchen sie, Lösungen für bestehende Herausforderungen in industriellen und klinischen Laboren sowie im Gesundheitswesen zu finden.",
+      "raymand1-des1": "Beschaffung, Import und Produktion von Laborausrüstung und Verbrauchsmaterialien basierend auf GPO-Prinzipien und Wertschöpfungskette",
+      "raymand1-des2": "Beschaffungskette und Importeur von Spezialgeräten internationaler Marken",
+      "raymand1-des3": "Durch das GPO-Modell senkt das Unternehmen die Kosten und steigert die Effizienz in der Lieferkette für industrielle, Forschungs- und klinische Labore im ganzen Land.",
+      "raymand2-des1": "Intelligente Verwaltung und Umsetzung von Qualitätssicherungssystemen für Spezial-, Forschungs- und Kliniklaboratorien",
+      "raymand2-des2": "Implementierung und Prüfung internationaler Standards wie GPI, ISO 17025 und ISO 15189",
+      "raymand2-des3": "Gestaltung von Laborprozessen, SOP-Entwicklung und Schulung von Personal",
+      "raymand2-des4": "Beratung beim Kauf, der Installation, Kalibrierung und Validierung von Geräten",
+      "raymand2-des5": "Ressourcenmanagement, einschließlich Personal, Verbrauchsmaterialien und Kapazitätsplanung für die Laborproduktion",
+      "raymand2-des6": "Steigerung der Produktivität, Genauigkeit und Effektivität der Laborleistungen",
+      "raymand2-des7": "Verkauf und Erbringung von Labor- und Forschungsdienstleistungen",
+      "raymand3-des1": "Intelligente Verwaltung von Gesundheitsdiensten basierend auf neuen Technologien",
+      "raymand3-des2": "Transformation von Prozessen",
+      "raymand3-des3": "Bereitstellung intelligenter Lösungen für alle Gesundheitseinheiten",
+      "raymand3-des4": "Entwurf von Betriebsmodellen und Organisationsstrukturen",
+      "raymand3-des5": "Virtuelles Krankenhaus und innovative Veränderungen in Vor-, In- und Nachkrankenhausdiensten"
+    },
+    "blog": "Blog",
+    "update": "Neueste Unternehmens­updates",
+    "newsBlog": "Bleiben Sie mit unseren neuesten Nachrichten und Einblicken auf dem Laufenden",
+    "news": {
+      "title1": "Unternehmen, die sich uns angeschlossen haben",
+      "title2": "Labore, die sich uns angeschlossen haben",
+      "title3": "Zentren, die sich uns angeschlossen haben"
+    },
+    "slogan1": "Präzision in jedem Puls",
+    "slogan2": "Diagnostik neu denken, Labore stärken",
+    "slogan3": "Gesundheitslösungen von morgen entwickeln"
   },
-  "contact_us": "Kontakt",
-  "about_us": "Über uns",
-
-  "site_pages": "Seitenübersicht",
-  "submit": "Absenden",
-  "name&lastname": "Vor- und Nachname",
-  "email": "E-Mail",
-  "phone": "Telefon",
-  "validation": {
-    "name_required": "Name ist erforderlich",
-    "email_required": "E-Mail ist erforderlich",
-    "email_invalid": "Bitte eine gültige E-Mail-Adresse eingeben",
-    "phone_required": "Telefonnummer ist erforderlich",
-    "phone_length": "Telefonnummer muss mindestens 11 Zeichen haben"
+  "header": {
+    "home-page": "Startseite",
+    "gpo": "G.P.O",
+    "synLab": "Syn Lab",
+    "vHospital": "Virtuelles Krankenhaus",
+    "contact_us": "Kontakt",
+    "about_us": "Über uns"
+  },
+  "common": {
+    "submit": "Absenden",
+    "name&lastname": "Vor- und Nachname",
+    "email": "E-Mail",
+    "phone": "Telefon",
+    "learn-more": "Mehr erfahren"
+  },
+  "footer": {
+    "site_pages": "Seitenübersicht",
+    "validation": {
+      "name_required": "Name ist erforderlich",
+      "email_required": "E-Mail ist erforderlich",
+      "email_invalid": "Bitte eine gültige E-Mail eingeben",
+      "phone_required": "Telefonnummer ist erforderlich",
+      "phone_length": "Telefonnummer muss mindestens 11 Stellen haben"
+    }
   }
 }
