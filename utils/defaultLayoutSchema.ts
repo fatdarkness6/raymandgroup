@@ -10,6 +10,6 @@ export const defaultLayoutSchema = (t: (key: string) => string) => {
     phone: yup
       .string()
       .required(t("footer.validation.phone_required"))
-      .min(11, t("fotter.validation.phone_length")),
+      .min(11, t("footer.validation.phone_length")),
   });
 };

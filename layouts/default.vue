@@ -478,8 +478,8 @@ const submit = handleSubmit((values) => {
     });
 });
 
-async function switchLanguage(lang: any) {
-  await setLocale(lang);
+function switchLanguage(lang: any) {
+  setLocale(lang);
 }
 </script>
 

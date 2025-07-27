@@ -8,8 +8,8 @@
         <div
           class="introduction space-between-each-sections q-pt-sm flex column gap-20"
         >
-          <MotionGroup>
-            <Motion delay="0" preset="slideVisibleOnceLeft" duration="600">
+          <MotionGroup preset="slideVisibleOnceLeft">
+            <Motion delay="0" duration="600">
               <div class="part1">
                 <h2
                   :class="`no-margin text-weight-medium res-h1`"
@@ -19,14 +19,14 @@
                 </h2>
               </div>
             </Motion>
-            <Motion delay="200" preset="slideVisibleOnceLeft" duration="600">
+            <Motion delay="200" duration="600">
               <div class="part2">
                 <p class="text-body1 text-weight-regular">
                   {{ tran[1] }}
                 </p>
               </div>
             </Motion>
-            <Motion delay="400" preset="slideVisibleOnceLeft" duration="600">
+            <Motion delay="400" duration="600">
               <div class="part3">
                 <q-btn push color="primary" no-caps padding="10px 20px">{{
                   tran[5]
@@ -86,7 +86,7 @@
           <MotionGroup preset="slideVisibleOnceTop">
             <Motion delay="0" duration="600">
               <div
-                v-if="locale !== 'fa'"
+                v-if="local !== 'fa'"
                 class="text-subtitle1 text-weight-bolder text-white"
               >
                 Explore
@@ -134,7 +134,7 @@
                         {{ tran[5] }}
                       </div>
                       <q-icon
-                        v-if="locale !== 'fa'"
+                        v-if="local !== 'fa'"
                         name="fa-solid fa-angle-right"
                         size="20px"
                       />
@@ -170,7 +170,7 @@
                           {{ tran[5] }}
                         </div>
                         <q-icon
-                          v-if="locale !== 'fa'"
+                          v-if="local !== 'fa'"
                           name="fa-solid fa-angle-right"
                           size="20px"
                         />
@@ -202,7 +202,7 @@
                         {{ tran[5] }}
                       </div>
                       <q-icon
-                        v-if="locale !== 'fa'"
+                        v-if="local !== 'fa'"
                         name="fa-solid fa-angle-right"
                         size="20px"
                       />
@@ -302,8 +302,6 @@
 </template>
 <script setup lang="ts">
 const { locale, t } = useI18n();
-console.log(locale.value);
-
 const tran = [
   t("home_page.hero-sec1"),
   t("home_page.hero-sec2"),
@@ -339,7 +337,7 @@ const tran = [
   t("home_page.newsBlog"),
 ];
 
-// const local = locale.value;
+const local = locale.value;
 const images = [
   { image: "/images/i-1.webp", title: tran[2], slogan: tran[26] },
   { image: "/images/i-2.webp", title: tran[2], slogan: tran[26] },
