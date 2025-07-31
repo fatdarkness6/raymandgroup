@@ -213,28 +213,6 @@
             <font-awesome-icon :icon="['fab', 'tiktok']" />
           </a>
         </div>
-        <div class="extra-details flex column justify-center items-center">
-          <div class="image">
-            <q-img
-              src="/images/logo-test.svg"
-              spinner-color="primary"
-              fetchpriority="high"
-              style="height: 90px; width: 90px"
-            >
-              <template v-slot:loading>
-                <q-spinner-gears color="white" />
-              </template>
-            </q-img>
-          </div>
-          <div class="details">
-            <p class="custom-text" :dir="directionOfElement(locale)">
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eum
-              numquam earum totam facilis doloribus unde magni repellat
-              repudiandae! Rem, impedit perferendis? Quam repudiandae ab vero,
-              magni in cupiditate culpa consectetur!
-            </p>
-          </div>
-        </div>
       </div>
       <p class="copyright-text">
         All rights reserved © {{ new Date().getFullYear() }} | Designed &

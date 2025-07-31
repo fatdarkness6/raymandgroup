@@ -8,32 +8,32 @@
         <div
           class="introduction space-between-each-sections q-pt-sm flex column gap-20"
         >
-          <MotionGroup preset="slideVisibleOnceLeft">
-            <Motion delay="0" duration="600">
+          <AnimationSlideOnceGroup direction="left">
+            <AnimationSlideOnce :delay="0">
               <div class="part1">
                 <h2
                   :class="`no-margin text-weight-medium res-h1`"
                   style="line-height: 5rem"
                 >
-                  {{ tran[0] }}
+                  {{ $t("home_page.hero-sec1") }}
                 </h2>
               </div>
-            </Motion>
-            <Motion delay="200" duration="600">
+            </AnimationSlideOnce>
+            <AnimationSlideOnce :delay="200">
               <div class="part2">
                 <p class="text-body1 text-weight-regular">
-                  {{ tran[1] }}
+                  {{ $t("home_page.hero-sec2") }}
                 </p>
               </div>
-            </Motion>
-            <Motion delay="400" duration="600">
+            </AnimationSlideOnce>
+            <AnimationSlideOnce :delay="400">
               <div class="part3">
                 <q-btn push color="primary" no-caps padding="10px 20px">{{
-                  tran[5]
+                  $t("common.learn-more")
                 }}</q-btn>
               </div>
-            </Motion>
-          </MotionGroup>
+            </AnimationSlideOnce>
+          </AnimationSlideOnceGroup>
         </div>
         <div
           class="img flex justify-center items-center gap-10 overflow-hidden animation-img relative"
@@ -83,35 +83,38 @@
         <div
           class="introduction flex column justify-center items-center text-center gap-20 q-mb-xl relative z-max"
         >
-          <MotionGroup preset="slideVisibleOnceTop">
-            <Motion delay="0" duration="600">
+          <AnimationSlideOnceGroup direction="up">
+            <AnimationSlideOnce :delay="0">
               <div
-                v-if="local !== 'fa'"
+                v-if="locale !== 'fa'"
                 class="text-subtitle1 text-weight-bolder text-white"
               >
                 Explore
               </div>
-            </Motion>
-            <Motion delay="200" duration="600">
+            </AnimationSlideOnce>
+            <AnimationSlideOnce :delay="200">
               <div class="text-h2 text-weight-medium res-h2 text-white">
-                {{ tran[6] }}
+                {{ $t("home_page.discover.discover-text") }}
               </div>
-            </Motion>
-            <Motion delay="400" duration="600">
-              <div
-                class="text-body1 text-weight-medium text-white"
-                style="max-width: 1500px; width: 100%"
-              >
-                {{ tran[7] }}
-              </div>
-            </Motion>
-          </MotionGroup>
+            </AnimationSlideOnce>
+          </AnimationSlideOnceGroup>
+          <AnimationSlideOnce direction="up" :delay="400">
+            <div
+              class="text-body1 text-weight-medium text-white"
+              style="max-width: 1500px; width: 100%"
+            >
+              {{ $t("home_page.discover.discover-intro") }}
+            </div>
+          </AnimationSlideOnce>
         </div>
       </div>
       <div class="">
         <div
           class="wrapper flex justify-center items-center gap-20 about-3-companies relative z-max no-wrap"
         >
+          <AnimationSlideOnceGroup direction="left">
+            <AnimationSlideOnce :delay="0"> </AnimationSlideOnce>
+          </AnimationSlideOnceGroup>
           <MotionGroup preset="slideVisibleOnceLeft" duration="600">
             <Motion delay="200" class="w-45 about-2">
               <q-card :bordered="true" class="custom-card my-card">
@@ -336,8 +339,8 @@ const tran = [
   t("home_page.update"),
   t("home_page.newsBlog"),
 ];
-
 const local = locale.value;
+
 const images = [
   { image: "/images/i-1.webp", title: tran[2], slogan: tran[26] },
   { image: "/images/i-2.webp", title: tran[2], slogan: tran[26] },
