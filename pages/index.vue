@@ -19,7 +19,7 @@
                 </h2>
               </div>
             </AnimationSlideOnce>
-            <AnimationSlideOnce :delay="200">
+            <AnimationSlideOnce ::delay="200">
               <div class="part2">
                 <p class="text-body1 text-weight-regular">
                   {{ $t("home_page.hero-sec2") }}
@@ -92,7 +92,7 @@
                 Explore
               </div>
             </AnimationSlideOnce>
-            <AnimationSlideOnce :delay="200">
+            <AnimationSlideOnce ::delay="200">
               <div class="text-h2 text-weight-medium res-h2 text-white">
                 {{ $t("home_page.discover.discover-text") }}
               </div>
@@ -108,97 +108,62 @@
           </AnimationSlideOnce>
         </div>
       </div>
-      <div class="">
-        <div
-          class="wrapper flex justify-center items-center gap-20 about-3-companies relative z-max no-wrap"
+      <div class="wrapper">
+        <AnimationSlideOnceGroup
+          direction="left"
+          class="flex justify-center items-center gap-20 about-3-companies relative z-max no-wrap"
         >
-          <AnimationSlideOnceGroup direction="left">
-            <AnimationSlideOnce :delay="0"> </AnimationSlideOnce>
-          </AnimationSlideOnceGroup>
-          <MotionGroup preset="slideVisibleOnceLeft" duration="600">
-            <Motion delay="200" class="w-45 about-2">
-              <q-card :bordered="true" class="custom-card my-card">
-                <div class="q-px-md">
-                  <q-card-section
-                    class="flex column gap-10 how-it-works-section-q full-width relative z-max text-white text-weight-md"
-                  >
-                    <div class="text-h4 res-h4 text-weight-medium">
-                      {{ tran[3] }}
-                    </div>
-                    <div
-                      v-for="(_, index) in 7"
-                      :key="index"
-                      class="text-caption"
-                    >
-                      {{ tran[index + 11] }}
-                    </div>
-                    <div class="learn-more flex items-center gap-10">
-                      <div class="text-body1 res-h6 text-weight-bold">
-                        {{ tran[5] }}
-                      </div>
-                      <q-icon
-                        v-if="local !== 'fa'"
-                        name="fa-solid fa-angle-right"
-                        size="20px"
-                      />
-                    </div>
-                  </q-card-section>
-                </div>
-                <q-img src="/images/i-2.webp" class="custom-img2" />
-              </q-card>
-            </Motion>
-            <Motion delay="0" class="w-30 about-1">
-              <q-card class="custom-card q-pl-sm my-card" :bordered="true">
-                <div
-                  class="flex justify-between items-center gap-20 no-wrap full-height"
+          <AnimationSlideOnce :delay="0" class="w-45 about-2">
+            <q-card :bordered="true" class="custom-card my-card">
+              <div class="q-px-md">
+                <q-card-section
+                  class="flex column gap-10 how-it-works-section-q full-width relative z-max text-white text-weight-md"
                 >
-                  <div class="part1">
-                    <q-card-section
-                      class="flex column gap-20 how-it-works-section-q full-width relative z-max text-white text-weight-md"
-                    >
-                      <div class="text-h4 res-h4 text-weight-medium">
-                        {{ tran[2] }}
-                      </div>
-                      <div class="text-caption">
-                        {{ tran[8] }}
-                      </div>
-                      <div class="text-caption">
-                        {{ tran[9] }}
-                      </div>
-                      <div class="text-caption">
-                        {{ tran[10] }}
-                      </div>
-                      <div class="learn-more flex items-center gap-10">
-                        <div class="text-body1 res-h6 text-weight-bold">
-                          {{ tran[5] }}
-                        </div>
-                        <q-icon
-                          v-if="local !== 'fa'"
-                          name="fa-solid fa-angle-right"
-                          size="20px"
-                        />
-                      </div>
-                    </q-card-section>
+                  <div class="text-h4 res-h4 text-weight-medium">
+                    {{ tran[3] }}
                   </div>
-                  <q-img src="/images/i-1.webp" class="custom-img2" />
-                </div>
-              </q-card>
-            </Motion>
-            <Motion delay="400" class="w-30 about-3">
-              <q-card :bordered="true" class="custom-card my-card">
-                <div class="q-px-md">
+                  <div
+                    v-for="(_, index) in 7"
+                    :key="index"
+                    class="text-caption"
+                  >
+                    {{ tran[index + 11] }}
+                  </div>
+                  <div class="learn-more flex items-center gap-10">
+                    <div class="text-body1 res-h6 text-weight-bold">
+                      {{ tran[5] }}
+                    </div>
+                    <q-icon
+                      v-if="local !== 'fa'"
+                      name="fa-solid fa-angle-right"
+                      size="20px"
+                    />
+                  </div>
+                </q-card-section>
+              </div>
+              <q-img src="/images/i-2.webp" class="custom-img2" />
+            </q-card>
+          </AnimationSlideOnce>
+          <AnimationSlideOnce :delay="200" class="w-30 about-1">
+            <q-card class="custom-card q-pl-sm my-card" :bordered="true">
+              <div
+                class="flex justify-between items-center gap-20 no-wrap full-height"
+              >
+                <div class="part1">
                   <q-card-section
-                    class="flex column gap-20 how-it-works-section-q relative z-max text-white"
+                    class="flex column gap-20 how-it-works-section-q full-width relative z-max text-white text-weight-md"
                   >
                     <div class="text-h4 res-h4 text-weight-medium">
-                      {{ tran[4] }}
+                      {{ tran[2] }}
                     </div>
-                    <div
-                      v-for="(_, index) in 7"
-                      :key="index"
-                      class="text-caption"
-                    >
-                      {{ tran[index + 18] }}
+                    <div class="text-caption">
+                      {{ tran[8] }}
+                    </div>
+                    <div class="text-caption">
+                      {{ tran[9] }}
+                    </div>
+                    <div class="text-caption">
+                      {{ tran[10] }}
                     </div>
                     <div class="learn-more flex items-center gap-10">
                       <div class="text-body1 res-h6 text-weight-bold">
@@ -212,40 +177,74 @@
                     </div>
                   </q-card-section>
                 </div>
-                <q-img src="/images/i-3.webp" class="custom-img2" />
-              </q-card>
-            </Motion>
-          </MotionGroup>
-        </div>
+                <q-img src="/images/i-1.webp" class="custom-img2" />
+              </div>
+            </q-card>
+          </AnimationSlideOnce>
+          <AnimationSlideOnce :delay="400" class="w-30 about-3">
+            <q-card :bordered="true" class="custom-card my-card">
+              <div class="q-px-md">
+                <q-card-section
+                  class="flex column gap-20 how-it-works-section-q relative z-max text-white"
+                >
+                  <div class="text-h4 res-h4 text-weight-medium">
+                    {{ tran[4] }}
+                  </div>
+                  <div
+                    v-for="(_, index) in 7"
+                    :key="index"
+                    class="text-caption"
+                  >
+                    {{ tran[index + 18] }}
+                  </div>
+                  <div class="learn-more flex items-center gap-10">
+                    <div class="text-body1 res-h6 text-weight-bold">
+                      {{ tran[5] }}
+                    </div>
+                    <q-icon
+                      v-if="local !== 'fa'"
+                      name="fa-solid fa-angle-right"
+                      size="20px"
+                    />
+                  </div>
+                </q-card-section>
+              </div>
+              <q-img src="/images/i-3.webp" class="custom-img2" />
+            </q-card>
+          </AnimationSlideOnce>
+        </AnimationSlideOnceGroup>
       </div>
     </div>
     <div class="wrapper">
       <div class="container-6 q-my-xl q-py-xl">
-        <div
-          class="introduction flex column justify-center items-center q-my-xl q-py-xl gap-20"
-          style="text-align: center"
-        >
-          <MotionGroup preset="slideVisibleOnceTop" duration="600">
-            <Motion>
+        <div style="text-align: center">
+          <AnimationSlideOnceGroup
+            class="introduction flex column justify-center items-center q-my-xl q-py-xl gap-20"
+            preset="slideVisibleOnceTop"
+          >
+            <AnimationSlideOnce>
               <div class="text-subtitle1 text-weight-bolder">
                 {{ tran[29] }}
               </div>
-            </Motion>
-            <Motion delay="200">
+            </AnimationSlideOnce>
+            <AnimationSlideOnce :delay="200">
               <div class="text-h2 text-weight-medium res-h2">
                 {{ tran[30] }}
               </div>
-            </Motion>
-            <Motion delay="400">
+            </AnimationSlideOnce>
+            <AnimationSlideOnce :delay="400">
               <div class="text-body1 text-weight-medium">
                 {{ tran[31] }}
               </div>
-            </Motion>
-          </MotionGroup>
+            </AnimationSlideOnce>
+          </AnimationSlideOnceGroup>
         </div>
-        <div class="flex items-start gap-20 justify-center">
-          <MotionGroup preset="slideVisibleOnceLeft" duration="600">
-            <Motion
+        <div>
+          <AnimationSlideOnceGroup
+            class="flex items-start gap-20 justify-center"
+            direction="left"
+          >
+            <AnimationSlideOnce
               v-for="(item, i) in news"
               :key="item.id"
               :delay="i * 200"
@@ -289,15 +288,15 @@
                   </q-card-section>
                 </div>
               </q-card>
-            </Motion>
-          </MotionGroup>
+            </AnimationSlideOnce>
+          </AnimationSlideOnceGroup>
         </div>
         <div class="full-width flex justify-center items-center">
-          <Motion duration="600" preset="slideVisibleOnceBottom">
+          <AnimationSlideOnce preset="slideVisibleOnceBottom">
             <q-btn push no-caps padding="15px 30px" class="q-mt-xl flex">
               View all
             </q-btn>
-          </Motion>
+          </AnimationSlideOnce>
         </div>
       </div>
     </div>

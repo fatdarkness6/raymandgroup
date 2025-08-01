@@ -42,21 +42,21 @@
               exact
             />
             <q-route-tab
-              icon="fa-solid fa-people-roof"
+              icon="fa-solid fa-building"
               :label="$t('header.gpo')"
               to="/salam"
               class="rounded-10"
               exact
             />
             <q-route-tab
-              icon="fa-solid fa-user-doctor"
+              icon="fa-solid fa-flask"
               :label="$t('header.synLab')"
               to="/alarms"
               class="rounded-10"
               exact
             />
             <q-route-tab
-              icon="fa-solid fa-star-of-life"
+              icon="fa-solid fa-hospital"
               :label="$t('header.vHospital')"
               to="/movies"
               class="rounded-10 text-sm"
