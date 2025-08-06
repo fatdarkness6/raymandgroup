@@ -141,7 +141,10 @@
                   </div>
                 </q-card-section>
               </div>
-              <q-img src="/images/i-2.webp" class="custom-img2" />
+              <q-img
+                src="/images/Laboratory-Teamwork.webp"
+                class="custom-img2"
+              />
             </q-card>
           </AnimationSlideOnce>
           <AnimationSlideOnce :delay="200" class="w-30 about-1">
@@ -177,7 +180,10 @@
                     </div>
                   </q-card-section>
                 </div>
-                <q-img src="/images/i-1.webp" class="custom-img2" />
+                <q-img
+                  src="/images/Laboratory-Equipment-Supply.webp"
+                  class="custom-img2"
+                />
               </div>
             </q-card>
           </AnimationSlideOnce>
@@ -209,7 +215,10 @@
                   </div>
                 </q-card-section>
               </div>
-              <q-img src="/images/i-3.webp" class="custom-img2" />
+              <q-img
+                src="/images/Smart-Health-Services.webp"
+                class="custom-img2"
+              />
             </q-card>
           </AnimationSlideOnce>
         </AnimationSlideOnceGroup>

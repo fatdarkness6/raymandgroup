@@ -44,12 +44,12 @@
             <q-route-tab
               icon="fa-solid fa-building"
               :label="$t('header.gpo')"
-              to="/salam"
+              to="/G.O.P"
               class="rounded-10"
               exact
             />
             <q-route-tab
-              icon="fa-solid fa-flask"
+              icon="fa-solid fa-microscope"
               :label="$t('header.synLab')"
               to="/alarms"
               class="rounded-10"
