@@ -1,8 +1,5 @@
 <template>
   <div :dir="directionOfElement(locale)">
-    <ul class="box-area">
-      <li v-for="items in 10" :key="items"></li>
-    </ul>
     <div class="wrapper">
       <div class="hero-section flex q-mt-xl">
         <div
