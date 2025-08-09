@@ -36,20 +36,42 @@
     "slogan2": "Diagnostik neu denken, Labore stärken",
     "slogan3": "Gesundheitslösungen von morgen entwickeln"
   },
+  "gop_page": {
+    "subtitle": "Eurofins. Weltmarktführer im Testen für das Leben. Über 65.000 Mitarbeiter. Mehr als 950 Labore. 60 Länder.",
+    "location": "Standorte der Labore",
+    "careers": "Karriere bei Eurofins",
+    "investors": "Investoren",
+    "shortCuts": {
+      "food": "Lebensmittel- & Futtermitteltests",
+      "agro": "Agrartests",
+      "environment": "Umwelttests",
+      "materials": "Material- & Ingenieurwissenschaften",
+      "innovation": "Innovation",
+      "bioPharma": "BioPharma-Dienstleistungen",
+      "genomic": "Genomik",
+      "clinical": "Klinische Diagnostik",
+      "inVitro": "In-vitro-Diagnoselösungen",
+      "eurofinsFoundation": "Eurofins Stiftung",
+      "agroscience": "Agrowissenschaftliche Dienstleistungen",
+      "consumerProduct": "Verbraucherprodukttests",
+      "forensic": "Forensische Dienstleistungen",
+      "cosmetics": "Kosmetik & Körperpflege"
+    }
+  },
   "header": {
     "home-page": "Startseite",
     "gpo": "G.P.O",
     "synLab": "Syn Lab",
     "vHospital": "Virtuelles Krankenhaus",
-    "contact_us": "Kontakt",
-    "about_us": "Über uns"
+    "contact_us": "Kontakt"
   },
   "common": {
     "submit": "Absenden",
     "name&lastname": "Vor- und Nachname",
     "email": "E-Mail",
     "phone": "Telefon",
-    "learn-more": "Mehr erfahren"
+    "learn-more": "Mehr erfahren",
+    "about_us": "Über uns"
   },
   "footer": {
     "site_pages": "Seitenübersicht",

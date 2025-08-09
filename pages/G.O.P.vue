@@ -3,8 +3,7 @@
     <div class="container1 relative q-mb-lg">
       <div class="ab-text-center relative z-max">
         <div class="text-h5 text-white">
-          Eurofins. World Leader in Testing for Life. Over 65,000 employees.
-          950+ laboratories. 60 countries.
+          {{ $t("gop_page.subtitle") }}
         </div>
       </div>
     </div>
@@ -47,47 +46,42 @@
   </div>
 </template>
 <script setup lang="ts">
+const { t } = useI18n();
 const imgData = [
   {
     image: "/images/i-1.webp",
-    text: "Laboratory Locations",
-    subtitle:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi, repudiandae sit. Omnis soluta ipsum, at quidem obcaecati nemo numquam cum. Facilis dolorem ad tenetur iusto voluptatibus molestias architecto consequuntur ut.",
+    text: t("gop_page.location"),
   },
   {
     image: "/images/i-2.webp",
-    text: "Eurofins Careers",
-    subtitle:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi, repudiandae sit. Omnis soluta ipsum, at quidem obcaecati nemo numquam cum. Facilis dolorem ad tenetur iusto voluptatibus molestias architecto consequuntur ut.",
+    text: t("gop_page.careers"),
   },
   {
     image: "/images/i-3.webp",
-    text: "Investors",
-    subtitle:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi, repudiandae sit. Omnis soluta ipsum, at quidem obcaecati nemo numquam cum. Facilis dolorem ad tenetur iusto voluptatibus molestias architecto consequuntur ut.",
+    text: t("gop_page.investors"),
   },
 ];
 const con3Data = [
   {
-    text1: "About Us",
-    text2: "Food & Feed Testing",
-    text3: "Agro Testing",
-    text4: "Environment  Testing",
-    text5: "Materials & Engineering Sciences",
+    text1: t("common.about_us"),
+    text2: t("gop_page.shortCuts.food"),
+    text3: t("gop_page.shortCuts.agro"),
+    text4: t("gop_page.shortCuts.environment"),
+    text5: t("gop_page.shortCuts.materials"),
   },
   {
-    text1: "Innovation",
-    text2: "BioPharma Services",
-    text3: "Genomic Services",
-    text4: "Clinical Diagnostics",
-    text5: "In Vitro Diagnostics Solutions",
+    text1: t("gop_page.shortCuts.innovation"),
+    text2: t("gop_page.shortCuts.bioPharma"),
+    text3: t("gop_page.shortCuts.genomic"),
+    text4: t("gop_page.shortCuts.clinical"),
+    text5: t("gop_page.shortCuts.inVitro"),
   },
   {
-    text1: "Eurofins Foundation",
-    text2: "Agroscience Services",
-    text3: "Consumer Product Testing",
-    text4: "Forensic Services",
-    text5: "Cosmetics & Personal Care",
+    text1: t("gop_page.shortCuts.eurofinsFoundation"),
+    text2: t("gop_page.shortCuts.agroscience"),
+    text3: t("gop_page.shortCuts.consumerProduct"),
+    text4: t("gop_page.shortCuts.forensic"),
+    text5: t("gop_page.shortCuts.cosmetics"),
   },
 ];
 </script>

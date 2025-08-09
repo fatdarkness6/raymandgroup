@@ -36,20 +36,42 @@
     "slogan2": "Innovating Diagnostics, Empowering Labs",
     "slogan3": "Engineering Tomorrow’s Health Solutions"
   },
+  "gop_page": {
+    "subtitle": "Eurofins. World Leader in Testing for Life. Over 65,000 employees. 950+ laboratories. 60 countries.",
+    "location": "Laboratory Locations",
+    "careers": "Eurofins Careers",
+    "investors": "Investors",
+    "shortCuts": {
+      "food": "Food & Feed Testing",
+      "agro": "Agro Testing",
+      "environment": "Environment  Testing",
+      "materials": "Materials & Engineering Sciences",
+      "innovation": "Innovation",
+      "bioPharma": "BioPharma Services",
+      "genomic": "Genomic",
+      "clinical": "Clinical Diagnostics",
+      "inVitro": "In Vitro Diagnostics Solutions",
+      "eurofinsFoundation": "Eurofins Foundation",
+      "agroscience": "Agroscience Services",
+      "consumerProduct": "Consumer Product Testing",
+      "forensic": "Forensic Services",
+      "cosmetics": "Cosmetics & Personal Care"
+    }
+  },
   "header": {
     "home-page": "Home",
     "gpo": "G.P.O",
     "synLab": "Syn Lab",
     "vHospital": "VHospital",
-    "contact_us": "Contact Us",
-    "about_us": "About Us"
+    "contact_us": "Contact Us"
   },
   "common": {
     "submit": "Submit",
     "name&lastname": "Name and Lastname",
     "email": "Email",
     "phone": "Phone",
-    "learn-more": "Learn More"
+    "learn-more": "Learn More",
+    "about_us": "About Us"
   },
   "footer": {
     "site_pages": "Site Pages",
