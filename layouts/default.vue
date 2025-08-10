@@ -174,7 +174,7 @@
             $t("header.home-page")
           }}</NuxtLink>
           <NuxtLink to="/about" class="custom-link">{{
-            $t("header.about_us")
+            $t("common.about_us")
           }}</NuxtLink>
           <NuxtLink to="/contact-us" class="custom-link">{{
             $t("header.contact_us")

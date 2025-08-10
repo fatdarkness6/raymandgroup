@@ -40,7 +40,9 @@
       >
         <div v-for="data in con3Data" class="w-33">
           <div class="texts flex column gap-10">
-            <div
+            <q-btn
+              push
+              color="primary"
               v-for="value in data"
               :dir="directionOfElement(locale)"
               class="text text-subtitle1 q-pa-sm rounded-10 text-white flex items-center justify-between"
@@ -52,7 +54,7 @@
                 }`"
                 size="20px"
               />
-            </div>
+            </q-btn>
           </div>
         </div>
       </div>
@@ -133,16 +135,5 @@ const con3Data = [
   left: 0;
   width: 100%;
   background: linear-gradient(to right, #1976d2, #0f51b4);
-}
-.container3 .texts .text {
-  background: linear-gradient(to right, #1976d2, #0d48a1);
-  z-index: 1;
-  position: relative;
-  transition: all 1s;
-}
-.container3 .texts .text:hover {
-  background: linear-gradient(to right, #1976d283, #0d48a15e);
-  z-index: 1;
-  position: relative;
 }
 </style>
