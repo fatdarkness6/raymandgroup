@@ -47,14 +47,14 @@
             <q-route-tab
               icon="fa-solid fa-building"
               :label="$t('header.gpo')"
-              to="/G.O.P"
+              to="/"
               class="rounded-10"
               exact
             />
             <q-route-tab
               icon="fa-solid fa-microscope"
               :label="$t('header.synLab')"
-              to="/alarms"
+              to="/G.O.P"
               class="rounded-10"
               exact
             />
@@ -182,7 +182,7 @@
           <NuxtLink to="/alarms" class="custom-link">{{
             $t("header.gpo")
           }}</NuxtLink>
-          <NuxtLink to="/movies" class="custom-link">{{
+          <NuxtLink to="/G.O.P" class="custom-link">{{
             $t("header.synLab")
           }}</NuxtLink>
           <NuxtLink to="/movies" class="custom-link">{{
@@ -376,11 +376,11 @@
           </q-item>
           <q-item
             clickable
-            @click="navigateTo('/alarms')"
+            @click="navigateTo('/G.O.P')"
             class="menu-item flex items-center"
           >
             <q-item-section avatar>
-              <q-icon name="fa-solid fa-user-doctor" size="30px" />
+              <q-icon name="fa-solid fa-microscope" size="30px" />
             </q-item-section>
             <q-item-section class="text-h6">
               <div>{{ $t("header.synLab") }}</div>
@@ -392,7 +392,7 @@
             class="menu-item flex items-center"
           >
             <q-item-section avatar>
-              <q-icon name="fa-solid fa-star-of-life" size="30px" />
+              <q-icon name="fa-solid fa-hospital" size="30px" />
             </q-item-section>
             <q-item-section class="text-h6">
               <div>{{ $t("header.vHospital") }}</div>

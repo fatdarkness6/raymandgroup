@@ -19,9 +19,17 @@
           class="relative w-33 elements"
         >
           <div class="text-hover text-white z-max q-px-xl">
-            <div class="flex items-center gap-10">
+            <div
+              class="flex items-center gap-10"
+              :dir="directionOfElement(locale)"
+            >
               <div class="text-h6">{{ items.text }}</div>
-              <q-icon name="fa-solid fa-angle-right" size="20px" />
+              <q-icon
+                :name="`fa-solid ${
+                  locale === 'fa' ? 'fa-angle-left' : 'fa-angle-right'
+                }`"
+                size="20px"
+              />
             </div>
           </div>
           <q-img :src="items.image" style="min-height: 350px" />
@@ -34,10 +42,16 @@
           <div class="texts flex column gap-10">
             <div
               v-for="value in data"
+              :dir="directionOfElement(locale)"
               class="text text-subtitle1 q-pa-sm rounded-10 text-white flex items-center justify-between"
             >
               {{ value }}
-              <q-icon name="fa-solid fa-angle-right" size="20px" />
+              <q-icon
+                :name="`fa-solid ${
+                  locale === 'fa' ? 'fa-angle-left' : 'fa-angle-right'
+                }`"
+                size="20px"
+              />
             </div>
           </div>
         </div>
@@ -46,7 +60,7 @@
   </div>
 </template>
 <script setup lang="ts">
-const { t } = useI18n();
+const { t, locale } = useI18n();
 const imgData = [
   {
     image: "/images/i-1.webp",

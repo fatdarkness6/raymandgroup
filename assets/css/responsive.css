@@ -131,6 +131,11 @@
     font-size: 3rem !important;
     line-height: 3rem;
   }
+  .footer-content {
+    flex-direction: column;
+    justify-content: center;
+    gap: 70px;
+  }
 }
 @media (max-width: 720px) {
   .container-2,
@@ -177,11 +182,6 @@
 @media (max-width: 560px) {
   .error-massage.text404 {
     font-size: 17px;
-  }
-  .footer-content {
-    flex-direction: column;
-    justify-content: center;
-    gap: 70px;
   }
   .how-it-works-section .about-3-companies :is(.about-1, .about-3) {
     width: 100%;
