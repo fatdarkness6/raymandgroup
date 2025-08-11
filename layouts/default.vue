@@ -54,7 +54,7 @@
             <q-route-tab
               icon="fa-solid fa-microscope"
               :label="$t('header.synLab')"
-              to="/G.O.P"
+              to="/syn-lab"
               class="rounded-10"
               exact
             />
@@ -182,7 +182,7 @@
           <NuxtLink to="/alarms" class="custom-link">{{
             $t("header.gpo")
           }}</NuxtLink>
-          <NuxtLink to="/G.O.P" class="custom-link">{{
+          <NuxtLink to="/syn-lab" class="custom-link">{{
             $t("header.synLab")
           }}</NuxtLink>
           <NuxtLink to="/movies" class="custom-link">{{
@@ -376,7 +376,7 @@
           </q-item>
           <q-item
             clickable
-            @click="navigateTo('/G.O.P')"
+            @click="navigateTo('/syn-lab')"
             class="menu-item flex items-center"
           >
             <q-item-section avatar>

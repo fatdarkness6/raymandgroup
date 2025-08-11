@@ -2,7 +2,10 @@
   <div class="gop">
     <div class="container1 relative q-mb-lg">
       <div class="ab-text-center relative z-max">
-        <div class="text-h5 text-white">
+        <div
+          class="text-h5 text-white text-center"
+          :dir="directionOfElement(locale)"
+        >
           {{ $t("gop_page.subtitle") }}
         </div>
       </div>
@@ -16,7 +19,8 @@
           v-for="(items, index) in imgData"
           :key="index"
           :delay="index * 200"
-          class="relative w-33 elements"
+          style="overflow: hidden"
+          class="relative w-33 elements rounded-10"
         >
           <div class="text-hover text-white z-max q-px-xl">
             <div
@@ -32,13 +36,17 @@
               />
             </div>
           </div>
-          <q-img :src="items.image" style="min-height: 350px" />
+          <q-img
+            :src="items.image"
+            style="max-height: 300px; height: 300px"
+            class="rounded-10"
+          />
         </AnimationSlideOnce>
       </AnimationSlideOnceGroup>
       <div
         class="container3 q-my-xl flex items-center justify-between gap-30 no-wrap"
       >
-        <div v-for="data in con3Data" class="w-33">
+        <div v-for="data in con3Data" class="w-33 div-of-btn">
           <div class="texts flex column gap-10">
             <q-btn
               push
@@ -65,15 +73,15 @@
 const { t, locale } = useI18n();
 const imgData = [
   {
-    image: "/images/i-1.webp",
+    image: "/images/reflab-map.png",
     text: t("gop_page.location"),
   },
   {
-    image: "/images/i-2.webp",
+    image: "/images/Laboratory-Teamwork.webp",
     text: t("gop_page.careers"),
   },
   {
-    image: "/images/i-3.webp",
+    image: "/images/business-investors.jpg",
     text: t("gop_page.investors"),
   },
 ];
@@ -102,8 +110,9 @@ const con3Data = [
 ];
 </script>
 <style scoped>
+@import "@/assets/css/responsives/pages/syn-lab-responsive.css";
 .container1 {
-  background-image: url("/images/i-1.webp");
+  background-image: url("/images/Laboratory_Featured.jpg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
