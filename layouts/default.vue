@@ -338,30 +338,6 @@
               <div>Login</div>
             </q-item-section>
           </q-item>
-          <!-- <q-item
-            clickable
-            @click="navigateTo('/about')"
-            class="menu-item flex items-center"
-          >
-            <q-item-section avatar>
-              <q-icon name="fa-solid fa-circle-info" size="30px" />
-            </q-item-section>
-            <q-item-section class="text-h6">
-              <div>About</div>
-            </q-item-section>
-          </q-item> -->
-          <!-- <q-item
-            clickable
-            @click="navigateTo('/contact')"
-            class="menu-item flex items-center"
-          >
-            <q-item-section avatar>
-              <q-icon name="fa-solid fa-envelope" size="30px" />
-            </q-item-section>
-            <q-item-section class="text-h6">
-              <div>Contact</div>
-            </q-item-section>
-          </q-item> -->
           <q-item
             clickable
             @click="navigateTo('/salam')"
@@ -440,8 +416,11 @@ const submit = handleSubmit((values) => {
 
   canSubmit.value = false;
   loading.value = true;
-
-  submitForm(values)
+  const cleanedValues = {
+    ...values,
+    phone: values.phone.replace(/\s+/g, ""),
+  };
+  submitForm(cleanedValues)
     .then((response) => {
       if (response.status === 200) {
         showSuccessDialog.value = true;
