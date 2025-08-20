@@ -156,9 +156,7 @@
     </svg>
     <div class="flex items-center justify-center q-mt-xl column">
       <h5 class="text-center error-massage text404">
-        Oops! The
-        <span class="text-weight-bolder">({{ $route.fullPath }})</span> page
-        you’re looking for doesn’t exist or has been moved.
+        Oops! The page you’re looking for doesn’t exist or has been moved.
       </h5>
       <q-btn
         class="home-btn"

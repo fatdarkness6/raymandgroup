@@ -36,7 +36,7 @@
     "slogan2": "Innovating Diagnostics, Empowering Labs",
     "slogan3": "Engineering Tomorrow’s Health Solutions"
   },
-  "gop_page": {
+  "syn-lab_page": {
     "subtitle": "Eurofins. World Leader in Testing for Life. Over 65,000 employees. 950+ laboratories. 60 countries.",
     "location": "Laboratory Locations",
     "careers": "Eurofins Careers",
@@ -56,6 +56,14 @@
       "consumerProduct": "Consumer Product Testing",
       "forensic": "Forensic Services",
       "cosmetics": "Cosmetics & Personal Care"
+    },
+    "routes": {
+      "soil": {
+        "container1": {
+          "title": "soil projects",
+          "description": "soil is the most important resource that is exist on the earth"
+        }
+      }
     }
   },
   "header": {

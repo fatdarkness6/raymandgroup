@@ -7,7 +7,7 @@
           class="text-h5 text-white text-center"
           :dir="directionOfElement(locale)"
         >
-          {{ t("gop_page.subtitle") }}
+          {{ t("syn-lab_page.subtitle") }}
         </div>
       </div>
     </div>
@@ -58,9 +58,11 @@
               push
               color="primary"
               :dir="directionOfElement(locale)"
-              class="text text-subtitle1 q-pa-sm rounded-10 text-white flex items-center justify-between"
+              :to="`syn-lab/${label.route}`"
+              padding="15px 30px"
+              class="text text-subtitle1 rounded-10 text-white flex items-center justify-between"
             >
-              {{ label }}
+              {{ label.title }}
               <q-icon :name="arrowIcon" size="20px" />
             </q-btn>
           </div>
@@ -71,7 +73,6 @@
 </template>
 
 <script setup lang="ts">
-import { computed } from "vue";
 const { t, locale } = useI18n();
 
 const arrowIcon = computed(() =>
@@ -79,32 +80,38 @@ const arrowIcon = computed(() =>
 );
 
 const imgData = computed(() => [
-  { image: "/images/reflab-map.png", text: t("gop_page.location") },
-  { image: "/images/Laboratory-Teamwork.webp", text: t("gop_page.careers") },
-  { image: "/images/business-investors.jpg", text: t("gop_page.investors") },
+  { image: "/images/reflab-map.png", text: t("syn-lab_page.location") },
+  {
+    image: "/images/Laboratory-Teamwork.webp",
+    text: t("syn-lab_page.careers"),
+  },
+  {
+    image: "/images/business-investors.jpg",
+    text: t("syn-lab_page.investors"),
+  },
 ]);
 
 const con3Data = computed(() => [
   [
-    t("common.about_us"),
-    t("gop_page.shortCuts.food"),
-    t("gop_page.shortCuts.agro"),
-    t("gop_page.shortCuts.environment"),
-    t("gop_page.shortCuts.materials"),
+    { title: t("common.about_us"), route: "about-us" },
+    { title: t("syn-lab_page.shortCuts.food"), route: "soil" },
+    { title: t("syn-lab_page.shortCuts.agro") },
+    { title: t("syn-lab_page.shortCuts.environment") },
+    { title: t("syn-lab_page.shortCuts.materials") },
   ],
   [
-    t("gop_page.shortCuts.innovation"),
-    t("gop_page.shortCuts.bioPharma"),
-    t("gop_page.shortCuts.genomic"),
-    t("gop_page.shortCuts.clinical"),
-    t("gop_page.shortCuts.inVitro"),
+    { title: t("syn-lab_page.shortCuts.innovation") },
+    { title: t("syn-lab_page.shortCuts.bioPharma") },
+    { title: t("syn-lab_page.shortCuts.genomic") },
+    { title: t("syn-lab_page.shortCuts.clinical") },
+    { title: t("syn-lab_page.shortCuts.inVitro") },
   ],
   [
-    t("gop_page.shortCuts.eurofinsFoundation"),
-    t("gop_page.shortCuts.agroscience"),
-    t("gop_page.shortCuts.consumerProduct"),
-    t("gop_page.shortCuts.forensic"),
-    t("gop_page.shortCuts.cosmetics"),
+    { title: t("syn-lab_page.shortCuts.eurofinsFoundation") },
+    { title: t("syn-lab_page.shortCuts.agroscience") },
+    { title: t("syn-lab_page.shortCuts.consumerProduct") },
+    { title: t("syn-lab_page.shortCuts.forensic") },
+    { title: t("syn-lab_page.shortCuts.cosmetics") },
   ],
 ]);
 </script>

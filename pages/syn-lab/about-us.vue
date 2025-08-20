@@ -50,8 +50,6 @@ const companyInfo = [
         </p>
       </div>
     </section>
-
-    <!-- Company Info / Story -->
     <section class="q-pa-xl row items-center justify-center q-col-gutter-xl">
       <div
         v-for="(item, index) in companyInfo"
