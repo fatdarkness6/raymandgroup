@@ -94,7 +94,7 @@ const imgData = computed(() => [
 const con3Data = computed(() => [
   [
     { title: t("common.about_us"), route: "about-us" },
-    { title: t("syn-lab_page.shortCuts.food"), route: "soil" },
+    { title: t("syn-lab_page.shortCuts.soil"), route: "soil" },
     { title: t("syn-lab_page.shortCuts.agro") },
     { title: t("syn-lab_page.shortCuts.environment") },
     { title: t("syn-lab_page.shortCuts.materials") },
@@ -117,8 +117,6 @@ const con3Data = computed(() => [
 </script>
 
 <style scoped>
-@import "@/assets/css/responsives/pages/syn-lab/syn-lab-responsive.css";
-
 .container1 {
   background: url("/images/Laboratory_Featured.jpg") center/cover no-repeat;
   width: 100%;
@@ -144,5 +142,54 @@ const con3Data = computed(() => [
 }
 .container2 .elements:hover .text-hover {
   background: linear-gradient(to right, #1976d2, #0f51b4);
+}
+
+@media (max-width: 1140px) {
+  .container2 {
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+  .container2 :is(.elements:nth-child(1), .elements:nth-child(2)) {
+    width: 45%;
+  }
+  .container2 .elements:nth-child(3) {
+    width: 100%;
+  }
+  .container3 .text {
+    font-size: 12px;
+  }
+}
+@media (max-width: 780px) {
+  .container2 :is(.elements:nth-child(1), .elements:nth-child(2)) {
+    width: 100%;
+  }
+  .container3 {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .container3 :is(.div-of-btn:nth-child(1), .div-of-btn:nth-child(2)) {
+    width: 45%;
+  }
+  .container3 .div-of-btn:nth-child(3) {
+    width: 100%;
+  }
+}
+@media (max-width: 530px) {
+  .container3
+    :is(
+      .div-of-btn:nth-child(1),
+      .div-of-btn:nth-child(2),
+      .div-of-btn:nth-child(3)
+    ) {
+    width: 100%;
+  }
+  .container1 .text-h5 {
+    font-size: 20px;
+  }
+}
+@media (max-width: 400px) {
+  .container2 .text-h6 {
+    font-size: 1.1rem;
+  }
 }
 </style>

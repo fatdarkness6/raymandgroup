@@ -3,7 +3,7 @@
     <ul class="box-area">
       <li v-for="items in 10" :key="items"></li>
     </ul>
-    <q-header elevated reveal class="q-pa-md wrapper header">
+    <q-header elevated reveal :reveal-offset="1" class="q-pa-md wrapper header">
       <AnimationHeader />
       <div class="flex flex-row items-center justify-between">
         <div class="berger-button" style="width: 80px">
