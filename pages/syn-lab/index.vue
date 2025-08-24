@@ -4,7 +4,7 @@
     <div class="container1 relative q-mb-lg">
       <div class="ab-text-center relative z-max">
         <div
-          class="text-h5 text-white text-center"
+          class="text-h3 text-white text-center"
           :dir="directionOfElement(locale)"
         >
           {{ t("syn-lab_page.subtitle") }}
@@ -13,10 +13,36 @@
     </div>
 
     <div class="wrapper">
-      <!-- Image Section -->
       <AnimationSlideOnceGroup
         direction="left"
-        class="container2 flex items-center gap-20 no-wrap q-mt-xl"
+        class="container2 row q-col-gutter-md justify-between items-start"
+      >
+        <AnimationSlideOnce
+          v-for="(value, index) in con2Data"
+          :delay="index * 200"
+          class="col-xl-6 col-md-6 col-sm-6 col-12"
+        >
+          <q-card @click="navigateTo(`/syn-lab/about-us`)" class="my-card">
+            <q-img :src="value.image" />
+            <q-card-section class="text-center">
+              <div class="text-h6">{{ value.title }}</div>
+            </q-card-section>
+            <div :dir="directionOfElement(locale)">
+              <q-card-section>
+                <div class="text-body1">{{ value.desc }}</div>
+              </q-card-section>
+              <q-card-section>
+                <div class="text-body2">
+                  {{ t("common.learn-more") }}
+                </div>
+              </q-card-section>
+            </div>
+          </q-card>
+        </AnimationSlideOnce>
+      </AnimationSlideOnceGroup>
+      <AnimationSlideOnceGroup
+        direction="left"
+        class="container3 flex items-center gap-20 no-wrap q-mt-xl"
       >
         <AnimationSlideOnce
           v-for="(item, index) in imgData"
@@ -56,7 +82,7 @@
               v-for="(label, i) in group"
               :key="i"
               push
-              color="primary"
+              :color="label.color || 'primary'"
               :dir="directionOfElement(locale)"
               :to="`syn-lab/${label.route}`"
               padding="15px 30px"
@@ -75,6 +101,12 @@
 <script setup lang="ts">
 const { t, locale } = useI18n();
 
+interface ButtonItem {
+  title: string;
+  route?: string;
+  color?: string;
+}
+
 const arrowIcon = computed(() =>
   locale.value === "fa" ? "fa-solid fa-angle-left" : "fa-solid fa-angle-right"
 );
@@ -90,24 +122,35 @@ const imgData = computed(() => [
     text: t("syn-lab_page.investors"),
   },
 ]);
-
-const con3Data = computed(() => [
+const con2Data = [
+  {
+    image: "/images/Laboratory-Teamwork.webp",
+    title: t("syn-lab_page.generalInfo.vision"),
+    desc: t("syn-lab_page.generalInfo.visionDesc"),
+  },
+  {
+    image: "/images/Laboratory-Teamwork.webp",
+    title: t("syn-lab_page.generalInfo.mission"),
+    desc: t("syn-lab_page.generalInfo.missionDesc"),
+  },
+];
+const con3Data = computed<ButtonItem[][]>(() => [
   [
-    { title: t("common.about_us"), route: "about-us" },
+    { title: t("common.about_us"), route: "about-us", color: "red" },
     { title: t("syn-lab_page.shortCuts.soil"), route: "soil" },
     { title: t("syn-lab_page.shortCuts.agro") },
     { title: t("syn-lab_page.shortCuts.environment") },
     { title: t("syn-lab_page.shortCuts.materials") },
   ],
   [
-    { title: t("syn-lab_page.shortCuts.innovation") },
+    { title: t("syn-lab_page.shortCuts.innovation"), color: "red" },
     { title: t("syn-lab_page.shortCuts.bioPharma") },
     { title: t("syn-lab_page.shortCuts.genomic") },
     { title: t("syn-lab_page.shortCuts.clinical") },
     { title: t("syn-lab_page.shortCuts.inVitro") },
   ],
   [
-    { title: t("syn-lab_page.shortCuts.eurofinsFoundation") },
+    { title: t("syn-lab_page.shortCuts.eurofinsFoundation"), color: "red" },
     { title: t("syn-lab_page.shortCuts.agroscience") },
     { title: t("syn-lab_page.shortCuts.consumerProduct") },
     { title: t("syn-lab_page.shortCuts.forensic") },
@@ -117,8 +160,9 @@ const con3Data = computed(() => [
 </script>
 
 <style scoped>
+@import "@/assets/css/components/card.css";
 .container1 {
-  background: url("/images/Laboratory_Featured.jpg") center/cover no-repeat;
+  background: url("/images/synLab/i-3.jpg") center/cover no-repeat;
   width: 100%;
   height: 70vh;
   position: relative;
@@ -131,7 +175,7 @@ const con3Data = computed(() => [
   opacity: 0.5;
 }
 
-.container2 .elements .text-hover {
+.container3 .elements .text-hover {
   position: absolute;
   bottom: 0;
   left: 0;
@@ -140,19 +184,19 @@ const con3Data = computed(() => [
   background: linear-gradient(to right, #1976d2a1, #0d48a154);
   transition: background 0.5s ease;
 }
-.container2 .elements:hover .text-hover {
+.container3 .elements:hover .text-hover {
   background: linear-gradient(to right, #1976d2, #0f51b4);
 }
 
 @media (max-width: 1140px) {
-  .container2 {
+  .container3 {
     justify-content: space-between;
     flex-wrap: wrap;
   }
-  .container2 :is(.elements:nth-child(1), .elements:nth-child(2)) {
+  .container3 :is(.elements:nth-child(1), .elements:nth-child(2)) {
     width: 45%;
   }
-  .container2 .elements:nth-child(3) {
+  .container3 .elements:nth-child(3) {
     width: 100%;
   }
   .container3 .text {
@@ -160,7 +204,7 @@ const con3Data = computed(() => [
   }
 }
 @media (max-width: 780px) {
-  .container2 :is(.elements:nth-child(1), .elements:nth-child(2)) {
+  .container3 :is(.elements:nth-child(1), .elements:nth-child(2)) {
     width: 100%;
   }
   .container3 {
@@ -173,6 +217,9 @@ const con3Data = computed(() => [
   .container3 .div-of-btn:nth-child(3) {
     width: 100%;
   }
+  .container1 .text-h3 {
+    font-size: 30px;
+  }
 }
 @media (max-width: 530px) {
   .container3
@@ -183,12 +230,9 @@ const con3Data = computed(() => [
     ) {
     width: 100%;
   }
-  .container1 .text-h5 {
-    font-size: 20px;
-  }
 }
 @media (max-width: 400px) {
-  .container2 .text-h6 {
+  .container3 .text-h6 {
     font-size: 1.1rem;
   }
 }

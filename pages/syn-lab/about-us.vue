@@ -3,19 +3,19 @@ const team = [
   {
     name: "Jane Doe",
     role: "CEO & Founder",
-    image: "https://randomuser.me/api/portraits/women/44.jpg",
+    image: "/images/Laboratory-Teamwork.webp",
     socials: { linkedin: "#", twitter: "#", github: "#" },
   },
   {
     name: "John Smith",
     role: "CTO",
-    image: "https://randomuser.me/api/portraits/men/32.jpg",
+    image: "/images/Laboratory-Teamwork.webp",
     socials: { linkedin: "#", twitter: "#", github: "#" },
   },
   {
     name: "Emily Brown",
     role: "Product Manager",
-    image: "https://randomuser.me/api/portraits/women/68.jpg",
+    image: "/images/Laboratory-Teamwork.webp",
     socials: { linkedin: "#", twitter: "#", github: "#" },
   },
 ];
@@ -24,17 +24,17 @@ const companyInfo = [
   {
     title: "Our Story",
     text: "Founded in 2015, our company started with a small team of passionate developers and designers. We aim to create impactful digital solutions that drive business growth and innovation.",
-    image: "https://images.unsplash.com/photo-1521737604893-d14cc237f11d",
+    image: "/images/Laboratory-Teamwork.webp",
   },
   {
     title: "Our Achievements",
     text: "We have served over 200 clients worldwide, launched 50+ successful digital products, and continuously innovate to stay ahead in technology and design.",
-    image: "https://images.unsplash.com/photo-1504384308090-c894fdcc538d",
+    image: "/images/Laboratory-Teamwork.webp",
   },
   {
     title: "Our Future Plans",
     text: "Our vision for the next 5 years includes expanding to global markets, investing in AI and blockchain solutions, and fostering a culture of innovation to empower the next generation of digital creators.",
-    image: "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4",
+    image: "/images/Laboratory-Teamwork.webp",
   },
 ];
 </script>

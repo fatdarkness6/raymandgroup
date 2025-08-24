@@ -100,16 +100,6 @@
     font-size: 5rem !important;
     line-height: 5rem !important;
   }
-  .how-it-works-section .about-3-companies {
-    flex-wrap: wrap;
-  }
-  .how-it-works-section .about-3-companies .about-2 {
-    width: 100%;
-  }
-
-  .how-it-works-section .about-3-companies :is(.about-1, .about-3) {
-    width: 48%;
-  }
 }
 @media (max-width: 820px) {
   .footer-content .submit-form {
@@ -183,14 +173,8 @@
   .error-massage.text404 {
     font-size: 17px;
   }
-  .how-it-works-section .about-3-companies :is(.about-1, .about-3) {
-    width: 100%;
-  }
   .res-h2 {
     font-size: 2rem;
-  }
-  .about-3-companies .part1.w-50 {
-    width: 100%;
   }
   .how-it-works-section .custom-card {
     height: 400px;

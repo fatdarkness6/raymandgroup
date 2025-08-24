@@ -108,27 +108,30 @@
       <div class="wrapper">
         <AnimationSlideOnceGroup
           direction="left"
-          class="flex justify-center items-center gap-20 about-3-companies relative z-max no-wrap"
+          class="row q-col-gutter-md about-3-companies justify-center relative z-max"
         >
-          <AnimationSlideOnce :delay="0" class="w-45 about-2">
+          <AnimationSlideOnce
+            :delay="400"
+            class="col-xl-3 col-md-3 col-sm-6 col-12 about-3"
+          >
             <q-card :bordered="true" class="custom-card my-card">
               <div class="q-px-md">
                 <q-card-section
-                  class="flex column gap-10 how-it-works-section-q full-width relative z-max text-white text-weight-md"
+                  class="flex column gap-20 how-it-works-section-q relative z-max text-white"
                 >
                   <div class="text-h4 res-h4 text-weight-medium">
-                    {{ tran[3] }}
+                    {{ t("home_page.raymand3") }}
                   </div>
                   <div
-                    v-for="(_, index) in 7"
+                    v-for="(text, index) in loopOnTexts2"
                     :key="index"
                     class="text-caption"
                   >
-                    {{ tran[index + 11] }}
+                    {{ text }}
                   </div>
                   <div class="learn-more flex items-center gap-10">
                     <div class="text-body1 res-h6 text-weight-bold">
-                      {{ tran[5] }}
+                      {{ t("common.learn-more") }}
                     </div>
                     <q-icon
                       v-if="local !== 'fa'"
@@ -139,35 +142,36 @@
                 </q-card-section>
               </div>
               <q-img
-                src="/images/Laboratory-Teamwork.webp"
+                src="/images/Smart-Health-Services.webp"
                 class="custom-img2"
               />
             </q-card>
           </AnimationSlideOnce>
-          <AnimationSlideOnce :delay="200" class="w-30 about-1">
+          <AnimationSlideOnce
+            :delay="200"
+            class="col-xl-3 col-md-3 col-sm-6 col-12 about-1"
+          >
             <q-card class="custom-card q-pl-sm my-card" :bordered="true">
-              <div
-                class="flex justify-between items-center gap-20 no-wrap full-height"
-              >
+              <div class="flex justify-between gap-20 no-wrap full-height">
                 <div class="part1">
                   <q-card-section
                     class="flex column gap-20 how-it-works-section-q full-width relative z-max text-white text-weight-md"
                   >
                     <div class="text-h4 res-h4 text-weight-medium">
-                      {{ tran[2] }}
+                      {{ t("home_page.raymand1") }}
                     </div>
                     <div class="text-caption">
-                      {{ tran[8] }}
+                      {{ t("home_page.discover.raymand1-des1") }}
                     </div>
                     <div class="text-caption">
-                      {{ tran[9] }}
+                      {{ t("home_page.discover.raymand1-des2") }}
                     </div>
                     <div class="text-caption">
-                      {{ tran[10] }}
+                      {{ t("home_page.discover.raymand1-des3") }}
                     </div>
                     <div class="learn-more flex items-center gap-10">
                       <div class="text-body1 res-h6 text-weight-bold">
-                        {{ tran[5] }}
+                        {{ t("common.learn-more") }}
                       </div>
                       <q-icon
                         v-if="local !== 'fa'"
@@ -184,25 +188,31 @@
               </div>
             </q-card>
           </AnimationSlideOnce>
-          <AnimationSlideOnce :delay="400" class="w-30 about-3">
+          <AnimationSlideOnce
+            :delay="0"
+            class="col-xl-6 col-md-6 col-sm-6 col-12 about-2"
+          >
             <q-card :bordered="true" class="custom-card my-card">
               <div class="q-px-md">
                 <q-card-section
-                  class="flex column gap-20 how-it-works-section-q relative z-max text-white"
+                  class="flex column gap-10 how-it-works-section-q full-width relative z-max text-white text-weight-md"
                 >
                   <div class="text-h4 res-h4 text-weight-medium">
-                    {{ tran[4] }}
+                    {{ t("home_page.raymand2") }}
                   </div>
                   <div
-                    v-for="(_, index) in 7"
+                    v-for="(text, index) in loopOnTexts"
                     :key="index"
                     class="text-caption"
                   >
-                    {{ tran[index + 18] }}
+                    {{ text }}
                   </div>
-                  <div class="learn-more flex items-center gap-10">
+                  <div
+                    @click="navigateTo(`/syn-lab`)"
+                    class="learn-more flex items-center gap-10 pointer"
+                  >
                     <div class="text-body1 res-h6 text-weight-bold">
-                      {{ tran[5] }}
+                      {{ t("common.learn-more") }}
                     </div>
                     <q-icon
                       v-if="local !== 'fa'"
@@ -212,10 +222,7 @@
                   </div>
                 </q-card-section>
               </div>
-              <q-img
-                src="/images/Smart-Health-Services.webp"
-                class="custom-img2"
-              />
+              <q-img src="/images/synLab/i-5.jpg" class="custom-img2" />
             </q-card>
           </AnimationSlideOnce>
         </AnimationSlideOnceGroup>
@@ -230,31 +237,31 @@
           >
             <AnimationSlideOnce>
               <div class="text-subtitle1 text-weight-bolder">
-                {{ tran[29] }}
+                {{ t("home_page.blog") }}
               </div>
             </AnimationSlideOnce>
             <AnimationSlideOnce :delay="200">
               <div class="text-h2 text-weight-medium res-h2">
-                {{ tran[30] }}
+                {{ t("home_page.update") }}
               </div>
             </AnimationSlideOnce>
             <AnimationSlideOnce :delay="400">
               <div class="text-body1 text-weight-medium">
-                {{ tran[31] }}
+                {{ t("home_page.newsBlog") }}
               </div>
             </AnimationSlideOnce>
           </AnimationSlideOnceGroup>
         </div>
         <div>
           <AnimationSlideOnceGroup
-            class="flex items-start gap-20 justify-center"
+            class="row q-col-gutter-md items-start justify-center"
             direction="left"
           >
             <AnimationSlideOnce
               v-for="(item, i) in news"
               :key="item.id"
               :delay="i * 200"
-              class="w-32"
+              class="col-xl-4 col-md-4 col-sm-6 col-12"
             >
               <q-card :bordered="true" class="my-card">
                 <q-img :src="item.image" class="full-width" />
@@ -266,9 +273,6 @@
                     <div class="text-h4 text-weight-medium res-h4">
                       {{ item.title }}
                     </div>
-                    <!-- <div class="text-h6 text-weight-light res-h6">
-                    {{ item.description }}
-                  </div> -->
                     <div class="reporter flex items-center gap-10">
                       <div class="part1">
                         <q-img
@@ -310,18 +314,7 @@
 </template>
 <script setup lang="ts">
 const { locale, t } = useI18n();
-const tran = [
-  t("home_page.hero-sec1"),
-  t("home_page.hero-sec2"),
-  t("home_page.raymand1"),
-  t("home_page.raymand2"),
-  t("home_page.raymand3"),
-  t("common.learn-more"),
-  t("home_page.discover.discover-text"),
-  t("home_page.discover.discover-intro"),
-  t("home_page.discover.raymand1-des1"),
-  t("home_page.discover.raymand1-des2"),
-  t("home_page.discover.raymand1-des3"),
+const loopOnTexts = [
   t("home_page.discover.raymand2-des1"),
   t("home_page.discover.raymand2-des2"),
   t("home_page.discover.raymand2-des3"),
@@ -329,59 +322,148 @@ const tran = [
   t("home_page.discover.raymand2-des5"),
   t("home_page.discover.raymand2-des6"),
   t("home_page.discover.raymand2-des7"),
+];
+const loopOnTexts2 = [
   t("home_page.discover.raymand3-des1"),
   t("home_page.discover.raymand3-des2"),
   t("home_page.discover.raymand3-des3"),
   t("home_page.discover.raymand3-des4"),
   t("home_page.discover.raymand3-des5"),
-  t("home_page.news.title1"),
-  t("home_page.news.title2"),
-  t("home_page.news.title3"),
-  t("home_page.slogan1"),
-  t("home_page.slogan2"),
-  t("home_page.slogan3"),
-  t("home_page.blog"),
-  t("home_page.update"),
-  t("home_page.newsBlog"),
 ];
 const local = locale.value;
 
 const images = [
-  { image: "/images/i-1.webp", title: tran[2], slogan: tran[26] },
-  { image: "/images/i-2.webp", title: tran[2], slogan: tran[26] },
-  { image: "/images/i-3.webp", title: tran[2], slogan: tran[26] },
-  { image: "/images/i-4.webp", title: tran[2], slogan: tran[26] },
-  { image: "/images/i-1.webp", title: tran[2], slogan: tran[26] },
-  { image: "/images/i-2.webp", title: tran[2], slogan: tran[26] },
-  { image: "/images/i-3.webp", title: tran[2], slogan: tran[26] },
-  { image: "/images/i-4.webp", title: tran[2], slogan: tran[26] },
+  {
+    image: "/images/synLab/i-1.jpg",
+    title: t("home_page.raymand2"),
+    slogan: t("home_page.slogan2"),
+  },
+  {
+    image: "/images/synLab/i-2.jpg",
+    title: t("home_page.raymand2"),
+    slogan: t("home_page.slogan2"),
+  },
+  {
+    image: "/images/synLab/i-3.jpg",
+    title: t("home_page.raymand2"),
+    slogan: t("home_page.slogan2"),
+  },
+  {
+    image: "/images/synLab/i-4.jpg",
+    title: t("home_page.raymand2"),
+    slogan: t("home_page.slogan2"),
+  },
+  {
+    image: "/images/synLab/i-5.jpg",
+    title: t("home_page.raymand2"),
+    slogan: t("home_page.slogan2"),
+  },
+  {
+    image: "/images/synLab/i-6.jpg",
+    title: t("home_page.raymand2"),
+    slogan: t("home_page.slogan2"),
+  },
+  {
+    image: "/images/synLab/i-7.jpg",
+    title: t("home_page.raymand2"),
+    slogan: t("home_page.slogan2"),
+  },
+  {
+    image: "/images/synLab/i-8.jpg",
+    title: t("home_page.raymand2"),
+    slogan: t("home_page.slogan2"),
+  },
 ];
 const images2 = [
-  { image: "/images/i-5.webp", title: tran[3], slogan: tran[27] },
-  { image: "/images/i-1.webp", title: tran[3], slogan: tran[27] },
-  { image: "/images/i-2.webp", title: tran[3], slogan: tran[27] },
-  { image: "/images/i-2.webp", title: tran[3], slogan: tran[27] },
-  { image: "/images/i-5.webp", title: tran[3], slogan: tran[27] },
-  { image: "/images/i-1.webp", title: tran[3], slogan: tran[27] },
-  { image: "/images/i-2.webp", title: tran[3], slogan: tran[27] },
-  { image: "/images/i-2.webp", title: tran[3], slogan: tran[27] },
+  {
+    image: "/images/i-1.webp",
+    title: t("home_page.raymand1"),
+    slogan: t("home_page.slogan1"),
+  },
+  {
+    image: "/images/i-2.webp",
+    title: t("home_page.raymand1"),
+    slogan: t("home_page.slogan1"),
+  },
+  {
+    image: "/images/i-3.webp",
+    title: t("home_page.raymand1"),
+    slogan: t("home_page.slogan1"),
+  },
+  {
+    image: "/images/i-4.webp",
+    title: t("home_page.raymand1"),
+    slogan: t("home_page.slogan1"),
+  },
+  {
+    image: "/images/i-1.webp",
+    title: t("home_page.raymand1"),
+    slogan: t("home_page.slogan1"),
+  },
+  {
+    image: "/images/i-2.webp",
+    title: t("home_page.raymand1"),
+    slogan: t("home_page.slogan1"),
+  },
+  {
+    image: "/images/i-3.webp",
+    title: t("home_page.raymand1"),
+    slogan: t("home_page.slogan1"),
+  },
+  {
+    image: "/images/i-4.webp",
+    title: t("home_page.raymand1"),
+    slogan: t("home_page.slogan1"),
+  },
 ];
 const images3 = [
-  { image: "/images/i-3.webp", title: tran[4], slogan: tran[28] },
-  { image: "/images/i-4.webp", title: tran[4], slogan: tran[28] },
-  { image: "/images/i-5.webp", title: tran[4], slogan: tran[28] },
-  { image: "/images/i-1.webp", title: tran[4], slogan: tran[28] },
-  { image: "/images/i-3.webp", title: tran[4], slogan: tran[28] },
-  { image: "/images/i-4.webp", title: tran[4], slogan: tran[28] },
-  { image: "/images/i-5.webp", title: tran[4], slogan: tran[28] },
-  { image: "/images/i-1.webp", title: tran[4], slogan: tran[28] },
+  {
+    image: "/images/i-3.webp",
+    title: t("home_page.raymand3"),
+    slogan: t("home_page.slogan3"),
+  },
+  {
+    image: "/images/i-4.webp",
+    title: t("home_page.raymand3"),
+    slogan: t("home_page.slogan3"),
+  },
+  {
+    image: "/images/i-5.webp",
+    title: t("home_page.raymand3"),
+    slogan: t("home_page.slogan3"),
+  },
+  {
+    image: "/images/i-1.webp",
+    title: t("home_page.raymand3"),
+    slogan: t("home_page.slogan3"),
+  },
+  {
+    image: "/images/i-3.webp",
+    title: t("home_page.raymand3"),
+    slogan: t("home_page.slogan3"),
+  },
+  {
+    image: "/images/i-4.webp",
+    title: t("home_page.raymand3"),
+    slogan: t("home_page.slogan3"),
+  },
+  {
+    image: "/images/i-5.webp",
+    title: t("home_page.raymand3"),
+    slogan: t("home_page.slogan3"),
+  },
+  {
+    image: "/images/i-1.webp",
+    title: t("home_page.raymand3"),
+    slogan: t("home_page.slogan3"),
+  },
 ];
 const allImages = [images, images2, images3];
 const news = [
   {
     image: "/images/i-3.webp",
-    subject: tran[2],
-    title: tran[23],
+    subject: t("home_page.raymand1"),
+    title: t("home_page.news.title1"),
     description:
       "Discover how our systems enhance lab efficiency and accuracy.",
     reporter: {
@@ -394,8 +476,8 @@ const news = [
   },
   {
     image: "/images/i-2.webp",
-    subject: tran[3],
-    title: tran[24],
+    subject: t("home_page.raymand2"),
+    title: t("home_page.news.title2"),
     description: "Explore our latest range of cutting-edge lab equipment.",
     reporter: {
       image: "/images/i-2.webp",
@@ -407,8 +489,8 @@ const news = [
   },
   {
     image: "/images/i-2.webp",
-    subject: tran[4],
-    title: tran[25],
+    subject: t("home_page.raymand3"),
+    title: t("home_page.news.title3"),
     description:
       "Transforming patient care with innovative virtual reality solutions",
     reporter: {

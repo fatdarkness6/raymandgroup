@@ -122,8 +122,11 @@ const pageContent = computed(() => map[slug]);
         </AnimationSlideOnce>
         <AnimationSlideOnceGroup direction="left" class="row q-col-gutter-xl">
           <AnimationSlideOnce
-            v-for="item in pageContent.container3['services-experiments']"
+            v-for="(item, index) in pageContent.container3[
+              'services-experiments'
+            ]"
             class="col-xl-3 col-md-4 col-sm-6 col-12"
+            :delay="index * 200"
           >
             <q-card class="my-card text-center">
               <q-img :src="item.image" />
@@ -179,13 +182,4 @@ const pageContent = computed(() => map[slug]);
 <style scoped>
 @import "@/assets/css/pages/slug.css";
 @import "@/assets/css/components/card.css";
-
-@media (max-width: 550px) {
-  .container1 .text-h3 {
-    font-size: 2rem;
-  }
-  .container1 .text-body1 {
-    font-size: 0.9rem;
-  }
-}
 </style>

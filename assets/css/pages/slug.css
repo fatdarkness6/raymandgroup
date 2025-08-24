@@ -16,3 +16,11 @@
   left: 0;
   z-index: 1;
 }
+@media (max-width: 550px) {
+  .container1 .text-h3 {
+    font-size: 2rem;
+  }
+  .container1 .text-body1 {
+    font-size: 0.9rem;
+  }
+}

@@ -45,16 +45,16 @@
               exact
             />
             <q-route-tab
-              icon="fa-solid fa-building"
-              :label="$t('header.gpo')"
-              to="/"
+              icon="fa-solid fa-microscope"
+              :label="$t('header.synLab')"
+              to="/syn-lab"
               class="rounded-10"
               exact
             />
             <q-route-tab
-              icon="fa-solid fa-microscope"
-              :label="$t('header.synLab')"
-              to="/syn-lab"
+              icon="fa-solid fa-building"
+              :label="$t('header.gpo')"
+              to="/"
               class="rounded-10"
               exact
             />
