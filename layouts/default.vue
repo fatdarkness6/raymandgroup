@@ -46,25 +46,59 @@
             />
             <q-route-tab
               icon="fa-solid fa-microscope"
-              :label="$t('header.synLab')"
-              to="/syn-lab"
-              class="rounded-10"
+              :label="undefined"
+              to="/tech-Lab"
               exact
-            />
+            >
+              <template v-slot>
+                <span
+                  v-for="(line, i) in $t('header.tech-Lab').split('\n')"
+                  :key="i"
+                  class="text-weight-bold"
+                >
+                  {{ line }}
+                </span>
+              </template>
+            </q-route-tab>
             <q-route-tab
               icon="fa-solid fa-building"
-              :label="$t('header.gpo')"
-              to="/"
+              to="/gpo"
               class="rounded-10"
               exact
-            />
+            >
+              <template v-slot>
+                <span
+                  v-for="(line, i) in $t('header.gpo').split('\n')"
+                  :key="i"
+                  class="text-weight-bold"
+                >
+                  {{ line }}
+                </span>
+              </template>
+            </q-route-tab>
             <q-route-tab
               icon="fa-solid fa-hospital"
-              :label="$t('header.vHospital')"
-              to="/movies"
+              to="/v-hospital"
               class="rounded-10 text-sm"
               exact
-            />
+            >
+              <template v-slot>
+                <span
+                  v-for="(line, i) in $t('header.vHospital').split('\n')"
+                  :key="i"
+                  class="text-weight-bold"
+                >
+                  {{ line }}
+                </span>
+              </template>
+            </q-route-tab>
+            <q-route-tab
+              icon="fa-solid fa-newspaper"
+              to="/news"
+              class="rounded-10 text-sm"
+              :label="t(`header.news`)"
+            >
+            </q-route-tab>
           </q-tabs>
         </div>
         <div class="login-button flex items-center gap-10">
@@ -173,19 +207,19 @@
           <NuxtLink to="/" class="custom-link">{{
             $t("header.home-page")
           }}</NuxtLink>
-          <NuxtLink to="/about" class="custom-link">{{
+          <NuxtLink to="/about-us" class="custom-link">{{
             $t("common.about_us")
           }}</NuxtLink>
           <NuxtLink to="/contact-us" class="custom-link">{{
             $t("header.contact_us")
           }}</NuxtLink>
-          <NuxtLink to="/alarms" class="custom-link">{{
+          <NuxtLink to="/gpo" class="custom-link">{{
             $t("header.gpo")
           }}</NuxtLink>
-          <NuxtLink to="/syn-lab" class="custom-link">{{
-            $t("header.synLab")
+          <NuxtLink to="/tech-Lab" class="custom-link">{{
+            $t("header.tech-Lab")
           }}</NuxtLink>
-          <NuxtLink to="/movies" class="custom-link">{{
+          <NuxtLink to="/v-hospital" class="custom-link">{{
             $t("header.vHospital")
           }}</NuxtLink>
         </div>
@@ -268,6 +302,8 @@
           color="negative"
           icon="fa-solid fa-envelope"
           label="Email"
+          type="a"
+          href="mailto:info@raymandgroup.de"
         />
         <q-fab-action
           label-position="right"
@@ -340,7 +376,7 @@
           </q-item>
           <q-item
             clickable
-            @click="navigateTo('/salam')"
+            @click="navigateTo('/gpo')"
             class="menu-item flex items-center"
           >
             <q-item-section avatar>
@@ -352,19 +388,19 @@
           </q-item>
           <q-item
             clickable
-            @click="navigateTo('/syn-lab')"
+            @click="navigateTo('/tech-Lab')"
             class="menu-item flex items-center"
           >
             <q-item-section avatar>
               <q-icon name="fa-solid fa-microscope" size="30px" />
             </q-item-section>
             <q-item-section class="text-h6">
-              <div>{{ $t("header.synLab") }}</div>
+              <div>{{ $t("header.tech-Lab") }}</div>
             </q-item-section>
           </q-item>
           <q-item
             clickable
-            @click="navigateTo('/movies')"
+            @click="navigateTo('/v-hospital')"
             class="menu-item flex items-center"
           >
             <q-item-section avatar>
@@ -540,5 +576,8 @@ function switchLanguage(lang: any) {
 
 .menu-item q-icon {
   color: #3b82f6;
+}
+.whitespace-pre-line {
+  white-space: pre-line;
 }
 </style>

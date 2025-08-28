@@ -7,8 +7,8 @@ const slug = route.params.slug as string;
 const map: any = {
   soil: {
     container1: {
-      title: t("syn-lab_page.routes.soil.container1.title"),
-      desc: t("syn-lab_page.routes.soil.container1.description"),
+      title: t("tech-Lab_page.routes.soil.container1.title"),
+      desc: t("tech-Lab_page.routes.soil.container1.description"),
       image: "/images/Laboratory_Featured.jpg",
     },
     container2: {

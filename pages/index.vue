@@ -89,7 +89,7 @@
                 Explore
               </div>
             </AnimationSlideOnce>
-            <AnimationSlideOnce ::delay="200">
+            <AnimationSlideOnce :delay="200">
               <div class="text-h2 text-weight-medium res-h2 text-white">
                 {{ $t("home_page.discover.discover-text") }}
               </div>
@@ -129,7 +129,10 @@
                   >
                     {{ text }}
                   </div>
-                  <div class="learn-more flex items-center gap-10">
+                  <div
+                    @click="`/v-hospital`"
+                    class="learn-more flex items-center gap-10 pointer"
+                  >
                     <div class="text-body1 res-h6 text-weight-bold">
                       {{ t("common.learn-more") }}
                     </div>
@@ -169,7 +172,10 @@
                     <div class="text-caption">
                       {{ t("home_page.discover.raymand1-des3") }}
                     </div>
-                    <div class="learn-more flex items-center gap-10">
+                    <div
+                      @click="navigateTo(`/gpo`)"
+                      class="learn-more flex items-center gap-10 pointer"
+                    >
                       <div class="text-body1 res-h6 text-weight-bold">
                         {{ t("common.learn-more") }}
                       </div>
@@ -181,10 +187,7 @@
                     </div>
                   </q-card-section>
                 </div>
-                <q-img
-                  src="/images/Laboratory-Equipment-Supply.webp"
-                  class="custom-img2"
-                />
+                <q-img src="/images/gpo/i-11.jpg" class="custom-img2" />
               </div>
             </q-card>
           </AnimationSlideOnce>
@@ -208,7 +211,7 @@
                     {{ text }}
                   </div>
                   <div
-                    @click="navigateTo(`/syn-lab`)"
+                    @click="navigateTo(`/tech-lab`)"
                     class="learn-more flex items-center gap-10 pointer"
                   >
                     <div class="text-body1 res-h6 text-weight-bold">
@@ -222,7 +225,7 @@
                   </div>
                 </q-card-section>
               </div>
-              <q-img src="/images/synLab/i-5.jpg" class="custom-img2" />
+              <q-img src="/images/tech-lab/i-4.jpg" class="custom-img2" />
             </q-card>
           </AnimationSlideOnce>
         </AnimationSlideOnceGroup>
@@ -270,7 +273,7 @@
                     <div class="text-subtitle2 text-weight-bold">
                       {{ item.subject }}
                     </div>
-                    <div class="text-h4 text-weight-medium res-h4">
+                    <div class="text-h6 text-weight-medium res-h6">
                       {{ item.title }}
                     </div>
                     <div class="reporter flex items-center gap-10">
@@ -303,8 +306,8 @@
         </div>
         <div class="full-width flex justify-center items-center">
           <AnimationSlideOnce preset="slideVisibleOnceBottom">
-            <q-btn push no-caps padding="15px 30px" class="q-mt-xl flex">
-              View all
+            <q-btn to="/news" push no-caps padding="15px 30px" class="q-mt-xl flex">
+              {{ t("home_page.news.view-all") }}
             </q-btn>
           </AnimationSlideOnce>
         </div>
@@ -334,134 +337,148 @@ const local = locale.value;
 
 const images = [
   {
-    image: "/images/synLab/i-1.jpg",
+    image: "/images/tech-lab/i-1.jpg",
     title: t("home_page.raymand2"),
     slogan: t("home_page.slogan2"),
   },
   {
-    image: "/images/synLab/i-2.jpg",
+    image: "/images/tech-lab/i-2.jpg",
     title: t("home_page.raymand2"),
     slogan: t("home_page.slogan2"),
   },
   {
-    image: "/images/synLab/i-3.jpg",
+    image: "/images/tech-lab/i-3.jpg",
     title: t("home_page.raymand2"),
     slogan: t("home_page.slogan2"),
   },
   {
-    image: "/images/synLab/i-4.jpg",
+    image: "/images/tech-lab/i-4.jpg",
     title: t("home_page.raymand2"),
     slogan: t("home_page.slogan2"),
   },
   {
-    image: "/images/synLab/i-5.jpg",
+    image: "/images/tech-lab/i-5.jpg",
     title: t("home_page.raymand2"),
     slogan: t("home_page.slogan2"),
   },
   {
-    image: "/images/synLab/i-6.jpg",
+    image: "/images/tech-lab/i-6.jpg",
     title: t("home_page.raymand2"),
     slogan: t("home_page.slogan2"),
   },
   {
-    image: "/images/synLab/i-7.jpg",
+    image: "/images/tech-lab/i-7.jpg",
     title: t("home_page.raymand2"),
     slogan: t("home_page.slogan2"),
   },
   {
-    image: "/images/synLab/i-8.jpg",
+    image: "/images/tech-lab/i-8.jpg",
     title: t("home_page.raymand2"),
     slogan: t("home_page.slogan2"),
   },
 ];
 const images2 = [
   {
-    image: "/images/i-1.webp",
+    image: "/images/gpo/i-1.jpg",
     title: t("home_page.raymand1"),
     slogan: t("home_page.slogan1"),
   },
   {
-    image: "/images/i-2.webp",
+    image: "/images/gpo/i-2.jpg",
     title: t("home_page.raymand1"),
     slogan: t("home_page.slogan1"),
   },
   {
-    image: "/images/i-3.webp",
+    image: "/images/gpo/i-3.jpg",
     title: t("home_page.raymand1"),
     slogan: t("home_page.slogan1"),
   },
   {
-    image: "/images/i-4.webp",
+    image: "/images/gpo/i-4.jpg",
     title: t("home_page.raymand1"),
     slogan: t("home_page.slogan1"),
   },
   {
-    image: "/images/i-1.webp",
+    image: "/images/gpo/i-5.jpg",
     title: t("home_page.raymand1"),
     slogan: t("home_page.slogan1"),
   },
   {
-    image: "/images/i-2.webp",
+    image: "/images/gpo/i-6.jpg",
     title: t("home_page.raymand1"),
     slogan: t("home_page.slogan1"),
   },
   {
-    image: "/images/i-3.webp",
+    image: "/images/gpo/i-7.jpg",
     title: t("home_page.raymand1"),
     slogan: t("home_page.slogan1"),
   },
   {
-    image: "/images/i-4.webp",
+    image: "/images/gpo/i-8.jpg",
     title: t("home_page.raymand1"),
     slogan: t("home_page.slogan1"),
   },
 ];
 const images3 = [
   {
-    image: "/images/i-3.webp",
+    image: "/images/vHospital/i-1.jpg",
     title: t("home_page.raymand3"),
     slogan: t("home_page.slogan3"),
   },
   {
-    image: "/images/i-4.webp",
+    image: "/images/vHospital/i-2.jpg",
     title: t("home_page.raymand3"),
     slogan: t("home_page.slogan3"),
   },
   {
-    image: "/images/i-5.webp",
+    image: "/images/vHospital/i-3.jpg",
     title: t("home_page.raymand3"),
     slogan: t("home_page.slogan3"),
   },
   {
-    image: "/images/i-1.webp",
+    image: "/images/vHospital/i-4.jpg",
     title: t("home_page.raymand3"),
     slogan: t("home_page.slogan3"),
   },
   {
-    image: "/images/i-3.webp",
+    image: "/images/vHospital/i-5.jpg",
     title: t("home_page.raymand3"),
     slogan: t("home_page.slogan3"),
   },
   {
-    image: "/images/i-4.webp",
+    image: "/images/vHospital/i-6.jpg",
     title: t("home_page.raymand3"),
     slogan: t("home_page.slogan3"),
   },
   {
-    image: "/images/i-5.webp",
+    image: "/images/vHospital/i-7.jpg",
     title: t("home_page.raymand3"),
     slogan: t("home_page.slogan3"),
   },
   {
-    image: "/images/i-1.webp",
+    image: "/images/vHospital/i-8.jpg",
     title: t("home_page.raymand3"),
     slogan: t("home_page.slogan3"),
   },
 ];
 const allImages = [images, images2, images3];
 const news = [
+    {
+    image: "/images/vHospital/i-4.jpg",
+    subject: t("home_page.raymand3"),
+    title: t("home_page.news.title3"),
+    description:
+      "Transforming patient care with innovative virtual reality solutions",
+    reporter: {
+      image: "/images/i-2.webp",
+      name: "John Doe",
+      time: "11 Jan 2022",
+      howLong: "5",
+    },
+    id: 3,
+  },
   {
-    image: "/images/i-3.webp",
+    image: "/images/exhibition.jpg",
     subject: t("home_page.raymand1"),
     title: t("home_page.news.title1"),
     description:
@@ -474,8 +491,8 @@ const news = [
     },
     id: 1,
   },
-  {
-    image: "/images/i-2.webp",
+   {
+    image: "/images/exhibition.jpg",
     subject: t("home_page.raymand2"),
     title: t("home_page.news.title2"),
     description: "Explore our latest range of cutting-edge lab equipment.",
@@ -486,20 +503,6 @@ const news = [
       howLong: "5",
     },
     id: 2,
-  },
-  {
-    image: "/images/i-2.webp",
-    subject: t("home_page.raymand3"),
-    title: t("home_page.news.title3"),
-    description:
-      "Transforming patient care with innovative virtual reality solutions",
-    reporter: {
-      image: "/images/i-2.webp",
-      name: "John Doe",
-      time: "11 Jan 2022",
-      howLong: "5",
-    },
-    id: 3,
   },
 ];
 </script>

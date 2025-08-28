@@ -7,7 +7,7 @@
           class="text-h3 text-white text-center"
           :dir="directionOfElement(locale)"
         >
-          {{ t("syn-lab_page.subtitle") }}
+          {{ t("tech-Lab_page.subtitle") }}
         </div>
       </div>
     </div>
@@ -22,7 +22,7 @@
           :delay="index * 200"
           class="col-xl-6 col-md-6 col-sm-6 col-12"
         >
-          <q-card @click="navigateTo(`/syn-lab/about-us`)" class="my-card">
+          <q-card @click="navigateTo(`/tech-Lab/about-us`)" class="my-card">
             <q-img :src="value.image" />
             <q-card-section class="text-center">
               <div class="text-h6">{{ value.title }}</div>
@@ -84,7 +84,7 @@
               push
               :color="label.color || 'primary'"
               :dir="directionOfElement(locale)"
-              :to="`syn-lab/${label.route}`"
+              :to="`tech-Lab/${label.route}`"
               padding="15px 30px"
               class="text text-subtitle1 rounded-10 text-white flex items-center justify-between"
             >
@@ -112,49 +112,51 @@ const arrowIcon = computed(() =>
 );
 
 const imgData = computed(() => [
-  { image: "/images/reflab-map.png", text: t("syn-lab_page.location") },
+  { 
+    image: "/images/tech-lab/i-1.jpg", 
+    text: t("tech-Lab_page.services") },
   {
-    image: "/images/Laboratory-Teamwork.webp",
-    text: t("syn-lab_page.careers"),
+    image: "/images/tech-lab/research.jpg",
+    text: t("tech-Lab_page.careers"),
   },
   {
-    image: "/images/business-investors.jpg",
-    text: t("syn-lab_page.investors"),
+    image: "/images/tech-lab/university-student-in-laboratory.jpg",
+    text: t("tech-Lab_page.investors"),
   },
 ]);
 const con2Data = [
   {
-    image: "/images/Laboratory-Teamwork.webp",
-    title: t("syn-lab_page.generalInfo.vision"),
-    desc: t("syn-lab_page.generalInfo.visionDesc"),
+    image: "/images/tech-lab/vision.jpg",
+    title: t("tech-Lab_page.generalInfo.vision"),
+    desc: t("tech-Lab_page.generalInfo.visionDesc"),
   },
   {
-    image: "/images/Laboratory-Teamwork.webp",
-    title: t("syn-lab_page.generalInfo.mission"),
-    desc: t("syn-lab_page.generalInfo.missionDesc"),
+    image: "/images/tech-lab/misson.jpg",
+    title: t("tech-Lab_page.generalInfo.mission"),
+    desc: t("tech-Lab_page.generalInfo.missionDesc"),
   },
 ];
 const con3Data = computed<ButtonItem[][]>(() => [
   [
     { title: t("common.about_us"), route: "about-us", color: "red" },
-    { title: t("syn-lab_page.shortCuts.soil"), route: "soil" },
-    { title: t("syn-lab_page.shortCuts.agro") },
-    { title: t("syn-lab_page.shortCuts.environment") },
-    { title: t("syn-lab_page.shortCuts.materials") },
+    { title: t("tech-Lab_page.shortCuts.soil"), route: "soil" },
+    { title: t("tech-Lab_page.shortCuts.agro") },
+    { title: t("tech-Lab_page.shortCuts.environment") },
+    { title: t("tech-Lab_page.shortCuts.materials") },
   ],
   [
-    { title: t("syn-lab_page.shortCuts.innovation"), color: "red" },
-    { title: t("syn-lab_page.shortCuts.bioPharma") },
-    { title: t("syn-lab_page.shortCuts.genomic") },
-    { title: t("syn-lab_page.shortCuts.clinical") },
-    { title: t("syn-lab_page.shortCuts.inVitro") },
+    { title: t("tech-Lab_page.shortCuts.innovation"), color: "red" },
+    { title: t("tech-Lab_page.shortCuts.bioPharma") },
+    { title: t("tech-Lab_page.shortCuts.genomic") },
+    { title: t("tech-Lab_page.shortCuts.clinical") },
+    { title: t("tech-Lab_page.shortCuts.inVitro") },
   ],
   [
-    { title: t("syn-lab_page.shortCuts.eurofinsFoundation"), color: "red" },
-    { title: t("syn-lab_page.shortCuts.agroscience") },
-    { title: t("syn-lab_page.shortCuts.consumerProduct") },
-    { title: t("syn-lab_page.shortCuts.forensic") },
-    { title: t("syn-lab_page.shortCuts.cosmetics") },
+    { title: t("tech-Lab_page.shortCuts.eurofinsFoundation"), color: "red" },
+    { title: t("tech-Lab_page.shortCuts.agroscience") },
+    { title: t("tech-Lab_page.shortCuts.consumerProduct") },
+    { title: t("tech-Lab_page.shortCuts.forensic") },
+    { title: t("tech-Lab_page.shortCuts.cosmetics") },
   ],
 ]);
 </script>
@@ -162,7 +164,7 @@ const con3Data = computed<ButtonItem[][]>(() => [
 <style scoped>
 @import "@/assets/css/components/card.css";
 .container1 {
-  background: url("/images/synLab/i-3.jpg") center/cover no-repeat;
+  background: url("/images/tech-Lab/i-4.jpg") center/cover no-repeat;
   width: 100%;
   height: 70vh;
   position: relative;

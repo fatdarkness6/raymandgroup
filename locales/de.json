@@ -36,7 +36,7 @@
     "slogan2": "Diagnostik neu denken, Labore stärken",
     "slogan3": "Gesundheitslösungen von morgen entwickeln"
   },
-  "syn-lab_page": {
+  "tech-Lab_page": {
     "subtitle": "Eurofins. Weltmarktführer im Testen für das Leben. Über 65.000 Mitarbeiter. Mehr als 950 Labore. 60 Länder.",
     "location": "Standorte der Labore",
     "careers": "Karriere bei Eurofins",
@@ -61,7 +61,7 @@
   "header": {
     "home-page": "Startseite",
     "gpo": "G.P.O",
-    "synLab": "Syn Lab",
+    "tech-Lab": "tech-Lab",
     "vHospital": "Virtuelles Krankenhaus",
     "contact_us": "Kontakt"
   },

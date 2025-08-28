@@ -36,7 +36,7 @@
     "slogan2": "Innovating Diagnostics, Empowering Labs",
     "slogan3": "Engineering Tomorrow’s Health Solutions"
   },
-  "syn-lab_page": {
+  "tech-Lab_page": {
     "subtitle": "Eurofins. World Leader in Testing for Life. Over 65,000 employees. 950+ laboratories. 60 countries.",
     "location": "Laboratory Locations",
     "careers": "Eurofins Careers",
@@ -69,7 +69,7 @@
   "header": {
     "home-page": "Home",
     "gpo": "G.P.O",
-    "synLab": "Syn Lab",
+    "tech-Lab": "tech-Lab",
     "vHospital": "VHospital",
     "contact_us": "Contact Us"
   },
