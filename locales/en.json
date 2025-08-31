@@ -1,94 +1,96 @@
 {
   "home_page": {
-    "hero-sec1": "A new transformation in laboratories and health services Based on strategic technology in Raymand Holding",
-    "hero-sec2": "Raymand Group was founded with the aim of creating an integrated and technology-driven ecosystem in the supply chain, management, and service delivery. At Raymand Group, we strive to bring about a transformation in the current standards of health and laboratory services in the country through a systematic, scientific, and value-oriented approach. By leveraging advanced technologies and modern management strategies, we aim to develop a localized model of the world's best practices in laboratory service management, specialized equipment supply chains, and health management in Iran.",
+    "hero-sec1": "A new transformation in laboratories and healthcare services based on strategic technology at Raymand Holding",
+    "hero-sec2": "Raymand Group was established with the aim of creating an integrated, technology-based ecosystem in the supply chain, management, and service delivery. At Raymand Group, we strive, through a systematic, scientific, and value-driven approach, to transform the current standards of healthcare and laboratory services in the country. By leveraging advanced technologies and modern management strategies, our goal is to develop a localized model of the world’s best practices in laboratory service management, specialized equipment supply chain, and healthcare management in Iran.",
     "raymand1": "Raymand Tajhiz Company",
     "raymand2": "Raymand System Azma Company",
     "raymand3": "Raymand System Tajhiz Company",
     "discover": {
-      "discover-text": "Organizational Structure of the Holding",
-      "discover-intro": "Raymand Group consists of three companies, each driven by the core motivation to transform the conventional systems in their respective fields. By relying on innovative methods and modern technologies, they aim to find solutions to the existing challenges in the country’s laboratories (both industrial and clinical) and health sector.",
+      "discover-text": "Holding Organizational Structure",
+      "discover-intro": "Raymand Group consists of three companies, each operating with the goal of transforming traditional systems in its field. With innovative methods and modern technologies, these companies aim to provide solutions to the challenges facing industrial, research, clinical laboratories, and healthcare in the country.",
       "raymand1-des1": "Supply, import, and production of laboratory equipment and consumables based on GPO principles and value chain",
-      "raymand1-des2": "The supply chain and import arm for specialized equipment from global brands",
-      "raymand1-des3": "By utilizing the GPO model, this company enables cost reduction and efficiency improvement in the supply chain for laboratory centers across the country — including industrial, research, and clinical labs.",
+      "raymand1-des2": "Procurement arm for importing specialized equipment from reputable global brands",
+      "raymand1-des3": "Using the GPO model, this company enables cost reduction and increased efficiency in the supply chain of industrial, research, and clinical laboratories in the country.",
       "raymand2-des1": "Smart management and implementation of quality assurance systems for specialized, research, and clinical laboratories",
-      "raymand2-des2": "Implementation and auditing of international standards such as GPI, ISO 17025, and ISO 15189",
-      "raymand2-des3": "Designing the process structure of laboratories, developing SOPs, and training human resources",
-      "raymand2-des4": "Consulting on the purchase, installation, calibration, and validation of equipment",
-      "raymand2-des5": "Management of resources, including human resources, consumables, and capacity planning for laboratory service production",
-      "raymand2-des6": "Enhancing productivity, accuracy, and effectiveness in laboratory performance",
-      "raymand2-des7": "Sales of laboratory services and provision of laboratory services Offering research services",
-      "raymand3-des1": "Smart management of health services based on new technologies",
-      "raymand3-des2": "Transformation in processes",
-      "raymand3-des3": "Providing smart solutions for all health units",
+      "raymand2-des2": "Implementation and auditing of international standards such as ISO 17025 and ISO 15189",
+      "raymand2-des3": "Designing laboratory process structures, preparing SOPs, and training human resources",
+      "raymand2-des4": "Consulting on purchasing, installation, calibration, and validation of equipment",
+      "raymand2-des5": "Resource management, including human resources, consumables, and capacity planning for laboratory services",
+      "raymand2-des6": "Improving efficiency, accuracy, and performance of laboratories",
+      "raymand2-des7": "Providing laboratory, research, and training services",
+      "raymand3-des1": "Smart management of healthcare services based on modern technologies",
+      "raymand3-des2": "Process transformation",
+      "raymand3-des3": "Providing smart solutions for all healthcare units",
       "raymand3-des4": "Designing operational models and organizational structures",
-      "raymand3-des5": "Virtual hospital and innovative transformations in pre-hospital, in-hospital, and post-hospital services"
+      "raymand3-des5": "Virtual hospital and innovative transformations in healthcare services (including prevention, pre-hospital, hospital, and post-hospital)"
     },
     "blog": "Blog",
     "update": "Latest Company Updates",
-    "newsBlog": "Stay informed with our latest news and insights",
-    "news": {
-      "title1": "Companies that joined us",
-      "title2": "Laboratories that joined us",
-      "title3": "Centers that joined us"
-    },
-    "slogan1": "Precision in Every Pulse",
-    "slogan2": "Innovating Diagnostics, Empowering Labs",
-    "slogan3": "Engineering Tomorrow’s Health Solutions"
+    "newsBlog": "Stay up to date with our latest news and insights",
+    "slogan1": "Accuracy in every test",
+    "slogan2": "Innovation in diagnostics, empowering laboratories",
+    "slogan3": "Engineering the health solutions of the future"
   },
   "tech-Lab_page": {
-    "subtitle": "Eurofins. World Leader in Testing for Life. Over 65,000 employees. 950+ laboratories. 60 countries.",
-    "location": "Laboratory Locations",
-    "careers": "Eurofins Careers",
-    "investors": "Investors",
-    "shortCuts": {
-      "soil": "soil",
-      "agro": "Agro Testing",
-      "environment": "Environment  Testing",
-      "materials": "Materials & Engineering Sciences",
-      "innovation": "Innovation",
-      "bioPharma": "BioPharma Services",
-      "genomic": "Genomic",
-      "clinical": "Clinical Diagnostics",
-      "inVitro": "In Vitro Diagnostics Solutions",
-      "eurofinsFoundation": "Eurofins Foundation",
-      "agroscience": "Agroscience Services",
-      "consumerProduct": "Consumer Product Testing",
-      "forensic": "Forensic Services",
-      "cosmetics": "Cosmetics & Personal Care"
+    "subtitle": "Raymand Group, a pioneer in testing for a better quality of life",
+    "services": "Laboratory Services",
+    "careers": "Research and Development (R&D) Services",
+    "investors": "Educational Services",
+    "generalInfo": {
+      "vision": "Vision",
+      "visionDesc": "Raymand Group aspires to become the most trusted specialized laboratory and healthcare network in Iran and the region; an institution that, through innovation, integration, and international standards, earns the trust of industries, universities, and society as a strategic partner in quality and healthcare.",
+      "mission": "Mission",
+      "missionDesc": "At Raymand Group, by managing and developing a network of laboratories, providing specialized healthcare services, and supplying modern equipment, we help industries and society operate more accurately, healthily, and efficiently."
     },
-    "routes": {
-      "soil": {
-        "container1": {
-          "title": "soil projects",
-          "description": "soil is the most important resource that is exist on the earth"
-        }
-      }
+    "shortCuts": {
+      "soil": "Soil Laboratory",
+      "agro": "Concrete and Rebar Testing Laboratory",
+      "environment": "Environmental Laboratory",
+      "materials": "Water Analysis Laboratory",
+      "innovation": "Laboratory Innovations",
+      "bioPharma": "Small Animal (Pet) Laboratory",
+      "genomic": "Large Animal Laboratory",
+      "clinical": "Poultry Laboratory",
+      "inVitro": "Agricultural Services Laboratory",
+      "eurofinsFoundation": "Documents and Records",
+      "agroscience": "Pharmaceutical, Cosmetic, and Hygiene Industries",
+      "consumerProduct": "Food Industry",
+      "forensic": "Medical Diagnostics and Pathology Laboratory",
+      "cosmetics": "Genetics Laboratory"
     }
   },
   "header": {
     "home-page": "Home",
-    "gpo": "G.P.O",
-    "tech-Lab": "tech-Lab",
-    "vHospital": "VHospital",
-    "contact_us": "Contact Us"
+    "gpo": "Group Purchasing Organization\n(Raymand Tajhiz)",
+    "tech-Lab": "Strategic Technology Laboratory\n(Raymand System Azma)",
+    "vHospital": "Healthcare Technology Management\n(Raymand System Tajhiz)",
+    "contact_us": "Contact Us",
+    "news": "News"
   },
   "common": {
     "submit": "Submit",
-    "name&lastname": "Name and Lastname",
+    "name&lastname": "First and Last Name",
     "email": "Email",
     "phone": "Phone",
-    "learn-more": "Learn More",
+    "learn-more": "Learn more...",
     "about_us": "About Us"
+  },
+  "news": {
+    "title1": "We look forward to seeing you at the Laboratory Equipment Exhibition with the latest products from major international companies.",
+    "title2": "Discover Raymand’s laboratory services in soil, water, microbiology, livestock and poultry, food, and pharmaceuticals.",
+    "title3": "Soon, the latest developments and news in healthcare and medicine will be available through this section.",
+    "view-all": "View News",
+    "read": "Read"
   },
   "footer": {
     "site_pages": "Site Pages",
+    "social-media": "Our Social Media",
     "validation": {
       "name_required": "Name is required",
       "email_required": "Email is required",
       "email_invalid": "Enter a valid email",
       "phone_required": "Phone number is required",
-      "phone_length": "Phone number must be at least 11 characters"
+      "phone_length": "Phone number must be at least 11 digits"
     }
   }
 }
