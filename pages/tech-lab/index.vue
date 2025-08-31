@@ -22,16 +22,25 @@
           :delay="index * 200"
           class="col-xl-6 col-md-6 col-sm-6 col-12"
           custom-class="full-height"
-          
         >
-          <q-card @click="navigateTo(`/tech-Lab/about-us`)" class="my-card full-height">
-            <q-img :src="value.image" style="max-height: 300px;" />
+          <q-card
+            @click="navigateTo(`/tech-Lab/about-us`)"
+            class="my-card full-height"
+          >
+            <q-img :src="value.image" style="max-height: 300px" />
             <q-card-section class="text-center">
-              <div class="text-h6">{{ value.title }}</div>
+              <div class="text-h6 ellipsis-lines" :style="{ '--lines': 2 }">
+                {{ value.title }}
+              </div>
             </q-card-section>
             <div :dir="directionOfElement(locale)">
               <q-card-section>
-                <div class="text-body1">{{ value.desc }}</div>
+                <div
+                  class="text-body1 ellipsis-lines"
+                  :style="{ '--lines': 2 }"
+                >
+                  {{ value.desc }}
+                </div>
               </q-card-section>
               <q-card-section>
                 <div class="text-body2 pointer">
@@ -114,9 +123,10 @@ const arrowIcon = computed(() =>
 );
 
 const imgData = computed(() => [
-  { 
-    image: "/images/tech-lab/i-1.jpg", 
-    text: t("tech-Lab_page.services") },
+  {
+    image: "/images/tech-lab/i-1.jpg",
+    text: t("tech-Lab_page.services"),
+  },
   {
     image: "/images/tech-lab/research.jpg",
     text: t("tech-Lab_page.careers"),

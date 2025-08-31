@@ -86,3 +86,9 @@
   z-index: 10000000;
   position: relative;
 }
+.ellipsis-lines {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  -webkit-line-clamp: var(--lines, 3);
+}

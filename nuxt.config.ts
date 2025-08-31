@@ -6,13 +6,7 @@ export default defineNuxtConfig({
       recaptchaSiteKey: process.env.NUXT_PUBLIC_RECAPTCHA_SITE_KEY || "",
     },
   },
-  googleFonts: {
-    families: {
-      "Nunito+Sans": [300, 400, 600, 700], // you can choose the weights you want
-    },
-    display: "swap", // good for performance
-    download: true, // self-host fonts for privacy and speed
-  },
+
   devtools: { enabled: true },
   quasar: {
     lang: "fa-IR",
@@ -69,7 +63,14 @@ export default defineNuxtConfig({
     "@nuxtjs/i18n",
     "@vueuse/motion/nuxt",
     "@nuxtjs/google-fonts",
+    "@nuxt/fonts",
   ],
+  app: {
+    head: {
+      htmlAttrs: { lang: "fa" },
+      bodyAttrs: { class: "font-vazir" },
+    },
+  },
   css: [
     // "swiper/css",
     // "swiper/css/navigation",
