@@ -175,8 +175,9 @@ const con3Data = computed<ButtonItem[][]>(() => [
 
 <style scoped>
 @import "@/assets/css/components/card.css";
+
 .container1 {
-  background: url("/images/tech-Lab/background-page.jpg") center/cover no-repeat;
+  background: url("/images/tech-lab/background-page.jpg") center/cover no-repeat;
   width: 100%;
   height: 70vh;
   position: relative;
