@@ -46,7 +46,7 @@
             />
             <q-route-tab
               icon="fa-solid fa-microscope"
-              :label="undefined"
+              class="rounded-10"
               to="/tech-Lab"
               exact
             >

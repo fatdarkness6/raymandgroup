@@ -1,7 +1,7 @@
 <template>
   <div ref="wrapper">
     <transition :name="transitionName" appear>
-      <div v-if="isVisible" class="slide-wrapper" :style="style">
+      <div v-if="isVisible" :class="['slide-wrapper' , customClass]" :style="style">
         <slot />
       </div>
     </transition>
@@ -13,6 +13,7 @@ const props = defineProps<{
   duration?: number;
   direction?: "left" | "right" | "up" | "down";
   delay?: number;
+  customClass?:string
 }>();
 
 const isVisible = ref(false);

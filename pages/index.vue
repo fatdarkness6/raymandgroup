@@ -257,7 +257,7 @@
         </div>
         <div>
           <AnimationSlideOnceGroup
-            class="row q-col-gutter-md items-start justify-center"
+            class="row q-col-gutter-md items-stretch items-start justify-center"
             direction="left"
           >
             <AnimationSlideOnce
@@ -265,18 +265,22 @@
               :key="item.id"
               :delay="i * 200"
               class="col-xl-4 col-md-4 col-sm-6 col-12"
+              custom-class="full-height"
             >
-              <q-card :bordered="true" class="my-card">
-                <q-img :src="item.image" class="full-width" />
-                <div class="q-px-md">
-                  <q-card-section class="flex column gap-20 q-mt-lg">
+              <q-card bordered class="my-card full-height">
+                <q-img :src="item.image" style="max-height: 300px" />
+                  <q-card-section>
                     <div class="text-subtitle2 text-weight-bold">
                       {{ item.subject }}
                     </div>
+                  </q-card-section>
+                  <q-card-section>
                     <div class="text-h6 text-weight-medium res-h6">
                       {{ item.title }}
                     </div>
-                    <div class="reporter flex items-center gap-10">
+                  </q-card-section>
+                  <q-card-section class="reporter">
+                    <div class="flex items-center gap-10">
                       <div class="part1">
                         <q-img
                           :src="item.reporter.image"
@@ -299,14 +303,19 @@
                       </div>
                     </div>
                   </q-card-section>
-                </div>
               </q-card>
             </AnimationSlideOnce>
           </AnimationSlideOnceGroup>
         </div>
         <div class="full-width flex justify-center items-center">
           <AnimationSlideOnce preset="slideVisibleOnceBottom">
-            <q-btn to="/news" push no-caps padding="15px 30px" class="q-mt-xl flex">
+            <q-btn
+              to="/news"
+              push
+              no-caps
+              padding="15px 30px"
+              class="q-mt-xl flex"
+            >
               {{ t("home_page.news.view-all") }}
             </q-btn>
           </AnimationSlideOnce>
@@ -336,6 +345,46 @@ const loopOnTexts2 = [
 const local = locale.value;
 
 const images = [
+  {
+    image: "/images/tech-lab/i-1.jpg",
+    title: t("home_page.raymand2"),
+    slogan: t("home_page.slogan2"),
+  },
+  {
+    image: "/images/tech-lab/i-2.jpg",
+    title: t("home_page.raymand2"),
+    slogan: t("home_page.slogan2"),
+  },
+  {
+    image: "/images/tech-lab/i-3.jpg",
+    title: t("home_page.raymand2"),
+    slogan: t("home_page.slogan2"),
+  },
+  {
+    image: "/images/tech-lab/i-4.jpg",
+    title: t("home_page.raymand2"),
+    slogan: t("home_page.slogan2"),
+  },
+  {
+    image: "/images/tech-lab/i-5.jpg",
+    title: t("home_page.raymand2"),
+    slogan: t("home_page.slogan2"),
+  },
+  {
+    image: "/images/tech-lab/i-6.jpg",
+    title: t("home_page.raymand2"),
+    slogan: t("home_page.slogan2"),
+  },
+  {
+    image: "/images/tech-lab/i-7.jpg",
+    title: t("home_page.raymand2"),
+    slogan: t("home_page.slogan2"),
+  },
+  {
+    image: "/images/tech-lab/i-8.jpg",
+    title: t("home_page.raymand2"),
+    slogan: t("home_page.slogan2"),
+  },
   {
     image: "/images/tech-lab/i-1.jpg",
     title: t("home_page.raymand2"),
@@ -418,8 +467,88 @@ const images2 = [
     title: t("home_page.raymand1"),
     slogan: t("home_page.slogan1"),
   },
+  {
+    image: "/images/gpo/i-1.jpg",
+    title: t("home_page.raymand1"),
+    slogan: t("home_page.slogan1"),
+  },
+  {
+    image: "/images/gpo/i-2.jpg",
+    title: t("home_page.raymand1"),
+    slogan: t("home_page.slogan1"),
+  },
+  {
+    image: "/images/gpo/i-3.jpg",
+    title: t("home_page.raymand1"),
+    slogan: t("home_page.slogan1"),
+  },
+  {
+    image: "/images/gpo/i-4.jpg",
+    title: t("home_page.raymand1"),
+    slogan: t("home_page.slogan1"),
+  },
+  {
+    image: "/images/gpo/i-5.jpg",
+    title: t("home_page.raymand1"),
+    slogan: t("home_page.slogan1"),
+  },
+  {
+    image: "/images/gpo/i-6.jpg",
+    title: t("home_page.raymand1"),
+    slogan: t("home_page.slogan1"),
+  },
+  {
+    image: "/images/gpo/i-7.jpg",
+    title: t("home_page.raymand1"),
+    slogan: t("home_page.slogan1"),
+  },
+  {
+    image: "/images/gpo/i-8.jpg",
+    title: t("home_page.raymand1"),
+    slogan: t("home_page.slogan1"),
+  },
 ];
 const images3 = [
+  {
+    image: "/images/vHospital/i-1.jpg",
+    title: t("home_page.raymand3"),
+    slogan: t("home_page.slogan3"),
+  },
+  {
+    image: "/images/vHospital/i-2.jpg",
+    title: t("home_page.raymand3"),
+    slogan: t("home_page.slogan3"),
+  },
+  {
+    image: "/images/vHospital/i-3.jpg",
+    title: t("home_page.raymand3"),
+    slogan: t("home_page.slogan3"),
+  },
+  {
+    image: "/images/vHospital/i-4.jpg",
+    title: t("home_page.raymand3"),
+    slogan: t("home_page.slogan3"),
+  },
+  {
+    image: "/images/vHospital/i-5.jpg",
+    title: t("home_page.raymand3"),
+    slogan: t("home_page.slogan3"),
+  },
+  {
+    image: "/images/vHospital/i-6.jpg",
+    title: t("home_page.raymand3"),
+    slogan: t("home_page.slogan3"),
+  },
+  {
+    image: "/images/vHospital/i-7.jpg",
+    title: t("home_page.raymand3"),
+    slogan: t("home_page.slogan3"),
+  },
+  {
+    image: "/images/vHospital/i-8.jpg",
+    title: t("home_page.raymand3"),
+    slogan: t("home_page.slogan3"),
+  },
   {
     image: "/images/vHospital/i-1.jpg",
     title: t("home_page.raymand3"),
@@ -463,7 +592,7 @@ const images3 = [
 ];
 const allImages = [images, images2, images3];
 const news = [
-    {
+  {
     image: "/images/vHospital/i-4.jpg",
     subject: t("home_page.raymand3"),
     title: t("home_page.news.title3"),
@@ -491,7 +620,7 @@ const news = [
     },
     id: 1,
   },
-   {
+  {
     image: "/images/exhibition.jpg",
     subject: t("home_page.raymand2"),
     title: t("home_page.news.title2"),

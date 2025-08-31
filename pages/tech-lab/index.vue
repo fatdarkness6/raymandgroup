@@ -15,15 +15,17 @@
     <div class="wrapper">
       <AnimationSlideOnceGroup
         direction="left"
-        class="container2 row q-col-gutter-md justify-between items-start"
+        class="container2 row q-col-gutter-md justify-between items-start items-stretch"
       >
         <AnimationSlideOnce
           v-for="(value, index) in con2Data"
           :delay="index * 200"
           class="col-xl-6 col-md-6 col-sm-6 col-12"
+          custom-class="full-height"
+          
         >
-          <q-card @click="navigateTo(`/tech-Lab/about-us`)" class="my-card">
-            <q-img :src="value.image" />
+          <q-card @click="navigateTo(`/tech-Lab/about-us`)" class="my-card full-height">
+            <q-img :src="value.image" style="max-height: 300px;" />
             <q-card-section class="text-center">
               <div class="text-h6">{{ value.title }}</div>
             </q-card-section>
@@ -32,7 +34,7 @@
                 <div class="text-body1">{{ value.desc }}</div>
               </q-card-section>
               <q-card-section>
-                <div class="text-body2">
+                <div class="text-body2 pointer">
                   {{ t("common.learn-more") }}
                 </div>
               </q-card-section>
@@ -164,7 +166,7 @@ const con3Data = computed<ButtonItem[][]>(() => [
 <style scoped>
 @import "@/assets/css/components/card.css";
 .container1 {
-  background: url("/images/tech-Lab/i-4.jpg") center/cover no-repeat;
+  background: url("/images/tech-Lab/background-page.jpg") center/cover no-repeat;
   width: 100%;
   height: 70vh;
   position: relative;
