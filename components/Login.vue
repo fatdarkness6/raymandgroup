@@ -49,7 +49,7 @@
         />
         <div class="text-weight-medium">Forgot Password?</div>
       </div>
-      <q-btn q-btn to="/login" color="primary" push no-caps padding="10px 20px"
+      <q-btn q-btn :to="localePath('login')" color="primary" push no-caps padding="10px 20px"
         >Login</q-btn
       >
     </q-card-section>
@@ -59,6 +59,7 @@
 import { useForm, useField } from "vee-validate";
 import { loginSchema } from "~/utils/registerSchema";
 
+const localePath = useLocalePath()
 const { handleSubmit, resetForm } = useForm({
   validationSchema: loginSchema,
 });

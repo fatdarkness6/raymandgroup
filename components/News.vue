@@ -55,18 +55,12 @@
           </q-card-section>
           <q-separator />
           <q-card-actions>
-            <q-btn flat :to="`/news/${item.slug}`">
-              <template #default>
-                <div class="flex items-center gap-10">
-                  <div class="text-body2">{{ $t("news.read") }}</div>
-                  <q-icon
-                    name="fa-brands fa-readme"
-                    class="q-ml-sm"
-                    size="20px"
-                  />
-                </div>
-              </template>
-            </q-btn>
+            <q-btn
+              flat
+              :label="$t('news.read')"
+              icon="fa-brands fa-readme"
+              :to="`news/${item.slug}`"
+            />
           </q-card-actions>
         </q-card>
       </AnimationSlideOnce>

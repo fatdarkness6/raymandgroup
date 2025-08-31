@@ -40,14 +40,14 @@
             <q-route-tab
               icon="fa-solid fa-house"
               :label="$t('header.home-page')"
-              to="/"
+              :to="localePath('index')"
               class="rounded-10"
               exact
             />
             <q-route-tab
               icon="fa-solid fa-microscope"
               class="rounded-10"
-              to="/tech-Lab"
+              :to="localePath('tech-lab')"
               exact
             >
               <template v-slot>
@@ -62,7 +62,7 @@
             </q-route-tab>
             <q-route-tab
               icon="fa-solid fa-building"
-              to="/gpo"
+              :to="localePath('gpo')"
               class="rounded-10"
               exact
             >
@@ -78,7 +78,7 @@
             </q-route-tab>
             <q-route-tab
               icon="fa-solid fa-hospital"
-              to="/v-hospital"
+              :to="localePath('v-hospital')"
               class="rounded-10 text-sm"
               exact
             >
@@ -94,7 +94,7 @@
             </q-route-tab>
             <q-route-tab
               icon="fa-solid fa-newspaper"
-              to="/news"
+              :to="localePath('news')"
               class="rounded-10 text-sm"
               :label="t(`header.news`)"
             >
@@ -204,22 +204,22 @@
         </div>
         <div class="site-map flex column justify-center items-center">
           <span class="text-h6">{{ $t("footer.site_pages") }}</span>
-          <NuxtLink to="/" class="custom-link">{{
+          <NuxtLink :to="localePath('index')" class="custom-link">{{
             $t("header.home-page")
           }}</NuxtLink>
-          <NuxtLink to="/about-us" class="custom-link">{{
+          <NuxtLink :to="localePath('about-us')" class="custom-link">{{
             $t("common.about_us")
           }}</NuxtLink>
-          <NuxtLink to="/contact-us" class="custom-link">{{
+          <NuxtLink :to="localePath('contact-us')" class="custom-link">{{
             $t("header.contact_us")
           }}</NuxtLink>
-          <NuxtLink to="/gpo" class="custom-link">{{
+          <NuxtLink :to="localePath('gpo')" class="custom-link">{{
             $t("header.gpo")
           }}</NuxtLink>
-          <NuxtLink to="/tech-Lab" class="custom-link">{{
+          <NuxtLink :to="localePath('tech-lab')" class="custom-link">{{
             $t("header.tech-Lab")
           }}</NuxtLink>
-          <NuxtLink to="/v-hospital" class="custom-link">{{
+          <NuxtLink :to="localePath('v-hospital')" class="custom-link">{{
             $t("header.vHospital")
           }}</NuxtLink>
         </div>
@@ -446,6 +446,8 @@ const { value: name, errorMessage: nameError } = useField<string>("name");
 const { value: email, errorMessage: emailError } = useField<string>("email");
 const { value: phone, errorMessage: phoneError } = useField<string>("phone");
 
+
+const localePath = useLocalePath()
 // Submit handler
 const submit = handleSubmit((values) => {
   if (!canSubmit.value) {

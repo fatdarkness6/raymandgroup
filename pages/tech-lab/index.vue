@@ -24,7 +24,7 @@
           custom-class="full-height"
         >
           <q-card
-            @click="navigateTo(`/tech-Lab/about-us`)"
+            @click="navigateTo(`tech-Lab/about-us`)"
             class="my-card full-height"
           >
             <q-img :src="value.image" style="max-height: 300px" />
@@ -95,7 +95,7 @@
               push
               :color="label.color || 'primary'"
               :dir="directionOfElement(locale)"
-              :to="`tech-Lab/${label.route}`"
+              :to="`tech-lab/${label.route}`"
               padding="15px 30px"
               class="text text-subtitle1 rounded-10 text-white flex items-center justify-between"
             >

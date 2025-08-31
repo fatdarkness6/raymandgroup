@@ -25,7 +25,7 @@
           <AnimationSlideOnce :delay="400">
             <div class="part3">
               <q-btn
-                to="/about-us"
+                :to="localePath('about-us')"
                 push
                 color="primary"
                 no-caps
@@ -266,7 +266,7 @@
       <div class="full-width flex justify-center items-center">
         <AnimationSlideOnce preset="slideVisibleOnceBottom">
           <q-btn
-            to="/news"
+            :to="localePath('news')"
             push
             no-caps
             padding="15px 30px"
@@ -289,6 +289,7 @@ import {
 } from "~/assets/data/pages/homePage";
 const { locale, t } = useI18n();
 
+const localePath = useLocalePath()
 const translateGroup = (group: typeof images) =>
   [...group, ...group].map((item) => ({
     image: item.image,
