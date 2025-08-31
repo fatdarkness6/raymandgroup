@@ -83,6 +83,7 @@
   },
   "footer": {
     "site_pages": "صفحات سایت",
+    "social-media" :"رسانه های اجتماعی ما",
     "validation": {
       "name_required": "وارد کردن نام الزامی است",
       "email_required": "وارد کردن ایمیل الزامی است",

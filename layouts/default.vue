@@ -224,7 +224,7 @@
           }}</NuxtLink>
         </div>
         <div class="social-media flex column items-center gap-10">
-          <div class="text-h6">Social Media</div>
+          <div class="text-h6">{{ t("footer.social-media") }}</div>
           <a class="instagram">
             <span class="custom-text q-pr-sm">Instagram</span>
             <font-awesome-icon :icon="['fab', 'instagram']" />
@@ -296,32 +296,35 @@
         glossy
         icon="fa-solid fa-comment"
         direction="up"
+        
       >
         <q-fab-action
           label-position="right"
           color="negative"
           icon="fa-solid fa-envelope"
           label="Email"
-          type="a"
-          href="mailto:info@raymandgroup.de"
+          @click="openEmail"
         />
         <q-fab-action
           label-position="right"
           color="positive"
           icon="fa-solid fa-phone"
           label="Phone"
+          @click="callPhone"
         />
         <q-fab-action
           label-position="right"
           color="secondary"
           icon="fa-brands fa-instagram"
           label="Instagram"
+          @click="openInstagram"
         />
         <q-fab-action
           label-position="right"
           color="accent"
           icon="fa-brands fa-tiktok"
-          label="Tiktok"
+          label="TikTok"
+          @click="openTikTok"
         />
       </q-fab>
     </div>
@@ -476,6 +479,22 @@ const submit = handleSubmit((values) => {
 
 function switchLanguage(lang: any) {
   setLocale(lang);
+}
+
+function openEmail() {
+  window.open('https://mail.google.com/mail/?view=cm&fs=1&to=info@raymandgroup.de', "_blank");
+}
+
+function callPhone() {
+  window.location.href = "tel:+49123456789";
+}
+
+function openInstagram() {
+  window.open("https://instagram.com/yourpage", "_blank");
+}
+
+function openTikTok() {
+  window.open("https://tiktok.com/@yourpage", "_blank");
 }
 </script>
 
