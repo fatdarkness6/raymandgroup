@@ -124,26 +124,26 @@ const arrowIcon = computed(() =>
 
 const imgData = computed(() => [
   {
-    image: "/images/tech-lab/i-1.jpg",
+    image: "/images/tech-lab/i-1.webp",
     text: t("tech-Lab_page.services"),
   },
   {
-    image: "/images/tech-lab/research.jpg",
+    image: "/images/tech-lab/research.webp",
     text: t("tech-Lab_page.careers"),
   },
   {
-    image: "/images/tech-lab/university-student-in-laboratory.jpg",
+    image: "/images/tech-lab/university-student-in-laboratory.webp",
     text: t("tech-Lab_page.investors"),
   },
 ]);
 const con2Data = [
   {
-    image: "/images/tech-lab/vision.jpg",
+    image: "/images/tech-lab/vision.webp",
     title: t("tech-Lab_page.generalInfo.vision"),
     desc: t("tech-Lab_page.generalInfo.visionDesc"),
   },
   {
-    image: "/images/tech-lab/misson.jpg",
+    image: "/images/tech-lab/misson.webp",
     title: t("tech-Lab_page.generalInfo.mission"),
     desc: t("tech-Lab_page.generalInfo.missionDesc"),
   },
@@ -177,7 +177,7 @@ const con3Data = computed<ButtonItem[][]>(() => [
 @import "@/assets/css/components/card.css";
 
 .container1 {
-  background: url("/images/tech-lab/background-page.jpg") center/cover no-repeat;
+  background: url("/images/tech-lab/background-page.webp") center/cover no-repeat;
   width: 100%;
   height: 70vh;
   position: relative;
