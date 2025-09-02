@@ -97,10 +97,16 @@
               :dir="directionOfElement(locale)"
               :to="`tech-lab/${label.route}`"
               padding="15px 30px"
-              class="text text-subtitle1 rounded-10 text-white flex items-center justify-between"
+              class="text text-subtitle1 rounded-10 text-white"
             >
-              {{ label.title }}
-              <q-icon :name="arrowIcon" size="20px" />
+              <template #default>
+                <div class="flex items-center justify-between no-wrap">
+                  <div class="ellipsis-lines" :style="{ '--lines': 1 }">
+                    {{ label.title }}
+                  </div>
+                  <q-icon :name="arrowIcon" size="20px" />
+                </div>
+              </template>
             </q-btn>
           </div>
         </div>
@@ -177,7 +183,8 @@ const con3Data = computed<ButtonItem[][]>(() => [
 @import "@/assets/css/components/card.css";
 
 .container1 {
-  background: url("/images/tech-lab/background-page.webp") center/cover no-repeat;
+  background: url("/images/tech-lab/background-page.webp") center/cover
+    no-repeat;
   width: 100%;
   height: 70vh;
   position: relative;

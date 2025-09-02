@@ -1,106 +1,74 @@
 <template>
-  <div class="about-page column q-pa-xl gap-50">
+  <div class="about-page column q-gutter-xl">
     <!-- Hero Section -->
-    <div
-      class="hero-section q-pa-xl rounded-borders bg-primary text-white text-center"
-    >
-      <div class="text-h2 text-weight-bold q-mb-md">
+    <section class="hero-section column flex-center text-center text-white">
+      <div class="text-h3 text-weight-bold q-mb-md">
         About Raymand Strategic Technology Group
       </div>
-      <div class="text-subtitle1 max-width-700 mx-auto">
-        Discover our mission, vision, and the brilliant minds behind our
-        innovations in soil, water, microbiology, veterinary labs, food, and
-        pharmaceutical testing.
+      <div class="text-subtitle1 max-w-700">
+        Pioneering innovations in soil, water, microbiology, veterinary, food, and pharmaceutical labs.
       </div>
-    </div>
+    </section>
 
     <!-- Mission & Vision -->
-    <div class="row q-col-gutter-lg q-mt-lg">
+    <section class="row q-col-gutter-lg q-px-md">
       <div class="col-12 col-md-6">
-        <q-card flat bordered class="q-pa-lg hover-card">
-          <q-icon name="mdi-target" size="50px" class="text-primary q-mb-md" />
+        <q-card class="info-card">
+          <q-icon name="mdi-target" size="48px" class="text-primary q-mb-md" />
           <div class="text-h5 text-weight-bold q-mb-sm">Our Mission</div>
-          <div class="text-body1 text-grey-9">
-            Our mission is to elevate laboratory testing quality and provide
-            accurate, reliable results to support research, health, and industry
-            standards.
-          </div>
+          <p class="text-body1 text-grey-8">
+            Elevating laboratory testing standards with precise, reliable results that empower health, research, and industry.
+          </p>
         </q-card>
       </div>
       <div class="col-12 col-md-6">
-        <q-card flat bordered class="q-pa-lg hover-card">
-          <q-icon
-            name="mdi-eye-outline"
-            size="50px"
-            class="text-primary q-mb-md"
-          />
+        <q-card class="info-card">
+          <q-icon name="mdi-eye-outline" size="48px" class="text-primary q-mb-md" />
           <div class="text-h5 text-weight-bold q-mb-sm">Our Vision</div>
-          <div class="text-body1 text-grey-9">
-            We envision a future where cutting-edge technology empowers
-            laboratories globally, ensuring safety, innovation, and sustainable
-            development.
-          </div>
+          <p class="text-body1 text-grey-8">
+            Driving a future where innovation and technology ensure safety, sustainability, and global progress in laboratories.
+          </p>
         </q-card>
       </div>
-    </div>
+    </section>
 
     <!-- Team Section -->
-    <div class="team-section q-mt-xl">
-      <div class="text-h4 text-weight-bold text-center q-mb-lg">
-        Meet Our Team
-      </div>
-      <div class="row q-col-gutter-lg q-row-gutter-md">
-        <div
-          v-for="member in team"
-          :key="member.id"
-          class="col-12 col-sm-6 col-md-3"
-        >
-          <q-card
-            flat
-            bordered
-            class="team-card hover-card column items-center text-center q-pa-md"
-          >
-            <q-img
-              :src="member.photo"
-              class="rounded-borders shadow-2"
-              style="width: 160px; height: 160px"
-            />
-            <div class="text-h6 text-weight-medium q-mt-sm">
-              {{ member.name }}
-            </div>
-            <div class="text-body2 text-grey-7">{{ member.position }}</div>
+    <section class="team-section q-mt-xl">
+      <div class="text-h4 text-weight-bold text-center q-mb-xl">Meet Our Team</div>
+      <div class="row q-col-gutter-lg q-row-gutter-lg justify-center">
+        <div v-for="member in team" :key="member.id" class="col-12 col-sm-6 col-md-3">
+          <q-card class="team-card column items-center text-center">
+            <q-avatar size="140px" class="q-mb-md shadow-3">
+              <img :src="member.photo" alt="team member" />
+            </q-avatar>
+            <div class="text-h6 text-weight-bold">{{ member.name }}</div>
+            <div class="text-body2 text-grey-7 q-mb-sm">{{ member.position }}</div>
             <q-btn
+              v-if="member.linkedin"
               flat
               round
               icon="mdi-linkedin"
-              class="q-mt-sm text-primary"
-              :to="member.linkedin"
+              color="primary"
+              :href="member.linkedin"
               target="_blank"
             />
           </q-card>
         </div>
       </div>
-    </div>
+    </section>
 
     <!-- Contact Section -->
-    <div class="contact-section q-pa-xl rounded-borders bg-grey-2 text-center">
-      <div class="text-h5 text-weight-bold q-mb-md">Get in Touch</div>
-      <div class="text-body1 q-mb-md">
-        Have questions or want to collaborate? Reach out to us and let's make a
-        difference together.
+    <section class="contact-section column flex-center text-center">
+      <div class="text-h5 text-weight-bold q-mb-sm">Get in Touch</div>
+      <div class="text-body1 text-grey-8 q-mb-md max-w-600">
+        Have questions or want to collaborate? Reach out to us and let’s build the future together.
       </div>
-      <q-btn
-        label="Contact Us"
-        color="primary"
-        rounded
-        size="lg"
-        :to="'/contact'"
-      />
-    </div>
+      <q-btn label="Contact Us" color="primary" rounded size="lg" :to="'/contact'" />
+    </section>
   </div>
 </template>
 
-<script lang="ts" setup>
+<script setup lang="ts">
 interface TeamMember {
   id: number;
   name: string;
@@ -147,23 +115,48 @@ const team: TeamMember[] = [
   margin: 0 auto;
 }
 
+/* Hero */
 .hero-section {
-  background-image: url("/images/hero-bg.jpg");
-  background-size: cover;
-  background-position: center;
-  padding: 80px 20px;
-  border-radius: 20px;
+  background: linear-gradient(135deg, #1976d2, #0d47a1);
+  padding: 100px 20px;
+  border-radius: 16px;
 }
 
-.hover-card {
+/* Mission & Vision */
+.info-card {
+  padding: 32px;
+  border-radius: 16px;
+  text-align: center;
   transition: all 0.3s ease;
 }
-.hover-card:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+.info-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.1);
 }
 
-.team-card q-img {
-  object-fit: cover;
+/* Team */
+.team-card {
+  padding: 24px;
+  border-radius: 16px;
+  transition: all 0.3s ease;
+}
+.team-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.1);
+}
+
+/* Contact */
+.contact-section {
+  background: #f9fafb;
+  padding: 80px 20px;
+  border-radius: 16px;
+}
+.max-w-700 {
+  max-width: 700px;
+  margin: 0 auto;
+}
+.max-w-600 {
+  max-width: 600px;
+  margin: 0 auto;
 }
 </style>

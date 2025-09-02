@@ -59,7 +59,8 @@
               flat
               :label="$t('news.read')"
               icon="fa-brands fa-readme"
-              :to="`news/${item.slug}`"
+              class="rounded-10"
+              :to="localePath({ name: 'news-slug', params: { slug: item.slug } })"
             />
           </q-card-actions>
         </q-card>
@@ -84,6 +85,7 @@ defineProps<{
 }>();
 
 const loading = ref(true);
+const localePath = useLocalePath()
 onMounted(() => {
   setTimeout(() => {
     loading.value = false;

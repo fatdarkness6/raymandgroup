@@ -6,112 +6,116 @@
     <q-header elevated reveal :reveal-offset="1" class="q-pa-md wrapper header">
       <AnimationHeader />
       <div class="flex flex-row items-center justify-between">
-        <div class="berger-button" style="width: 80px">
-          <q-btn
-            flat
-            dense
-            round
-            icon="fa-solid fa-bars"
-            @click="leftDrawerOpen = !leftDrawerOpen"
-          />
-        </div>
-        <div class="flex items-center">
-          <div class="logo-moon-wrapper q-mr-sm">
-            <q-img
-              src="/images/logo-test.svg"
-              spinner-color="primary"
-              fetchpriority="high"
-              style="height: 65px; width: 65px"
-              class="logo-img"
-            >
-              <template v-slot:loading>
-                <q-spinner-gears color="white" />
-              </template>
-            </q-img>
-          </div>
-          <q-tabs
-            v-model="tab"
-            dense
-            active-color="white"
-            class="white header-tabs"
-            router
-            no-caps
+        <!-- Mobile Burger -->
+        <q-btn
+          flat
+          dense
+          round
+          icon="fa-solid fa-bars"
+          class="lt-md ham-menu"
+          @click="leftDrawerOpen = !leftDrawerOpen"
+        />
+
+        <!-- Logo -->
+        <div class="logo-moon-wrapper q-mr-sm">
+          <q-img
+            src="/images/logo-test.svg"
+            spinner-color="primary"
+            fetchpriority="high"
+            style="height: 50px; width: 50px"
+            class="logo-img"
           >
-            <q-route-tab
-              icon="fa-solid fa-house"
-              :label="$t('header.home-page')"
-              :to="localePath('index')"
-              class="rounded-10"
-              exact
-            />
-            <q-route-tab
-              icon="fa-solid fa-microscope"
-              class="rounded-10"
-              :to="localePath('tech-lab')"
-              exact
-            >
-              <template v-slot>
-                <span
-                  v-for="(line, i) in $t('header.tech-Lab').split('\n')"
-                  :key="i"
-                  class="text-weight-bold"
-                >
-                  {{ line }}
-                </span>
-              </template>
-            </q-route-tab>
-            <q-route-tab
-              icon="fa-solid fa-building"
-              :to="localePath('gpo')"
-              class="rounded-10"
-              exact
-            >
-              <template v-slot>
-                <span
-                  v-for="(line, i) in $t('header.gpo').split('\n')"
-                  :key="i"
-                  class="text-weight-bold"
-                >
-                  {{ line }}
-                </span>
-              </template>
-            </q-route-tab>
-            <q-route-tab
-              icon="fa-solid fa-hospital"
-              :to="localePath('v-hospital')"
-              class="rounded-10 text-sm"
-              exact
-            >
-              <template v-slot>
-                <span
-                  v-for="(line, i) in $t('header.vHospital').split('\n')"
-                  :key="i"
-                  class="text-weight-bold"
-                >
-                  {{ line }}
-                </span>
-              </template>
-            </q-route-tab>
-            <q-route-tab
-              icon="fa-solid fa-newspaper"
-              :to="localePath('news')"
-              class="rounded-10 text-sm"
-              :label="t(`header.news`)"
-            >
-            </q-route-tab>
-          </q-tabs>
+            <template v-slot:loading>
+              <q-spinner-gears color="white" />
+            </template>
+          </q-img>
         </div>
-        <div class="login-button flex items-center gap-10">
+
+        <!-- Tabs (desktop only) -->
+        <q-tabs
+          v-model="tab"
+          dense
+          active-color="white"
+          class="white header-tabs gt-sm"
+          router
+          no-caps
+        >
+          <q-route-tab
+            icon="fa-solid fa-house"
+            :label="$t('header.home-page')"
+            :to="localePath('index')"
+            class="rounded-10"
+            exact
+          />
+          <q-route-tab
+            icon="fa-solid fa-microscope"
+            :to="localePath('tech-lab')"
+            class="rounded-10"
+            exact
+          >
+            <template v-slot>
+              <span
+                v-for="(line, i) in $t('header.tech-Lab').split('\n')"
+                :key="i"
+                class="text-weight-bold"
+              >
+                {{ line }}
+              </span>
+            </template>
+          </q-route-tab>
+          <q-route-tab
+            icon="fa-solid fa-building"
+            :to="localePath('gpo')"
+            class="rounded-10"
+            exact
+          >
+            <template v-slot>
+              <span
+                v-for="(line, i) in $t('header.gpo').split('\n')"
+                :key="i"
+                class="text-weight-bold"
+              >
+                {{ line }}
+              </span>
+            </template>
+          </q-route-tab>
+          <q-route-tab
+            icon="fa-solid fa-hospital"
+            :to="localePath('v-hospital')"
+            class="rounded-10"
+            exact
+          >
+            <template v-slot>
+              <span
+                v-for="(line, i) in $t('header.vHospital').split('\n')"
+                :key="i"
+                class="text-weight-bold"
+              >
+                {{ line }}
+              </span>
+            </template>
+          </q-route-tab>
+          <q-route-tab
+            icon="fa-solid fa-newspaper"
+            :to="localePath('news')"
+            class="rounded-10"
+            :label="$t('header.news')"
+          />
+        </q-tabs>
+
+        <!-- Login + Language -->
+        <div class="login-button flex items-center gap-2">
           <q-btn
             class="login-btn-none"
-            q-btn
-            to="/login?form=login"
+            :to="localePath('login')"
             color="primary"
             push
             no-caps
             padding="10px 20px"
-            >Login</q-btn
           >
+            Login
+          </q-btn>
+
           <q-btn-dropdown
             color="white"
             :label="locale"
@@ -296,7 +300,6 @@
         glossy
         icon="fa-solid fa-comment"
         direction="up"
-        
       >
         <q-fab-action
           label-position="right"
@@ -446,8 +449,7 @@ const { value: name, errorMessage: nameError } = useField<string>("name");
 const { value: email, errorMessage: emailError } = useField<string>("email");
 const { value: phone, errorMessage: phoneError } = useField<string>("phone");
 
-
-const localePath = useLocalePath()
+const localePath = useLocalePath();
 // Submit handler
 const submit = handleSubmit((values) => {
   if (!canSubmit.value) {
@@ -484,7 +486,10 @@ function switchLanguage(lang: any) {
 }
 
 function openEmail() {
-  window.open('https://mail.google.com/mail/?view=cm&fs=1&to=info@raymandgroup.de', "_blank");
+  window.open(
+    "https://mail.google.com/mail/?view=cm&fs=1&to=info@raymandgroup.de",
+    "_blank"
+  );
 }
 
 function callPhone() {
