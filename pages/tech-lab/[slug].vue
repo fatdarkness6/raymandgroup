@@ -62,7 +62,10 @@
             custom-class="full-height"
             :delay="index * 200"
           >
-            <q-card class="my-card text-center full-height">
+            <q-card
+              class="my-card text-center full-height"
+              :dir="directionOfElement(locale)"
+            >
               <q-img :src="item.image" />
               <q-card-section>
                 <div class="text-subtitle1 text-bold">
@@ -88,7 +91,10 @@
           </div>
         </AnimationSlideOnce>
         <AnimationSlideOnce>
-          <q-card class="my-card q-mt-xl full-width">
+          <q-card
+            class="my-card q-mt-xl full-width"
+            :dir="directionOfElement(locale)"
+          >
             <div class="row q-col-gutter-md items-center">
               <div class="col-12 col-sm-12 col-md-6 col-lg-6">
                 <q-img
