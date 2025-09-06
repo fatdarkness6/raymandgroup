@@ -82,42 +82,6 @@
           </AnimationSlideOnce>
         </AnimationSlideOnceGroup>
       </div>
-      <div
-        class="container4 space-between-each-sections-bottom space-between-each-sections-top"
-      >
-        <AnimationSlideOnce direction="down">
-          <div class="text-h4 text-center">
-            {{ t("tech-Lab_page.routes.soil.container4.title") }}
-          </div>
-        </AnimationSlideOnce>
-        <AnimationSlideOnce>
-          <q-card
-            class="my-card q-mt-xl full-width"
-            :dir="directionOfElement(locale)"
-          >
-            <div class="row q-col-gutter-md items-center">
-              <div class="col-12 col-sm-12 col-md-6 col-lg-6">
-                <q-img
-                  :src="pageContent.container4.image"
-                  class="full-width"
-                  style="max-height: 400px; object-fit: cover"
-                />
-              </div>
-              <div class="col-sm-12 col-md-6 col-lg-6 q-pa-xl">
-                <div class="column q-gutter-md">
-                  <div
-                    v-for="item in pageContent.container4.texts"
-                    :key="item"
-                    class="text-body1"
-                  >
-                    {{ item }}
-                  </div>
-                </div>
-              </div>
-            </div>
-          </q-card>
-        </AnimationSlideOnce>
-      </div>
     </div>
   </div>
 </template>
