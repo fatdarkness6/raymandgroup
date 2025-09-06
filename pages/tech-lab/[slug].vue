@@ -63,8 +63,9 @@
             :delay="index * 200"
           >
             <q-card
-              class="my-card text-center full-height"
+              class="my-card text-center full-height relative"
               :dir="directionOfElement(locale)"
+              style="min-height: 400px"
             >
               <q-img :src="item.image" />
               <q-card-section>
@@ -75,7 +76,7 @@
                   {{ item.desc }}
                 </div>
               </q-card-section>
-              <q-card-section>
+              <q-card-section class="ab-btn">
                 <q-btn push color="primary"> Click to See more </q-btn>
               </q-card-section>
             </q-card>
@@ -148,15 +149,6 @@ const map: any = {
         },
       ],
     },
-    container4: {
-      image: "/images/tech-lab/soil/container3-i-4.jpg",
-      texts: [
-        "Our soil testing laboratory is equipped with modern analytical instruments and advanced technology.",
-        "We provide precise measurements of soil nutrients, contaminants, and physical properties.",
-        "Our experts support farmers, researchers, and industries with reliable scientific data.",
-        "The laboratory ensures sustainable agriculture, healthy crops, and environmental protection.",
-      ],
-    },
   },
 };
 
@@ -172,4 +164,23 @@ const pageContent = computed(() => map[slug]);
 <style scoped>
 @import "@/assets/css/pages/slug.css";
 @import "@/assets/css/components/card.css";
+
+.ab-btn {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+}
+
+@media (max-width: 1920px) {
+  .container3 .my-card {
+    min-height: 450px !important;
+  }
+}
+@media (max-width: 600px) {
+  .container3 .my-card {
+    min-height: 500px !important;
+  }
+}
 </style>
