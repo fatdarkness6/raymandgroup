@@ -1,234 +1,175 @@
-<script setup lang="ts">
-const team = [
-  {
-    name: "Jane Doe",
-    role: "CEO & Founder",
-    image: "/images/Laboratory-Teamwork.webp",
-    socials: { linkedin: "#", twitter: "#", github: "#" },
-  },
-  {
-    name: "John Smith",
-    role: "CTO",
-    image: "/images/Laboratory-Teamwork.webp",
-    socials: { linkedin: "#", twitter: "#", github: "#" },
-  },
-  {
-    name: "Emily Brown",
-    role: "Product Manager",
-    image: "/images/Laboratory-Teamwork.webp",
-    socials: { linkedin: "#", twitter: "#", github: "#" },
-  },
-];
+<template>
+  <q-page
+    class="q-pa-lg space-between-each-sections"
+    :dir="directionOfElement(locale)"
+  >
+    <!-- Hero Section with Gradient Overlay & Button -->
+    <q-card class="my-card hero-banner text-white q-mb-xl q-pa-xl">
+      <div class="hero-overlay-gradient"></div>
+      <div class="relative-position text-center q-pa-xl">
+        <div class="text-h2 q-mb-md font-bold hero-title">
+          {{ t("tech-Lab_page.routes.aboutUs.container1.title1") }}<br />
+          {{ t("tech-Lab_page.routes.aboutUs.container1.title2") }}
+        </div>
+        <div class="text-subtitle1 q-mx-auto q-mb-md" style="max-width: 700px">
+          {{ t("tech-Lab_page.routes.aboutUs.container1.description") }}
+        </div>
+      </div>
+    </q-card>
 
-const companyInfo = [
+    <!-- Philosophy Section -->
+    <q-card flat bordered class="my-card q-pa-lg q-mb-xl bg-white shadow-lg">
+      <AnimationSlideOnceGroup direction="up" class="text-center">
+        <AnimationSlideOnce>
+          <div class="text-h5 text-primary q-mb-md font-bold">
+            {{ t("tech-Lab_page.routes.aboutUs.container2.title") }}
+          </div>
+          <p class="text-body1 text-dark">
+            {{ t("tech-Lab_page.routes.aboutUs.container2.description") }}
+          </p>
+        </AnimationSlideOnce>
+      </AnimationSlideOnceGroup>
+    </q-card>
+
+    <!-- Key Features Section -->
+    <q-card flat bordered class="q-pa-lg q-mb-xl feature-section">
+      <q-card-section class="text-center">
+        <div class="text-h5 text-white q-mb-lg font-bold">
+          {{ t("tech-Lab_page.routes.aboutUs.container3.title") }}
+        </div>
+        <AnimationSlideOnceGroup direction="up" class="row q-col-gutter-lg">
+          <AnimationSlideOnce
+            v-for="(feature, index) in features"
+            :key="index"
+            class="col-xs-12 col-sm-6 col-md-4"
+            :delay="index * 200"
+          >
+            <q-card flat bordered class="feature-card text-center hover-card">
+              <i :class="`fa ${feature.icon} fa-2x q-mb-md feature-icon`"></i>
+              <div class="text-h6 q-mb-sm font-semibold feature-title">
+                {{ feature.title }}
+              </div>
+              <p class="text-body2 feature-desc">{{ feature.description }}</p>
+            </q-card>
+          </AnimationSlideOnce>
+        </AnimationSlideOnceGroup>
+      </q-card-section>
+    </q-card>
+
+    <!-- Mission & Vision Section -->
+    <!-- <q-card
+      flat
+      bordered
+      class="my-card q-pa-lg mission-vision-section text-white"
+    >
+      <q-card-section class="text-center">
+        <AnimationSlideOnceGroup direction="up" class="row q-col-gutter-lg">
+          <AnimationSlideOnce class="col-12 col-md-6 q-mb-md" :delay="0">
+            <i class="fa fa-compass fa-2x q-mb-md"></i>
+            <div class="text-h6 q-mb-sm font-semibold">ماموریت ما</div>
+            <p class="text-body1">
+              ماموریت ما فراتر از انجام آزمون‌های استاندارد است؛ ما در رایمند
+              تلاش می‌کنیم تا با ایجاد ارزش واقعی برای صنایع، تولیدکنندگان و
+              مراکز تحقیقاتی، به شریک راهبردی مشتریان خود در مسیر ارتقا و توسعه
+              تبدیل شویم.
+            </p>
+          </AnimationSlideOnce>
+          <AnimationSlideOnce class="col-12 col-md-6" :delay="200">
+            <i class="fa fa-rocket fa-2x q-mb-md"></i>
+            <div class="text-h6 q-mb-sm font-semibold">چشم‌انداز ما</div>
+            <p class="text-body1">
+              چشم‌انداز ما این است که رایمند در آینده نزدیک، نه‌تنها در سطح ملی
+              بلکه در عرصه منطقه‌ای، به عنوان یکی از بازیگران اصلی صنعت خدمات
+              آزمایشگاهی شناخته شود.
+            </p>
+          </AnimationSlideOnce>
+        </AnimationSlideOnceGroup>
+      </q-card-section>
+    </q-card> -->
+  </q-page>
+</template>
+
+<script setup>
+const { t, locale } = useI18n();
+const features = [
   {
-    title: "Our Story",
-    text: "Founded in 2015, our company started with a small team of passionate developers and designers. We aim to create impactful digital solutions that drive business growth and innovation.",
-    image: "/images/Laboratory-Teamwork.webp",
+    title: t("tech-Lab_page.routes.aboutUs.container3.item1.title"),
+    description: t("tech-Lab_page.routes.aboutUs.container3.item1.description"),
+    icon: "fa-network-wired",
   },
   {
-    title: "Our Achievements",
-    text: "We have served over 200 clients worldwide, launched 50+ successful digital products, and continuously innovate to stay ahead in technology and design.",
-    image: "/images/Laboratory-Teamwork.webp",
+    title: t("tech-Lab_page.routes.aboutUs.container3.item2.title"),
+    description: t("tech-Lab_page.routes.aboutUs.container3.item2.description"),
+    icon: "fa-globe",
   },
   {
-    title: "Our Future Plans",
-    text: "Our vision for the next 5 years includes expanding to global markets, investing in AI and blockchain solutions, and fostering a culture of innovation to empower the next generation of digital creators.",
-    image: "/images/Laboratory-Teamwork.webp",
+    title: t("tech-Lab_page.routes.aboutUs.container3.item3.title"),
+    description: t("tech-Lab_page.routes.aboutUs.container3.item3.description"),
+    icon: "fa-lightbulb",
+  },
+  {
+    title: t("tech-Lab_page.routes.aboutUs.container3.item4.title"),
+    description: t("tech-Lab_page.routes.aboutUs.container3.item4.description"),
+    icon: "fa-users",
+  },
+  {
+    title: t("tech-Lab_page.routes.aboutUs.container3.item5.title"),
+    description: t("tech-Lab_page.routes.aboutUs.container3.item5.description"),
+    icon: "fa-share-nodes",
   },
 ];
 </script>
 
-<template>
-  <div class="about-page">
-    <!-- Hero Section -->
-    <section class="q-pa-xl flex flex-center column text-white hero-section">
-      <div class="text-center fade-in">
-        <h1 class="text-h3 text-weight-bold q-mb-sm">About Us</h1>
-        <p class="text-subtitle1">
-          Building digital solutions with passion, innovation & creativity.
-        </p>
-      </div>
-    </section>
-    <section class="q-pa-xl row items-center justify-center q-col-gutter-xl">
-      <div
-        v-for="(item, index) in companyInfo"
-        :key="index"
-        :class="['col-12', 'col-md-6', index % 2 === 1 ? 'order-md-2' : '']"
-        class="fade-in"
-      >
-        <q-img
-          :src="item.image"
-          alt="Image"
-          class="rounded-borders shadow-4 q-mb-md"
-        />
-        <h2 class="text-h5 text-weight-bold q-mb-sm text-primary">
-          {{ item.title }}
-        </h2>
-        <p class="text-body1 text-grey-8">{{ item.text }}</p>
-      </div>
-    </section>
-
-    <!-- Mission / Vision -->
-    <section class="q-pa-xl row justify-center q-col-gutter-xl bg-white">
-      <div class="col-12 col-md-5 fade-in">
-        <q-card
-          flat
-          bordered
-          class="q-pa-lg text-center hover-card gradient-border"
-        >
-          <q-icon
-            name="fa-solid fa-flag"
-            size="40px"
-            color="primary"
-            class="q-mb-md"
-          />
-          <h3 class="text-h6 text-weight-bold">Our Mission</h3>
-          <p class="text-body2 text-grey-7">
-            To empower businesses through technology and creativity, helping
-            them achieve their full potential.
-          </p>
-        </q-card>
-      </div>
-      <div class="col-12 col-md-5 fade-in delay-1">
-        <q-card
-          flat
-          bordered
-          class="q-pa-lg text-center hover-card gradient-border"
-        >
-          <q-icon
-            name="fa-solid fa-eye"
-            size="40px"
-            color="primary"
-            class="q-mb-md"
-          />
-          <h3 class="text-h6 text-weight-bold">Our Vision</h3>
-          <p class="text-body2 text-grey-7">
-            To become a global leader in digital innovation and to inspire the
-            next generation of creators and entrepreneurs.
-          </p>
-        </q-card>
-      </div>
-    </section>
-
-    <!-- Team Section -->
-    <section class="q-pa-xl bg-grey-2">
-      <h2 class="text-h5 text-center text-weight-bold q-mb-xl text-primary">
-        Meet Our Team
-      </h2>
-      <div class="row q-col-gutter-xl justify-center">
-        <div
-          v-for="member in team"
-          :key="member.name"
-          class="col-12 col-sm-6 col-md-4 fade-in"
-        >
-          <q-card class="q-pa-md team-card text-center">
-            <q-img
-              :src="member.image"
-              :alt="member.name"
-              class="q-mb-md rounded-borders"
-              style="height: 250px; object-fit: cover"
-            />
-            <q-card-section>
-              <h4 class="text-subtitle1 text-weight-bold">{{ member.name }}</h4>
-              <p class="text-body2 text-grey-7">{{ member.role }}</p>
-              <div class="q-mt-sm row justify-center q-gutter-md">
-                <q-btn
-                  v-if="member.socials.linkedin"
-                  flat
-                  round
-                  size="sm"
-                  color="primary"
-                  :href="member.socials.linkedin"
-                  target="_blank"
-                  icon="fa-brands fa-linkedin"
-                />
-                <q-btn
-                  v-if="member.socials.twitter"
-                  flat
-                  round
-                  size="sm"
-                  color="blue"
-                  :href="member.socials.twitter"
-                  target="_blank"
-                  icon="fa-brands fa-twitter"
-                />
-                <q-btn
-                  v-if="member.socials.github"
-                  flat
-                  round
-                  size="sm"
-                  color="dark"
-                  :href="member.socials.github"
-                  target="_blank"
-                  icon="fa-brands fa-github"
-                />
-              </div>
-            </q-card-section>
-          </q-card>
-        </div>
-      </div>
-    </section>
-  </div>
-</template>
-
 <style scoped>
-.hero-section {
-  background: linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)),
-    url("https://images.unsplash.com/photo-1504384308090-c894fdcc538d")
-      center/cover no-repeat;
-  min-height: 65vh;
+@import "@/assets/css/components/card.css";
+.hero-banner {
   position: relative;
+  background-image: url("/images/tech-lab/aboutUs.jpg");
+  background-size: cover;
+  background-position: center;
+  overflow: hidden;
 }
-
-.fade-in {
-  opacity: 0;
-  transform: translateY(15px);
-  animation: fadeInUp 0.8s forwards;
-}
-.delay-1 {
-  animation-delay: 0.3s;
-}
-
-@keyframes fadeInUp {
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-.hover-card {
-  transition: transform 0.3s, box-shadow 0.3s;
-  border-radius: 16px;
-}
-.hover-card:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.2);
-}
-
-.gradient-border {
-  border: 2px solid transparent;
-  background-clip: padding-box;
-  position: relative;
-}
-.gradient-border::before {
-  content: "";
+.hero-overlay-gradient {
   position: absolute;
-  inset: 0;
-  padding: 2px;
-  border-radius: 16px;
-  background: linear-gradient(135deg, #42a5f5, #478ed1, #1e88e5);
-  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
-  -webkit-mask-composite: xor;
-  mask-composite: exclude;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    to bottom right,
+    rgba(2, 123, 227, 0.6),
+    rgba(0, 0, 0, 0.5)
+  );
+  z-index: 0;
 }
-
-.team-card {
-  border-radius: 16px;
-  transition: transform 0.3s, box-shadow 0.3s;
+.hero-title {
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
 }
-.team-card:hover {
+.feature-section {
+  background: linear-gradient(135deg, #027be3, #26a69a);
+  border-radius: 15px;
+}
+.feature-card {
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 12px;
+  padding: 20px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.feature-card:hover {
   transform: translateY(-8px);
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.25);
+}
+.feature-icon {
+  color: #027be3;
+}
+.feature-title {
+  color: #027be3;
+}
+.feature-desc {
+  color: #333;
+}
+.mission-vision-section {
+  background: linear-gradient(135deg, #027be3, #26a69a);
+  border-radius: 15px;
 }
 </style>

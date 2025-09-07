@@ -1,85 +1,158 @@
 {
   "home_page": {
-    "hero-sec1": "Eine neue Transformation in Laboren und Gesundheitsdiensten auf Basis strategischer Technologie bei Raymand Holding",
-    "hero-sec2": "Die Raymand-Gruppe wurde mit dem Ziel gegründet, ein integriertes, technologiegestütztes Ökosystem in Lieferkette, Management und Dienstleistung zu schaffen. Wir in der Raymand-Gruppe bemühen uns mit einem systematischen, wissenschaftlichen und werteorientierten Ansatz, die aktuellen Standards der Gesundheits- und Labordienstleistungen im Land zu verändern. Durch den Einsatz modernster Technologien und neuer Managementstrategien ist es unser Ziel, ein lokales Modell der besten globalen Praktiken in Laborservice-Management, Lieferkette für Spezialgeräte und Gesundheitsmanagement im Iran zu entwickeln.",
+    "hero-sec1": "Eine neue Ära in Laboren und Gesundheitsdiensten, basierend auf strategischer Technologie im Raymand-Holding",
+    "hero-sec2": "Die Raymand-Gruppe wurde mit dem Ziel gegründet, ein integriertes, technologiegestütztes Ökosystem für Lieferkettenmanagement und Dienstleistungen zu schaffen. Mit einem systematischen, wissenschaftlichen und wertorientierten Ansatz streben wir danach, die aktuellen Standards der Gesundheits- und Labordienstleistungen im Land zu revolutionieren. Durch den Einsatz modernster Technologien und innovativer Managementstrategien wollen wir ein lokal angepasstes Modell der besten globalen Praktiken im Management von Labordienstleistungen, in der Versorgungskette für Spezialausrüstungen und im Gesundheitsmanagement in Iran entwickeln.",
     "raymand1": "Raymand Tajhiz GmbH",
     "raymand2": "Raymand System Azma GmbH",
     "raymand3": "Raymand System Tajhiz GmbH",
     "discover": {
-      "discover-text": "Organisationsstruktur der Holding",
-      "discover-intro": "Die Raymand-Gruppe besteht aus drei Unternehmen, die jeweils mit dem Ziel arbeiten, traditionelle Systeme in ihrem Bereich zu transformieren. Mit innovativen Methoden und modernster Technologie wollen diese Unternehmen Lösungen für die Herausforderungen von Industrie-, Forschungs- und Kliniklaboren sowie im Gesundheitswesen des Landes bieten.",
-      "raymand1-des1": "Beschaffung, Import und Produktion von Laborausrüstung und Verbrauchsmaterialien basierend auf GPO-Prinzipien und Wertschöpfungskette",
-      "raymand1-des2": "Beschaffungsarm für den Import von Spezialgeräten namhafter internationaler Marken",
-      "raymand1-des3": "Mit dem GPO-Modell ermöglicht dieses Unternehmen Kostenreduzierung und Effizienzsteigerung in der Lieferkette von Industrie-, Forschungs- und Kliniklaboren im Land.",
-      "raymand2-des1": "Intelligentes Management und Umsetzung von Qualitätssicherungssystemen für spezialisierte, Forschungs- und Kliniklaboratorien",
-      "raymand2-des2": "Implementierung und Auditierung internationaler Standards wie ISO 17025 und ISO 15189",
-      "raymand2-des3": "Gestaltung von Laborprozessstrukturen, Erstellung von SOPs und Schulung des Personals",
+      "discover-text": "Organisationsstruktur des Holdings",
+      "discover-intro": "Die Raymand-Gruppe besteht aus drei Unternehmen, die jeweils das Ziel haben, ihre traditionellen Systeme zu transformieren. Mit innovativen Methoden und modernsten Technologien bieten diese Unternehmen Lösungen für bestehende Herausforderungen in industriellen, wissenschaftlichen, klinischen Laboren und im Gesundheitswesen.",
+      "raymand1-des1": "Beschaffung, Import und Herstellung von Laborausrüstung und Verbrauchsmaterialien nach GPO-Prinzipien und Wertschöpfungsketten",
+      "raymand1-des2": "Einkaufs- und Importarm für spezialisierte Geräte führender internationaler Marken",
+      "raymand1-des3": "Mit dem GPO-Modell ermöglicht dieses Unternehmen die Kostensenkung und Produktivitätssteigerung in den Lieferketten industrieller, wissenschaftlicher und klinischer Labore im Land.",
+      "raymand2-des1": "Intelligentes Management und Implementierung von Qualitätssicherungssystemen für spezialisierte, wissenschaftliche und klinische Labore",
+      "raymand2-des2": "Implementierung und Auditierung internationaler Standards wie ISO 17025 und ISO 15189 usw.",
+      "raymand2-des3": "Prozessdesign für Labore, Erstellung von SOPs und Schulung des Personals",
       "raymand2-des4": "Beratung beim Kauf, Installation, Kalibrierung und Validierung von Geräten",
-      "raymand2-des5": "Ressourcenmanagement, einschließlich Personal, Verbrauchsmaterialien und Kapazitätsplanung für Labordienstleistungen",
-      "raymand2-des6": "Steigerung von Effizienz, Genauigkeit und Leistungsfähigkeit im Laborbetrieb",
-      "raymand2-des7": "Erbringung von Labor-, Forschungs- und Schulungsdienstleistungen",
-      "raymand3-des1": "Intelligentes Management von Gesundheitsdiensten auf Basis moderner Technologien",
-      "raymand3-des2": "Prozessinnovation",
+      "raymand2-des5": "Ressourcenmanagement einschließlich Personal, Verbrauchsmaterialien und Kapazitätsplanung für die Erbringung von Labordienstleistungen",
+      "raymand2-des6": "Steigerung von Produktivität, Genauigkeit und Effizienz der Labortätigkeit",
+      "raymand2-des7": "Erbringung von Labor-, Forschungs- und Ausbildungsdienstleistungen",
+      "raymand3-des1": "Intelligentes Management von Gesundheitsdiensten auf Basis modernster Technologien",
+      "raymand3-des2": "Transformation von Prozessen",
       "raymand3-des3": "Bereitstellung intelligenter Lösungen für alle Gesundheitseinheiten",
-      "raymand3-des4": "Gestaltung von Betriebsmodellen und Organisationsstrukturen",
-      "raymand3-des5": "Virtuelles Krankenhaus und innovative Veränderungen in Gesundheitsdiensten (Prävention, Vorstationär, Stationär, Nachstationär)"
+      "raymand3-des4": "Design von Betriebsmodellen und Organisationsstrukturen",
+      "raymand3-des5": "Virtuelles Krankenhaus und innovative Transformationen in Gesundheitsdiensten (einschließlich Prävention, Pre-Hospital, Hospital, Post-Hospital)"
     },
     "blog": "Blog",
     "update": "Neueste Unternehmens-Updates",
-    "newsBlog": "Bleiben Sie auf dem Laufenden mit unseren neuesten Nachrichten und Einsichten",
-    "slogan1": "Präzision bei jedem Test",
+    "newsBlog": "Bleiben Sie auf dem Laufenden mit unseren neuesten Nachrichten und Erkenntnissen",
+    "slogan1": "Präzision in jedem Test",
     "slogan2": "Innovation in der Diagnostik, Stärkung der Labore",
-    "slogan3": "Engineering der Gesundheitssysteme der Zukunft"
+    "slogan3": "Engineering der Gesundheitslösungen der Zukunft"
   },
   "tech-Lab_page": {
-    "subtitle": "Raymand-Gruppe, Pionier beim Testen für eine bessere Lebensqualität",
+    "subtitle": "Raymand-Gruppe – Vorreiter in Laboren für ein besseres Leben",
     "services": "Labordienstleistungen",
     "careers": "Forschungs- und Entwicklungsdienste (F&E)",
     "investors": "Bildungsdienste",
     "generalInfo": {
       "vision": "Vision",
-      "visionDesc": "Die Raymand-Gruppe möchte zum vertrauenswürdigsten spezialisierten Labor- und Gesundheitsnetzwerk im Iran und in der Region werden; eine Institution, die durch Innovation, Integration und internationale Standards das Vertrauen von Industrie, Universitäten und Gesellschaft als strategischer Partner im Bereich Qualität und Gesundheit gewinnt.",
+      "visionDesc": "Die Raymand-Gruppe möchte sich zum angesehensten Netzwerk für spezialisierte Labor- und Gesundheitsdienste im Iran und in der Region entwickeln; eine Institution, die mit Innovation, Integration und internationalen Standards das Vertrauen von Industrie, Universitäten und Gesellschaft als strategischer Partner im Bereich Qualität und Gesundheit gewinnt.",
       "mission": "Mission",
-      "missionDesc": "Wir in der Raymand-Gruppe helfen durch das Management und die Entwicklung eines Labornetzwerks, die Bereitstellung spezialisierter Gesundheitsdienste und die Lieferung moderner Geräte der Industrie und der Gesellschaft, präziser, gesünder und effizienter zu arbeiten."
+      "missionDesc": "Wir in der Raymand-Gruppe helfen durch das Management und die Entwicklung von Labornetzwerken, die Bereitstellung spezialisierter Gesundheitsdienste und die Versorgung mit modernen Geräten Industrie und Gesellschaft, präziser, gesünder und effizienter zu arbeiten."
     },
     "shortCuts": {
-      "soil": "Bodenlabor",
-      "agro": "Beton- und Bewehrungstestlabor",
-      "environment": "Umweltlabor",
-      "materials": "Wasseranalyselabor",
-      "innovation": "Laborinnovationen",
-      "bioPharma": "Kleintierlabor (Haustiere)",
-      "genomic": "Großtierlabor",
-      "clinical": "Geflügellabor",
-      "inVitro": "Landwirtschaftliches Dienstleistungslabor",
-      "eurofinsFoundation": "Dokumente und Nachweise",
-      "agroscience": "Pharma-, Kosmetik- und Hygieneindustrie",
-      "consumerProduct": "Lebensmittelindustrie",
-      "forensic": "Medizinisches Diagnostik- und Pathologielabor",
-      "cosmetics": "Genetiklabor"
+      "soilLab": "Bodenlabor",
+      "concreteSteelLab": "Beton- und Bewehrungsstahl-Labor",
+      "environmentLab": "Umweltlabor",
+      "waterAnalysisLab": "Wasseranalyse-Labor",
+      "innovationLab": "Innovationslabor",
+      "petLab": "Kleintierlabor (Pet)",
+      "livestockLab": "Nutztierlabor",
+      "poultryLab": "Geflügellabor",
+      "agricultureServicesLab": "Landwirtschaftsdienstleistungen-Labor",
+      "documents": "Dokumente und Unterlagen",
+      "pharmaCosmeticIndustry": "Pharmazeutische und kosmetische Industrie",
+      "foodIndustry": "Lebensmittelindustrie",
+      "clinicalPathologyLab": "Klinische Diagnostik und Pathologie",
+      "geneticLab": "Genetik-Labor"
+    },
+    "routes": {
+      "aboutUs": {
+        "container1": {
+          "title1": "Vorstellung des Laborkomplexes",
+          "title2": "Strategische Technologie – Raymand System Azma",
+          "description": "Der Laborkomplex Raymand wurde mit der Mission gegründet, Qualität, Gesundheit und Sicherheit in Industrie und Gesundheitswesen zu verbessern und dem iranischen Markt ein neues Konzept integrierter Labordienstleistungen vorzustellen."
+        },
+        "container2": {
+          "title": "Inspiration aus Managementmodellen internationaler Unternehmen",
+          "description": "Raymand hat eine Sammlung spezialisierter Labore in den Bereichen Lebensmittel und Getränke, Wasser und Umwelt, Boden und Landwirtschaft, Petrochemie und verwandte Industrien sowie Gesundheit zusammengestellt und so eine innovative Plattform geschaffen, um den vielfältigen Bedürfnissen von Organisationen, Industrien und Forschungszentren gerecht zu werden."
+        },
+        "container3": {
+          "title": "Unsere wichtigsten Merkmale",
+          "item1": {
+            "title": "Integriertes und intelligentes Management",
+            "description": "Alle Labore arbeiten als ein kohärentes Netzwerk; diese Struktur ermöglicht schnelle, präzise und koordinierte Dienstleistungen."
+          },
+          "item2": {
+            "title": "Internationale Standards im Dienst des iranischen Kunden",
+            "description": "Alle Prozesse werden nach internationalen Standards wie ISO/IEC 17025 entworfen und umgesetzt, um Ergebnisse mit höchster Glaubwürdigkeit und weltweiter Anerkennung zu gewährleisten."
+          },
+          "item3": {
+            "title": "Innovation in der Dienstleistungserbringung",
+            "description": "Raymand ist nicht nur ein Anbieter von Labordienstleistungen, sondern bietet mit einem beratungsorientierten Ansatz Lösungen zur Qualitätsverbesserung, Kostensenkung und Produktivitätssteigerung für Kunden."
+          },
+          "item4": {
+            "title": "Hervorragendes wissenschaftliches und Managementteam",
+            "description": "Der Einsatz erfahrener Spezialisten in verschiedenen Labor- und Industriebereichen ermöglicht es uns, komplexe Kundenbedürfnisse präzise und schnell zu erfüllen."
+          },
+          "item5": {
+            "title": "Ein wachsendes, landesweites Netzwerk",
+            "description": "Unser Modell basiert auf der Zusammenarbeit mit anerkannten Laboren im ganzen Land, sodass Raymand zu einer nationalen Laborplattform wird."
+          }
+        }
+      },
+      "soilLab": {
+        "container1": {
+          "title": "Bodenlabor",
+          "description": "Das Bodenlabor bewertet durch präzise Analysedienste die Qualität und Fruchtbarkeit des Bodens und bietet wissenschaftliche Lösungen zur Förderung einer nachhaltigen Landwirtschaft."
+        },
+        "container2": {
+          "title": "Die Raymand-Gruppe möchte zur Förderung einer gesunden, nachhaltigen Landwirtschaft beitragen.",
+          "title2": "Als unabhängiger Partner ermöglichen wir Akteuren der Landwirtschafts- und Lebensmittelindustrie, die Gesundheit und Fruchtbarkeit von Böden und Produkten sowie die Leistung und Rentabilität zu verbessern.",
+          "title3": "Unsere Analysedienste und Entscheidungsunterstützung sind entscheidende Werkzeuge, um den Übergang zu nachhaltigeren landwirtschaftlichen Praktiken zu erleichtern.",
+          "title4": "Diese Dienste tragen zu positiven ökologischen und sozialen Auswirkungen bei.",
+          "service": "Weitere Dienste"
+        },
+        "container3": {
+          "services": {
+            "service1": {
+              "name": "Das Labor beginnt mit der Annahme von Tests.",
+              "description": "Die Labordienste beginnen mit der Annahme der entsprechenden Tests."
+            },
+            "service2": {
+              "name": "Kooperationsanfragen für Forschungsarbeiten",
+              "description": "Annahme von Forschungskooperationsanfragen."
+            },
+            "service3": {
+              "name": "Kooperationsanfragen für Bildungs- und Studentenarbeiten",
+              "description": "Zusammenarbeit bei Bildungs- und Studentenprojekten."
+            },
+            "service4": {
+              "name": "Wissenschaftliche Inhalte für jedes Labor",
+              "description": "Bereitstellung wissenschaftlicher Inhalte, die mit jedem Labor verbunden sind."
+            }
+          },
+          "title": "Dienste und Tests"
+        },
+        "container4": {
+          "title": "Über das Labor"
+        }
+      }
     }
   },
   "header": {
     "home-page": "Startseite",
-    "gpo": "Gruppeneinkaufsorganisation\n(Raymand Tajhiz)",
-    "tech-Lab": "Strategisches Technologielabor\n(Raymand System Azma)",
-    "vHospital": "Gesundheitstechnologie-Management\n(Raymand System Tajhiz)",
+    "gpo": "Gruppeneinkaufsorganisation\n(Raymand Tajhiz GmbH)",
+    "tech-Lab": "Strategisches Technologielabor\n(Raymand System Azma GmbH)",
+    "vHospital": "Gesundheitstechnologie-Management\n(Raymand System Tajhiz GmbH)",
     "contact_us": "Kontakt",
     "news": "Nachrichten"
   },
   "common": {
-    "submit": "Absenden",
+    "submit": "Senden",
     "name&lastname": "Vor- und Nachname",
     "email": "E-Mail",
     "phone": "Telefon",
-    "learn-more": "Mehr erfahren...",
+    "learn-more": "Mehr erfahren ...",
     "about_us": "Über uns"
   },
   "news": {
-    "title1": "Wir freuen uns, Sie auf der Laborausrüstungsmesse mit den neuesten Produkten führender internationaler Unternehmen zu sehen.",
-    "title2": "Lernen Sie die Labordienstleistungen von Raymand in den Bereichen Boden, Wasser, Mikrobiologie, Vieh und Geflügel, Lebensmittel und Pharmazeutika kennen.",
-    "title3": "Bald werden die neuesten Entwicklungen und Nachrichten im Bereich Gesundheit und Medizin in diesem Abschnitt verfügbar sein.",
-    "view-all": "Alle Nachrichten",
+    "title1": "Wir freuen uns, Sie auf der Ausstellung für Laborausrüstung mit den neuesten Produkten führender internationaler Unternehmen zu treffen.",
+    "title2": "Lernen Sie die Labordienste von Raymand in den Bereichen Boden, Wasser, Mikrobiologie, Vieh und Geflügel, Lebensmittel und Pharmazie kennen.",
+    "title3": "Bald werden die neuesten Entwicklungen und Nachrichten im Bereich Gesundheit und Medizin über diesen Abschnitt verfügbar sein.",
+    "view-all": "Alle Nachrichten ansehen",
     "read": "Lesen"
   },
   "footer": {
@@ -90,7 +163,7 @@
       "email_required": "E-Mail ist erforderlich",
       "email_invalid": "Bitte eine gültige E-Mail eingeben",
       "phone_required": "Telefonnummer ist erforderlich",
-      "phone_length": "Telefonnummer muss mindestens 11 Stellen haben"
+      "phone_length": "Die Telefonnummer muss mindestens 11 Ziffern enthalten"
     }
   }
 }

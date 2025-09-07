@@ -23,10 +23,7 @@
           class="col-xl-6 col-md-6 col-sm-6 col-12"
           custom-class="full-height"
         >
-          <q-card
-            @click="navigateTo(`tech-Lab/about-us`)"
-            class="my-card full-height"
-          >
+          <q-card class="my-card full-height">
             <q-img :src="value.image" style="max-height: 300px" />
             <q-card-section class="text-center">
               <div class="text-h6 ellipsis-lines" :style="{ '--lines': 2 }">
@@ -37,14 +34,9 @@
               <q-card-section>
                 <div
                   class="text-body1 ellipsis-lines"
-                  :style="{ '--lines': 2 }"
+                  :style="{ '--lines': 3 }"
                 >
                   {{ value.desc }}
-                </div>
-              </q-card-section>
-              <q-card-section>
-                <div class="text-body2 pointer">
-                  {{ t("common.learn-more") }}
                 </div>
               </q-card-section>
             </div>
@@ -157,24 +149,56 @@ const con2Data = [
 const con3Data = computed<ButtonItem[][]>(() => [
   [
     { title: t("common.about_us"), route: "about-us", color: "red" },
-    { title: t("tech-Lab_page.shortCuts.soil"), route: "soil" },
-    { title: t("tech-Lab_page.shortCuts.agro") },
-    { title: t("tech-Lab_page.shortCuts.environment") },
-    { title: t("tech-Lab_page.shortCuts.materials") },
+    { title: t("tech-Lab_page.shortCuts.soilLab"), route: "soil-lab" },
+    {
+      title: t("tech-Lab_page.shortCuts.concreteSteelLab"),
+      route: "concrete-steel-lab",
+    },
+    {
+      title: t("tech-Lab_page.shortCuts.environmentLab"),
+      route: "environment-lab",
+    },
+    {
+      title: t("tech-Lab_page.shortCuts.waterAnalysisLab"),
+      route: "water-analysis-lab",
+    },
   ],
   [
-    { title: t("tech-Lab_page.shortCuts.innovation"), color: "red" },
-    { title: t("tech-Lab_page.shortCuts.bioPharma") },
-    { title: t("tech-Lab_page.shortCuts.genomic") },
-    { title: t("tech-Lab_page.shortCuts.clinical") },
-    { title: t("tech-Lab_page.shortCuts.inVitro") },
+    {
+      title: t("tech-Lab_page.shortCuts.innovationLab"),
+      route: "innovation-lab",
+      color: "red",
+    },
+    { title: t("tech-Lab_page.shortCuts.petLab"), route: "pet-lab" },
+    {
+      title: t("tech-Lab_page.shortCuts.livestockLab"),
+      route: "livestock-lab",
+    },
+    { title: t("tech-Lab_page.shortCuts.poultryLab"), route: "poultry-lab" },
+    {
+      title: t("tech-Lab_page.shortCuts.agricultureServicesLab"),
+      route: "agriculture-services-lab",
+    },
   ],
   [
-    { title: t("tech-Lab_page.shortCuts.eurofinsFoundation"), color: "red" },
-    { title: t("tech-Lab_page.shortCuts.agroscience") },
-    { title: t("tech-Lab_page.shortCuts.consumerProduct") },
-    { title: t("tech-Lab_page.shortCuts.forensic") },
-    { title: t("tech-Lab_page.shortCuts.cosmetics") },
+    {
+      title: t("tech-Lab_page.shortCuts.documents"),
+      route: "documents",
+      color: "red",
+    },
+    {
+      title: t("tech-Lab_page.shortCuts.pharmaCosmeticIndustry"),
+      route: "pharma-cosmetic-industry",
+    },
+    {
+      title: t("tech-Lab_page.shortCuts.foodIndustry"),
+      route: "food-industry",
+    },
+    {
+      title: t("tech-Lab_page.shortCuts.clinicalPathologyLab"),
+      route: "clinical-pathology-lab",
+    },
+    { title: t("tech-Lab_page.shortCuts.geneticLab"), route: "genetic-lab" },
   ],
 ]);
 </script>

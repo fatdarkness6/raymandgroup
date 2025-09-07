@@ -2,9 +2,12 @@
   <div class="dynamic-page z-max relative" v-if="pageContent">
     <div class="container1 space-between-each-sections-bottom">
       <q-img :src="pageContent.container1.image" class="bg-img" />
-      <div class="ab-text-center z-max text-white text-center">
-        <div class="text-h3">{{ pageContent.container1.title }}</div>
-        <div class="text-body1">{{ pageContent.container1.desc }}</div>
+      <div
+        class="ab-text-center z-max text-white text-center"
+        :dir="directionOfElement(locale)"
+      >
+        <div class="text-h3">{{ t(pageContent.container1.title) }}</div>
+        <div class="text-body1">{{ t(pageContent.container1.desc) }}</div>
       </div>
     </div>
     <div class="wrapper">
@@ -25,13 +28,13 @@
               v-for="(item, index) in pageContent.container2.texts"
               :delay="index * 100"
             >
-              {{ item }}
+              {{ t(item) }}
             </AnimationSlideOnce>
             <AnimationSlideOnce :delay="700">
               <q-btn
                 push
                 color="primary"
-                :label="t(`tech-Lab_page.routes.soil.container2.service`)"
+                :label="t(`tech-Lab_page.routes.soilLab.container2.service`)"
                 type="a"
                 padding="10px 15px"
                 :href="pageContent.container2.link"
@@ -47,7 +50,7 @@
       >
         <AnimationSlideOnce direction="left">
           <div class="text-h4 text-center q-mb-xl">
-            {{ t("tech-Lab_page.routes.soil.container3.title") }}
+            {{ t("tech-Lab_page.routes.soilLab.container3.title") }}
           </div>
         </AnimationSlideOnce>
         <AnimationSlideOnceGroup
@@ -70,14 +73,16 @@
               <q-img :src="item.image" />
               <q-card-section>
                 <div class="text-subtitle1 text-bold">
-                  {{ item.name }}
+                  {{ t(item.name) }}
                 </div>
                 <div class="text-subtitle1">
-                  {{ item.desc }}
+                  {{ t(item.desc) }}
                 </div>
               </q-card-section>
               <q-card-section class="ab-btn">
-                <q-btn push color="primary"> Click to See more </q-btn>
+                <q-btn push color="primary">
+                  {{ t("common.learn-more") }}</q-btn
+                >
               </q-card-section>
             </q-card>
           </AnimationSlideOnce>
@@ -89,77 +94,15 @@
 <script setup lang="ts">
 const route = useRoute();
 const { t, locale } = useI18n();
+import { labs } from "~/assets/data/pages/slugOfTechLab";
 
 const slug = route.params.slug as string;
 
-const map: any = {
-  soil: {
-    container1: {
-      title: t("tech-Lab_page.routes.soil.container1.title"),
-      desc: t("tech-Lab_page.routes.soil.container1.description"),
-      image: "/images/tech-lab/soil/container1.jpg",
-    },
-    container2: {
-      image: "/images/tech-lab/soil/container2.jpg",
-      texts: [
-        t("tech-Lab_page.routes.soil.container2.title"),
-        t("tech-Lab_page.routes.soil.container2.title2"),
-        t("tech-Lab_page.routes.soil.container2.title3"),
-        t("tech-Lab_page.routes.soil.container2.title4"),
-      ],
-      link: "https://google.com",
-    },
-    container3: {
-      "services-experiments": [
-        {
-          name: t(
-            "tech-Lab_page.routes.soil.container3.services.service1.name"
-          ),
-          image: "/images/tech-lab/soil/container3-i-1.jpg",
-          desc: t(
-            "tech-Lab_page.routes.soil.container3.services.service1.description"
-          ),
-        },
-        {
-          name: t(
-            "tech-Lab_page.routes.soil.container3.services.service2.name"
-          ),
-          image: "/images/tech-lab/soil/container3-i-2.jpg",
-          desc: t(
-            "tech-Lab_page.routes.soil.container3.services.service2.description"
-          ),
-        },
-        {
-          name: t(
-            "tech-Lab_page.routes.soil.container3.services.service3.name"
-          ),
-          image: "/images/tech-lab/soil/container3-i-3.jpg",
-          desc: t(
-            "tech-Lab_page.routes.soil.container3.services.service3.description"
-          ),
-        },
-        {
-          name: t(
-            "tech-Lab_page.routes.soil.container3.services.service4.name"
-          ),
-          image: "/images/tech-lab/soil/container3-i-4.jpg",
-          desc: t(
-            "tech-Lab_page.routes.soil.container3.services.service4.description"
-          ),
-        },
-      ],
-    },
-  },
-};
-
-if (!map[slug]) {
+if (!labs[slug]) {
   navigateTo(`/${slug}`, { replace: true });
-  useHead({
-    title: "404",
-  });
 }
 
-const pageContent = computed(() => map[slug]);
+const pageContent = computed(() => labs[slug]);
 </script>
 <style scoped>
 @import "@/assets/css/pages/slug.css";
@@ -173,7 +116,7 @@ const pageContent = computed(() => map[slug]);
   width: 100%;
 }
 
-@media (max-width: 1920px) {
+@media (max-width: 1919px) {
   .container3 .my-card {
     min-height: 450px !important;
   }
