@@ -32,10 +32,7 @@
             </q-card-section>
             <div :dir="directionOfElement(locale)">
               <q-card-section>
-                <div
-                  class="text-body1 ellipsis-lines"
-                  :style="{ '--lines': 3 }"
-                >
+                <div class="text-body1">
                   {{ value.desc }}
                 </div>
               </q-card-section>
