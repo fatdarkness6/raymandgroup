@@ -65,26 +65,25 @@
             custom-class="full-height"
             :delay="index * 200"
           >
-            <q-card
-              class="my-card text-center full-height relative"
+            <div
+              class="text-center flex column items-center gap-10"
               :dir="directionOfElement(locale)"
-              style="min-height: 400px"
             >
-              <q-img :src="item.image" />
-              <q-card-section>
+              <q-icon :name="item.icon" size="25px" />
+              <div class="section1">
                 <div class="text-subtitle1 text-bold">
                   {{ t(item.name) }}
                 </div>
                 <div class="text-subtitle1">
                   {{ t(item.desc) }}
                 </div>
-              </q-card-section>
-              <q-card-section class="ab-btn">
+              </div>
+              <div class="section2">
                 <q-btn push color="primary">
                   {{ t("common.learn-more") }}</q-btn
                 >
-              </q-card-section>
-            </q-card>
+              </div>
+            </div>
           </AnimationSlideOnce>
         </AnimationSlideOnceGroup>
       </div>

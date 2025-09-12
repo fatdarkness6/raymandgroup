@@ -430,22 +430,22 @@ export const labs: any = {
       "services-experiments": [
         {
           name: "tech-Lab_page.routes.soilLab.container3.services.service1.name",
-          image: "/images/tech-lab/soilLab/container3-i-1.jpg",
+          icon: "fa-solid fa-flask",
           desc: "tech-Lab_page.routes.soilLab.container3.services.service1.description",
         },
         {
           name: "tech-Lab_page.routes.soilLab.container3.services.service2.name",
-          image: "/images/tech-lab/soilLab/container3-i-2.jpg",
+          icon: "fa-brands fa-researchgate",
           desc: "tech-Lab_page.routes.soilLab.container3.services.service2.description",
         },
         {
           name: "tech-Lab_page.routes.soilLab.container3.services.service3.name",
-          image: "/images/tech-lab/soilLab/container3-i-3.jpg",
+          icon: "fa-solid fa-school",
           desc: "tech-Lab_page.routes.soilLab.container3.services.service3.description",
         },
         {
           name: "tech-Lab_page.routes.soilLab.container3.services.service4.name",
-          image: "/images/tech-lab/soilLab/container3-i-4.jpg",
+          icon: "fa-solid fa-microscope",
           desc: "tech-Lab_page.routes.soilLab.container3.services.service4.description",
         },
       ],
