@@ -1,9 +1,12 @@
 <template>
-  <q-card flat class="login-signUp-form-content q-pa-sm rounded-10">
-    <q-card-section
-      class="login-form flex column justify-center gap-30 z-max relative"
-    >
-      <div class="text-h5 text-weight-medium text-center text-white">Login</div>
+  <q-card
+    flat
+    class="login-signUp-form-content q-pa-sm rounded-10 relative z-max"
+  >
+    <q-card-section>
+      <div class="text-h5 text-weight-medium text-center text-black">Login</div>
+    </q-card-section>
+    <q-card-section>
       <q-form
         @submit="onSubmit"
         class="flex column gap-10"
@@ -41,6 +44,8 @@
           </template>
         </q-input>
       </q-form>
+    </q-card-section>
+    <q-card-section>
       <div class="remember-forgotPass flex justify-between items-center">
         <q-checkbox
           v-model="loginForm.rememberMe"
@@ -49,9 +54,29 @@
         />
         <div class="text-weight-medium">Forgot Password?</div>
       </div>
-      <q-btn q-btn :to="localePath('login')" color="primary" push no-caps padding="10px 20px"
+    </q-card-section>
+    <q-card-section class="flex justify-center full-width">
+      <q-btn
+        q-btn
+        :to="localePath('login')"
+        color="primary"
+        push
+        no-caps
+        padding="10px 20px"
+        class="full-width"
         >Login</q-btn
       >
+    </q-card-section>
+    <q-card-section>
+      <div class="text-center text-weight-md">
+        Don't have an account?
+        <span
+          style="cursor: pointer"
+          @click="$router.push({ query: { form: 'sign-up' } })"
+          class="text-weight-bolder text-blue-9"
+          >Register</span
+        >
+      </div>
     </q-card-section>
   </q-card>
 </template>
@@ -59,7 +84,7 @@
 import { useForm, useField } from "vee-validate";
 import { loginSchema } from "~/utils/registerSchema";
 
-const localePath = useLocalePath()
+const localePath = useLocalePath();
 const { handleSubmit, resetForm } = useForm({
   validationSchema: loginSchema,
 });
