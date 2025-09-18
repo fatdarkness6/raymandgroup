@@ -61,29 +61,31 @@
             v-for="(item, index) in pageContent.container3[
               'services-experiments'
             ]"
-            class="col-xl-3 col-md-4 col-sm-6 col-12"
+            class="col-xl-6 col-md-6 col-sm-6 col-12"
             custom-class="full-height"
             :delay="index * 200"
           >
-            <div
-              class="text-center flex column items-center gap-10"
+            <q-card
+              class="my-card full-height text-center"
               :dir="directionOfElement(locale)"
             >
-              <q-icon :name="item.icon" size="25px" />
-              <div class="section1">
+              <q-card-section>
+                <q-icon :name="item.icon" size="35px" />
+              </q-card-section>
+              <q-card-section>
                 <div class="text-subtitle1 text-bold">
                   {{ t(item.name) }}
                 </div>
                 <div class="text-subtitle1">
                   {{ t(item.desc) }}
                 </div>
-              </div>
-              <div class="section2">
+              </q-card-section>
+              <q-card-section>
                 <q-btn push color="primary">
                   {{ t("common.learn-more") }}</q-btn
                 >
-              </div>
-            </div>
+              </q-card-section>
+            </q-card>
           </AnimationSlideOnce>
         </AnimationSlideOnceGroup>
       </div>
@@ -113,16 +115,5 @@ const pageContent = computed(() => labs[slug]);
   left: 50%;
   transform: translateX(-50%);
   width: 100%;
-}
-
-@media (max-width: 1919px) {
-  .container3 .my-card {
-    min-height: 450px !important;
-  }
-}
-@media (max-width: 600px) {
-  .container3 .my-card {
-    min-height: 500px !important;
-  }
 }
 </style>

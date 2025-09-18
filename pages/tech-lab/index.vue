@@ -15,7 +15,7 @@
     <div class="wrapper">
       <AnimationSlideOnceGroup
         direction="left"
-        class="container2 row q-col-gutter-md justify-between items-start items-stretch"
+        class="container2 row q-col-gutter-md justify-between items-start items-stretch q-my-xl"
       >
         <AnimationSlideOnce
           v-for="(value, index) in con2Data"
@@ -42,7 +42,7 @@
       </AnimationSlideOnceGroup>
       <AnimationSlideOnceGroup
         direction="left"
-        class="container3 flex items-center gap-20 no-wrap q-mt-xl"
+        class="container3 flex items-center gap-20 no-wrap q-my-xl"
       >
         <AnimationSlideOnce
           v-for="(item, index) in imgData"
@@ -67,7 +67,34 @@
           />
         </AnimationSlideOnce>
       </AnimationSlideOnceGroup>
-
+      <AnimationSlideOnceGroup
+        class="row q-col-gutter-xl items-stretch q-my-xl acceptance"
+      >
+        <AnimationSlideOnce
+          v-for="(item, index) in visitorData"
+          class="col-xl-6 col-md-6 col-sm-6 col-12"
+          custom-class="full-height"
+          :delay="index * 200"
+        >
+          <div
+            class="text-center flex column items-center gap-10"
+            :dir="directionOfElement(locale)"
+          >
+            <q-icon :name="item.icon" size="25px" />
+            <div class="section1">
+              <div class="text-subtitle1 text-bold">
+                {{ t(item.name) }}
+              </div>
+              <div class="text-subtitle1">
+                {{ t(item.desc) }}
+              </div>
+            </div>
+            <div class="section2">
+              <q-btn push color="primary"> {{ t("common.learn-more") }}</q-btn>
+            </div>
+          </div>
+        </AnimationSlideOnce>
+      </AnimationSlideOnceGroup>
       <!-- Buttons Section -->
       <div
         class="container3 q-my-xl flex items-center justify-between gap-30 no-wrap"
@@ -141,6 +168,18 @@ const con2Data = [
     image: "/images/tech-lab/misson.webp",
     title: t("tech-Lab_page.generalInfo.mission"),
     desc: t("tech-Lab_page.generalInfo.missionDesc"),
+  },
+];
+const visitorData = [
+  {
+    name: "tech-Lab_page.routes.soilLab.container3.services.service2.name",
+    icon: "fa-solid fa-vials",
+    desc: "tech-Lab_page.routes.soilLab.container3.services.service2.description",
+  },
+  {
+    name: "tech-Lab_page.routes.soilLab.container3.services.service3.name",
+    icon: "fa-solid fa-vial-virus",
+    desc: "tech-Lab_page.routes.soilLab.container3.services.service3.description",
   },
 ];
 const con3Data = computed<ButtonItem[][]>(() => [
@@ -230,7 +269,6 @@ const con3Data = computed<ButtonItem[][]>(() => [
 .container3 .elements:hover .text-hover {
   background: linear-gradient(to right, #1976d2, #0f51b4);
 }
-
 @media (max-width: 1140px) {
   .container3 {
     justify-content: space-between;
