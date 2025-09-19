@@ -129,6 +129,32 @@
         "container4": {
           "title": "About the Laboratory"
         }
+      },
+      "environmentalLaboratory": {
+        "container1": {
+          "title": "Raimand Laboratory Services for Health and Environment",
+          "description": "Raimand provides specialized testing of water, air, soil, and waste, along with professional consulting and monitoring, to improve health and protect the environment."
+        },
+        "container2": {
+          "title": "A clean and safe environment is a prerequisite for health and quality of life.",
+          "title2": "Raimand, as a leading provider of laboratory services in the market,",
+          "title3": "contributes by offering monitoring and consulting to a wide range of industrial companies, environmental consultants, contractors, retailers, and government authorities.",
+          "title4": "Our services include testing of water, air, soil, waste, and other products",
+          "title5": "to assess their quality and impact on health and the environment."
+        }
+      },
+      "pharmaCosmeticIndustry": {
+        "container1": {
+          "title": "Pharmaceutical, Biotech, Cosmetic and Hygiene Industries",
+          "description": "The Strategic Technology Laboratories (Raimand Group) provide pharmaceutical, biotech, cosmetic, and hygiene services through an integrated and standardized network."
+        },
+        "container2": {
+          "title1": "Pharmaceutical, Biotech, Cosmetic and Hygiene Industries",
+          "title2": "The pharmaceutical, biotech, cosmetic, and hygiene laboratories of the Strategic Technology Laboratory (Raimand Group) are a top-tier business partner for outsourcing pharmaceutical and biotech services.",
+          "title3": "These laboratories operate in collaboration with pharmaceutical, chemical, biotechnology, medical device, and cosmetic laboratories.",
+          "title4": "The Raimand Group laboratory network covers the entire production chain of related products.",
+          "title5": "By establishing a nationwide laboratory network, the group provides an integrated quality assurance system and high-standard services."
+        }
       }
     }
   },

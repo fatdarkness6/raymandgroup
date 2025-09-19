@@ -13,15 +13,15 @@
     <div class="wrapper">
       <div
         class="container2 space-between-each-sections-bottom space-between-each-sections-top"
+        :dir="directionOfElement(locale)"
       >
         <div class="services row q-col-gutter-xl items-center">
           <AnimationSlideOnce direction="left" class="image col-12 col-md-6">
-            <q-img :src="pageContent.container2.image" class="rounded-10" />
+            <q-img :src="pageContent.container2.image" class="rounded-10" style="max-height: 400px;" />
           </AnimationSlideOnce>
           <AnimationSlideOnceGroup
             direction="right"
             class="description-and-redirectLink col-12 col-md-5"
-            :dir="directionOfElement(locale)"
           >
             <AnimationSlideOnce
               class="text-body1 q-mb-md"

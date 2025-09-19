@@ -129,6 +129,32 @@
         "container4": {
           "title": "Über das Labor"
         }
+      },
+      "environmentalLaboratory": {
+        "container1": {
+          "title": "Raimand Labordienstleistungen für Gesundheit und Umwelt",
+          "description": "Raimand bietet spezialisierte Tests von Wasser, Luft, Boden und Abfall sowie professionelle Beratung und Überwachung, um die Gesundheit zu fördern und die Umwelt zu schützen."
+        },
+        "container2": {
+          "title": "Eine saubere und sichere Umwelt ist Voraussetzung für Gesundheit und Lebensqualität.",
+          "title2": "Raimand ist ein führender Anbieter von Labordienstleistungen auf dem Markt,",
+          "title3": "und trägt durch Überwachung und Beratung für zahlreiche Industrieunternehmen, Umweltberater, Auftragnehmer, Einzelhändler und Behörden dazu bei.",
+          "title4": "Unsere Dienstleistungen umfassen Tests von Wasser, Luft, Boden, Abfall und weiteren Produkten,",
+          "title5": "um deren Qualität und Auswirkungen auf Gesundheit und Umwelt zu bewerten."
+        }
+      },
+      "pharmaCosmeticIndustry": {
+        "container1": {
+          "title": "Pharma-, Biotech-, Kosmetik- und Hygieneindustrie",
+          "description": "Die Strategischen Technologielabore (Raimand-Gruppe) bieten pharmazeutische, biotechnologische, kosmetische und hygienische Dienstleistungen über ein integriertes und standardisiertes Netzwerk an."
+        },
+        "container2": {
+          "title1": "Pharma-, Biotech-, Kosmetik- und Hygieneindustrie",
+          "title2": "Die pharmazeutischen, biotechnologischen, kosmetischen und hygienischen Labore des Strategischen Technologielabors (Raimand-Gruppe) sind ein erstklassiger Geschäftspartner für das Outsourcing pharmazeutischer und biotechnologischer Dienstleistungen.",
+          "title3": "Diese Labore arbeiten in Zusammenarbeit mit pharmazeutischen, chemischen, biotechnologischen, medizinischen Geräte- sowie Kosmetik- und Hygienelaboren.",
+          "title4": "Das Labornetzwerk der Raimand-Gruppe deckt die gesamte Produktionskette der entsprechenden Produkte ab.",
+          "title5": "Durch den Aufbau eines landesweiten Labornetzwerks bietet die Gruppe ein integriertes Qualitätssicherungssystem und Dienstleistungen auf hohem Standard."
+        }
       }
     }
   },
