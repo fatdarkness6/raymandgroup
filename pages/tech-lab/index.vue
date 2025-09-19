@@ -67,34 +67,6 @@
           />
         </AnimationSlideOnce>
       </AnimationSlideOnceGroup>
-      <AnimationSlideOnceGroup
-        class="row q-col-gutter-xl items-stretch q-my-xl acceptance"
-      >
-        <AnimationSlideOnce
-          v-for="(item, index) in visitorData"
-          class="col-xl-6 col-md-6 col-sm-6 col-12"
-          custom-class="full-height"
-          :delay="index * 200"
-        >
-          <div
-            class="text-center flex column items-center gap-10"
-            :dir="directionOfElement(locale)"
-          >
-            <q-icon :name="item.icon" size="25px" />
-            <div class="section1">
-              <div class="text-subtitle1 text-bold">
-                {{ t(item.name) }}
-              </div>
-              <div class="text-subtitle1">
-                {{ t(item.desc) }}
-              </div>
-            </div>
-            <div class="section2">
-              <q-btn push color="primary"> {{ t("common.learn-more") }}</q-btn>
-            </div>
-          </div>
-        </AnimationSlideOnce>
-      </AnimationSlideOnceGroup>
       <!-- Buttons Section -->
       <div
         class="container3 q-my-xl flex items-center justify-between gap-30 no-wrap"
@@ -218,7 +190,7 @@ const con3Data = computed<ButtonItem[][]>(() => [
   ],
   [
     {
-      title: t("tech-Lab_page.shortCuts.documents"),
+      title: t("tech-Lab_page.shortCuts.collaborationRequest"),
       route: "documents",
       color: "red",
     },
