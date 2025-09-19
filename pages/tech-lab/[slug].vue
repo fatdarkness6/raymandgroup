@@ -76,9 +76,6 @@
                 <div class="text-subtitle1 text-bold">
                   {{ t(item.name) }}
                 </div>
-                <div class="text-subtitle1">
-                  {{ t(item.desc) }}
-                </div>
               </q-card-section>
               <q-card-section>
                 <q-btn push color="primary">
