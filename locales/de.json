@@ -143,6 +143,23 @@
           "title5": "um deren Qualität und Auswirkungen auf Gesundheit und Umwelt zu bewerten."
         }
       },
+      "agricultureServicesLab": {
+        "container1": {
+          "title": "Agrarwissenschaft & Pflanzenschutz",
+          "description": "Fachgerechte Tests, Beratung und Zulassungsdienste für Pflanzengesundheit, Pflanzenschutz und Saatgutinnovation."
+        },
+        "container2": {
+          "title": "Raymand Agrarwissenschaftliche Dienste, gestützt auf Fachwissen,",
+          "title2": "bieten Tests und regulatorische Beratung für Pflanzengesundheit, Pflanzenschutz, Agrartechnik, Züchtung und Saatgut.",
+          "title3": "In einem komplexen Umfeld",
+          "title4": "unterstützen wir Kunden bei allen Schritten der Chemikalienzulassung.",
+          "title5": "Feld- und Laborstudien zu Sicherheit und Wirksamkeit stehen im Mittelpunkt,",
+          "title6": "mit Zulassungen durch unsere Fachspezialisten.",
+          "title7": "Unser nationales Expertennetzwerk",
+          "title8": "erweitert die Dienste auf Biozid- und Chemikalienhersteller",
+          "title9": "und wächst durch Wissensaustausch zwischen spezialisierten Zentren."
+        }
+      },
       "pharmaCosmeticIndustry": {
         "container1": {
           "title": "Pharma-, Biotech-, Kosmetik- und Hygieneindustrie",
@@ -154,6 +171,34 @@
           "title3": "Diese Labore arbeiten in Zusammenarbeit mit pharmazeutischen, chemischen, biotechnologischen, medizinischen Geräte- sowie Kosmetik- und Hygienelaboren.",
           "title4": "Das Labornetzwerk der Raimand-Gruppe deckt die gesamte Produktionskette der entsprechenden Produkte ab.",
           "title5": "Durch den Aufbau eines landesweiten Labornetzwerks bietet die Gruppe ein integriertes Qualitätssicherungssystem und Dienstleistungen auf hohem Standard."
+        }
+      },
+      "clinicalPathologyLab": {
+        "container1": {
+          "title": "Raymand Klinische Diagnostik — Innovation für alle Patienten",
+          "description": "Tägliche umfangreiche Tests mit modernsten Techniken für zuverlässige Diagnose, Überwachung und Therapieentscheidungen weltweit."
+        },
+        "container2": {
+          "title": "Mit Hunderttausenden klinischen Tests täglich",
+          "title2": "bemühen sich die Raymand Diagnostiklaboratorien,",
+          "title3": "dass jeder Patient, überall,",
+          "title4": "Zugang zu den spezialisiertesten und innovativsten Techniken für Diagnose, Überwachung und Therapieentscheidungen hat.",
+          "title5": "Unsere logistische Expertise und das tägliche Netzwerk für Probenabholung und -lieferung",
+          "title6": "sichern die Kontinuität der Versorgung",
+          "title7": "und gewährleisten Qualitätsstandards sowie Zugang zu Innovationen in allen Regionen, die wir bedienen."
+        }
+      },
+      "geneticLab": {
+        "container1": {
+          "title": "Raymand Genomics — Fortschrittliche DNA- & Bioinformatik-Dienste",
+          "description": "Führender Anbieter von DNA-Sequenzierung, Genotypisierung, Synthese und Bioinformatik für Pharma, Diagnostik, Lebensmittel, Landwirtschaft, Biotechnologie und Forschung."
+        },
+        "container2": {
+          "title": "Raymand Genomics vertritt die Genomik-Sparte der Raymand Scientific Group.",
+          "title2": "Mit Zentren im In- und Ausland",
+          "title3": "ist es ein international führender Anbieter von DNA-Sequenzierungsdiensten,",
+          "title4": "Genotypisierung, DNA-Syntheseprodukten",
+          "title5": "und Bioinformatik für die Märkte Pharma, Diagnostik, Lebensmittel, Landwirtschaft, Biotechnologie und Forschung."
         }
       }
     }

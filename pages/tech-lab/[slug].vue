@@ -17,7 +17,7 @@
       >
         <div class="services row q-col-gutter-xl items-center">
           <AnimationSlideOnce direction="left" class="image col-12 col-md-6">
-            <q-img :src="pageContent.container2.image" class="rounded-10" style="max-height: 400px;" />
+            <q-img :src="pageContent.container2.image" class="rounded-10" style="max-height: 500px;" />
           </AnimationSlideOnce>
           <AnimationSlideOnceGroup
             direction="right"
