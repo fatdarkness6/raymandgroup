@@ -104,30 +104,42 @@
           "title3": "Unsere Analysedienste und Entscheidungsunterstützung sind entscheidende Werkzeuge, um den Übergang zu nachhaltigeren landwirtschaftlichen Praktiken zu erleichtern.",
           "title4": "Diese Dienste tragen zu positiven ökologischen und sozialen Auswirkungen bei.",
           "service": "Weitere Dienste"
+        }
+      },
+      "waterAnalysisLab": {
+        "container1": {
+          "title": "Raymand Wasseranalyselabor — Gewährleistung von Wasserqualität und Sicherheit",
+          "description": "Umfassende Wasseranalysen für Trinkwasser, industrielle und umweltbezogene Anwendungen mit zuverlässigen, modernen Methoden."
         },
-        "container3": {
-          "services": {
-            "service1": {
-              "name": "Das Labor beginnt mit der Annahme von Tests.",
-              "description": "Die Labordienste beginnen mit der Annahme der entsprechenden Tests."
-            },
-            "service2": {
-              "name": "Kooperationsanfragen für Forschungsarbeiten",
-              "description": "Annahme von Forschungskooperationsanfragen."
-            },
-            "service3": {
-              "name": "Kooperationsanfragen für Bildungs- und Studentenarbeiten",
-              "description": "Zusammenarbeit bei Bildungs- und Studentenprojekten."
-            },
-            "service4": {
-              "name": "Wissenschaftliche Inhalte für jedes Labor",
-              "description": "Bereitstellung wissenschaftlicher Inhalte, die mit jedem Labor verbunden sind."
-            }
-          },
-          "title": "Dienste und Tests"
+        "container2": {
+          "title": "Unser Wasseranalyselabor bietet umfassende Tests zur Bewertung der Wasserqualität für verschiedene Anwendungen, einschließlich Trinkwasser, industrielle Nutzung und Umweltüberwachung. Mit fortschrittlichen analytischen Techniken liefern wir präzise und zuverlässige Ergebnisse, um Sicherheit, Einhaltung gesetzlicher Vorschriften und nachhaltiges Wassermanagement zu gewährleisten. Vertrauen Sie uns, um Ihre Anforderungen an die Wasserqualität mit Genauigkeit und Fachwissen zu unterstützen."
+        }
+      },
+      "petLab": {
+        "container1": {
+          "title": "Raymand Kleintierlabor — Diagnostik für Haustiere",
+          "description": "Umfassende und zuverlässige Tests für Haustiere, die Tierärzte mit schnellen Ergebnissen und moderner Betreuung unterstützen."
         },
-        "container4": {
-          "title": "Über das Labor"
+        "container2": {
+          "title": "Unser Kleintierlabor bietet umfassende diagnostische Tests, die speziell für Haustiere entwickelt wurden, und unterstützt Tierärzte bei einer präzisen und zeitnahen Versorgung. Von routinemäßigen Bluttests bis hin zu spezialisierten Analysen gewährleisten unsere modernen Einrichtungen schnelle und zuverlässige Ergebnisse und fördern die Gesundheit und das Wohlbefinden Ihrer Tiere. Wir sind engagiert, mit tierärztlichen Fachkräften zusammenzuarbeiten, um die bestmögliche Unterstützung für die medizinischen Bedürfnisse Ihrer Haustiere zu bieten."
+        }
+      },
+      "livestockLab": {
+        "container1": {
+          "title": "Raymand Großtierlabor — Spezialisierte Diagnostik für Nutztiere & Pferde",
+          "description": "Fortschrittliche Diagnostik für Großtiere mit präzisen Ergebnissen zur Unterstützung der tierärztlichen Versorgung, Herdengesundheit und landwirtschaftlichen Produktivität."
+        },
+        "container2": {
+          "title": "Unser Großtierlabor bietet spezialisierte diagnostische Tests, die auf die besonderen Bedürfnisse von Nutztieren und Pferden zugeschnitten sind. Mit modernster Technologie und einem erfahrenen Expertenteam liefern wir präzise und zeitnahe Ergebnisse zur Unterstützung der tierärztlichen Versorgung, des Herdenmanagements und der landwirtschaftlichen Produktivität. Unser Engagement für Qualität und Zuverlässigkeit trägt dazu bei, die Gesundheit und das Wohlbefinden Ihrer wertvollen Tiere zu gewährleisten."
+        }
+      },
+      "poultryLab": {
+        "container1": {
+          "title": "Raymand Geflügellabor — Präzise Diagnostik für die Geflügelgesundheit",
+          "description": "Spezialisierte Tests und Analysen für die Geflügelindustrie zur Sicherung von Krankheitsprävention, Produktivität und Lebensmittelsicherheit."
+        },
+        "container2": {
+          "title": "Unser Geflügellabor ist auf diagnostische Tests und Analysen spezialisiert, die auf die Geflügelindustrie zugeschnitten sind. Wir liefern präzise und zeitnahe Ergebnisse zur Unterstützung des Gesundheitsmanagements von Geflügel, der Krankheitsprävention und der allgemeinen Produktivität. Mit moderner Ausstattung und fachkundigem Personal helfen wir Landwirten und Tierärzten, die Fruchtbarkeit und Gesundheit des Geflügels zu erhalten und die Lebensmittelsicherheitsstandards einzuhalten."
         }
       },
       "environmentalLaboratory": {
@@ -141,6 +153,15 @@
           "title3": "und trägt durch Überwachung und Beratung für zahlreiche Industrieunternehmen, Umweltberater, Auftragnehmer, Einzelhändler und Behörden dazu bei.",
           "title4": "Unsere Dienstleistungen umfassen Tests von Wasser, Luft, Boden, Abfall und weiteren Produkten,",
           "title5": "um deren Qualität und Auswirkungen auf Gesundheit und Umwelt zu bewerten."
+        }
+      },
+      "concreteSteelLab": {
+        "container1": {
+          "title": "Raymand Beton- und Bewehrungslabor — Zuverlässige Strukturprüfungen",
+          "description": "Präzise und normgerechte Tests für Beton, Bewehrungsstahl und Baumaterialien zur Sicherstellung von Sicherheit und Ingenieursgenauigkeit."
+        },
+        "container2": {
+          "title": "Das Beton- und Bewehrungslabor von Raymand bietet präzise, zuverlässige und normgerechte Tests für eine Vielzahl von Baumaterialien. Wir sind spezialisiert auf die Prüfung von Beton, Bewehrungsstahl und verwandten Materialien, um die strukturelle Integrität, Sicherheit und die Einhaltung von Industriestandards zu gewährleisten. Ob in der Planungs- oder Bauphase, unser Labor liefert genaue Daten zur Unterstützung fundierter Ingenieursentscheidungen."
         }
       },
       "agricultureServicesLab": {
@@ -217,7 +238,9 @@
     "email": "E-Mail",
     "phone": "Telefon",
     "learn-more": "Mehr erfahren ...",
-    "about_us": "Über uns"
+    "about_us": "Über uns",
+    "services_tests": "Dienstleistungen und Tests",
+    "lab_test_admission": "Das Labor beginnt mit der Annahme von Tests."
   },
   "news": {
     "title1": "Wir freuen uns, Sie auf der Ausstellung für Laborausrüstung mit den neuesten Produkten führender internationaler Unternehmen zu treffen.",

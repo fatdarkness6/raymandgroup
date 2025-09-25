@@ -16,47 +16,38 @@ export const labs: any = {
       link: "https://google.com",
     },
     container3: {
-     "services-experiments": [
+      "services-experiments": [
         {
-          name: "tech-Lab_page.routes.soilLab.container3.services.service1.name",
+          name: "common.services_tests",
           icon: "fa-solid fa-flask",
-          desc: "tech-Lab_page.routes.soilLab.container3.services.service1.description",
         },
         {
-          name: "tech-Lab_page.routes.soilLab.container3.services.service4.name",
+          name: "common.lab_test_admission",
           icon: "fa-solid fa-microscope",
-          desc: "tech-Lab_page.routes.soilLab.container3.services.service4.description",
         },
       ],
     },
   },
   "concrete-steel-lab": {
     container1: {
-      title: "tech-Lab_page.routes.soilLab.container1.title",
-      desc: "tech-Lab_page.routes.soilLab.container1.description",
-      image: "/images/tech-lab/soilLab/container1.jpg",
+      title: "tech-Lab_page.routes.concreteSteelLab.container1.title",
+      desc: "tech-Lab_page.routes.concreteSteelLab.container1.description",
+      image: "/images/tech-lab/concreteSteelLab/container1.jpg",
     },
     container2: {
-      image: "/images/tech-lab/soilLab/container2.jpg",
-      texts: [
-        "tech-Lab_page.routes.soilLab.container2.title",
-        "tech-Lab_page.routes.soilLab.container2.title2",
-        "tech-Lab_page.routes.soilLab.container2.title3",
-        "tech-Lab_page.routes.soilLab.container2.title4",
-      ],
+      image: "/images/tech-lab/concreteSteelLab/container2.jpg",
+      texts: ["tech-Lab_page.routes.concreteSteelLab.container2.title"],
       link: "https://google.com",
     },
     container3: {
       "services-experiments": [
         {
-          name: "tech-Lab_page.routes.soilLab.container3.services.service1.name",
+          name: "common.services_tests",
           icon: "fa-solid fa-flask",
-          desc: "tech-Lab_page.routes.soilLab.container3.services.service1.description",
         },
         {
-          name: "tech-Lab_page.routes.soilLab.container3.services.service4.name",
+          name: "common.lab_test_admission",
           icon: "fa-solid fa-microscope",
-          desc: "tech-Lab_page.routes.soilLab.container3.services.service4.description",
         },
       ],
     },
@@ -81,45 +72,36 @@ export const labs: any = {
     container3: {
       "services-experiments": [
         {
-          name: "tech-Lab_page.routes.soilLab.container3.services.service1.name",
+          name: "common.services_tests",
           icon: "fa-solid fa-flask",
-          desc: "tech-Lab_page.routes.soilLab.container3.services.service1.description",
         },
         {
-          name: "tech-Lab_page.routes.soilLab.container3.services.service4.name",
+          name: "common.lab_test_admission",
           icon: "fa-solid fa-microscope",
-          desc: "tech-Lab_page.routes.soilLab.container3.services.service4.description",
         },
       ],
     },
   },
   "water-analysis-lab": {
     container1: {
-      title: "tech-Lab_page.routes.soilLab.container1.title",
-      desc: "tech-Lab_page.routes.soilLab.container1.description",
-      image: "/images/tech-lab/soilLab/container1.jpg",
+      title: "tech-Lab_page.routes.waterAnalysisLab.container1.title",
+      desc: "tech-Lab_page.routes.waterAnalysisLab.container1.description",
+      image: "/images/tech-lab/waterAnalysisLab/container1.jpg",
     },
     container2: {
-      image: "/images/tech-lab/soilLab/container2.jpg",
-      texts: [
-        "tech-Lab_page.routes.soilLab.container2.title",
-        "tech-Lab_page.routes.soilLab.container2.title2",
-        "tech-Lab_page.routes.soilLab.container2.title3",
-        "tech-Lab_page.routes.soilLab.container2.title4",
-      ],
+      image: "/images/tech-lab/waterAnalysisLab/container2.jpg",
+      texts: ["tech-Lab_page.routes.waterAnalysisLab.container2.title"],
       link: "https://google.com",
     },
     container3: {
       "services-experiments": [
         {
-          name: "tech-Lab_page.routes.soilLab.container3.services.service1.name",
+          name: "common.services_tests",
           icon: "fa-solid fa-flask",
-          desc: "tech-Lab_page.routes.soilLab.container3.services.service1.description",
         },
         {
-          name: "tech-Lab_page.routes.soilLab.container3.services.service4.name",
+          name: "common.lab_test_admission",
           icon: "fa-solid fa-microscope",
-          desc: "tech-Lab_page.routes.soilLab.container3.services.service4.description",
         },
       ],
     },
@@ -143,107 +125,84 @@ export const labs: any = {
     container3: {
       "services-experiments": [
         {
-          name: "tech-Lab_page.routes.soilLab.container3.services.service1.name",
+          name: "common.services_tests",
           icon: "fa-solid fa-flask",
-          desc: "tech-Lab_page.routes.soilLab.container3.services.service1.description",
         },
         {
-          name: "tech-Lab_page.routes.soilLab.container3.services.service4.name",
+          name: "common.lab_test_admission",
           icon: "fa-solid fa-microscope",
-          desc: "tech-Lab_page.routes.soilLab.container3.services.service4.description",
         },
       ],
     },
   },
   "pet-lab": {
     container1: {
-      title: "tech-Lab_page.routes.soilLab.container1.title",
-      desc: "tech-Lab_page.routes.soilLab.container1.description",
-      image: "/images/tech-lab/soilLab/container1.jpg",
+      title: "tech-Lab_page.routes.petLab.container1.title",
+      desc: "tech-Lab_page.routes.petLab.container1.description",
+      image: "/images/tech-lab/petLab/container1.jpg",
     },
     container2: {
-      image: "/images/tech-lab/soilLab/container2.jpg",
-      texts: [
-        "tech-Lab_page.routes.soilLab.container2.title",
-        "tech-Lab_page.routes.soilLab.container2.title2",
-        "tech-Lab_page.routes.soilLab.container2.title3",
-        "tech-Lab_page.routes.soilLab.container2.title4",
-      ],
+      image: "/images/tech-lab/petLab/container2.jpg",
+      texts: ["tech-Lab_page.routes.petLab.container2.title"],
       link: "https://google.com",
     },
     container3: {
       "services-experiments": [
         {
-          name: "tech-Lab_page.routes.soilLab.container3.services.service1.name",
+          name: "common.services_tests",
           icon: "fa-solid fa-flask",
-          desc: "tech-Lab_page.routes.soilLab.container3.services.service1.description",
         },
         {
-          name: "tech-Lab_page.routes.soilLab.container3.services.service4.name",
+          name: "common.lab_test_admission",
           icon: "fa-solid fa-microscope",
-          desc: "tech-Lab_page.routes.soilLab.container3.services.service4.description",
         },
       ],
     },
   },
   "livestock-lab": {
     container1: {
-      title: "tech-Lab_page.routes.soilLab.container1.title",
-      desc: "tech-Lab_page.routes.soilLab.container1.description",
-      image: "/images/tech-lab/soilLab/container1.jpg",
+      title: "tech-Lab_page.routes.livestockLab.container1.title",
+      desc: "tech-Lab_page.routes.livestockLab.container1.description",
+      image: "/images/tech-lab/livestockLab/container1.jpg",
     },
     container2: {
-      image: "/images/tech-lab/soilLab/container2.jpg",
-      texts: [
-        "tech-Lab_page.routes.soilLab.container2.title",
-        "tech-Lab_page.routes.soilLab.container2.title2",
-        "tech-Lab_page.routes.soilLab.container2.title3",
-        "tech-Lab_page.routes.soilLab.container2.title4",
-      ],
+      image: "/images/tech-lab/livestockLab/container2.jpg",
+      texts: ["tech-Lab_page.routes.livestockLab.container2.title"],
       link: "https://google.com",
     },
     container3: {
       "services-experiments": [
         {
-          name: "tech-Lab_page.routes.soilLab.container3.services.service1.name",
+          name: "common.services_tests",
           icon: "fa-solid fa-flask",
-          desc: "tech-Lab_page.routes.soilLab.container3.services.service1.description",
         },
         {
-          name: "tech-Lab_page.routes.soilLab.container3.services.service4.name",
+          name: "common.lab_test_admission",
           icon: "fa-solid fa-microscope",
-          desc: "tech-Lab_page.routes.soilLab.container3.services.service4.description",
         },
       ],
     },
   },
   "poultry-lab": {
     container1: {
-      title: "tech-Lab_page.routes.soilLab.container1.title",
-      desc: "tech-Lab_page.routes.soilLab.container1.description",
-      image: "/images/tech-lab/soilLab/container1.jpg",
+      title: "tech-Lab_page.routes.poultryLab.container1.title",
+      desc: "tech-Lab_page.routes.poultryLab.container1.description",
+      image: "/images/tech-lab/poultryLab/container1.jpg",
     },
     container2: {
-      image: "/images/tech-lab/soilLab/container2.jpg",
-      texts: [
-        "tech-Lab_page.routes.soilLab.container2.title",
-        "tech-Lab_page.routes.soilLab.container2.title2",
-        "tech-Lab_page.routes.soilLab.container2.title3",
-        "tech-Lab_page.routes.soilLab.container2.title4",
-      ],
+      image: "/images/tech-lab/poultryLab/container2.jpg",
+      texts: ["tech-Lab_page.routes.poultryLab.container2.title"],
       link: "https://google.com",
     },
     container3: {
       "services-experiments": [
         {
-          name: "tech-Lab_page.routes.soilLab.container3.services.service1.name",
+          name: "common.services_tests",
           icon: "fa-solid fa-flask",
-          desc: "tech-Lab_page.routes.soilLab.container3.services.service1.description",
         },
         {
-          name: "tech-Lab_page.routes.soilLab.container3.services.service4.name",
+          name: "common.lab_test_admission",
           icon: "fa-solid fa-microscope",
-          desc: "tech-Lab_page.routes.soilLab.container3.services.service4.description",
         },
       ],
     },
@@ -273,14 +232,12 @@ export const labs: any = {
     container3: {
       "services-experiments": [
         {
-          name: "tech-Lab_page.routes.soilLab.container3.services.service1.name",
+          name: "common.services_tests",
           icon: "fa-solid fa-flask",
-          desc: "tech-Lab_page.routes.soilLab.container3.services.service1.description",
         },
         {
-          name: "tech-Lab_page.routes.soilLab.container3.services.service4.name",
+          name: "common.lab_test_admission",
           icon: "fa-solid fa-microscope",
-          desc: "tech-Lab_page.routes.soilLab.container3.services.service4.description",
         },
       ],
     },
@@ -304,14 +261,12 @@ export const labs: any = {
     container3: {
       "services-experiments": [
         {
-          name: "tech-Lab_page.routes.soilLab.container3.services.service1.name",
+          name: "common.services_tests",
           icon: "fa-solid fa-flask",
-          desc: "tech-Lab_page.routes.soilLab.container3.services.service1.description",
         },
         {
-          name: "tech-Lab_page.routes.soilLab.container3.services.service4.name",
+          name: "common.lab_test_admission",
           icon: "fa-solid fa-microscope",
-          desc: "tech-Lab_page.routes.soilLab.container3.services.service4.description",
         },
       ],
     },
@@ -336,14 +291,12 @@ export const labs: any = {
     container3: {
       "services-experiments": [
         {
-          name: "tech-Lab_page.routes.soilLab.container3.services.service1.name",
+          name: "common.services_tests",
           icon: "fa-solid fa-flask",
-          desc: "tech-Lab_page.routes.soilLab.container3.services.service1.description",
         },
         {
-          name: "tech-Lab_page.routes.soilLab.container3.services.service4.name",
+          name: "common.lab_test_admission",
           icon: "fa-solid fa-microscope",
-          desc: "tech-Lab_page.routes.soilLab.container3.services.service4.description",
         },
       ],
     },
@@ -367,14 +320,12 @@ export const labs: any = {
     container3: {
       "services-experiments": [
         {
-          name: "tech-Lab_page.routes.soilLab.container3.services.service1.name",
+          name: "common.services_tests",
           icon: "fa-solid fa-flask",
-          desc: "tech-Lab_page.routes.soilLab.container3.services.service1.description",
         },
         {
-          name: "tech-Lab_page.routes.soilLab.container3.services.service4.name",
+          name: "common.lab_test_admission",
           icon: "fa-solid fa-microscope",
-          desc: "tech-Lab_page.routes.soilLab.container3.services.service4.description",
         },
       ],
     },
@@ -398,14 +349,12 @@ export const labs: any = {
     container3: {
       "services-experiments": [
         {
-          name: "tech-Lab_page.routes.soilLab.container3.services.service1.name",
+          name: "common.services_tests",
           icon: "fa-solid fa-flask",
-          desc: "tech-Lab_page.routes.soilLab.container3.services.service1.description",
         },
         {
-          name: "tech-Lab_page.routes.soilLab.container3.services.service4.name",
+          name: "common.lab_test_admission",
           icon: "fa-solid fa-microscope",
-          desc: "tech-Lab_page.routes.soilLab.container3.services.service4.description",
         },
       ],
     },
@@ -429,14 +378,12 @@ export const labs: any = {
     container3: {
       "services-experiments": [
         {
-          name: "tech-Lab_page.routes.soilLab.container3.services.service1.name",
+          name: "common.services_tests",
           icon: "fa-solid fa-flask",
-          desc: "tech-Lab_page.routes.soilLab.container3.services.service1.description",
         },
         {
-          name: "tech-Lab_page.routes.soilLab.container3.services.service4.name",
+          name: "common.lab_test_admission",
           icon: "fa-solid fa-microscope",
-          desc: "tech-Lab_page.routes.soilLab.container3.services.service4.description",
         },
       ],
     },

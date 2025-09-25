@@ -50,7 +50,7 @@
       >
         <AnimationSlideOnce direction="left">
           <div class="text-h4 text-center q-mb-xl">
-            {{ t("tech-Lab_page.routes.soilLab.container3.title") }}
+            {{ t("common.services_tests") }}
           </div>
         </AnimationSlideOnce>
         <AnimationSlideOnceGroup

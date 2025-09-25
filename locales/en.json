@@ -104,30 +104,42 @@
           "title3": "Our analytical services and decision-support tools are vital in helping transition to more sustainable farming practices.",
           "title4": "These services lead to positive environmental and social impacts.",
           "service": "More Services"
+        }
+      },
+      "waterAnalysisLab": {
+        "container1": {
+          "title": "Raymand Water Analysis Laboratory — Ensuring Water Quality & Safety",
+          "description": "Comprehensive water testing for drinking, industrial, and environmental uses with reliable, advanced analysis."
         },
-        "container3": {
-          "services": {
-            "service1": {
-              "name": "Laboratory Begins with Test Acceptance",
-              "description": "Laboratory services start with the acceptance of the requested tests."
-            },
-            "service2": {
-              "name": "Collaboration in Research Projects",
-              "description": "Accepting collaboration requests for research projects."
-            },
-            "service3": {
-              "name": "Collaboration in Educational & Student Projects",
-              "description": "Cooperation in educational and student-related activities."
-            },
-            "service4": {
-              "name": "Scientific Materials Related to Each Laboratory",
-              "description": "Providing scientific content relevant to each laboratory."
-            }
-          },
-          "title": "Services & Tests"
+        "container2": {
+          "title": "Our water analysis laboratory offers comprehensive testing services to evaluate water quality for various applications, including drinking water, industrial use, and environmental monitoring. Using advanced analytical techniques, we provide accurate and reliable results to ensure safety, regulatory compliance, and sustainable water management. Trust us to support your water quality needs with precision and expertise."
+        }
+      },
+      "petLab": {
+        "container1": {
+          "title": "Raymand Small Animal Laboratory — Dedicated Pet Diagnostics",
+          "description": "Comprehensive and reliable diagnostic tests for pets, supporting veterinarians with timely results and advanced veterinary care."
         },
-        "container4": {
-          "title": "About the Laboratory"
+        "container2": {
+          "title": "Our small animal laboratory provides comprehensive diagnostic tests designed specifically for pets, helping veterinarians deliver precise and timely care. From routine blood tests to advanced specialized diagnostics, our state-of-the-art facilities ensure fast and reliable results, supporting the health and well-being of your beloved animals. We are committed to working with veterinary professionals to provide the best possible support for your pets’ medical needs."
+        }
+      },
+      "livestockLab": {
+        "container1": {
+          "title": "Raymand Large Animal Laboratory — Specialized Diagnostics for Livestock & Horses",
+          "description": "Advanced diagnostic services tailored for large animals, ensuring accurate results to support veterinary care, herd health, and agricultural productivity."
+        },
+        "container2": {
+          "title": "Our large animal laboratory offers specialized diagnostic testing designed to meet the unique needs of livestock and horses. Equipped with advanced technology and a team of experienced specialists, we provide accurate and timely results to support veterinary care, herd health management, and agricultural productivity. With a commitment to quality and reliability, our services help safeguard the health and well-being of your valuable animals."
+        }
+      },
+      "poultryLab": {
+        "container1": {
+          "title": "Raymand Poultry Laboratory — Precision Diagnostics for Poultry Health",
+          "description": "Specialized testing and analysis for the poultry industry, ensuring disease prevention, productivity, and food safety."
+        },
+        "container2": {
+          "title": "Our poultry laboratory specializes in diagnostic testing and analysis tailored to the poultry industry. We provide accurate and timely results to support poultry health management, disease prevention, and overall productivity. With advanced equipment and skilled staff, we help farmers and veterinarians maintain flock health and ensure compliance with food safety standards."
         }
       },
       "environmentalLaboratory": {
@@ -141,6 +153,15 @@
           "title3": "contributes by offering monitoring and consulting to a wide range of industrial companies, environmental consultants, contractors, retailers, and government authorities.",
           "title4": "Our services include testing of water, air, soil, waste, and other products",
           "title5": "to assess their quality and impact on health and the environment."
+        }
+      },
+      "concreteSteelLab": {
+        "container1": {
+          "title": "Raymand Concrete & Rebar Laboratory — Reliable Structural Testing",
+          "description": "Precise and standard-compliant testing for concrete, rebar, and construction materials to ensure safety and engineering accuracy."
+        },
+        "container2": {
+          "title": "Raymand’s Concrete and Rebar Laboratory provides precise, reliable, and standard-compliant testing for a wide range of construction materials. We specialize in testing concrete, reinforcing steel (rebar), and related materials to ensure structural integrity, safety, and compliance with industry standards. Whether during design or construction, our lab delivers accurate data to support sound engineering decisions."
         }
       },
       "agricultureServicesLab": {
@@ -217,7 +238,9 @@
     "email": "Email",
     "phone": "Phone",
     "learn-more": "Learn More...",
-    "about_us": "About Us"
+    "about_us": "About Us",
+    "services_tests" : "Services and Tests",
+    "lab_test_admission": "The laboratory begins with test admission."
   },
   "news": {
     "title1": "We look forward to seeing you at the Laboratory Equipment Exhibition with the latest products from major international brands.",
