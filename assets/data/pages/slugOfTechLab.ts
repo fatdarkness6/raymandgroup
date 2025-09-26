@@ -303,17 +303,14 @@ export const labs: any = {
   },
   "food-industry": {
     container1: {
-      title: "tech-Lab_page.routes.soilLab.container1.title",
-      desc: "tech-Lab_page.routes.soilLab.container1.description",
-      image: "/images/tech-lab/soilLab/container1.jpg",
+      title: "tech-Lab_page.routes.foodIndustry.container1.title",
+      desc: "tech-Lab_page.routes.foodIndustry.container1.description",
+      image: "/images/tech-lab/foodIndustry/container1.jpg",
     },
     container2: {
-      image: "/images/tech-lab/soilLab/container2.jpg",
+      image: "/images/tech-lab/foodIndustry/container2.jpg",
       texts: [
-        "tech-Lab_page.routes.soilLab.container2.title",
-        "tech-Lab_page.routes.soilLab.container2.title2",
-        "tech-Lab_page.routes.soilLab.container2.title3",
-        "tech-Lab_page.routes.soilLab.container2.title4",
+        "tech-Lab_page.routes.foodIndustry.container2.title",
       ],
       link: "https://google.com",
     },

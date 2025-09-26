@@ -181,6 +181,15 @@
           "title9": "and grows through knowledge-sharing across specialized centers."
         }
       },
+      "foodIndustry": {
+        "container1": {
+          "title": "Raymand Food & Feed Testing — Ensuring Quality and Safety",
+          "description": "National network of advanced food laboratories delivering reliable testing for safety, composition, authenticity, and traceability."
+        },
+        "container2": {
+          "title": "Raymand is a leading group in food and feed laboratories in Iran, employing a wide range of advanced analytical techniques to support the growing quality and safety standards of its customers. The group has established a national network of food laboratories and accreditation centers, performing numerous tests each year to determine the safety, composition, authenticity, origin, traceability, and purity of food products. Therefore, Raymand offers the most extensive portfolio of food testing services, making this unique offering accessible worldwide through optimized processes, logistics, and information technology from each of its laboratories."
+        }
+      },
       "pharmaCosmeticIndustry": {
         "container1": {
           "title": "Pharmaceutical, Biotech, Cosmetic and Hygiene Industries",
@@ -239,7 +248,7 @@
     "phone": "Phone",
     "learn-more": "Learn More...",
     "about_us": "About Us",
-    "services_tests" : "Services and Tests",
+    "services_tests": "Services and Tests",
     "lab_test_admission": "The laboratory begins with test admission."
   },
   "news": {

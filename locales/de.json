@@ -181,6 +181,15 @@
           "title9": "und wächst durch Wissensaustausch zwischen spezialisierten Zentren."
         }
       },
+      "foodIndustry": {
+        "container1": {
+          "title": "Raymand Lebensmittel- & Futtermitteltests — Qualität und Sicherheit gewährleisten",
+          "description": "Nationales Netzwerk moderner Labore mit zuverlässigen Tests zu Sicherheit, Zusammensetzung, Authentizität und Rückverfolgbarkeit."
+        },
+        "container2": {
+          "title": "Raymand ist eine führende Gruppe im Bereich Lebensmittel- und Futtermittellabore im Iran, die eine breite Palette fortschrittlicher Analysetechniken einsetzt, um die wachsenden Qualitäts- und Sicherheitsstandards ihrer Kunden zu unterstützen. Die Gruppe hat ein nationales Netzwerk von Lebensmittellaboren und Akkreditierungszentren aufgebaut, die jährlich zahlreiche Tests zur Bestimmung der Sicherheit, Zusammensetzung, Authentizität, Herkunft, Rückverfolgbarkeit und Reinheit von Lebensmitteln durchführen. Daher bietet Raymand das umfangreichste Portfolio an Lebensmitteldienstleistungen an und stellt dieses einzigartige Angebot weltweit durch optimierte Prozesse, Logistik und Informationstechnologie aus jedem seiner Labore zur Verfügung."
+        }
+      },
       "pharmaCosmeticIndustry": {
         "container1": {
           "title": "Pharma-, Biotech-, Kosmetik- und Hygieneindustrie",
