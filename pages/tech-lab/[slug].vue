@@ -79,7 +79,7 @@
               </q-card-section>
               <q-card-section>
                 <q-btn push color="primary">
-                  {{ t("common.learn-more") }}</q-btn
+                  {{detectEvenNumber(index) ?  t("common.learn-more") : t("common.click") }}</q-btn
                 >
               </q-card-section>
             </q-card>

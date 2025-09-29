@@ -37,14 +37,15 @@
         <div class="text-h5 text-white q-mb-lg font-bold">
           {{ t("tech-Lab_page.routes.aboutUs.container3.title") }}
         </div>
-        <AnimationSlideOnceGroup direction="up" class="row q-col-gutter-lg">
+        <AnimationSlideOnceGroup direction="up" class="row q-col-gutter-lg items-stetch">
           <AnimationSlideOnce
             v-for="(feature, index) in features"
             :key="index"
             class="col-xs-12 col-sm-6 col-md-4"
+            custom-class="full-height"
             :delay="index * 200"
           >
-            <q-card flat bordered class="feature-card text-center hover-card">
+            <q-card flat bordered class="feature-card full-height text-center hover-card ">
               <i :class="`fa ${feature.icon} fa-2x q-mb-md feature-icon`"></i>
               <div class="text-h6 q-mb-sm font-semibold feature-title">
                 {{ feature.title }}
@@ -55,37 +56,6 @@
         </AnimationSlideOnceGroup>
       </q-card-section>
     </q-card>
-
-    <!-- Mission & Vision Section -->
-    <!-- <q-card
-      flat
-      bordered
-      class="my-card q-pa-lg mission-vision-section text-white"
-    >
-      <q-card-section class="text-center">
-        <AnimationSlideOnceGroup direction="up" class="row q-col-gutter-lg">
-          <AnimationSlideOnce class="col-12 col-md-6 q-mb-md" :delay="0">
-            <i class="fa fa-compass fa-2x q-mb-md"></i>
-            <div class="text-h6 q-mb-sm font-semibold">ماموریت ما</div>
-            <p class="text-body1">
-              ماموریت ما فراتر از انجام آزمون‌های استاندارد است؛ ما در رایمند
-              تلاش می‌کنیم تا با ایجاد ارزش واقعی برای صنایع، تولیدکنندگان و
-              مراکز تحقیقاتی، به شریک راهبردی مشتریان خود در مسیر ارتقا و توسعه
-              تبدیل شویم.
-            </p>
-          </AnimationSlideOnce>
-          <AnimationSlideOnce class="col-12 col-md-6" :delay="200">
-            <i class="fa fa-rocket fa-2x q-mb-md"></i>
-            <div class="text-h6 q-mb-sm font-semibold">چشم‌انداز ما</div>
-            <p class="text-body1">
-              چشم‌انداز ما این است که رایمند در آینده نزدیک، نه‌تنها در سطح ملی
-              بلکه در عرصه منطقه‌ای، به عنوان یکی از بازیگران اصلی صنعت خدمات
-              آزمایشگاهی شناخته شود.
-            </p>
-          </AnimationSlideOnce>
-        </AnimationSlideOnceGroup>
-      </q-card-section>
-    </q-card> -->
   </q-page>
 </template>
 

@@ -56,8 +56,9 @@
               class="flex items-center gap-10"
               :dir="directionOfElement(locale)"
             >
-              <div class="text-h6">{{ item.text }}</div>
-              <q-icon :name="arrowIcon" size="20px" />
+              <div class="ab-text-center">
+                <div class="text-h6 text-center">{{ item.text }}</div>
+              </div>
             </div>
           </div>
           <q-img
@@ -233,13 +234,20 @@ const con3Data = computed<ButtonItem[][]>(() => [
   position: absolute;
   bottom: 0;
   left: 0;
-  height: 30px;
+  height: 100%;
   width: 100%;
-  background: linear-gradient(to right, #1976d2a1, #0d48a154);
-  transition: background 0.5s ease;
+  background: #00000052;
+  transition: all 0.2s ease;
 }
 .container3 .elements:hover .text-hover {
-  background: linear-gradient(to right, #1976d2, #0f51b4);
+  background: #00000078;
+}
+.container3 .elements .text-hover .text-h6 {
+  transform: scale(1);
+  transition: all 0.3s;
+}
+.container3 .elements:hover .text-hover .text-h6 {
+  transform: scale(1.2);
 }
 @media (max-width: 1140px) {
   .container3 {
