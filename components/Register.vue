@@ -15,7 +15,7 @@
         <q-input
           label-color="black"
           v-model="name"
-          label="Name"
+          label="Name and Lastname"
           :error="!!nameError"
           :error-message="nameError"
           input-class="text-subtitle1"
@@ -56,7 +56,8 @@
           :error-message="confirmPassError"
           label="Repeat Password"
           input-class="text-subtitle1"
-        />
+        >
+        </q-input>
         <q-btn
           class="full-width"
           q-btn
@@ -64,6 +65,8 @@
           push
           no-caps
           padding="10px 20px"
+          type="submit"
+          :loading="loading"
           >Sign Up</q-btn
         >
       </q-form>
@@ -71,18 +74,22 @@
         Already have an account?
         <span
           style="cursor: pointer"
-          @click="$router.push({ query: { form: 'login' } })"
+          @click="$router.push('')"
           class="text-weight-bolder text-blue-9"
           >Login</span
         >
       </div>
     </q-card-section>
+    <VerifyEmail :openDialog="verifyEmail" />
   </q-card>
 </template>
 <script lang="ts" setup>
 import { useForm, useField } from "vee-validate";
+import useLogin from "~/composable/useLogin";
 import { registerSchema } from "~/utils/registerSchema";
-const isPwd = ref(true);
+import { useNotify } from "~/composable/useNotify";
+import { faCircleRight } from "@fortawesome/free-solid-svg-icons";
+
 const { handleSubmit, resetForm } = useForm({
   validationSchema: registerSchema,
 });
@@ -93,7 +100,41 @@ const { value: password, errorMessage: passError } =
 const { value: confirmPassword, errorMessage: confirmPassError } =
   useField<string>("confirmPassword");
 
-const onSubmit = handleSubmit((values) => {
-  console.log(values);
+const { register, verifyEmailAddress } = useLogin();
+const { success, error } = useNotify();
+
+const isPwd = ref(true);
+const loading = ref(false);
+const verifyEmail = ref({
+  dialog: false,
+  massage: "",
+  email,
 });
+
+const onSubmit = handleSubmit((values) => {
+  delete values.confirmPassword;
+  loading.value = true;
+  register(values)
+    .then((response) => {
+      verifyEmail.value.dialog = true;
+      verifyEmail.value.massage = response.data.msg;
+    })
+    .catch((response) => {
+      handleError(response)
+    })
+    .finally(() => {
+      loading.value = false;
+    });
+});
+
+function handleError(response : any) {
+  const validation = response.response.data.isVerified;
+  if (!validation) {
+    verifyEmail.value.dialog = true;
+  } else if (validation) {
+    verifyEmail.value.massage = response.response.data.massage;
+  } else {
+    error(response.response.data.msg);
+  }
+}
 </script>
