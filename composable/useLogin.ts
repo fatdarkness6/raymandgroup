@@ -7,8 +7,12 @@ export default function useLogin() {
   function verifyEmailAddress(data : any) {
     return axios.post("http://localhost:5000/auth/verify-email" , data).then(data => data)
   }
+  function resendCode(data : any) {
+    return axios.post("http://localhost:5000/auth/resend-code" , data).then(data => data)
+  }
   return {
     register,
-    verifyEmailAddress
+    verifyEmailAddress,
+    resendCode,
   };
 }

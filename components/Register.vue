@@ -70,6 +70,9 @@
           >Sign Up</q-btn
         >
       </q-form>
+      <div class="text-red ">
+        {{ accountHasBeenCreatedOrNotMassage }}
+      </div>
       <div class="text-center text-weight-md">
         Already have an account?
         <span
@@ -88,7 +91,7 @@ import { useForm, useField } from "vee-validate";
 import useLogin from "~/composable/useLogin";
 import { registerSchema } from "~/utils/registerSchema";
 import { useNotify } from "~/composable/useNotify";
-import { faCircleRight } from "@fortawesome/free-solid-svg-icons";
+import type { VerifyEmailType } from "~/types/registerComponent";
 
 const { handleSubmit, resetForm } = useForm({
   validationSchema: registerSchema,
@@ -100,41 +103,59 @@ const { value: password, errorMessage: passError } =
 const { value: confirmPassword, errorMessage: confirmPassError } =
   useField<string>("confirmPassword");
 
-const { register, verifyEmailAddress } = useLogin();
+const { register } = useLogin();
 const { success, error } = useNotify();
 
 const isPwd = ref(true);
 const loading = ref(false);
-const verifyEmail = ref({
+const verifyEmail = ref<VerifyEmailType>({
   dialog: false,
   massage: "",
-  email,
+  email: "",
+  registerMode: false,
+  remainTime: 0,
 });
+const accountHasBeenCreatedOrNotMassage = ref<string>("");
 
 const onSubmit = handleSubmit((values) => {
   delete values.confirmPassword;
   loading.value = true;
   register(values)
     .then((response) => {
-      verifyEmail.value.dialog = true;
-      verifyEmail.value.massage = response.data.msg;
+      const setData = {
+        dialog: true,
+        massage: response.data.msg,
+        email,
+        registerMode: true,
+      };
+      verifyEmail.value = setData;
+      localStorage.setItem("email" , JSON.stringify(email))
     })
     .catch((response) => {
-      handleError(response)
+      handleError(response);
     })
     .finally(() => {
       loading.value = false;
     });
 });
 
-function handleError(response : any) {
-  const validation = response.response.data.isVerified;
+function handleError(response: any) {
+  const responseFromFetch = response.response.data;
+  const validation = responseFromFetch.isVerified;
+  const massage = responseFromFetch.msg;
   if (!validation) {
-    verifyEmail.value.dialog = true;
+    const setData = {
+      dialog: true,
+      massage: massage,
+      email,
+    };
+    verifyEmail.value = setData;
   } else if (validation) {
-    verifyEmail.value.massage = response.response.data.massage;
+    accountHasBeenCreatedOrNotMassage.value =
+      massage + " " + "please login in to your account";
+      error(massage);
   } else {
-    error(response.response.data.msg);
+    error(massage);
   }
 }
 </script>
