@@ -152,10 +152,17 @@ function verify2faCodeFn(code: string) {
   };
   loading.value.verify2faLoading = true;
   verify2faCode(data)
-    .then(() => {
+    .then((res) => {
       verify2faCodeVal.value.dialog = false;
+      getToken(res.data.token);
     })
     .catch(console.error)
-    .finally(() => loading.value.verify2faLoading);
+    .finally(() => (loading.value.verify2faLoading = false));
+}
+function getToken(token: string) {
+  if (token !== "" && token) {
+    localStorage.setItem("token", token);
+    navigateTo("/profile");
+  }
 }
 </script>
