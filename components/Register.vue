@@ -87,6 +87,8 @@
       :openDialog="verifyEmail"
       :verifyEmailLoading="loading.verifyEmailAddressLoading"
       @code="verifyEmailFn"
+      title="Verify your Email"
+      desc="Verfication code has been sent to your email"
     />
     <CommonDoneMassage
       v-model="openSucssesMsg"
