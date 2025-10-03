@@ -1,6 +1,6 @@
 <template>
   <q-card flat class="login-signUp-form-content q-pa-sm rounded-10 relative">
-    <div class="z-max relative">
+    <div class="relative" style="z-index: 2">
       <q-card-section>
         <div class="text-h5 text-weight-medium text-center text-black">
           Login
@@ -56,7 +56,7 @@
             no-caps
             padding="10px 20px"
             class="full-width"
-            :loading="loading"
+            :loading="loading.loginBtnLoading"
           >
             Login
           </q-btn>
@@ -88,15 +88,24 @@
         </div>
       </q-card-section>
     </div>
+    <CommonEnterCode
+      :openDialog="verify2faCodeVal"
+      :verifyEmailLoading="loading.verify2faLoading"
+      :loginOption="loginOption"
+      @code="verify2faCodeFn"
+      title="Verify your 2FA Code"
+      desc="2FA code has been sent to your email"
+    />
   </q-card>
 </template>
 <script setup lang="ts">
 import { useForm, useField } from "vee-validate";
 import { loginSchema } from "~/utils/registerSchema";
 import useLogin from "~/composable/useLogin";
+import type { VerifyEmailType } from "~/types/registerComponent";
 
 const localePath = useLocalePath();
-const { login } = useLogin();
+const { login, verify2faCode } = useLogin();
 const { handleSubmit, resetForm } = useForm({
   validationSchema: loginSchema,
 });
@@ -107,15 +116,46 @@ const isPwd = ref(true);
 const loginForm = ref<any>({
   rememberMe: false,
 });
-const loading = ref(false);
+const loading = ref({
+  loginBtnLoading: false,
+  verify2faLoading: false,
+});
+const loginOption = ref<string>("");
+const verify2faCodeVal = ref<VerifyEmailType>({
+  dialog: false,
+  email: "",
+  registerMode: false,
+});
 const onSubmit = handleSubmit((values) => {
   loginFn(values);
 });
 function loginFn(data: any) {
-  loading.value = true;
+  loading.value.loginBtnLoading = true;
   login(data)
-    .then((response) => console.log(response))
+    .then(() => {
+      loginOption.value = "signin";
+      const setData = {
+        dialog: true,
+        email,
+        registerMode: true,
+      };
+      verify2faCodeVal.value = setData;
+    })
     .catch((res) => console.log(res))
-    .finally(() => (loading.value = false));
+    .finally(() => (loading.value.loginBtnLoading = false));
+}
+
+function verify2faCodeFn(code: string) {
+  const data = {
+    email: email.value,
+    code,
+  };
+  loading.value.verify2faLoading = true;
+  verify2faCode(data)
+    .then(() => {
+      verify2faCodeVal.value.dialog = false;
+    })
+    .catch(console.error)
+    .finally(() => loading.value.verify2faLoading);
 }
 </script>

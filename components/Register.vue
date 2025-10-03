@@ -86,6 +86,7 @@
     <CommonEnterCode
       :openDialog="verifyEmail"
       :verifyEmailLoading="loading.verifyEmailAddressLoading"
+      :loginOption="loginOption"
       @code="verifyEmailFn"
       title="Verify your Email"
       desc="Verfication code has been sent to your email"
@@ -129,12 +130,12 @@ const loading = ref({
 });
 const verifyEmail = ref<VerifyEmailType>({
   dialog: false,
-  massage: "",
   email: "",
   registerMode: false,
 });
 const openSucssesMsg = ref<boolean>(false);
 const accountHasBeenCreatedOrNotMassage = ref<string>("");
+const loginOption = ref<string>("")
 
 const onSubmit = handleSubmit((values) => {
   delete values.confirmPassword;
@@ -143,12 +144,11 @@ const onSubmit = handleSubmit((values) => {
     .then((response) => {
       const setData = {
         dialog: true,
-        massage: response.data.msg,
         email,
         registerMode: true,
       };
       verifyEmail.value = setData;
-      localStorage.setItem("email", JSON.stringify(email));
+      loginOption.value = "signup"
     })
     .catch((response) => {
       handleError(response);

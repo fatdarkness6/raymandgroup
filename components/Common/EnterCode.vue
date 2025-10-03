@@ -1,6 +1,6 @@
 <template>
   <q-dialog v-model="openDialog.dialog" persistent>
-    <q-card class="q-pa-md" style="min-width: 400px">
+    <q-card class="q-pa-md" style="max-width: 400px">
       <!-- Title / Message -->
       <q-card-section class="text-h6 text-center">
         {{ title }}
@@ -17,7 +17,7 @@
             autofocus
           />
         </q-card-section>
-        <q-card-section class="flex justify-between gap-10 items-center">
+        <q-card-section class="flex  items-center justify-center full-width">
           <div class="text-caption">
             {{ desc }}
           </div>
@@ -35,7 +35,7 @@
             </q-btn>
           </div>
         </q-card-section>
-        <q-card-section>
+        <q-card-section class="flex justify-end">
           <q-btn
             flat
             color="negative"
@@ -73,8 +73,9 @@ const prop = defineProps<{
   verifyEmailLoading: boolean;
   title: string;
   desc: string;
+  loginOption:string
 }>();
-const { resendEmailVerificationCode } = useLogin();
+const { resendEmailVerificationCode ,resend2faCode } = useLogin();
 
 const code = ref("");
 const cooldown = ref<any>(0);
@@ -102,18 +103,6 @@ watch(
 function handleVerify() {
   if (!code.value) return;
   emit("code", code.value);
-
-  // verifyEmailAddress(data)
-  //   .then(() => {
-  //     prop.openDialog.dialog = false;
-  //     emit("successfullyEmailVerified");
-  //   })
-  //   .catch((response) => {
-  //     console.log(response);
-  //   })
-  //   .finally(() => {
-  //     loading.value.verifyEmailAddressLoading = false;
-  //   });
 }
 function startCooldown(seconds: number | undefined) {
   cooldown.value = seconds;
@@ -130,7 +119,13 @@ function startCooldown(seconds: number | undefined) {
 function resendEmailFn() {
   if (cooldown.value > 0) return; // prevent extra clicks
   loading.value.resendEmailAddressLoading = true;
-  resendEmailVerificationCode({ email: prop.openDialog.email })
+   let handleRequest 
+   if(prop.loginOption === "signup") {
+    handleRequest = resendEmailVerificationCode({ email: prop.openDialog.email })
+   }else {
+    handleRequest = resend2faCode({ email: prop.openDialog.email })
+   }
+  handleRequest
     .then(() => {
       // Backend success → start full 60s cooldown
       prop.openDialog.registerMode = false;

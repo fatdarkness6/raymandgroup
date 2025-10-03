@@ -26,11 +26,17 @@ export default function useLogin() {
       .post("http://localhost:5000/auth/resend-2fa", data)
       .then((data) => data);
   }
+  function verify2faCode(data: any) {
+    return axios
+      .post("http://localhost:5000/auth/verify-2fa", data)
+      .then((data) => data);
+  }
   return {
     register,
     verifyEmailAddress,
     resendEmailVerificationCode,
     login,
     resend2faCode,
+    verify2faCode
   };
 }
