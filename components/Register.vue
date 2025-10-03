@@ -70,20 +70,32 @@
           >Sign Up</q-btn
         >
       </q-form>
-      <div class="text-red ">
+      <div class="text-red">
         {{ accountHasBeenCreatedOrNotMassage }}
       </div>
       <div class="text-center text-weight-md">
         Already have an account?
         <span
           style="cursor: pointer"
-          @click="$router.push('')"
+          @click="makeEmptyQuery"
           class="text-weight-bolder text-blue-9"
           >Login</span
         >
       </div>
     </q-card-section>
-    <VerifyEmail :openDialog="verifyEmail" />
+    <VerifyEmail
+      :openDialog="verifyEmail"
+      @successfullyEmailVerified="successfullyEmailVerifiedFn"
+    />
+    <CommonDoneMassage
+      v-model="openSucssesMsg"
+      title="Email Verified"
+      message="You can now log in with your account."
+      icon="fa-solid fa-circle-check"
+      color="positive"
+      button-label="Go to Login"
+      @action="makeEmptyQuery"
+    />
   </q-card>
 </template>
 <script lang="ts" setup>
@@ -105,6 +117,7 @@ const { value: confirmPassword, errorMessage: confirmPassError } =
 
 const { register } = useLogin();
 const { success, error } = useNotify();
+const router = useRouter();
 
 const isPwd = ref(true);
 const loading = ref(false);
@@ -115,6 +128,7 @@ const verifyEmail = ref<VerifyEmailType>({
   registerMode: false,
   remainTime: 0,
 });
+const openSucssesMsg = ref<boolean>(false);
 const accountHasBeenCreatedOrNotMassage = ref<string>("");
 
 const onSubmit = handleSubmit((values) => {
@@ -129,7 +143,7 @@ const onSubmit = handleSubmit((values) => {
         registerMode: true,
       };
       verifyEmail.value = setData;
-      localStorage.setItem("email" , JSON.stringify(email))
+      localStorage.setItem("email", JSON.stringify(email));
     })
     .catch((response) => {
       handleError(response);
@@ -153,9 +167,16 @@ function handleError(response: any) {
   } else if (validation) {
     accountHasBeenCreatedOrNotMassage.value =
       massage + " " + "please login in to your account";
-      error(massage);
+    error(massage);
   } else {
     error(massage);
   }
+}
+function successfullyEmailVerifiedFn() {
+  openSucssesMsg.value = true;
+  resetForm();
+}
+function makeEmptyQuery() {
+  router.push("");
 }
 </script>
