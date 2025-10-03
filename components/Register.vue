@@ -66,7 +66,7 @@
           no-caps
           padding="10px 20px"
           type="submit"
-          :loading="loading"
+          :loading="loading.registerLoading"
           >Sign Up</q-btn
         >
       </q-form>
@@ -83,9 +83,10 @@
         >
       </div>
     </q-card-section>
-    <VerifyEmail
+    <CommonEnterCode
       :openDialog="verifyEmail"
-      @successfullyEmailVerified="successfullyEmailVerifiedFn"
+      :verifyEmailLoading="loading.verifyEmailAddressLoading"
+      @code="verifyEmailFn"
     />
     <CommonDoneMassage
       v-model="openSucssesMsg"
@@ -115,25 +116,27 @@ const { value: password, errorMessage: passError } =
 const { value: confirmPassword, errorMessage: confirmPassError } =
   useField<string>("confirmPassword");
 
-const { register } = useLogin();
+const { register, verifyEmailAddress } = useLogin();
 const { success, error } = useNotify();
 const router = useRouter();
 
 const isPwd = ref(true);
-const loading = ref(false);
+const loading = ref({
+  registerLoading: false,
+  verifyEmailAddressLoading: false,
+});
 const verifyEmail = ref<VerifyEmailType>({
   dialog: false,
   massage: "",
   email: "",
   registerMode: false,
-  remainTime: 0,
 });
 const openSucssesMsg = ref<boolean>(false);
 const accountHasBeenCreatedOrNotMassage = ref<string>("");
 
 const onSubmit = handleSubmit((values) => {
   delete values.confirmPassword;
-  loading.value = true;
+  loading.value.registerLoading = true;
   register(values)
     .then((response) => {
       const setData = {
@@ -149,7 +152,7 @@ const onSubmit = handleSubmit((values) => {
       handleError(response);
     })
     .finally(() => {
-      loading.value = false;
+      loading.value.registerLoading = false;
     });
 });
 
@@ -171,6 +174,24 @@ function handleError(response: any) {
   } else {
     error(massage);
   }
+}
+function verifyEmailFn(code: string) {
+  const data = {
+    email: email.value,
+    code,
+  };
+  loading.value.verifyEmailAddressLoading = true;
+  verifyEmailAddress(data)
+    .then(() => {
+      verifyEmail.value.dialog = false;
+      successfullyEmailVerifiedFn();
+    })
+    .catch((response) => {
+      console.log(response);
+    })
+    .finally(() => {
+      loading.value.verifyEmailAddressLoading = false;
+    });
 }
 function successfullyEmailVerifiedFn() {
   openSucssesMsg.value = true;

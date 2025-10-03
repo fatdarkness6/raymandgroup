@@ -3,7 +3,7 @@
     <q-card class="q-pa-md" style="min-width: 400px">
       <!-- Title / Message -->
       <q-card-section class="text-h6 text-center">
-        Verify your Email
+        {{ title }}
       </q-card-section>
 
       <!-- Input for verification code -->
@@ -19,7 +19,7 @@
         </q-card-section>
         <q-card-section class="flex justify-between gap-10 items-center">
           <div class="text-caption">
-            Verfication code has been sent to your email
+            {{ desc }}
           </div>
           <div class="resendCode text-blue">
             <q-btn
@@ -48,7 +48,7 @@
             color="primary"
             label="Verify"
             type="submit"
-            :loading="loading.verifyEmailAddressLoading"
+            :loading="prop.verifyEmailLoading"
           />
         </q-card-section>
       </q-form>
@@ -57,27 +57,29 @@
 </template>
 
 <script lang="ts" setup>
+import useLogin from "~/composable/useLogin";
 const emit = defineEmits<{
   (e: "successfullyEmailVerified"): void;
+  (e: "code", data: string): void;
 }>();
 
 interface OpenDialogType {
   dialog: boolean;
-  massage: string;
   email: string;
   registerMode?: boolean;
 }
-import useLogin from "~/composable/useLogin";
-
-const { verifyEmailAddress, resendCode } = useLogin();
 const prop = defineProps<{
   openDialog: OpenDialogType;
+  verifyEmailLoading: boolean;
+  title: string;
+  desc: string;
 }>();
+const { resendEmailVerificationCode } = useLogin();
+
 const code = ref("");
 const cooldown = ref<any>(0);
 const resendCodeCount = ref(0);
 const loading = ref({
-  verifyEmailAddressLoading: false,
   resendEmailAddressLoading: false,
 });
 let timer: ReturnType<typeof setInterval> | null = null;
@@ -99,22 +101,19 @@ watch(
 
 function handleVerify() {
   if (!code.value) return;
-  const data = {
-    email: prop.openDialog.email,
-    code: code.value,
-  };
-  loading.value.verifyEmailAddressLoading = true;
-  verifyEmailAddress(data)
-    .then(() => {
-      prop.openDialog.dialog = false;
-      emit("successfullyEmailVerified");
-    })
-    .catch((response) => {
-      console.log(response);
-    })
-    .finally(() => {
-      loading.value.verifyEmailAddressLoading = false;
-    });
+  emit("code", code.value);
+
+  // verifyEmailAddress(data)
+  //   .then(() => {
+  //     prop.openDialog.dialog = false;
+  //     emit("successfullyEmailVerified");
+  //   })
+  //   .catch((response) => {
+  //     console.log(response);
+  //   })
+  //   .finally(() => {
+  //     loading.value.verifyEmailAddressLoading = false;
+  //   });
 }
 function startCooldown(seconds: number | undefined) {
   cooldown.value = seconds;
@@ -131,7 +130,7 @@ function startCooldown(seconds: number | undefined) {
 function resendEmailFn() {
   if (cooldown.value > 0) return; // prevent extra clicks
   loading.value.resendEmailAddressLoading = true;
-  resendCode({ email: prop.openDialog.email })
+  resendEmailVerificationCode({ email: prop.openDialog.email })
     .then(() => {
       // Backend success → start full 60s cooldown
       prop.openDialog.registerMode = false;
