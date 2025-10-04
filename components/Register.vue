@@ -88,8 +88,8 @@
       :verifyEmailLoading="loading.verifyEmailAddressLoading"
       :loginOption="loginOption"
       @code="verifyEmailFn"
-      title="Verify your Email"
-      desc="Verfication code has been sent to your email"
+      :titles="setMsgForDialog"
+      :error-massage="errorMassageForDialog"
     />
     <CommonDoneMassage
       v-model="openSucssesMsg"
@@ -133,22 +133,30 @@ const verifyEmail = ref<VerifyEmailType>({
   email: "",
   registerMode: false,
 });
+const setMsgForDialog = ref({
+  title: "Verify your Email",
+  desc: "Verfication code has been sent to your email",
+});
 const openSucssesMsg = ref<boolean>(false);
 const accountHasBeenCreatedOrNotMassage = ref<string>("");
-const loginOption = ref<string>("")
+const loginOption = ref<string>("");
+const errorMassageForDialog = ref({
+  massage: "",
+  error: false,
+});
 
 const onSubmit = handleSubmit((values) => {
   delete values.confirmPassword;
   loading.value.registerLoading = true;
   register(values)
-    .then((response) => {
+    .then(() => {
       const setData = {
         dialog: true,
         email,
         registerMode: true,
       };
       verifyEmail.value = setData;
-      loginOption.value = "signup"
+      loginOption.value = "signup";
     })
     .catch((response) => {
       handleError(response);
@@ -165,7 +173,6 @@ function handleError(response: any) {
   if (!validation) {
     const setData = {
       dialog: true,
-      massage: massage,
       email,
     };
     verifyEmail.value = setData;
@@ -189,7 +196,11 @@ function verifyEmailFn(code: string) {
       successfullyEmailVerifiedFn();
     })
     .catch((response) => {
-      console.log(response);
+      const setMaasage = {
+        massage: response.msg,
+        error: true,
+      };
+      errorMassageForDialog.value = setMaasage;
     })
     .finally(() => {
       loading.value.verifyEmailAddressLoading = false;

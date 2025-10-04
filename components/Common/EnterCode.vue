@@ -3,7 +3,7 @@
     <q-card class="q-pa-md" style="max-width: 400px">
       <!-- Title / Message -->
       <q-card-section class="text-h6 text-center">
-        {{ title }}
+        {{ titles.title }}
       </q-card-section>
 
       <!-- Input for verification code -->
@@ -15,11 +15,13 @@
             outlined
             dense
             autofocus
+            :error="errorMassage.error"
+            :error-message="errorMassage.massage"
           />
         </q-card-section>
-        <q-card-section class="flex  items-center justify-center full-width">
+        <q-card-section class="flex items-center justify-center full-width">
           <div class="text-caption">
-            {{ desc }}
+            {{ titles.desc }}
           </div>
           <div class="resendCode text-blue">
             <q-btn
@@ -68,14 +70,22 @@ interface OpenDialogType {
   email: string;
   registerMode?: boolean;
 }
+interface TitlesType {
+  title: string;
+  desc: string;
+}
+interface ErrorMassage {
+  massage: string;
+  error: boolean;
+}
 const prop = defineProps<{
   openDialog: OpenDialogType;
   verifyEmailLoading: boolean;
-  title: string;
-  desc: string;
-  loginOption:string
+  titles: TitlesType;
+  loginOption: string;
+  errorMassage: ErrorMassage;
 }>();
-const { resendEmailVerificationCode ,resend2faCode } = useLogin();
+const { resendEmailVerificationCode, resend2faCode } = useLogin();
 
 const code = ref("");
 const cooldown = ref<any>(0);
@@ -87,17 +97,6 @@ let timer: ReturnType<typeof setInterval> | null = null;
 
 const cooldownLabel = computed(() =>
   cooldown.value > 0 ? `Resend in ${cooldown.value}s` : "Resend Code"
-);
-watch(
-  () => prop.openDialog.dialog,
-  (val) => {
-    if (val) {
-      resendCodeCount.value = resendCodeCount.value + 1;
-      if (resendCodeCount.value <= 1 && !prop.openDialog.registerMode) {
-        resendEmailFn();
-      }
-    }
-  }
 );
 
 function handleVerify() {
@@ -119,12 +118,14 @@ function startCooldown(seconds: number | undefined) {
 function resendEmailFn() {
   if (cooldown.value > 0) return; // prevent extra clicks
   loading.value.resendEmailAddressLoading = true;
-   let handleRequest 
-   if(prop.loginOption === "signup") {
-    handleRequest = resendEmailVerificationCode({ email: prop.openDialog.email })
-   }else {
-    handleRequest = resend2faCode({ email: prop.openDialog.email })
-   }
+  let handleRequest;
+  if (prop.loginOption === "signup") {
+    handleRequest = resendEmailVerificationCode({
+      email: prop.openDialog.email,
+    });
+  } else {
+    handleRequest = resend2faCode({ email: prop.openDialog.email });
+  }
   handleRequest
     .then(() => {
       // Backend success → start full 60s cooldown
