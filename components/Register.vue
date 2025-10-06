@@ -99,6 +99,7 @@
       color="positive"
       button-label="Go to Login"
       @action="makeEmptyQuery"
+      :closePermit="true"
     />
   </q-card>
 </template>

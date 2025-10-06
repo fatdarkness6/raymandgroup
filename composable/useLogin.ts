@@ -1,5 +1,4 @@
 import axios from "axios";
-
 export default function useLogin() {
   function register(data: any) {
     return axios.post(
@@ -37,6 +36,12 @@ export default function useLogin() {
       data
     );
   }
+  function forgotPassword(data: any) {
+    return axios.post("https://raymand-backend-8hbo.onrender.com/auth/forgot-password", data);
+  }
+  function resetPassword(data: any) {
+    return axios.post("https://raymand-backend-8hbo.onrender.com/auth/reset-password", data);
+  }
   function profile(token: string) {
     return axios.get("https://raymand-backend-8hbo.onrender.com/auth/profile", {
       headers: {
@@ -51,6 +56,8 @@ export default function useLogin() {
     login,
     resend2faCode,
     verify2faCode,
+    forgotPassword,
+    resetPassword,
     profile,
   };
 }

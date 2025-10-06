@@ -10,10 +10,8 @@
       <div class="login-signUp-form flex justify-center items-center">
         <div class="form-slider-wrapper">
           <div
-            :class="[
-              'form-slider relative flex items-center no-wrap',
-              setClass && 'transform-left',
-            ]"
+            class="form-slider relative flex items-center no-wrap transition-all duration-500"
+            :style="{ transform: setTransformClass }"
           >
             <div class="v-bg">
               <video autoplay muted loop playsinline>
@@ -23,6 +21,7 @@
             </div>
             <Login />
             <Register />
+            <ForgotPassword />
           </div>
         </div>
       </div>
@@ -32,7 +31,7 @@
 <script setup lang="ts">
 definePageMeta({ layout: false });
 
-const setClass = ref<any>(false);
+const setTransformClass = ref<string>("");
 const route = useRoute();
 
 watch(
@@ -43,9 +42,11 @@ watch(
 );
 function addClassAccordingToQuery(value: any) {
   if (value === "sign-up") {
-    setClass.value = true;
+    setTransformClass.value = "translateX(-33.33%)";
+  } else if (value === "forgot-password") {
+    setTransformClass.value = "translateX(-66.66%)";
   } else {
-    setClass.value = false;
+    setTransformClass.value = "translateX(0%)";
   }
 }
 

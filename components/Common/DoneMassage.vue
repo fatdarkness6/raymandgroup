@@ -1,5 +1,5 @@
 <template>
-  <q-dialog v-model="model">
+  <q-dialog v-model="model" :persistent="!closePermit">
     <q-card class="q-pa-lg q-ma-md shadow-3 rounded-borders done-dialog">
       <div class="flex flex-center column q-gutter-md">
         <!-- Icon -->
@@ -34,6 +34,7 @@ interface Props {
   icon?: string;
   color?: string;
   buttonLabel?: string;
+  closePermit:boolean
 }
 
 const props = withDefaults(defineProps<Props>(), {

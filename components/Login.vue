@@ -74,7 +74,7 @@
             label="Remember me"
             class="custom-checkbox"
           />
-          <div class="text-weight-medium">Forgot Password?</div>
+          <div style="cursor: pointer;" class="text-weight-medium" @click="$router.push({ query: { form: 'forgot-password' } })">Forgot Password?</div>
         </div>
       </q-card-section>
 
