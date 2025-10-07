@@ -29,7 +29,7 @@
             input-class="text-subtitle1"
           />
           <div v-if="showError.error" class="text-red text-subtitle2">
-            {{ showError.massage }}
+            {{ showError.message }}
           </div>
           <q-btn
             type="submit"
@@ -64,10 +64,10 @@
           >
         </div>
       </q-card-section>
-      <CommonDoneMassage
-        v-model="openDoneMassage"
+      <CommonDonemessage
+        v-model="openDonemessage"
         title="Email has been sent successfully"
-        massage="Forgot password email has been snet to you email . pleas check your email"
+        message="Forgot password email has been snet to you email . pleas check your email"
         icon="fa-solid fa-circle-check"
         button-label="Go to Login"
         @action="makeEmptyQuery"
@@ -91,26 +91,26 @@ const { handleSubmit, resetForm } = useForm({
 const { value: email, errorMessage: emailError } = useField<string>("email");
 const loading = ref(false);
 const showError = ref({
-  massage: "",
+  message: "",
   error: false,
 });
-const openDoneMassage = ref(false);
+const openDonemessage = ref(false);
 const onSubmit = handleSubmit((values) => {
   loading.value = true;
   forgotPassword({ email: values.email })
     .then(() => {
       resetForm();
       showError.value = {
-        massage: "",
+        message: "",
         error: false,
       };
-      openDoneMassage.value = true;
+      openDonemessage.value = true;
     })
     .catch((res) => {
-      const massage = res.response.data.msg;
-      error(massage);
+      const message = res.response.data.msg;
+      error(message);
       showError.value = {
-        massage: massage,
+        message: message,
         error: true,
       };
     })

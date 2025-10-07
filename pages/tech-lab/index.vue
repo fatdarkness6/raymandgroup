@@ -143,18 +143,6 @@ const con2Data = [
     desc: t("tech-Lab_page.generalInfo.missionDesc"),
   },
 ];
-const visitorData = [
-  {
-    name: "tech-Lab_page.routes.soilLab.container3.services.service2.name",
-    icon: "fa-solid fa-vials",
-    desc: "tech-Lab_page.routes.soilLab.container3.services.service2.description",
-  },
-  {
-    name: "tech-Lab_page.routes.soilLab.container3.services.service3.name",
-    icon: "fa-solid fa-vial-virus",
-    desc: "tech-Lab_page.routes.soilLab.container3.services.service3.description",
-  },
-];
 const con3Data = computed<ButtonItem[][]>(() => [
   [
     { title: t("common.about_us"), route: "about-us", color: "red" },
@@ -175,7 +163,7 @@ const con3Data = computed<ButtonItem[][]>(() => [
   [
     {
       title: t("tech-Lab_page.shortCuts.innovationLab"),
-      route: "innovation-lab",
+      route: "profile",
       color: "red",
     },
     { title: t("tech-Lab_page.shortCuts.petLab"), route: "pet-lab" },

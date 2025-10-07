@@ -50,7 +50,7 @@
 
           <!-- Submit button -->
           <div class="text-red" v-if="accountIsExistOrNot.error">
-            {{ accountIsExistOrNot.massage }}
+            {{ accountIsExistOrNot.message }}
           </div>
           <q-btn
             type="submit"
@@ -74,7 +74,13 @@
             label="Remember me"
             class="custom-checkbox"
           />
-          <div style="cursor: pointer;" class="text-weight-medium" @click="$router.push({ query: { form: 'forgot-password' } })">Forgot Password?</div>
+          <div
+            style="cursor: pointer"
+            class="text-weight-medium"
+            @click="$router.push({ query: { form: 'forgot-password' } })"
+          >
+            Forgot Password?
+          </div>
         </div>
       </q-card-section>
 
@@ -97,7 +103,7 @@
       :loginOption="loginOption"
       @code="verify2faCodeFn"
       :titles="setMsgForDialog"
-      :errorMassage="errorMassageForDialog"
+      :errormessage="errormessageForDialog"
     />
   </q-card>
 </template>
@@ -127,11 +133,11 @@ const loading = ref({
 });
 const loginOption = ref<string>("");
 const accountIsExistOrNot = ref({
-  massage: "",
+  message: "",
   error: false,
 });
-const errorMassageForDialog = ref({
-  massage: "",
+const errormessageForDialog = ref({
+  message: "",
   error: false,
 });
 
@@ -152,7 +158,7 @@ function loginFn(data: any) {
   login(data)
     .then(() => {
       accountIsExistOrNot.value = {
-        massage: "",
+        message: "",
         error: false,
       };
       loginOption.value = "signin";
@@ -194,7 +200,7 @@ function handleError(response: any) {
   else if (msg === "Invalid credentials") {
     error(msg);
     accountIsExistOrNot.value = {
-      massage: msg,
+      message: msg,
       error: true,
     };
   }
@@ -247,8 +253,8 @@ function handleError(response: any) {
 }
 
 function verify2faCodeFn(code: string) {
-  errorMassageForDialog.value = {
-    massage: "",
+  errormessageForDialog.value = {
+    message: "",
     error: false,
   };
   const data = {
@@ -272,10 +278,10 @@ function verify2faCodeFn(code: string) {
       const msg = response.msg || "Something went wrong";
       error(msg);
       const setMaasage = {
-        massage: msg,
+        message: msg,
         error: true,
       };
-      errorMassageForDialog.value = setMaasage;
+      errormessageForDialog.value = setMaasage;
     })
     .finally(() => (loading.value.verify2faLoading = false));
 }

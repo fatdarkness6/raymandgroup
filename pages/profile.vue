@@ -108,20 +108,31 @@ const userData = ref({
 });
 
 onMounted(() => {
-  const token = localStorage.getItem("token");
-  if (!token) {
-    navigateTo("/login");
+  let getTokenFromLocalStorage = localStorage.getItem("token");
+  if (!getTokenFromLocalStorage) {
+    navigateToAnotherRoute("login");
   } else {
-    getUserData(token);
+    getUserData(getTokenFromLocalStorage);
   }
 });
-
+function navigateToAnotherRoute(val: string) {
+  navigateTo(val);
+}
 function getUserData(token: string) {
   profile(token)
     .then((res: any) => {
       userData.value = res.data;
     })
-    .catch((err) => error(err));
+    .catch((err) => {
+      let getTokenFromLocalStorage = localStorage.getItem("token");
+      if (err.status === 401) {
+        if (getTokenFromLocalStorage) {
+          localStorage.removeItem("token");
+        }
+        navigateToAnotherRoute("login");
+      }
+      error(err.message);
+    });
 }
 
 function formatDate(dateStr: string) {

@@ -15,8 +15,8 @@
             outlined
             dense
             autofocus
-            :error="errorMassage.error"
-            :error-message="errorMassage.massage"
+            :error="errormessage.error"
+            :error-message="errormessage.message"
           />
         </q-card-section>
         <q-card-section class="flex items-center justify-center full-width">
@@ -74,8 +74,8 @@ interface TitlesType {
   title: string;
   desc: string;
 }
-interface ErrorMassage {
-  massage: string;
+interface Errormessage {
+  message: string;
   error: boolean;
 }
 const prop = defineProps<{
@@ -83,7 +83,7 @@ const prop = defineProps<{
   verifyEmailLoading: boolean;
   titles: TitlesType;
   loginOption: string;
-  errorMassage: ErrorMassage;
+  errormessage: Errormessage;
 }>();
 const { resendEmailVerificationCode, resend2faCode } = useLogin();
 

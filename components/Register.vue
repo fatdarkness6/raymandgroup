@@ -71,7 +71,7 @@
         >
       </q-form>
       <div class="text-red">
-        {{ accountHasBeenCreatedOrNotMassage }}
+        {{ accountHasBeenCreatedOrNotmessage }}
       </div>
       <div class="text-center text-weight-md">
         Already have an account?
@@ -89,9 +89,9 @@
       :loginOption="loginOption"
       @code="verifyEmailFn"
       :titles="setMsgForDialog"
-      :error-massage="errorMassageForDialog"
+      :error-message="errormessageForDialog"
     />
-    <CommonDoneMassage
+    <CommonDonemessage
       v-model="openSucssesMsg"
       title="Email Verified"
       message="You can now log in with your account."
@@ -139,10 +139,10 @@ const setMsgForDialog = ref({
   desc: "Verfication code has been sent to your email",
 });
 const openSucssesMsg = ref<boolean>(false);
-const accountHasBeenCreatedOrNotMassage = ref<string>("");
+const accountHasBeenCreatedOrNotmessage = ref<string>("");
 const loginOption = ref<string>("");
-const errorMassageForDialog = ref({
-  massage: "",
+const errormessageForDialog = ref({
+  message: "",
   error: false,
 });
 
@@ -170,7 +170,7 @@ const onSubmit = handleSubmit((values) => {
 function handleError(response: any) {
   const responseFromFetch = response.response.data;
   const validation = responseFromFetch.isVerified;
-  const massage = responseFromFetch.msg;
+  const message = responseFromFetch.msg;
   if (!validation) {
     const setData = {
       dialog: true,
@@ -178,11 +178,11 @@ function handleError(response: any) {
     };
     verifyEmail.value = setData;
   } else if (validation) {
-    accountHasBeenCreatedOrNotMassage.value =
-      massage + " " + "please login in to your account";
-    error(massage);
+    accountHasBeenCreatedOrNotmessage.value =
+      message + " " + "please login in to your account";
+    error(message);
   } else {
-    error(massage);
+    error(message);
   }
 }
 function verifyEmailFn(code: string) {
@@ -198,10 +198,10 @@ function verifyEmailFn(code: string) {
     })
     .catch((response) => {
       const setMaasage = {
-        massage: response.msg,
+        message: response.msg,
         error: true,
       };
-      errorMassageForDialog.value = setMaasage;
+      errormessageForDialog.value = setMaasage;
     })
     .finally(() => {
       loading.value.verifyEmailAddressLoading = false;

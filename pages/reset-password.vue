@@ -2,7 +2,7 @@
   <div class="f-height">
     <q-card
       flat
-      style="max-width: 400px;"
+      style="max-width: 400px"
       class="reset-password full-width space-between-each-sections space-between-each-sections-bottom q-pa-sm rounded-10 relative"
     >
       <div class="relative" style="z-index: 2">
@@ -52,7 +52,7 @@
             >
             </q-input>
             <div v-if="showError.error" class="text-red text-subtitle2">
-              {{ showError.massage }}
+              {{ showError.message }}
             </div>
             <q-btn
               type="submit"
@@ -67,10 +67,10 @@
             </q-btn>
           </q-form>
         </q-card-section>
-        <CommonDoneMassage
-          v-model="openDoneMassage"
+        <CommonDonemessage
+          v-model="openDonemessage"
           title="Reset Password successfully"
-          massage="Your Password is changed successfully"
+          message="Your Password is changed successfully"
           icon="fa-solid fa-circle-check"
           button-label="Go to Login"
           @action="goToLogin"
@@ -102,10 +102,10 @@ const { value: confirmPassword, errorMessage: confirmPassError } =
 const loading = ref(false);
 const isPwd = ref(true);
 const showError = ref({
-  massage: "",
+  message: "",
   error: false,
 });
-const openDoneMassage = ref(false);
+const openDonemessage = ref(false);
 const onSubmit = handleSubmit((values) => {
   loading.value = true;
   const data = {
@@ -117,36 +117,36 @@ const onSubmit = handleSubmit((values) => {
     .then(() => {
       resetForm();
       showError.value = {
-        massage: "",
+        message: "",
         error: false,
       };
-      openDoneMassage.value = true;
+      openDonemessage.value = true;
     })
     .catch((res) => {
-      const massage = res.response.data.msg;
-      error(massage);
+      const message = res.response.data.msg;
+      error(message);
       console.log();
       showError.value = {
-        massage: massage,
+        message: message,
         error: true,
       };
     })
     .finally(() => (loading.value = false));
 });
 function goToLogin() {
-    router.replace("/login")
+  router.replace("/login");
 }
 onMounted(() => {
-    if (!route.query.email && !route.query.token ) {
-        router.push("/")
-    }
-})
+  if (!route.query.email && !route.query.token) {
+    router.push("/");
+  }
+});
 </script>
 <style scoped>
 .f-height {
-    height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 </style>

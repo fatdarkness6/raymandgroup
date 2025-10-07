@@ -155,7 +155,7 @@
       </g>
     </svg>
     <div class="flex items-center justify-center q-mt-xl column">
-      <h5 class="text-center error-massage text404">
+      <h5 class="text-center error-message text404">
         Oops! The page you’re looking for doesn’t exist or has been moved.
       </h5>
       <q-btn
@@ -171,7 +171,7 @@
   </div>
 </template>
 <script lang="ts" setup>
-const localePath = useLocalePath()
+const localePath = useLocalePath();
 </script>
 <style scoped>
 @import "@/assets/css/components/Animation/404Animation.css";
@@ -208,7 +208,7 @@ const localePath = useLocalePath()
   fill: #4c423b;
 }
 
-.error-massage {
+.error-message {
   animation: fadeIn 1s ease-in-out forwards;
   animation-delay: 1s;
   opacity: 0;

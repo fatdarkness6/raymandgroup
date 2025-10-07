@@ -49,10 +49,11 @@
   }
 }
 @media (max-width: 1023px) {
-.login-btn-none {
+  .login-btn-none {
     display: none;
   }
-  .login-btn , .ham-menu {
+  .login-btn,
+  .ham-menu {
     width: 80px;
   }
 }
@@ -178,7 +179,7 @@
   }
 }
 @media (max-width: 560px) {
-  .error-massage.text404 {
+  .error-message.text404 {
     font-size: 17px;
   }
   .res-h2 {
