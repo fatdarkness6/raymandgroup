@@ -24,7 +24,7 @@
             v-model="email"
             label="Email"
             type="email"
-            :error="!!emailError"
+            :error="!!emailError || showError.error"
             :error-message="emailError"
             input-class="text-subtitle1"
           />
@@ -89,14 +89,14 @@ const { handleSubmit, resetForm } = useForm({
   validationSchema: forgotPasswordSchema,
 });
 const { value: email, errorMessage: emailError } = useField<string>("email");
-const loading = ref(false)
+const loading = ref(false);
 const showError = ref({
   massage: "",
   error: false,
 });
 const openDoneMassage = ref(false);
 const onSubmit = handleSubmit((values) => {
-  loading.value = true
+  loading.value = true;
   forgotPassword({ email: values.email })
     .then(() => {
       resetForm();
@@ -104,18 +104,17 @@ const onSubmit = handleSubmit((values) => {
         massage: "",
         error: false,
       };
-      openDoneMassage.value = true
+      openDoneMassage.value = true;
     })
     .catch((res) => {
       const massage = res.response.data.msg;
       error(massage);
-      console.log();
       showError.value = {
         massage: massage,
         error: true,
       };
     })
-    .finally(() => loading.value = false)
+    .finally(() => (loading.value = false));
 });
 function makeEmptyQuery() {
   router.push("");
