@@ -71,7 +71,7 @@
         >
       </q-form>
       <div class="text-red">
-        {{ accountHasBeenCreatedOrNotmessage }}
+        {{ accountIsExistOrNot.message }}
       </div>
       <div class="text-center text-weight-md">
         Already have an account?
@@ -89,9 +89,9 @@
       :loginOption="loginOption"
       @code="verifyEmailFn"
       :titles="setMsgForDialog"
-      :error-message="errormessageForDialog"
+      :errorMessage="errormessageForDialog"
     />
-    <CommonDonemessage
+    <CommonDoneMessage
       v-model="openSucssesMsg"
       title="Email Verified"
       message="You can now log in with your account."
@@ -139,7 +139,10 @@ const setMsgForDialog = ref({
   desc: "Verfication code has been sent to your email",
 });
 const openSucssesMsg = ref<boolean>(false);
-const accountHasBeenCreatedOrNotmessage = ref<string>("");
+const accountIsExistOrNot = ref({
+  message : "",
+  error : false
+});
 const loginOption = ref<string>("");
 const errormessageForDialog = ref({
   message: "",
@@ -168,23 +171,67 @@ const onSubmit = handleSubmit((values) => {
 });
 
 function handleError(response: any) {
-  const responseFromFetch = response.response.data;
-  const validation = responseFromFetch.isVerified;
-  const message = responseFromFetch.msg;
-  if (!validation) {
-    const setData = {
+  const res = response?.response?.data || {};
+  const msg: string = res.msg || "Something went wrong";
+  const validation: boolean | undefined = res.isVerified;
+  const status: number | undefined = response?.response?.status;
+
+  // === Email not verified ===
+  if (validation === false || msg.toLowerCase().includes("email not verified")) {
+    loginOption.value = "signup";
+    setMsgForDialog.value = {
+      title: "Verify your Email",
+      desc: "A verification code has been sent to your email.",
+    };
+    verifyEmail.value = {
       dialog: true,
       email,
     };
-    verifyEmail.value = setData;
-  } else if (validation) {
-    accountHasBeenCreatedOrNotmessage.value =
-      message + " " + "please login in to your account";
-    error(message);
-  } else {
-    error(message);
+    return;
   }
+
+  // === Invalid credentials ===
+  if (msg === "Invalid credentials") {
+    error(msg);
+    accountIsExistOrNot.value = {
+      message: msg,
+      error: true,
+    };
+    return;
+  }
+
+  // === Verification code expired ===
+  if (msg.toLowerCase().includes("verification code expired")) {
+    setMsgForDialog.value = {
+      title: "Code Expired ⌛",
+      desc: "Your verification code has expired. Please request a new one.",
+    };
+    verifyEmail.value = {
+      dialog: true,
+      email,
+    };
+    return;
+  }
+
+  // === User already exists ===
+  if (msg.toLowerCase().includes("user already exists")) {
+    accountIsExistOrNot.value = {
+      error : true,
+      message : msg
+    }
+    return;
+  }
+
+  // === User not found ===
+  if (msg.toLowerCase().includes("user not found")) {
+    error("This email address is not registered.");
+    return;
+  }
+
+  // === Generic Error (fallback) ===
+  error(msg);
 }
+
 function verifyEmailFn(code: string) {
   const data = {
     email: email.value,

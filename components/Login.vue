@@ -103,7 +103,7 @@
       :loginOption="loginOption"
       @code="verify2faCodeFn"
       :titles="setMsgForDialog"
-      :errormessage="errormessageForDialog"
+      :errorMessage="errormessageForDialog"
     />
   </q-card>
 </template>

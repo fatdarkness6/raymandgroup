@@ -30,18 +30,6 @@
             >
               {{ t(item) }}
             </AnimationSlideOnce>
-            <AnimationSlideOnce :delay="700">
-              <q-btn
-                push
-                color="primary"
-                :label="t(`tech-Lab_page.routes.soilLab.container2.service`)"
-                type="a"
-                padding="10px 15px"
-                :href="pageContent.container2.link"
-                target="_blank"
-                class="q-mt-md"
-              />
-            </AnimationSlideOnce>
           </AnimationSlideOnceGroup>
         </div>
       </div>

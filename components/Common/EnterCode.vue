@@ -15,8 +15,8 @@
             outlined
             dense
             autofocus
-            :error="errormessage.error"
-            :error-message="errormessage.message"
+            :error="errorMessage.error"
+            :error-message="errorMessage.message"
           />
         </q-card-section>
         <q-card-section class="flex items-center justify-center full-width">
@@ -83,7 +83,7 @@ const prop = defineProps<{
   verifyEmailLoading: boolean;
   titles: TitlesType;
   loginOption: string;
-  errormessage: Errormessage;
+  errorMessage: Errormessage;
 }>();
 const { resendEmailVerificationCode, resend2faCode } = useLogin();
 
