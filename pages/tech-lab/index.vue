@@ -163,7 +163,7 @@ const con3Data = computed<ButtonItem[][]>(() => [
   [
     {
       title: t("tech-Lab_page.shortCuts.innovationLab"),
-      route: "profile",
+      route: "research-cooperation-form",
       color: "red",
     },
     { title: t("tech-Lab_page.shortCuts.petLab"), route: "pet-lab" },
@@ -180,7 +180,7 @@ const con3Data = computed<ButtonItem[][]>(() => [
   [
     {
       title: t("tech-Lab_page.shortCuts.collaborationRequest"),
-      route: "documents",
+      route: "educational-cooperation",
       color: "red",
     },
     {

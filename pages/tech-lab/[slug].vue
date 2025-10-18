@@ -25,6 +25,7 @@
           >
             <AnimationSlideOnce
               class="text-body1 q-mb-md"
+              style="line-height: 40px;"
               v-for="(item, index) in pageContent.container2.texts"
               :delay="index * 100"
             >

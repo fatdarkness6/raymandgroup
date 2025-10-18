@@ -12,6 +12,15 @@ select:-webkit-autofill {
   transition: background-color 99999s ease-in-out 0s !important;
   caret-color: inherit !important;
 }
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none !important;
+  margin: 0;
+}
+
+.no-spinner input[type=number] {
+  -moz-appearance: textfield !important; /* For Firefox */
+}
 .wrapper {
   max-width: 1500px;
   margin: 0 auto;

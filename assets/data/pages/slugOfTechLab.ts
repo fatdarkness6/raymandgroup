@@ -280,11 +280,7 @@ export const labs: any = {
     container2: {
       image: "/images/tech-lab/pharmaCosmeticIndustry/container2.jpg",
       texts: [
-        "tech-Lab_page.routes.pharmaCosmeticIndustry.container2.title1",
-        "tech-Lab_page.routes.pharmaCosmeticIndustry.container2.title2",
-        "tech-Lab_page.routes.pharmaCosmeticIndustry.container2.title3",
-        "tech-Lab_page.routes.pharmaCosmeticIndustry.container2.title4",
-        "tech-Lab_page.routes.pharmaCosmeticIndustry.container2.title5",
+        "tech-Lab_page.routes.pharmaCosmeticIndustry.container2.title",
       ],
       link: "https://google.com",
     },
