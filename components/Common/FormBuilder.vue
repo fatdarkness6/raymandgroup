@@ -52,8 +52,7 @@ const props = defineProps<{
   onSubmit: (values: any) => void;
   customClass?: string;
 }>();
-
-const { handleSubmit, errors, values, setFieldValue, resetForm ,  } = useForm({
+const { handleSubmit, errors, values, setFieldValue, resetForm , defineField } = useForm({
   validationSchema: props.schema,
   initialValues: props.initialValues || {},
   validateOnMount: false,
@@ -67,7 +66,8 @@ const fields = computed(() => {
 
   for (const [key, value] of Object.entries(desc)) {
     const meta = (value as any).meta || {};
-    console.log(meta);
+    console.log(key);
+    defineField(key)
     result[key] = {
       label: meta.label || key,
       type: meta.type || "text",
