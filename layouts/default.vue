@@ -153,58 +153,11 @@
         class="wrapper q-py-xl flex justify-between footer-content row reverse items-start"
       >
         <div class="submit-form flex column" style="width: 200px">
-          <q-form @submit="submit" class="flex justify-center column q-form-m">
-            <q-input
-              v-model="name"
-              :label="$t('common.name&lastname')"
-              :error="!!nameError"
-              :error-message="nameError"
-              :input-style="{
-                color: 'white',
-                fontWeight: 'bold',
-                direction: directionOfElement(locale),
-              }"
-              label-color="white"
-              :dark="true"
-              class="full-width-res"
-            />
-            <q-input
-              v-model="email"
-              :label="$t('common.email')"
-              :error="!!emailError"
-              :error-message="emailError"
-              label-color="white"
-              :input-style="{
-                color: 'white',
-                fontWeight: 'bold',
-              }"
-              :dark="true"
-              class="full-width-res"
-            />
-            <q-input
-              v-model="phone"
-              mask="#### #### ####"
-              :label="$t('common.phone')"
-              :error="!!phoneError"
-              :error-message="phoneError"
-              label-color="white"
-              :input-style="{
-                color: 'white',
-                fontWeight: 'bold',
-              }"
-              :dark="true"
-              class="full-width-res"
-            />
-            <div class="btn full-width flex justify-center">
-              <q-btn
-                type="submit"
-                :label="$t('common.submit')"
-                color="accent"
-                :loading="loading"
-                class="q-mt-md custom-button full-width"
-              />
-            </div>
-          </q-form>
+          <CommonFormBuilder
+            :schema="defaultLayoutSchema(t)"
+            :onSubmit="submit"
+            custom-class="column q-gutter-md"
+          />
         </div>
         <div class="site-map flex column justify-center items-center">
           <span class="text-h6">{{ $t("footer.site_pages") }}</span>
@@ -444,42 +397,38 @@ const canSubmit = ref(true);
 const leftDrawerOpen = ref(false);
 const cooldownTime = 100000;
 
-// Define fields
-const { value: name, errorMessage: nameError } = useField<string>("name");
-const { value: email, errorMessage: emailError } = useField<string>("email");
-const { value: phone, errorMessage: phoneError } = useField<string>("phone");
-
 const localePath = useLocalePath();
 // Submit handler
-const submit = handleSubmit((values) => {
-  if (!canSubmit.value) {
-    error("Please wait before submitting again.");
-    return;
-  }
+function submit(values : any) {
+  console.log(values);
+  // if (!canSubmit.value) {
+  //   error("Please wait before submitting again.");
+  //   return;
+  // }
 
-  canSubmit.value = false;
-  loading.value = true;
-  const cleanedValues = {
-    ...values,
-    phone: values.phone.replace(/\s+/g, ""),
-  };
-  submitForm(cleanedValues)
-    .then((response) => {
-      if (response.status === 200) {
-        showSuccessDialog.value = true;
-        resetForm();
-      }
-    })
-    .catch(() => {
-      error("Something went wrong.");
-    })
-    .finally(() => {
-      loading.value = false;
-      setTimeout(() => {
-        canSubmit.value = true;
-      }, cooldownTime);
-    });
-});
+  // canSubmit.value = false;
+  // loading.value = true;
+  // const cleanedValues = {
+  //   ...values,
+  //   phone: values.phone.replace(/\s+/g, ""),
+  // };
+  // submitForm(cleanedValues)
+  //   .then((response) => {
+  //     if (response.status === 200) {
+  //       showSuccessDialog.value = true;
+  //       resetForm();
+  //     }
+  //   })
+  //   .catch(() => {
+  //     error("Something went wrong.");
+  //   })
+  //   .finally(() => {
+  //     loading.value = false;
+  //     setTimeout(() => {
+  //       canSubmit.value = true;
+  //     }, cooldownTime);
+  //   });
+}
 
 function switchLanguage(lang: any) {
   setLocale(lang);
