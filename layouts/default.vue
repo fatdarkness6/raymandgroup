@@ -156,8 +156,18 @@
           <CommonFormBuilder
             :schema="defaultLayoutSchema(t)"
             :onSubmit="submit"
+            :input-props="{ color: 'white', labelColor: 'white', dark: true}"
             custom-class="column q-gutter-md"
-          />
+          >
+            <template #defualt>
+              <q-btn
+                :label="t(`common.submit`)"
+                color="accent"
+                padding="10px"
+                type="submit"
+              />
+            </template>
+          </CommonFormBuilder>
         </div>
         <div class="site-map flex column justify-center items-center">
           <span class="text-h6">{{ $t("footer.site_pages") }}</span>
@@ -399,7 +409,7 @@ const cooldownTime = 100000;
 
 const localePath = useLocalePath();
 // Submit handler
-function submit(values : any) {
+function submit(values: any) {
   console.log(values);
   // if (!canSubmit.value) {
   //   error("Please wait before submitting again.");

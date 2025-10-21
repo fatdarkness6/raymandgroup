@@ -4,7 +4,7 @@
       <template v-for="(field, key) in fields" :key="key">
         <!-- Text, email, password -->
         <q-input
-          v-if="['text', 'email', 'password'].includes(field.type)"
+          v-if="['text', 'email', 'password' , 'number'].includes(field.type)"
           :model-value="values[key]"
           @update:model-value="setFieldValue(key, $event)"
           :label="field.label"
@@ -12,7 +12,8 @@
           filled
           :error="!!errors[key]"
           :error-message="errors[key]"
-          :class="['styled-input', field.class]"
+          :class="field.class"
+          v-bind="inputProps"
         />
 
         <!-- Textarea -->
@@ -29,15 +30,9 @@
           :class="['styled-input', field.class]"
         />
 
-        <!-- Button -->
-        <q-btn
-          v-else-if="field.type === 'button'"
-          :label="field.label"
-          :color="field.color || 'primary'"
-          :type="field.submit ? 'submit' : 'button'"
-          :class="['styled-input', field.class]"
-        />
       </template>
+      <slot name="defualt">
+      </slot>
     </div>
   </q-form>
 </template>
@@ -51,25 +46,26 @@ const props = defineProps<{
   initialValues?: Record<string, any>;
   onSubmit: (values: any) => void;
   customClass?: string;
+  inputProps?: Record<string, any>;
 }>();
-const { handleSubmit, errors, values, setFieldValue, resetForm , defineField } = useForm({
-  validationSchema: props.schema,
-  initialValues: props.initialValues || {},
-  validateOnMount: false,
-});
+const { handleSubmit, errors, values, setFieldValue, resetForm, defineField } =
+  useForm({
+    validationSchema: props.schema,
+    initialValues: props.initialValues || {},
+    validateOnMount: false,
+  });
 
 // ✅ Safely describe schema fields
 const fields = computed(() => {
   const desc = props.schema.describe().fields as Record<string, any>;
-  
+
   const result: Record<string, any> = {};
 
   for (const [key, value] of Object.entries(desc)) {
     const meta = (value as any).meta || {};
-    console.log(key);
-    defineField(key)
+    defineField(key);
     result[key] = {
-      label: meta.label || key,
+      label: value.label || key,
       type: meta.type || "text",
       ...meta,
     };
