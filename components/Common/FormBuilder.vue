@@ -12,14 +12,19 @@
           expand-separator
           :default-opened="sIndex === 0"
         >
+          <!-- Dynamic Inputs -->
+           <div v-for="(field, fIndex) in section.value.fields">
+            {{ console.log(section.value) }}
+           </div>
           <div
             class="row q-col-gutter-sm q-mt-sm"
             v-if="section?.value?.meta?.type === 'input'"
           >
             <q-input
               v-for="(field, fIndex) in section.value.fields"
-              :model-value="values[field.key]"
-              @update:model-value="setFieldValue(field.key, $event)"
+              :key="field.key"
+              :model-value="getValue(field.key)"
+              @update:model-value="setValue(field.key, $event)"
               :label="field.label"
               :type="field.type"
               :error="!!errors[field.key]"
@@ -30,14 +35,13 @@
           </div>
 
           <!-- Dynamic Textareas -->
-
           <div
             class="q-mt-sm"
             v-else-if="section?.value.meta?.type === 'textarea'"
           >
             <q-input
-              :model-value="values[section.key]"
-              @update:model-value="setFieldValue(section.key, $event)"
+              :model-value="getValue(section.key)"
+              @update:model-value="setValue(section.key, $event)"
               :error="!!errors[section.key]"
               :error-message="errors[section.key]"
               type="textarea"
@@ -46,21 +50,10 @@
               class="styled-input"
             />
           </div>
-          <!-- {{ (fields) }} -->
-          <!-- <div class="text-right q-mt-sm">
-                <q-btn
-                  outline
-                  :color="color"
-                  icon="fa-solid fa-plus"
-                  label="افزودن ردیف جدید"
-                  class="action-btn"
-                  @click="addEducation"
-                />
-              </div> -->
         </q-expansion-item>
       </template>
+
       <template v-else v-for="(field, key) in fields" :key="key">
-        <!-- Text, email, password -->
         <q-input
           v-if="['text', 'email', 'password', 'number'].includes(field.type)"
           :model-value="values[key]"
@@ -74,7 +67,6 @@
           v-bind="inputProps"
         />
 
-        <!-- Textarea -->
         <q-input
           v-else-if="field.type === 'textarea'"
           :model-value="values[key]"
@@ -88,7 +80,7 @@
           :class="['styled-input', field.class]"
         />
       </template>
-      <slot name="default"> </slot>
+      <slot name="default"></slot>
     </div>
   </q-form>
 </template>
@@ -104,14 +96,14 @@ const props = defineProps<{
   customClass?: string;
   inputProps?: Record<string, any>;
 }>();
-const { handleSubmit, errors, values, setFieldValue, resetForm, defineField } =
-  useForm({
-    validationSchema: props.schema,
-    initialValues: props.initialValues || {},
-    validateOnMount: false,
-  });
 
-// ✅ Safely describe schema fields
+const { handleSubmit, errors, values, setFieldValue, defineField } = useForm({
+  validationSchema: props.schema,
+  initialValues: props.initialValues || {},
+  validateOnMount: false,
+});
+
+// ✅ Map schema fields
 const fields = computed(() => {
   const desc = props.schema.describe().fields as Record<string, any>;
   const result: Record<string, any> = {};
@@ -125,12 +117,10 @@ const fields = computed(() => {
       ...meta,
     };
   }
-  if (props.sectionStructure) {
-    return sectionStructureFn(desc);
-  } else {
-    return result;
-  }
+  return props.sectionStructure ? sectionStructureFn(desc) : result;
 });
+
+// ✅ Convert schema sections into field arrays
 function sectionStructureFn(desc: any) {
   const data: any[] = [];
   for (const [sectionKey, sectionValue] of Object.entries(desc)) {
@@ -143,7 +133,7 @@ function sectionStructureFn(desc: any) {
     if (fields) {
       for (const [fieldKey, fieldValue] of Object.entries(fields)) {
         const fullPath = `${sectionKey}.${fieldKey}`;
-        defineField(fullPath); // 💥 Important!
+        defineField(fullPath);
         sectionFields.push({
           key: fullPath,
           label: fieldValue.label || fieldKey,
@@ -165,7 +155,15 @@ function sectionStructureFn(desc: any) {
   return data;
 }
 
-const submit = handleSubmit((values) => {
-  props.onSubmit(values);
+// ✅ Helpers to access nested paths reactively
+function getValue(path: string) {
+  return path.split(".").reduce((obj, key) => obj?.[key], values);
+}
+function setValue(path: string, val: any) {
+  setFieldValue(path, val);
+}
+
+const submit = handleSubmit((vals) => {
+  props.onSubmit(vals);
 });
 </script>

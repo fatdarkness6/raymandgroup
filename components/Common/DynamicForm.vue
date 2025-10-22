@@ -65,7 +65,7 @@
                   class="col-12 col-sm-6 styled-input"
                 />
               </div>
-              <!-- <div class="text-right q-mt-sm">
+              <div class="text-right q-mt-sm">
                 <q-btn
                   outline
                   :color="color"
@@ -74,7 +74,7 @@
                   class="action-btn"
                   @click="addEducation"
                 />
-              </div> -->
+              </div>
             </div>
           </q-expansion-item>
         </template>
