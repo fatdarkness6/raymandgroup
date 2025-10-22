@@ -22,7 +22,7 @@
             src="/images/logo-test.svg"
             spinner-color="primary"
             fetchpriority="high"
-            style="height: 50px; width: 50px"
+            style="height: 65px; width: 65px"
             class="logo-img"
           >
             <template v-slot:loading>
@@ -159,7 +159,7 @@
             :input-props="{ color: 'white', labelColor: 'white', dark: true}"
             custom-class="column q-gutter-md"
           >
-            <template #defualt>
+            <template #default>
               <q-btn
                 :label="t(`common.submit`)"
                 color="accent"
