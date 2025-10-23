@@ -1,7 +1,5 @@
 <template>
-    <div class="text-h1">
-        v-hospital
-    </div>
+   <UnderConstructionPage/>
 </template>
 <script setup lang="ts">
 

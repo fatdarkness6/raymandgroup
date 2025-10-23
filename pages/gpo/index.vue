@@ -1,5 +1,5 @@
 <template>
-    <div class="text-h1">gpo</div>
+    <UnderConstructionPage/>
 </template>
 <script lang="ts" setup>
 

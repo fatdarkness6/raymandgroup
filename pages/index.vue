@@ -22,7 +22,7 @@
               </p>
             </div>
           </AnimationSlideOnce>
-          <AnimationSlideOnce :delay="400">
+          <!-- <AnimationSlideOnce :delay="400">
             <div class="part3">
               <q-btn
                 :to="localePath('about-us')"
@@ -33,7 +33,7 @@
                 >{{ $t("common.learn-more") }}</q-btn
               >
             </div>
-          </AnimationSlideOnce>
+          </AnimationSlideOnce> -->
         </AnimationSlideOnceGroup>
       </div>
       <div

@@ -105,7 +105,7 @@
 
         <!-- Login + Language -->
         <div class="login-button flex items-center gap-2">
-          <q-btn
+          <!-- <q-btn
             class="login-btn-none"
             :to="localePath('login')"
             color="primary"
@@ -114,7 +114,7 @@
             padding="10px 20px"
           >
             Login
-          </q-btn>
+          </q-btn> -->
 
           <q-btn-dropdown
             color="white"
@@ -332,7 +332,7 @@
               <div>{{ $t("header.home-page") }}</div>
             </q-item-section>
           </q-item>
-          <q-item
+          <!-- <q-item
             clickable
             @click="navigateTo('/login?form=login')"
             class="menu-item flex items-center"
@@ -343,7 +343,7 @@
             <q-item-section class="text-h6">
               <div>Login</div>
             </q-item-section>
-          </q-item>
+          </q-item> -->
           <q-item
             clickable
             @click="navigateTo('/gpo')"

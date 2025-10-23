@@ -92,11 +92,11 @@
   }
   .hero-section .animation-img {
     justify-content: unset !important;
-    height: 490px !important;
+    height: 300px !important;
   }
   .hero-section .hero-img {
-    width: 200px !important;
-    height: 150px !important;
+    width: 140px !important;
+    height: 90px !important;
   }
   .hero-section .scroll-animation:hover,
   .hero-section .scroll-animation-reverse:hover {

@@ -1,5 +1,5 @@
 <template>
-    <h1>yo man</h1>
+    <UnderConstructionPage/>
 </template>
 <script lang="ts">
 </script>
