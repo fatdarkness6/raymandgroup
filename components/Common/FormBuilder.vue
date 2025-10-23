@@ -8,6 +8,7 @@
       >
         <q-expansion-item
           :label="section.value.label"
+          v-model="openSections[section.key]"
           :icon="section?.value?.meta?.icon"
           expand-separator
           :default-opened="Number(sIndex) === 0"
@@ -23,12 +24,13 @@
               :model-value="String(getValue(field.key) ?? '')"
               @update:model-value="setValue(field.key, $event)"
               :label="field.label"
-              :type="field.type"
+              :type="field?.meta?.type || 'text'"
               :error="!!errors[field.key]"
               :error-message="errors[field.key]"
               filled
               v-bind="inputProps"
               class="col-12 col-sm-6 styled-input"
+              :dir="field?.meta?.direction || direction || 'ltr'"
             />
           </div>
 
@@ -47,6 +49,7 @@
               rows="3"
               v-bind="inputProps"
               class="styled-input"
+              :dir="section?.value.meta?.direction || direction || 'ltr'"
             />
           </div>
         </q-expansion-item>
@@ -64,6 +67,7 @@
           :error-message="errors[key]"
           :class="field.class"
           v-bind="inputProps"
+          :dir="field.direction || direction || 'ltr'"
         />
 
         <q-input
@@ -77,6 +81,7 @@
           :error="!!errors[key]"
           :error-message="errors[key]"
           :class="['styled-input', field.class]"
+          :dir="field?.meta?.direction || direction || 'ltr'"
         />
       </template>
       <slot name="default"></slot>
@@ -94,6 +99,7 @@ const props = defineProps<{
   onSubmit: (values: any) => void;
   customClass?: string;
   inputProps?: Record<string, any>;
+  direction?: string;
 }>();
 
 const { handleSubmit, errors, values, setFieldValue, defineField } = useForm({
@@ -101,6 +107,8 @@ const { handleSubmit, errors, values, setFieldValue, defineField } = useForm({
   initialValues: props.initialValues || {},
   validateOnMount: false,
 });
+
+const openSections = reactive<Record<string, boolean>>({});
 
 const fields = computed(() => {
   const desc = props.schema.describe().fields as Record<string, any>;
@@ -128,13 +136,16 @@ function sectionStructureFn(desc: any) {
 
     const sectionFields = [];
     if (fields) {
-      for (const [fieldKey, fieldValue] of Object.entries(fields) as [string, any][]) {
+      for (const [fieldKey, fieldValue] of Object.entries(fields) as [
+        string,
+        any
+      ][]) {
         const fullPath = `${sectionKey}.${fieldKey}`;
         defineField(fullPath);
         sectionFields.push({
           key: fullPath,
           label: fieldValue.label || fieldKey,
-          type: fieldValue?.meta?.type || "text",
+          meta: fieldValue?.meta,
         });
       }
     }
@@ -162,4 +173,30 @@ function setValue(path: string, val: any) {
 const submit = handleSubmit((vals) => {
   props.onSubmit(vals);
 });
+
+
+watch(
+  () => errors.value,
+  (newErrors = {}) => {
+    if (!props.sectionStructure) return;
+    if (!Array.isArray(fields.value)) return;
+
+    for (const section of fields.value) {
+      const hasSubFields =
+        Array.isArray(section.value.fields) && section.value.fields.length > 0;
+
+      let hasError = false;
+
+      if (hasSubFields) {
+        hasError = section.value.fields.some((f: any) => !!newErrors[f.key]);
+      } else {
+        hasError = !!newErrors[section.key];
+      }
+      if (hasError) {
+        openSections[section.key] = true;
+      }
+    }
+  },
+  { deep: true, immediate: true }
+);
 </script>

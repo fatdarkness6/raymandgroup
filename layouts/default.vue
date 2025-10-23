@@ -158,6 +158,7 @@
             :onSubmit="submit"
             :input-props="{ color: 'white', labelColor: 'white', dark: true}"
             custom-class="column q-gutter-md"
+            :direction="directionOfElement(locale)"
           >
             <template #default>
               <q-btn

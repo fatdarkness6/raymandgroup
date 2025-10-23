@@ -18,10 +18,10 @@ export const educationSchema = yup.object({
         .label("صادره از"),
       birthYear: yup
         .number()
-        .typeError("سال تولد باید عدد باشد")
+        .typeError("سال تولد الزامی است")
         .label("متولد سال")
         .required("سال تولد الزامی است")
-        .meta({ type: "number" }),
+        .meta({ type: "number" , direction : "ltr" }),
       specialty: yup.string().required("تخصص الزامی است").label("تخصص"),
     })
     .label("مشخصات فردی")

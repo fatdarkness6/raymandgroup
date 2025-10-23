@@ -13,13 +13,13 @@ export const defaultLayoutSchema = (t: (key: string) => string) => {
       .email(t("footer.validation.email_invalid"))
       .matches(emailRules, { message: t("footer.validation.email_invalid")})
       .required(t("footer.validation.email_required"))
-      .meta({ class: "col-12" }),
+      .meta({ class: "col-12" , direction : "ltr"}),
     phone: yup
       .string()
       .label(t("common.phone"))
       .matches(/^[0-9]+$/, t("footer.validation.phone_required"))
       .required(t("footer.validation.phone_required"))
       .min(11, t("footer.validation.phone_length"))
-      .meta({ class: "col-12", type:"number" }),
+      .meta({ class: "col-12", type:"number" , direction : "ltr" }),
   });
 };

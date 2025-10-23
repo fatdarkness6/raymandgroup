@@ -22,6 +22,8 @@
         :sectionStructure="true"
         :schema="educationSchema"
         :onSubmit="handleSubmit"
+        :input-props="{ color: 'primary', labelColor: 'primary', }"
+        :direction="directionOfElement(locale)"
       >
         <template #default>
           <div class="full-width flex items-center justify-center">
@@ -40,6 +42,7 @@
 </template>
 
 <script setup lang="ts">
+const {locale } = useI18n();
 function handleSubmit(values: any) {
   console.log("📨 Educational Cooperation form submitted:", values);
 }
