@@ -10,43 +10,42 @@
           :label="section.value.label"
           :icon="section?.value?.meta?.icon"
           expand-separator
-          :default-opened="sIndex === 0"
+          :default-opened="Number(sIndex) === 0"
         >
           <!-- Dynamic Inputs -->
-           <div v-for="(field, fIndex) in section.value.fields">
-            {{ console.log(section.value) }}
-           </div>
           <div
-            class="row q-col-gutter-sm q-mt-sm"
+            class="row q-col-gutter-sm q-mt-sm q-pb-md"
             v-if="section?.value?.meta?.type === 'input'"
           >
             <q-input
-              v-for="(field, fIndex) in section.value.fields"
+              v-for="field in section.value.fields"
               :key="field.key"
-              :model-value="getValue(field.key)"
+              :model-value="String(getValue(field.key) ?? '')"
               @update:model-value="setValue(field.key, $event)"
               :label="field.label"
               :type="field.type"
               :error="!!errors[field.key]"
               :error-message="errors[field.key]"
               filled
+              v-bind="inputProps"
               class="col-12 col-sm-6 styled-input"
             />
           </div>
 
           <!-- Dynamic Textareas -->
           <div
-            class="q-mt-sm"
+            class="q-mt-sm q-pb-md"
             v-else-if="section?.value.meta?.type === 'textarea'"
           >
             <q-input
-              :model-value="getValue(section.key)"
+              :model-value="String(getValue(section.key) ?? '')"
               @update:model-value="setValue(section.key, $event)"
               :error="!!errors[section.key]"
               :error-message="errors[section.key]"
               type="textarea"
               filled
               rows="3"
+              v-bind="inputProps"
               class="styled-input"
             />
           </div>
@@ -103,7 +102,6 @@ const { handleSubmit, errors, values, setFieldValue, defineField } = useForm({
   validateOnMount: false,
 });
 
-// ✅ Map schema fields
 const fields = computed(() => {
   const desc = props.schema.describe().fields as Record<string, any>;
   const result: Record<string, any> = {};
@@ -120,7 +118,6 @@ const fields = computed(() => {
   return props.sectionStructure ? sectionStructureFn(desc) : result;
 });
 
-// ✅ Convert schema sections into field arrays
 function sectionStructureFn(desc: any) {
   const data: any[] = [];
   for (const [sectionKey, sectionValue] of Object.entries(desc)) {
@@ -131,7 +128,7 @@ function sectionStructureFn(desc: any) {
 
     const sectionFields = [];
     if (fields) {
-      for (const [fieldKey, fieldValue] of Object.entries(fields)) {
+      for (const [fieldKey, fieldValue] of Object.entries(fields) as [string, any][]) {
         const fullPath = `${sectionKey}.${fieldKey}`;
         defineField(fullPath);
         sectionFields.push({
@@ -155,7 +152,6 @@ function sectionStructureFn(desc: any) {
   return data;
 }
 
-// ✅ Helpers to access nested paths reactively
 function getValue(path: string) {
   return path.split(".").reduce((obj, key) => obj?.[key], values);
 }
