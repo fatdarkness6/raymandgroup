@@ -1,5 +1,5 @@
 import * as yup from "yup";
-
+const emailRules = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
 export const researchSchema = yup.object({
   personal: yup
     .object({
@@ -7,6 +7,13 @@ export const researchSchema = yup.object({
         .string()
         .required("نام و نام خانوادگی الزامی است")
         .label("نام و نام خانوادگی"),
+      email: yup
+        .string()
+        .label("ایمیل")
+        .email("لطفا ایمیل را درست وارد کنید")
+        .matches(emailRules, { message: "لطفا ایمیل را درست وارد کنید" })
+        .required("ایمیل را وارد کنید")
+        .meta({ direction: "ltr" }),
       organization: yup
         .string()
         .required("نام سازمان یا دانشگاه الزامی است")
@@ -15,10 +22,7 @@ export const researchSchema = yup.object({
         .string()
         .required("سمت یا مرتبه علمی الزامی است")
         .label("سمت / مرتبه علمی"),
-      specialty: yup
-        .string()
-        .required("تخصص الزامی است")
-        .label("تخصص"),
+      specialty: yup.string().required("تخصص الزامی است").label("تخصص"),
     })
     .label("مشخصات فردی")
     .meta({ icon: "fa-solid fa-user-tie", type: "input" }),

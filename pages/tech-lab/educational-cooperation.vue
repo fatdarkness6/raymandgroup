@@ -22,7 +22,7 @@
         :sectionStructure="true"
         :schema="educationSchema"
         :onSubmit="handleSubmit"
-        :input-props="{ color: 'primary', labelColor: 'primary', }"
+        :input-props="{ color: 'primary', labelColor: 'primary' }"
         :direction="directionOfElement(locale)"
       >
         <template #default>
@@ -33,18 +33,49 @@
               padding="10px 0"
               type="submit"
               class="full-width q-mt-md"
+              :loading="loading"
             />
           </div>
         </template>
       </CommonFormBuilder>
     </q-card>
+    <CommonDoneMessage
+      :modelValue="openDoneMessage"
+      :closePermit="true"
+      persistent
+      title="!ارسال شد"
+      message="درخواست شما با موفقیت ارسال شد"
+      icon="fa-solid fa-circle-check"
+      button-label="بستن"
+      @action="closeDialog"
+    />
   </q-page>
 </template>
 
 <script setup lang="ts">
-const {locale } = useI18n();
-function handleSubmit(values: any) {
-  console.log("📨 Educational Cooperation form submitted:", values);
+import { useNotify } from "~/composable/useNotify";
+import { useRequestForm } from "~/composable/useRequestForm";
+
+const { locale } = useI18n();
+const { education } = useRequestForm();
+const { error } = useNotify();
+
+const openDoneMessage = ref<boolean>(false);
+const loading = ref<boolean>(false);
+function closeDialog() {
+  openDoneMessage.value = false;
+}
+function handleSubmit(values: any, resetForm: any) {
+  loading.value = true;
+  education(values)
+    .then(() => {
+      openDoneMessage.value = true;
+      resetForm();
+    })
+    .catch((res) => error(res.response.data.message))
+    .finally(() => {
+      loading.value = false;
+    });
 }
 </script>
 <style scoped>

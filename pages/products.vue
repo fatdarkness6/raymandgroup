@@ -1,0 +1,3 @@
+<template>
+    <UnderConstructionPage/>
+</template>

@@ -67,7 +67,7 @@
                 </div>
               </q-card-section>
               <q-card-section>
-                <q-btn push color="primary">
+                <q-btn push color="primary" to="/products">
                   {{detectEvenNumber(index) ?  t("common.learn-more") : t("common.click") }}</q-btn
                 >
               </q-card-section>

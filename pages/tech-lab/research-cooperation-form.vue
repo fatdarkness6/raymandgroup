@@ -1,13 +1,5 @@
- <template>
-<!-- <CommonDynamicForm
-  title="فرم درخواست همکاری تحقیقاتی"
-  subtitle="لطفاً اطلاعات زیر را جهت بررسی همکاری تحقیقاتی تکمیل نمایید."
-  color="deep-purple-7"
-  :sections="section"
-  @submit="handleSubmit"
-/> -->
-
-<q-page
+<template>
+  <q-page
     class="flex flex-center q-pa-md bg-gradient space-between-each-sections"
   >
     <q-card
@@ -30,7 +22,8 @@
         :sectionStructure="true"
         :schema="researchSchema"
         :onSubmit="handleSubmit"
-        :input-props="{ color: 'deep-purple-7', labelColor: 'deep-purple-7', }"
+        :input-props="{ color: 'deep-purple-7', labelColor: 'deep-purple-7' }"
+        :direction="directionOfElement(locale)"
       >
         <template #default>
           <div class="full-width flex items-center justify-center">
@@ -40,44 +33,49 @@
               padding="10px 0"
               type="submit"
               class="full-width q-mt-md"
+              :loading="loading"
             />
           </div>
         </template>
       </CommonFormBuilder>
     </q-card>
+    <CommonDoneMessage
+      :modelValue="openDoneMessage"
+      :closePermit="true"
+      persistent
+      title="!ارسال شد"
+      message="درخواست شما با موفقیت ارسال شد"
+      icon="fa-solid fa-circle-check"
+      button-label="بستن"
+      @action="closeDialog"
+    />
   </q-page>
-</template> 
+</template>
 
 <script setup lang="ts">
-const section = [
-    {
-      label: 'مشخصات فردی',
-      icon: 'fa-solid fa-user-tie',
-      type: 'inputs',
-      fields: [
-        { label: 'نام و نام خانوادگی', model: 'fullName' },
-        { label: 'نام سازمان / دانشگاه', model: 'organization' },
-        { label: 'سمت / مرتبه علمی', model: 'position' },
-        { label: 'تخصص', model: 'specialty' }
-      ]
-    },
-    {
-      label: 'سوابق تحصیلی',
-      icon: 'fa-solid fa-graduation-cap',
-      type: 'education',
-      fields: [
-        { label: 'مقطع تحصیلی', model: 'degree' },
-        { label: 'رشته تحصیلی', model: 'field' },
-        { label: 'دانشگاه محل تحصیل', model: 'university' },
-        { label: 'سال دریافت مدرک', model: 'year', type: 'number' }
-      ]
-    },
-    { label: 'زمینه‌های همکاری تحقیقاتی', icon: 'fa-solid fa-flask', type: 'textarea', model: 'researchAreas' },
-    { label: 'سوابق پژوهشی', icon: 'fa-solid fa-microscope', type: 'textarea', model: 'researchExperience' },
-    { label: 'توضیحات تکمیلی', icon: 'fa-solid fa-comment', type: 'textarea', model: 'additionalInfo' }
-  ]
-function handleSubmit(vales : any) {
-    console.log(vales);
+import { useNotify } from "~/composable/useNotify";
+import { useRequestForm } from "~/composable/useRequestForm";
+
+const { locale } = useI18n();
+const { research } = useRequestForm();
+const { error } = useNotify();
+
+const openDoneMessage = ref<boolean>(false);
+const loading = ref<boolean>(false);
+function closeDialog() {
+  openDoneMessage.value = false;
+}
+function handleSubmit(values: any, resetForm: any) {
+  loading.value = true;
+  research(values)
+    .then(() => {
+      openDoneMessage.value = true;
+      resetForm();
+    })
+    .catch((res) => error(res.response.data.message))
+    .finally(() => {
+      loading.value = false;
+    });
 }
 </script>
 <style scoped>

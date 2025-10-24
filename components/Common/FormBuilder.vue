@@ -52,6 +52,23 @@
               :dir="section?.value.meta?.direction || direction || 'ltr'"
             />
           </div>
+          <div
+            class="q-mt-sm q-pb-md"
+            v-else-if="section?.value.meta?.type === 'singleInput'"
+          >
+            <q-input
+              :key="section.key"
+              :model-value="String(getValue(section.key) ?? '')"
+              @update:model-value="setValue(section.key, $event)"
+              :label="section?.value.label"
+              :error="!!errors[section.key]"
+              :error-message="errors[section.key]"
+              filled
+              v-bind="inputProps"
+              class="col-12 styled-input"
+              :dir="section?.value.meta.direction || direction || 'ltr'"
+            />
+          </div>
         </q-expansion-item>
       </template>
 
@@ -96,13 +113,13 @@ const props = defineProps<{
   schema: any;
   initialValues?: Record<string, any>;
   sectionStructure?: boolean;
-  onSubmit: (values: any) => void;
+  onSubmit: (values: any, resetForm?: () => void) => void;
   customClass?: string;
   inputProps?: Record<string, any>;
   direction?: string;
 }>();
 
-const { handleSubmit, errors, values, setFieldValue, defineField } = useForm({
+const { handleSubmit, errors, values, setFieldValue, defineField , resetForm } = useForm({
   validationSchema: props.schema,
   initialValues: props.initialValues || {},
   validateOnMount: false,
@@ -171,7 +188,7 @@ function setValue(path: string, val: any) {
 }
 
 const submit = handleSubmit((vals) => {
-  props.onSubmit(vals);
+  props.onSubmit(vals , resetForm);
 });
 
 

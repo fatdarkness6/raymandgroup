@@ -1,12 +1,20 @@
 import * as yup from "yup";
 
+const emailRules = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
 export const educationSchema = yup.object({
   personal: yup
     .object({
-      name: yup
+      fullName: yup
         .string()
         .required("نام و نام خانوادگی الزامی است")
         .label("نام و نام خانوادگی"),
+      email: yup
+        .string()
+        .label("ایمیل")
+        .email("لطفا ایمیل را درست وارد کنید")
+        .matches(emailRules, { message: "لطفا ایمیل را درت وارد کنید" })
+        .required("ایمیل را وارد کنید")
+        .meta({ direction: "ltr" }),
       father: yup.string().required("نام پدر الزامی است").label("فرزند"),
       idNumber: yup
         .string()
@@ -21,7 +29,7 @@ export const educationSchema = yup.object({
         .typeError("سال تولد الزامی است")
         .label("متولد سال")
         .required("سال تولد الزامی است")
-        .meta({ type: "number" , direction : "ltr" }),
+        .meta({ type: "number", direction: "ltr" }),
       specialty: yup.string().required("تخصص الزامی است").label("تخصص"),
     })
     .label("مشخصات فردی")

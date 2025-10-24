@@ -191,31 +191,19 @@
             $t("header.vHospital")
           }}</NuxtLink>
         </div>
-        <div class="social-media flex column items-center gap-10">
+        <div class="social-media flex column items-start gap-10">
           <div class="text-h6">{{ t("footer.social-media") }}</div>
-          <a class="instagram">
-            <span class="custom-text q-pr-sm">Instagram</span>
-            <font-awesome-icon :icon="['fab', 'instagram']" />
+          <a @click="callPhone" :href="`https://wa.me/989391858962`" target="_blank" class="text-white" style="text-decoration: none;">
+            <q-icon name="fa-brands fa-whatsapp" class="q-pr-sm"/>
+            <span class="custom-text text-white">09391858962</span>
           </a>
-          <a class="facebook">
-            <span class="custom-text q-pr-sm">Facebook</span>
-            <font-awesome-icon :icon="['fab', 'facebook']" />
+          <a @click="openEmail" class="pointer">
+            <q-icon name="fa-solid fa-envelope" class="q-pr-sm "/>
+            <span class="custom-text">info@raymandgroup.de</span>
           </a>
           <a class="twitter">
-            <span class="custom-text q-pr-sm">Twitter</span>
-            <font-awesome-icon :icon="['fab', 'twitter']" />
-          </a>
-          <a class="linkedin">
-            <span class="custom-text q-pr-sm">LinkedIn</span>
-            <font-awesome-icon :icon="['fab', 'linkedin']" />
-          </a>
-          <a class="youtube">
-            <span class="custom-text q-pr-sm">Youtube</span>
-            <font-awesome-icon :icon="['fab', 'youtube']" />
-          </a>
-          <a class="tiktok">
-            <span class="custom-text q-pr-sm">Tiktok</span>
-            <font-awesome-icon :icon="['fab', 'tiktok']" />
+            <q-icon name="fa-brands fa-telegram" class="q-pr-sm"/>
+            <span class="custom-text">Telegram</span>
           </a>
         </div>
       </div>
@@ -257,44 +245,6 @@
         </q-card>
       </q-dialog>
     </q-footer>
-    <div class="select-methodes">
-      <q-fab
-        vertical-actions-align="left"
-        color="primary"
-        glossy
-        icon="fa-solid fa-comment"
-        direction="up"
-      >
-        <q-fab-action
-          label-position="right"
-          color="negative"
-          icon="fa-solid fa-envelope"
-          label="Email"
-          @click="openEmail"
-        />
-        <q-fab-action
-          label-position="right"
-          color="positive"
-          icon="fa-solid fa-phone"
-          label="Phone"
-          @click="callPhone"
-        />
-        <q-fab-action
-          label-position="right"
-          color="secondary"
-          icon="fa-brands fa-instagram"
-          label="Instagram"
-          @click="openInstagram"
-        />
-        <q-fab-action
-          label-position="right"
-          color="accent"
-          icon="fa-brands fa-tiktok"
-          label="TikTok"
-          @click="openTikTok"
-        />
-      </q-fab>
-    </div>
     <!-- Sidebar Menu -->
     <transition name="slide-left">
       <nav v-if="leftDrawerOpen" class="sidebar-menu">
@@ -453,7 +403,7 @@ function openEmail() {
 }
 
 function callPhone() {
-  window.location.href = "tel:+49123456789";
+  window.location.href = "tel:+98 09391858962";
 }
 
 function openInstagram() {
