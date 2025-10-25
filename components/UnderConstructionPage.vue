@@ -1,5 +1,5 @@
 <template>
-  <div class="container space-between-each-sections-bottom relative z-max">
+  <div class="container space-between-each-sections-bottom relative z-max font-family font-size">
     <div class="row justify-center">
       <div class="col-md-10 main-title text-center mt-5">
         <h1>ما در حال ساخت آینده‌ای بهتر هستیم</h1>
