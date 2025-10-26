@@ -143,7 +143,7 @@
         <slot />
       </main>
     </q-page-container>
-    <q-footer class="custom-footer">
+    <!-- <q-footer class="custom-footer">
       <div class="animated-wave-bg" aria-hidden="true">
         <div class="wave"></div>
         <div class="wave"></div>
@@ -224,7 +224,6 @@
           class="bg-white text-black q-pa-lg"
           style="min-width: 350px; max-width: 90vw; border-radius: 12px"
         >
-          <!-- Icon + Title -->
           <div class="row items-center q-mb-md" style="gap: 12px">
             <q-icon name="fas fa-check-circle" size="36px" color="green" />
             <div class="text-h5 text-weight-bold" style="user-select: none">
@@ -232,19 +231,16 @@
             </div>
           </div>
 
-          <!-- Message -->
           <q-card-section class="text-body1" style="line-height: 1.6">
             Thank you for contacting us. We’ll get back to you as soon as
             possible.
           </q-card-section>
-
-          <!-- Actions -->
           <q-card-actions align="right" class="q-pt-sm">
             <q-btn flat label="Close" color="primary" v-close-popup rounded />
           </q-card-actions>
         </q-card>
       </q-dialog>
-    </q-footer>
+    </q-footer> -->
     <!-- Sidebar Menu -->
     <transition name="slide-left">
       <nav v-if="leftDrawerOpen" class="sidebar-menu">
