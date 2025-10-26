@@ -1,5 +1,5 @@
-.font-size {
-  font-size: 62.5%; /* 1rem = 10px */
+/* .font-size {
+  font-size: 62.5%; 
 }
 
 .font-family {
@@ -112,18 +112,17 @@ svg {
   }
 }
 
-/* Media Queries */
 
 @media (max-width: 640px) {
   .main-title h1 {
-    /* font-size: 5rem; */
+
     text-transform: uppercase;
     font-weight: 700;
     color: #555;
   }
 
   .main-title h2 {
-    /* font-size: 3rem; */
+
     font-weight: 300;
     text-transform: uppercase;
   }
@@ -131,14 +130,14 @@ svg {
 
 @media (max-width: 768px) {
   .main-title h1 {
-    /* font-size: 6rem; */
+
     text-transform: uppercase;
     font-weight: 800;
     color: #555;
   }
 
   .main-title h2 {
-    /* font-size: 4rem; */
+
     font-weight: 300;
     text-transform: uppercase;
   }
@@ -146,14 +145,14 @@ svg {
 
 @media (max-width: 1024px) {
   .main-title h1 {
-    /* font-size: 7rem; */
+
     text-transform: uppercase;
     font-weight: 900;
     color: #555;
   }
 
   .main-title h2 {
-    /* font-size: 5rem; */
+
     font-weight: 300;
     text-transform: uppercase;
   }
@@ -161,21 +160,19 @@ svg {
 
 @media (max-width: 1200px) {
   .main-title h1 {
-    /* font-size: 5rem; */
+
     text-transform: uppercase;
     font-weight: 900;
     color: #555;
   }
 
   .main-title h2 {
-    /* font-size: 3rem; */
+
     font-weight: 300;
     text-transform: uppercase;
   }
 
   .main-title {
     text-align: center;
-    /* margin-top: 7rem; */
-    /* margin-bottom: 1rem; */
   }
-}
+} */

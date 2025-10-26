@@ -245,8 +245,8 @@
 </template>
 
 <style scoped>
-@import url("https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css");
+/* @import url("https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css");
 @import url("https://fonts.googleapis.com/css?family=Lato:400,900&display=swap");
-@import url("https://fonts.googleapis.com/icon?family=Material+Icons");
+@import url("https://fonts.googleapis.com/icon?family=Material+Icons"); */
 @import "@/assets/css/components/Animation/underConstruction.css";
 </style>
