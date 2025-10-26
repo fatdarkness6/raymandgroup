@@ -74,7 +74,7 @@ export default defineNuxtConfig({
     },
   },
   experimental: {
-    payloadExtraction: false, // 👈 disables per-page _payload.json
+    payloadExtraction: false,
   },
   nitro: {
     prerender: {
