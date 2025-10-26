@@ -65,10 +65,17 @@ export default defineNuxtConfig({
     "@nuxtjs/google-fonts",
     "@nuxt/fonts",
   ],
-  app: {
+   app: {
+    baseURL: '/',
+    buildAssetsDir: '/_nuxt/',
     head: {
       htmlAttrs: { lang: "fa" },
       bodyAttrs: { class: "font-vazir" },
+    },
+  },
+  nitro: {
+    prerender: {
+      routes: ['/'],
     },
   },
   css: [
