@@ -226,7 +226,7 @@
         وب‌سایت ما در حال توسعه است
       </div>
       <div class="text-subtitle2 text-grey-7">
-        لطفاً به‌زودی دوباره سر بزنید!
+        ! به‌زودی دوباره سر بزنید
       </div>
       <q-btn
         fa-solid
@@ -245,8 +245,5 @@
 </template>
 
 <style scoped>
-/* @import url("https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css");
-@import url("https://fonts.googleapis.com/css?family=Lato:400,900&display=swap");
-@import url("https://fonts.googleapis.com/icon?family=Material+Icons"); */
 @import "@/assets/css/components/Animation/underConstruction.css";
 </style>

@@ -73,9 +73,6 @@ export default defineNuxtConfig({
       bodyAttrs: { class: "font-vazir" },
     },
   },
-  experimental: {
-    payloadExtraction: false,
-  },
   nitro: {
     prerender: {
       routes: ['/'],
