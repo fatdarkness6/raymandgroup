@@ -362,9 +362,6 @@ export const labs: any = {
       image: "/images/tech-lab/geneticLab/container2.jpg",
       texts: [
         "tech-Lab_page.routes.geneticLab.container2.title",
-        "tech-Lab_page.routes.geneticLab.container2.title2",
-        "tech-Lab_page.routes.geneticLab.container2.title3",
-        "tech-Lab_page.routes.geneticLab.container2.title4",
       ],
       link: "https://google.com",
     },

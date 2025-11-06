@@ -14,6 +14,13 @@ export const researchSchema = yup.object({
         .matches(emailRules, { message: "لطفا ایمیل را درست وارد کنید" })
         .required("ایمیل را وارد کنید")
         .meta({ direction: "ltr" }),
+      phone: yup
+        .string()
+        .label("شماره تلفن")
+        .matches(/^[0-9]+$/, "شماره تلفن الزامی میباشد")
+        .required("شماره تلفن الزامی میباشد")
+        .min(9, "شماره تلفن کمتر از 9 رقم نباید باشد ")
+        .meta({ class: "col-12", type: "number", direction: "ltr" }),
       organization: yup
         .string()
         .required("نام سازمان یا دانشگاه الزامی است")

@@ -1,5 +1,5 @@
 import * as yup from "yup";
-
+//"شماره تلفن الزامی میباشد"
 const emailRules = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
 export const educationSchema = yup.object({
   personal: yup
@@ -15,6 +15,13 @@ export const educationSchema = yup.object({
         .matches(emailRules, { message: "لطفا ایمیل را درت وارد کنید" })
         .required("ایمیل را وارد کنید")
         .meta({ direction: "ltr" }),
+      phone: yup
+        .string()
+        .label("شماره تلفن")
+        .matches(/^[0-9]+$/, "شماره تلفن الزامی میباشد")
+        .required("شماره تلفن الزامی میباشد")
+        .min(9, "شماره تلفن کمتر از 9 رقم نباید باشد ")
+        .meta({ class: "col-12", type: "number", direction: "ltr" }),
       father: yup.string().required("نام پدر الزامی است").label("فرزند"),
       idNumber: yup
         .string()
@@ -73,10 +80,10 @@ export const educationSchema = yup.object({
     .min(10, "حداقل ۱۰ کاراکتر وارد کنید")
     .label("درخواست همکاری")
     .meta({ icon: "fa-solid fa-comment-dots", type: "textarea" }),
-  result: yup
-    .string()
-    .nullable()
-    .required("نتیجه برسی و دارویی الزامی است")
-    .label("نتیجه برسی و داوری")
-    .meta({ icon: "fa-solid fa-clipboard-check", type: "textarea" }),
+  // result: yup
+  //   .string()
+  //   .nullable()
+  //   .required("نتیجه برسی و دارویی الزامی است")
+  //   .label("نتیجه برسی و داوری")
+  //   .meta({ icon: "fa-solid fa-clipboard-check", type: "textarea" }),
 });
