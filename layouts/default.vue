@@ -156,7 +156,7 @@
           <CommonFormBuilder
             :schema="defaultLayoutSchema(t)"
             :onSubmit="submit"
-            :input-props="{ color: 'white', labelColor: 'white', dark: true}"
+            :input-props="{ color: 'white', labelColor: 'white', dark: true }"
             custom-class="column q-gutter-md"
             :direction="directionOfElement(locale)"
           >
@@ -193,16 +193,22 @@
         </div>
         <div class="social-media flex column items-start gap-10">
           <div class="text-h6">{{ t("footer.social-media") }}</div>
-          <a @click="callPhone" :href="`https://wa.me/989391858962`" target="_blank" class="text-white" style="text-decoration: none;">
-            <q-icon name="fa-brands fa-whatsapp" class="q-pr-sm"/>
+          <a
+            @click="callPhone"
+            :href="`https://wa.me/989391858962`"
+            target="_blank"
+            class="text-white"
+            style="text-decoration: none"
+          >
+            <q-icon name="fa-brands fa-whatsapp" class="q-pr-sm" />
             <span class="custom-text text-white">09391858962</span>
           </a>
           <a @click="openEmail" class="pointer">
-            <q-icon name="fa-solid fa-envelope" class="q-pr-sm "/>
+            <q-icon name="fa-solid fa-envelope" class="q-pr-sm" />
             <span class="custom-text">info@raymandgroup.de</span>
           </a>
           <a class="twitter">
-            <q-icon name="fa-brands fa-telegram" class="q-pr-sm"/>
+            <q-icon name="fa-brands fa-telegram" class="q-pr-sm" />
             <span class="custom-text">Telegram</span>
           </a>
         </div>
@@ -337,19 +343,13 @@
 </template>
 
 <script setup lang="ts">
-import { useForm, useField } from "vee-validate";
 import { useFormContact } from "~/composable/useFormContact";
 import { useNotify } from "~/composable/useNotify";
 import { defaultLayoutSchema } from "~/utils/defaultLayoutSchema";
 const { locales, setLocale, t, locale } = useI18n();
 
-const validationSchema = computed(() => defaultLayoutSchema(t));
-
 const { submitForm } = useFormContact();
 const { error } = useNotify();
-const { handleSubmit, resetForm } = useForm({
-  validationSchema,
-});
 
 const tab = ref<string>("mails");
 const loading = ref<boolean>(false);
