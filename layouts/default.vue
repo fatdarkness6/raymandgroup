@@ -55,7 +55,7 @@
           >
             <template v-slot>
               <span
-                v-for="(line, i) in $t('header.tech-Lab').split('\n')"
+                v-for="(line, i) in $t('header.tech-Lab').split('\\n')"
                 :key="i"
                 class="text-weight-bold"
               >
@@ -71,7 +71,7 @@
           >
             <template v-slot>
               <span
-                v-for="(line, i) in $t('header.gpo').split('\n')"
+                v-for="(line, i) in $t('header.gpo').split('\\n')"
                 :key="i"
                 class="text-weight-bold"
               >
@@ -87,7 +87,7 @@
           >
             <template v-slot>
               <span
-                v-for="(line, i) in $t('header.vHospital').split('\n')"
+                v-for="(line, i) in $t('header.vHospital').split('\\n')"
                 :key="i"
                 class="text-weight-bold"
               >
