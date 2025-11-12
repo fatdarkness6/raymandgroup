@@ -10,6 +10,81 @@
         "services_tests": "Dienstleistungen und Tests",
         "submit": "Schicken"
     },
+    "education": {
+        "educations": {
+            "country": {
+                "label": "Studienland",
+                "required": "Das Studienland ist erforderlich."
+            },
+            "degree": {
+                "label": "Bildungsabschluss",
+                "required": "Ein Hochschulabschluss ist erforderlich."
+            },
+            "field": {
+                "label": "Studienfach und Spezialisierung",
+                "required": "Ein Studienfach ist erforderlich."
+            },
+            "label": "Vorbildung",
+            "university": {
+                "label": "Universität des Studiums",
+                "required": "Ein Universitätsstudium ist erforderlich."
+            },
+            "year": {
+                "label": "Jahr erhalten",
+                "required": "Das Jahr ist erforderlich.",
+                "typeError": "Das Jahr ist erforderlich."
+            }
+        },
+        "experience": {
+            "label": "Berufliche Laufbahn",
+            "required": "Berufliche und schulische Vorkenntnisse sind erforderlich."
+        },
+        "personal": {
+            "birthPlace": {
+                "label": "Ausgestellt von",
+                "required": "Geburtsort erforderlich."
+            },
+            "birthYear": {
+                "label": "Geboren in",
+                "required": "Das Geburtsjahr ist erforderlich.",
+                "typeError": "Das Geburtsjahr ist erforderlich."
+            },
+            "email": {
+                "email": "Bitte geben Sie die korrekte E-Mail-Adresse ein.",
+                "label": "E-Mail",
+                "matches": "Bitte geben Sie Ihre E-Mail-Adresse ein.",
+                "required": "E-Mail-Adresse eingeben."
+            },
+            "father": {
+                "label": "Kind",
+                "required": "Der Name des Vaters ist erforderlich."
+            },
+            "fullName": {
+                "label": "Vor- und Nachname",
+                "required": "Vor- und Nachname sind erforderlich."
+            },
+            "idNumber": {
+                "label": "Geburtsurkundennummer",
+                "required": "Eine Ausweisnummer ist erforderlich."
+            },
+            "label": "Persönliche Daten",
+            "phone": {
+                "label": "Telefonnummer",
+                "matches": "Eine Telefonnummer wird benötigt.",
+                "min": "Die Telefonnummer sollte mindestens 9 Ziffern lang sein.",
+                "required": "Eine Telefonnummer wird benötigt."
+            },
+            "specialty": {
+                "label": "Sachverstand",
+                "required": "Fachkenntnisse sind erforderlich."
+            }
+        },
+        "request": {
+            "label": "Bitte um Zusammenarbeit",
+            "min": "Geben Sie mindestens 10 Zeichen ein.",
+            "required": "Beschreibung des Antrags auf Bildungszusammenarbeit"
+        }
+    },
     "footer": {
         "site_pages": "Seiten der Website",
         "social-media": "Unsere sozialen Medien",
@@ -67,6 +142,73 @@
         "title2": "Lernen Sie die Labordienstleistungen von Raymand in den Bereichen Boden, Wasser, Mikrobiologie, Nutz- und Geflügelzucht, Lebensmittel und Medizin kennen.",
         "title3": "In Kürze werden Ihnen die neuesten Entwicklungen und Neuigkeiten aus dem Bereich Gesundheit und Medizin in diesem Abschnitt zur Verfügung stehen.",
         "view-all": "Nachrichten durchsuchen"
+    },
+    "research": {
+        "additionalInfo": {
+            "label": "Weitere Informationen"
+        },
+        "education": {
+            "degree": {
+                "label": "Bildungsniveau",
+                "required": "Ein Hochschulabschluss ist erforderlich."
+            },
+            "field": {
+                "label": "Forschungsbereich",
+                "required": "Ein Studienfach ist erforderlich."
+            },
+            "label": "Vorbildung",
+            "university": {
+                "label": "Universität des Studiums",
+                "required": "Ein Universitätsstudium ist erforderlich."
+            },
+            "year": {
+                "integer": "Das Jahr ist ungültig.",
+                "label": "Abschlussjahr",
+                "required": "Das Jahr des Studienabschlusses ist erforderlich.",
+                "typeError": "Das Jahr muss eine Zahl sein."
+            }
+        },
+        "personal": {
+            "email": {
+                "email": "Bitte geben Sie die E-Mail-Adresse korrekt ein.",
+                "label": "E-Mail",
+                "matches": "Bitte geben Sie die E-Mail-Adresse korrekt ein.",
+                "required": "E-Mail-Adresse eingeben."
+            },
+            "fullName": {
+                "label": "Vor- und Nachname",
+                "required": "Vor- und Nachname sind erforderlich."
+            },
+            "label": "Persönliche Daten",
+            "organization": {
+                "label": "Name der Organisation\/Universität",
+                "required": "Die Angabe des Namens der Organisation oder Universität ist erforderlich."
+            },
+            "phone": {
+                "label": "Telefonnummer",
+                "matches": "Eine Telefonnummer wird benötigt.",
+                "min": "Die Telefonnummer sollte mindestens 9 Ziffern lang sein.",
+                "required": "Eine Telefonnummer wird benötigt."
+            },
+            "position": {
+                "label": "Akademische Position\/Rang",
+                "required": "Eine akademische Position oder ein akademischer Rang ist erforderlich."
+            },
+            "specialty": {
+                "label": "Sachverstand",
+                "required": "Fachkenntnisse sind erforderlich."
+            }
+        },
+        "researchAreas": {
+            "label": "Bereiche der Forschungskooperation",
+            "min": "Geben Sie mindestens 5 Zeichen ein.",
+            "required": "Bereiche für die Forschungskooperation sind erforderlich."
+        },
+        "researchExperience": {
+            "label": "Forschungshintergrund",
+            "min": "Geben Sie mindestens 5 Zeichen ein.",
+            "required": "Forschungserfahrung ist erforderlich."
+        }
     },
     "tech-Lab_page": {
         "careers": " Forschungs- und Entwicklungsdienstleistungen (F&E)",
@@ -262,5 +404,12 @@
             "waterAnalysisLab": "Wasseranalyselabor"
         },
         "subtitle": "Raymand Group, ein führendes Unternehmen im Bereich Tests für eine bessere Lebensqualität"
+    },
+    "validation": {
+        "email_invalid": "Geben Sie eine gültige E-Mail-Adresse ein.",
+        "email_required": "Die Angabe einer E-Mail-Adresse ist erforderlich.",
+        "name_required": "Die Eingabe eines Namens ist erforderlich.",
+        "phone_length": "Die Telefonnummer muss mindestens 11 Ziffern lang sein.",
+        "phone_required": "Die Angabe einer Telefonnummer ist erforderlich."
     }
 }

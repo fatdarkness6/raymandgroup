@@ -20,7 +20,7 @@
       <!-- Form -->
       <CommonFormBuilder
         :sectionStructure="true"
-        :schema="educationSchema"
+        :schema="educationSchema(t)"
         :onSubmit="handleSubmit"
         :input-props="{ color: 'primary', labelColor: 'primary' }"
         :direction="directionOfElement(locale)"
@@ -56,7 +56,7 @@
 import { useNotify } from "~/composable/useNotify";
 import { useRequestForm } from "~/composable/useRequestForm";
 
-const { locale } = useI18n();
+const { locale, t } = useI18n();
 const { education } = useRequestForm();
 const { error } = useNotify();
 

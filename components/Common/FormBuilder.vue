@@ -119,11 +119,12 @@ const props = defineProps<{
   direction?: string;
 }>();
 
-const { handleSubmit, errors, values, setFieldValue, defineField , resetForm } = useForm({
-  validationSchema: props.schema,
-  initialValues: props.initialValues || {},
-  validateOnMount: false,
-});
+const { handleSubmit, errors, values, setFieldValue, defineField, resetForm } =
+  useForm({
+    validationSchema: props.schema,
+    initialValues: props.initialValues || {},
+    validateOnMount: false,
+  });
 
 const openSections = reactive<Record<string, boolean>>({});
 
@@ -188,9 +189,8 @@ function setValue(path: string, val: any) {
 }
 
 const submit = handleSubmit((vals) => {
-  props.onSubmit(vals , resetForm);
+  props.onSubmit(vals, resetForm);
 });
-
 
 watch(
   () => errors.value,

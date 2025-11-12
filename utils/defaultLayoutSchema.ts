@@ -5,21 +5,21 @@ export const defaultLayoutSchema = (t: (key: string) => string) => {
     name: yup
       .string()
       .label(t("common.name&lastname"))
-      .required(t("footer.validation.name_required"))
+      .required(t("validation.name_required"))
       .meta({ class: "col-12" }),
     email: yup
       .string()
       .label(t("common.email"))
-      .email(t("footer.validation.email_invalid"))
-      .matches(emailRules, { message: t("footer.validation.email_invalid")})
-      .required(t("footer.validation.email_required"))
-      .meta({ class: "col-12" , direction : "ltr"}),
+      .email(t("validation.email_invalid"))
+      .matches(emailRules, { message: t("validation.email_invalid") })
+      .required(t("validation.email_required"))
+      .meta({ class: "col-12", direction: "ltr" }),
     phone: yup
       .string()
       .label(t("common.phone"))
-      .matches(/^[0-9]+$/, t("footer.validation.phone_required"))
-      .required(t("footer.validation.phone_required"))
-      .min(11, t("footer.validation.phone_length"))
-      .meta({ class: "col-12", type:"number" , direction : "ltr" }),
+      .matches(/^[0-9]+$/, t("validation.phone_required"))
+      .required(t("validation.phone_required"))
+      .min(11, t("validation.phone_length"))
+      .meta({ class: "col-12", type: "number", direction: "ltr" }),
   });
 };
