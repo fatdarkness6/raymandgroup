@@ -1,273 +1,266 @@
 {
-  "home_page": {
-    "hero-sec1": "Eine neue Ära in Laboren und Gesundheitsdiensten, basierend auf strategischer Technologie im Raymand-Holding",
-    "hero-sec2": "Die Raymand-Gruppe wurde mit dem Ziel gegründet, ein integriertes, technologiegestütztes Ökosystem für Lieferkettenmanagement und Dienstleistungen zu schaffen. Mit einem systematischen, wissenschaftlichen und wertorientierten Ansatz streben wir danach, die aktuellen Standards der Gesundheits- und Labordienstleistungen im Land zu revolutionieren. Durch den Einsatz modernster Technologien und innovativer Managementstrategien wollen wir ein lokal angepasstes Modell der besten globalen Praktiken im Management von Labordienstleistungen, in der Versorgungskette für Spezialausrüstungen und im Gesundheitsmanagement in Iran entwickeln.",
-    "raymand1": "Raymand Tajhiz GmbH",
-    "raymand2": "Raymand System Azma GmbH",
-    "raymand3": "Raymand System Tajhiz GmbH",
-    "discover": {
-      "discover-text": "Organisationsstruktur des Holdings",
-      "discover-intro": "Die Raymand-Gruppe besteht aus drei Unternehmen, die jeweils das Ziel haben, ihre traditionellen Systeme zu transformieren. Mit innovativen Methoden und modernsten Technologien bieten diese Unternehmen Lösungen für bestehende Herausforderungen in industriellen, wissenschaftlichen, klinischen Laboren und im Gesundheitswesen.",
-      "raymand1-des1": "Beschaffung, Import und Herstellung von Laborausrüstung und Verbrauchsmaterialien nach GPO-Prinzipien und Wertschöpfungsketten",
-      "raymand1-des2": "Einkaufs- und Importarm für spezialisierte Geräte führender internationaler Marken",
-      "raymand1-des3": "Mit dem GPO-Modell ermöglicht dieses Unternehmen die Kostensenkung und Produktivitätssteigerung in den Lieferketten industrieller, wissenschaftlicher und klinischer Labore im Land.",
-      "raymand2-des1": "Intelligentes Management und Implementierung von Qualitätssicherungssystemen für spezialisierte, wissenschaftliche und klinische Labore",
-      "raymand2-des2": "Implementierung und Auditierung internationaler Standards wie ISO 17025 und ISO 15189 usw.",
-      "raymand2-des3": "Prozessdesign für Labore, Erstellung von SOPs und Schulung des Personals",
-      "raymand2-des4": "Beratung beim Kauf, Installation, Kalibrierung und Validierung von Geräten",
-      "raymand2-des5": "Ressourcenmanagement einschließlich Personal, Verbrauchsmaterialien und Kapazitätsplanung für die Erbringung von Labordienstleistungen",
-      "raymand2-des6": "Steigerung von Produktivität, Genauigkeit und Effizienz der Labortätigkeit",
-      "raymand2-des7": "Erbringung von Labor-, Forschungs- und Ausbildungsdienstleistungen",
-      "raymand3-des1": "Intelligentes Management von Gesundheitsdiensten auf Basis modernster Technologien",
-      "raymand3-des2": "Transformation von Prozessen",
-      "raymand3-des3": "Bereitstellung intelligenter Lösungen für alle Gesundheitseinheiten",
-      "raymand3-des4": "Design von Betriebsmodellen und Organisationsstrukturen",
-      "raymand3-des5": "Virtuelles Krankenhaus und innovative Transformationen in Gesundheitsdiensten (einschließlich Prävention, Pre-Hospital, Hospital, Post-Hospital)"
+    "common": {
+        "about_us": "Über uns",
+        "click": "Klicken Sie hier, um mit dem Akzeptieren zu beginnen.",
+        "email": "E-Mail",
+        "lab_test_admission": "Das Labor beginnt mit der Annahme von Proben.",
+        "learn-more": "Mehr erfahren...",
+        "name&lastname": "Vor- und Nachname",
+        "phone": "Telefon",
+        "services_tests": "Dienstleistungen und Tests",
+        "submit": "Schicken"
     },
-    "blog": "Blog",
-    "update": "Neueste Unternehmens-Updates",
-    "newsBlog": "Bleiben Sie auf dem Laufenden mit unseren neuesten Nachrichten und Erkenntnissen",
-    "slogan1": "Präzision in jedem Test",
-    "slogan2": "Innovation in der Diagnostik, Stärkung der Labore",
-    "slogan3": "Engineering der Gesundheitslösungen der Zukunft"
-  },
-  "tech-Lab_page": {
-    "subtitle": "Raymand-Gruppe – Vorreiter in Laboren für ein besseres Leben",
-    "services": "Labordienstleistungen",
-    "careers": "Forschungs- und Entwicklungsdienste (F&E)",
-    "investors": "Bildungsdienste",
-    "generalInfo": {
-      "vision": "Vision",
-      "visionDesc": "Die Raymand-Gruppe möchte sich zum angesehensten Netzwerk für spezialisierte Labor- und Gesundheitsdienste im Iran und in der Region entwickeln; eine Institution, die mit Innovation, Integration und internationalen Standards das Vertrauen von Industrie, Universitäten und Gesellschaft als strategischer Partner im Bereich Qualität und Gesundheit gewinnt.",
-      "mission": "Mission",
-      "missionDesc": "Wir in der Raymand-Gruppe helfen durch das Management und die Entwicklung von Labornetzwerken, die Bereitstellung spezialisierter Gesundheitsdienste und die Versorgung mit modernen Geräten Industrie und Gesellschaft, präziser, gesünder und effizienter zu arbeiten."
+    "footer": {
+        "site_pages": "Seiten der Website",
+        "social-media": "Unsere sozialen Medien",
+        "validation": {
+            "email_invalid": "Geben Sie eine gültige E-Mail-Adresse ein.",
+            "email_required": "Die Angabe einer E-Mail-Adresse ist erforderlich.",
+            "name_required": "Die Eingabe eines Namens ist erforderlich.",
+            "phone_length": "Die Telefonnummer muss mindestens 11 Ziffern lang sein.",
+            "phone_required": "Die Angabe einer Telefonnummer ist erforderlich."
+        }
     },
-    "shortCuts": {
-      "soilLab": "Bodenlabor",
-      "concreteSteelLab": "Beton- und Bewehrungsstahl-Labor",
-      "environmentLab": "Umweltlabor",
-      "waterAnalysisLab": "Wasseranalyse-Labor",
-      "innovationLab": "Kooperationsanfrage für Forschungsarbeiten",
-      "petLab": "Kleintierlabor (Pet)",
-      "livestockLab": "Nutztierlabor",
-      "poultryLab": "Geflügellabor",
-      "agricultureServicesLab": "Landwirtschaftsdienstleistungen-Labor",
-      "collaborationRequest": "Kooperationsanfrage für Bildungs- und Studierendentätigkeiten",
-      "pharmaCosmeticIndustry": "Pharmazeutische und kosmetische Industrie",
-      "foodIndustry": "Lebensmittelindustrie",
-      "clinicalPathologyLab": "Klinische Diagnostik und Pathologie",
-      "geneticLab": "Genetik-Labor"
+    "header": {
+        "contact_us": "Kontaktieren Sie uns",
+        "gpo": "Einkaufsgemeinschaft \\n (Raymand Tajhiz Company)",
+        "home-page": "Heim",
+        "news": "Nachricht",
+        "tech-Lab": "Strategisches Technologielabor \\n (Raymand System Ezma Group)",
+        "vHospital": "Health Technology Management \\n (Raymand System Equipment Company)"
     },
-    "routes": {
-      "aboutUs": {
-        "container1": {
-          "title1": "Vorstellung des Laborkomplexes",
-          "title2": "Strategische Technologie – Raymand System Azma",
-          "description": "Der Laborkomplex Raymand wurde mit der Mission gegründet, Qualität, Gesundheit und Sicherheit in Industrie und Gesundheitswesen zu verbessern und dem iranischen Markt ein neues Konzept integrierter Labordienstleistungen vorzustellen."
+    "home_page": {
+        "blog": "Blog",
+        "discover": {
+            "discover-intro": "Die Raymand-Gruppe besteht aus drei Unternehmen, die jeweils die traditionellen Systeme in ihren jeweiligen Bereichen revolutionieren wollen. Mithilfe innovativer Methoden und modernster Technologien entwickeln diese Unternehmen Lösungen für die Herausforderungen, denen sich die Industrie-, Forschungs-, Klinik- und Gesundheitslabore des Landes gegenübersehen.",
+            "discover-text": "Organisationsstruktur der Holding",
+            "raymand1-des1": "Lieferung, Import und Produktion von Laborgeräten und Verbrauchsmaterialien auf Basis von GPO- und Wertschöpfungskettenprinzipien",
+            "raymand1-des2": "Liefer- und Importabteilung für Spezialausrüstung von renommierten globalen Marken",
+            "raymand1-des3": "Durch die Anwendung des GPO-Modells ermöglicht das Unternehmen Kostensenkungen und eine Steigerung der Produktivität in der Lieferkette von Industrie-, Forschungs- und klinischen Laboren im Land.",
+            "raymand2-des1": "Intelligentes Management und Implementierung von Qualitätssicherungssystemen für spezialisierte, Forschungs- und klinische Labore",
+            "raymand2-des2": "Implementierung und Auditierung internationaler Normen wie ISO 17025 und ISO 15189 usw.",
+            "raymand2-des3": "Gestaltung der Struktur von Laborprozessen, Entwicklung von Standardarbeitsanweisungen und Schulung von Mitarbeitern",
+            "raymand2-des4": "Beratung bei Kauf, Installation, Kalibrierung und Validierung von Geräten",
+            "raymand2-des5": "Ressourcenmanagement einschließlich Personal, Verbrauchsmaterialien und Kapazitätsplanung für die Erbringung von Labordienstleistungen",
+            "raymand2-des6": "Steigerung von Produktivität, Genauigkeit und Effizienz im Laborbetrieb",
+            "raymand2-des7": " Bereitstellung von Labor-, Forschungs- und Verwaltungsdienstleistungen",
+            "raymand3-des1": "Intelligentes Management von Gesundheitsdienstleistungen auf Basis moderner Technologien",
+            "raymand3-des2": "Transformation in Prozessen",
+            "raymand3-des3": "Bereitstellung intelligenter Lösungen für alle Gesundheitseinrichtungen",
+            "raymand3-des4": "Gestaltung von Betriebsmodellen und Organisationsstrukturen",
+            "raymand3-des5": "Virtuelles Krankenhaus und innovative Entwicklungen im Gesundheitswesen (einschließlich Prävention, präklinische Versorgung, stationäre Versorgung, Nachsorge)"
         },
-        "container2": {
-          "title": "Inspiration aus Managementmodellen internationaler Unternehmen",
-          "description": "Raymand hat eine Sammlung spezialisierter Labore in den Bereichen Lebensmittel und Getränke, Wasser und Umwelt, Boden und Landwirtschaft, Petrochemie und verwandte Industrien sowie Gesundheit zusammengestellt und so eine innovative Plattform geschaffen, um den vielfältigen Bedürfnissen von Organisationen, Industrien und Forschungszentren gerecht zu werden."
+        "hero-sec1": "Eine neue Entwicklung im Bereich Laboratorien und Gesundheitsdienstleistungen auf Basis strategischer Technologie bei Raymand Holding",
+        "hero-sec2": "Die Raymand Group wurde mit dem Ziel gegründet, ein integriertes und technologiebasiertes Ökosystem in den Bereichen Lieferkette, Management und Dienstleistungserbringung zu schaffen. Wir bei der Raymand Group streben danach, die aktuellen Standards der Gesundheits- und Labordienstleistungen im Land durch einen systematischen, wissenschaftlichen und werteorientierten Ansatz zu transformieren. Durch den Einsatz fortschrittlicher Technologien und moderner Managementstrategien wollen wir ein lokalisiertes Modell globaler Best Practices im Management von Labordienstleistungen, der Lieferkette für Spezialgeräte und im Gesundheitsmanagement im Iran entwickeln.",
+        "newsBlog": "Bleiben Sie mit unseren neuesten Nachrichten und Einblicken auf dem Laufenden.",
+        "raymand1": "Raymand Tajhiz Company",
+        "raymand2": "Raymand System Azma Company",
+        "raymand3": "Raymand System Equipment Company",
+        "slogan1": "Genauigkeit bei jedem Test",
+        "slogan2": "Innovationen in der Diagnostik stärken Labore",
+        "slogan3": "Entwicklung zukünftiger Gesundheitslösungen",
+        "update": "Aktuelle Unternehmensneuigkeiten"
+    },
+    "news": {
+        "read": "Lesen",
+        "title1": "Wir freuen uns darauf, Sie auf der Ausstellung für Laborgeräte mit den neuesten Produkten führender ausländischer Unternehmen begrüßen zu dürfen. ",
+        "title2": "Lernen Sie die Labordienstleistungen von Raymand in den Bereichen Boden, Wasser, Mikrobiologie, Nutz- und Geflügelzucht, Lebensmittel und Medizin kennen.",
+        "title3": "In Kürze werden Ihnen die neuesten Entwicklungen und Neuigkeiten aus dem Bereich Gesundheit und Medizin in diesem Abschnitt zur Verfügung stehen.",
+        "view-all": "Nachrichten durchsuchen"
+    },
+    "tech-Lab_page": {
+        "careers": " Forschungs- und Entwicklungsdienstleistungen (F&E)",
+        "generalInfo": {
+            "mission": "Mission",
+            "missionDesc": "Bei Raymand Group helfen wir Industrie und Gesellschaft, präziser, gesünder und effizienter zu funktionieren, indem wir ein Netzwerk von Laboren betreiben und weiterentwickeln, spezialisierte Gesundheitsdienstleistungen anbieten und moderne Ausrüstung liefern.",
+            "vision": "Ausblick",
+            "visionDesc": "Raymand; ein führendes Unternehmen beim Aufbau eines integrierten Netzwerks von Laboren und Gesundheitsdienstleistungen im Iran und der Region, das globalen Standards und nachhaltiger Innovation entspricht."
         },
-        "container3": {
-          "title": "Unsere wichtigsten Merkmale",
-          "item1": {
-            "title": "Integriertes und intelligentes Management",
-            "description": "Alle Labore arbeiten als ein kohärentes Netzwerk; diese Struktur ermöglicht schnelle, präzise und koordinierte Dienstleistungen."
-          },
-          "item2": {
-            "title": "Internationale Standards im Dienst des iranischen Kunden",
-            "description": "Alle Prozesse werden nach internationalen Standards wie ISO/IEC 17025 entworfen und umgesetzt, um Ergebnisse mit höchster Glaubwürdigkeit und weltweiter Anerkennung zu gewährleisten."
-          },
-          "item3": {
-            "title": "Innovation in der Dienstleistungserbringung",
-            "description": "Raymand ist nicht nur ein Anbieter von Labordienstleistungen, sondern bietet mit einem beratungsorientierten Ansatz Lösungen zur Qualitätsverbesserung, Kostensenkung und Produktivitätssteigerung für Kunden."
-          },
-          "item4": {
-            "title": "Hervorragendes wissenschaftliches und Managementteam",
-            "description": "Der Einsatz erfahrener Spezialisten in verschiedenen Labor- und Industriebereichen ermöglicht es uns, komplexe Kundenbedürfnisse präzise und schnell zu erfüllen."
-          },
-          "item5": {
-            "title": "Ein wachsendes, landesweites Netzwerk",
-            "description": "Unser Modell basiert auf der Zusammenarbeit mit anerkannten Laboren im ganzen Land, sodass Raymand zu einer nationalen Laborplattform wird."
-          }
-        }
-      },
-      "soilLab": {
-        "container1": {
-          "title": "Bodenlabor",
-          "description": "Das Bodenlabor bewertet durch präzise Analysedienste die Qualität und Fruchtbarkeit des Bodens und bietet wissenschaftliche Lösungen zur Förderung einer nachhaltigen Landwirtschaft."
+        "investors": "Bildungsdienstleistungen",
+        "routes": {
+            "aboutUs": {
+                "container1": {
+                    "description": "Der Raymand Strategic Technology Laboratory Complex wurde mit dem Ziel gegründet, Qualität, Gesundheit und Sicherheit in der Industrie und im Gesundheitswesen des Landes zu verbessern und ein neues Konzept integrierter Labordienstleistungen auf dem iranischen Markt einzuführen.",
+                    "title1": "Vorstellung des Laborkomplexes",
+                    "title2": "Strategisches Technologie-System von Raymand Azma"
+                },
+                "container2": {
+                    "description": "Durch die Zusammenführung einer Reihe spezialisierter Labore in den Bereichen Lebensmittel und Getränke, Wasser und Umwelt, Boden und Landwirtschaft, Petrochemie und verwandte Industrien sowie Gesundheit hat Raymand eine innovative Plattform geschaffen, um den vielfältigen Bedürfnissen von Organisationen, Industrien und Forschungszentren gerecht zu werden.",
+                    "title": "Inspiriert vom Managementmodell internationaler Unternehmen"
+                },
+                "container3": {
+                    "item1": {
+                        "description": "Alle Laboratorien arbeiten als zusammenhängendes Netzwerk; diese Struktur ermöglicht die Bereitstellung schneller, genauer und koordinierter Dienstleistungen.",
+                        "title": "Integriertes und intelligentes Management"
+                    },
+                    "item2": {
+                        "description": "Alle Prozesse werden auf der Grundlage internationaler Standards wie ISO\/IEC 17025 konzipiert und umgesetzt, um sicherzustellen, dass die Ergebnisse ein Höchstmaß an Glaubwürdigkeit und globaler Akzeptanz erreichen.",
+                        "title": "Globale Standards für iranische Kunden"
+                    },
+                    "item3": {
+                        "description": "Raymand ist nicht nur ein Labordienstleister; vielmehr bietet das Unternehmen mit einem beratungsorientierten Ansatz Lösungen zur Verbesserung der Qualität, zur Senkung der Kosten und zur Steigerung der Kundenproduktivität.",
+                        "title": "Innovation bei der Leistungserbringung"
+                    },
+                    "item4": {
+                        "description": "Durch den Einsatz erfahrener Experten in verschiedenen Labor- und Industriebereichen sind wir in der Lage, präzise und schnell auf die komplexen Bedürfnisse unserer Kunden einzugehen.",
+                        "title": "Hervorragendes wissenschaftliches und Managementteam"
+                    },
+                    "item5": {
+                        "description": "Unser Modell basiert auf der Zusammenarbeit mit renommierten Laboren im ganzen Land, um Raymand in eine nationale Laborplattform zu verwandeln.",
+                        "title": "Ein riesiges und stetig wachsendes Netzwerk"
+                    },
+                    "title": "Unsere wichtigsten Merkmale"
+                }
+            },
+            "agricultureServicesLab": {
+                "container1": {
+                    "description": "Spezialisierte Prüf-, Beratungs- und Zulassungsdienstleistungen für Pflanzengesundheit, Pflanzenschutz und Saatgutinnovation.",
+                    "title": "Agrarwissenschaftliche und Pflanzenschutzdienstleistungen"
+                },
+                "container2": {
+                    "title": "Raymand Agricultural Science Services mit Expertenwissen,",
+                    "title10": "Diese Dienstleistungen werden durch Wissensaustausch zwischen spezialisierten Zentren im Land entwickelt.",
+                    "title2": "Prüfungs- und Zulassungsberatung für Hersteller von Pflanzenschutzmitteln",
+                    "title3": "Es bietet Pflanzenschutz, Agrartechnologie, Pflanzenzüchtung und Saatgut an.",
+                    "title4": "In einem komplexen und dynamischen Umfeld",
+                    "title5": "Wir unterstützen unsere Kunden in allen Phasen der Registrierung von Agrarchemikalien.",
+                    "title6": "Feld- und Laborstudien zur Sicherheit und Wirksamkeit neuer Produkte",
+                    "title7": "Das ist der Kern unserer Tätigkeit und die Registrierung wird von unserem Expertenteam durchgeführt.",
+                    "title8": "Nationales Spezialnetzwerk von Raymand,",
+                    "title9": "Bietet Dienstleistungen für Hersteller von Bioziden und anderen Chemikalien an"
+                }
+            },
+            "clinicalPathologyLab": {
+                "container1": {
+                    "description": "Tägliche Durchführung umfangreicher Tests mit fortschrittlichen Techniken zur Diagnose, Überwachung und sicheren Entscheidungsfindung bei der Behandlung.",
+                    "title": "Innovative, kostengünstige klinische Diagnosedienstleistungen für alle Patienten verfügbar"
+                },
+                "container2": {
+                    "title": "Durch die Durchführung hunderttausender klinischer Diagnosetests täglich,",
+                    "title2": "Die Labore von Raymand Clinical Diagnostic Services arbeiten hart.",
+                    "title3": "Um sicherzustellen, dass jeder Patient überall",
+                    "title4": "Sie haben Zugang zu den spezialisiertesten und innovativsten Techniken für Diagnose, Überwachung und Behandlung.",
+                    "title5": "Logistische Expertise und tägliches Probenentnahme- und -lieferungsnetzwerk,",
+                    "title6": "Gewährleistet die vollständige Kontinuität der Betreuung",
+                    "title7": "Und es erhält den Qualitätsstandard und den Zugang zu Innovationen in allen Regionen aufrecht."
+                }
+            },
+            "concreteSteelLab": {
+                "container1": {
+                    "description": "Wir bieten Prüfdienstleistungen für Beton, Bewehrungsstahl und Baustoffe an, um Sicherheit und fundierte Ingenieurentscheidungen zu gewährleisten.",
+                    "title": "Raymand Beton- und Bewehrungslabor – Genaue und standardisierte Prüfungen"
+                },
+                "container2": {
+                    "title": "Das Raymand Beton- und Bewehrungslabor bietet präzise, zuverlässige und normkonforme Prüfdienstleistungen für eine breite Palette von Baustoffen. Wir sind spezialisiert auf die Prüfung von Beton, Bewehrungsstahl und verwandten Materialien, um die strukturelle Integrität, Sicherheit und die Einhaltung der Branchenspezifikationen zu gewährleisten. Ob in der Planungsphase oder während der Bauphase – unser Labor liefert präzise Daten für fundierte Ingenieurentscheidungen."
+                }
+            },
+            "environmentalLaboratory": {
+                "container1": {
+                    "description": "Raymand trägt zur Förderung der Gesundheit und zum Schutz der Umwelt bei, indem es spezialisierte Wasser-, Luft-, Boden- und Abfallanalysen sowie professionelle Beratung und Überwachung anbietet.",
+                    "title": "Raymand Labordienstleistungen für Gesundheit und Umwelt"
+                },
+                "container2": {
+                    "title": "Eine saubere und sichere Umgebung ist Voraussetzung für Gesundheit und Lebensqualität.",
+                    "title2": "Raymand bietet marktführende Labordienstleistungen an.",
+                    "title3": "Dazu trägt die Überwachung und Beratung einer breiten Palette von Industrieunternehmen, Umweltberatern, Auftragnehmern, Einzelhändlern und Regierungsbeamten bei.",
+                    "title4": "Zu unseren Dienstleistungen gehören die Prüfung von Wasser, Luft, Boden, Abfall und anderen Produkten.",
+                    "title5": "Um ihre Qualität und ihre Auswirkungen auf Gesundheit und Umwelt zu beurteilen."
+                }
+            },
+            "foodIndustry": {
+                "container1": {
+                    "description": "Ein landesweites Netzwerk von hochmodernen Laboren zur Durchführung von Lebensmittelsicherheits-, Zusammensetzungs-, Authentizitäts- und Rückverfolgbarkeitsprüfungen.",
+                    "title": "Qualitäts- und Sicherheitssicherung im Lebensmittel- und Futtermittellabor von Raymand"
+                },
+                "container2": {
+                    "title": "Raymand ist eine führende Laborgruppe für Lebensmittel und Futtermittel im Iran und setzt ein breites Spektrum fortschrittlicher Analyseverfahren ein, um die steigenden Qualitäts- und Sicherheitsstandards ihrer Kunden zu erfüllen. Die Gruppe verfügt über ein landesweites Netzwerk von Lebensmittellaboren und Kompetenzzentren, die jährlich zahlreiche Tests durchführen, um die Sicherheit, Zusammensetzung, Authentizität, Herkunft, Rückverfolgbarkeit und Reinheit von Lebensmitteln zu bestimmen. Raymand bietet daher das umfassendste Portfolio an Produkten für Lebensmitteltests und stellt dieses einzigartige Angebot weltweit über jedes seiner Labore mithilfe optimierter Prozesse, Logistik und Informationstechnologie zur Verfügung."
+                }
+            },
+            "geneticLab": {
+                "container1": {
+                    "description": "Führender Anbieter von DNA-Sequenzierung, Genotypisierung, Synthese und Bioinformatik für die Bereiche Pharmazeutika, Diagnostik, Lebensmittel, Landwirtschaft, Biotechnologie und Forschung.",
+                    "title": "Raymand Genomics – Fortgeschrittene DNA- und Bioinformatik-Dienstleistungen"
+                },
+                "container2": {
+                    "title": "Raymand Genomics ist der Geschäftsbereich Genomik der Raymand Scientific Group. Mit Niederlassungen im Iran und im Ausland ist Raymand Genomics ein international führender Anbieter von DNA-Sequenzierungsdiensten, Genotypisierungsdiensten, DNA-Syntheseprodukten und Bioinformatik-Dienstleistungen für die pharmazeutische Industrie, die Diagnostik, die Lebensmittelindustrie, die Landwirtschaft, die Biotechnologie und den Forschungssektor."
+                }
+            },
+            "livestockLab": {
+                "container1": {
+                    "description": "Fortschrittliche und präzise Diagnostikleistungen für Großtiere zur Unterstützung der tierärztlichen Versorgung, der Herdengesundheit und der landwirtschaftlichen Produktivität.",
+                    "title": "Raymand Großtierlabor – Spezialisierte Diagnostik für Nutztiere und Pferde"
+                },
+                "container2": {
+                    "title": "Unser Großtierlabor bietet spezialisierte Diagnostik, die auf die besonderen Bedürfnisse von Großtieren wie Rindern und Pferden zugeschnitten ist. Ausgestattet mit modernster Technologie und erfahrenen Fachkräften liefern wir präzise und zeitnahe Ergebnisse zur Unterstützung der tierärztlichen Versorgung, des Herdenmanagements und der landwirtschaftlichen Produktivität. Wir legen Wert auf Qualität und Zuverlässigkeit und tragen so zum Wohlbefinden Ihrer wertvollen Tiere bei."
+                }
+            },
+            "petLab": {
+                "container1": {
+                    "description": "Umfassende und zuverlässige Haustieruntersuchungen mit schnellen Ergebnissen zur Unterstützung von Tierärzten und der Gesundheit Ihrer geliebten Tiere.",
+                    "title": "Raymand Kleintierlabor – Spezialisierte Diagnostik für Haustiere"
+                },
+                "container2": {
+                    "title": "Unser Kleintierlabor bietet umfassende, speziell für Haustiere entwickelte Diagnostiktests, die Tierärzten eine präzise und zeitnahe Behandlung ermöglichen. Von routinemäßigen Blutuntersuchungen bis hin zu Spezialtests – unsere hochmodernen Einrichtungen gewährleisten schnelle und zuverlässige Ergebnisse und tragen zum Wohlbefinden Ihrer Lieblinge bei. Wir arbeiten eng mit Tierärzten zusammen, um die bestmögliche medizinische Versorgung Ihrer Tiere zu gewährleisten."
+                }
+            },
+            "pharmaCosmeticIndustry": {
+                "container1": {
+                    "description": "Strategic Technology Laboratories (Raymand Group) bietet pharmazeutische, biologische, kosmetische und Gesundheitsdienstleistungen über ein integriertes und standardisiertes Netzwerk an.",
+                    "title": "Pharmazeutische, biologische, kosmetische und Gesundheitsindustrie"
+                },
+                "container2": {
+                    "title": "Die Raymand Group, ein führendes Technologielabor für pharmazeutische, biologische, kosmetische und Gesundheitslabore, ist ein erstklassiger Partner für das Outsourcing pharmazeutischer und biologischer Dienstleistungen. Das Labornetzwerk der Raymand Group deckt alle in der Produktionskette der entsprechenden Produkte erforderlichen Tests ab. Diese werden von führenden und hochspezialisierten Laboren aus den Bereichen Pharmazie, Chemie, Biotechnologie, Medizintechnik und Kosmetik durchgeführt. Durch den Aufbau eines landesweiten Labornetzwerks und die Implementierung eines Qualitätssicherungssystems bietet die Raymand Group integrierte Dienstleistungen auf höchstem Niveau."
+                }
+            },
+            "poultryLab": {
+                "container1": {
+                    "description": "Spezialisierte Testverfahren und Analysen für die Geflügelindustrie zur Krankheitsprävention, Produktivitätssteigerung und Gewährleistung der Lebensmittelsicherheit.",
+                    "title": "Raymand Geflügellabor – Genaue Diagnose für die Geflügelgesundheit"
+                },
+                "container2": {
+                    "title": "Unser Geflügellabor ist auf diagnostische Tests und Analysen speziell für die Geflügelindustrie spezialisiert. Wir liefern präzise und zeitnahe Ergebnisse zur Unterstützung des Gesundheitsmanagements, der Krankheitsprävention und der Steigerung der Produktionseffizienz. Mit modernster Ausstattung und qualifiziertem Fachpersonal helfen wir Geflügelhaltern und Tierärzten, die Fruchtbarkeit und Gesundheit ihrer Tiere zu erhalten und die Einhaltung der Lebensmittelsicherheitsstandards zu gewährleisten."
+                }
+            },
+            "soilLab": {
+                "container1": {
+                    "description": "Das Bodenkundliche Labor bietet präzise analytische Dienstleistungen, beurteilt die Bodenqualität und -fruchtbarkeit und liefert wissenschaftliche Lösungen zur Verbesserung einer nachhaltigen Landwirtschaft.",
+                    "title": "Bodenkundliches Labor"
+                },
+                "container2": {
+                    "service": "Weitere Dienstleistungen",
+                    "title": "Die Raymand Group möchte zu einer gesunden, nachhaltigen und nachhaltigen Landwirtschaft und zu nachhaltigem Wachstum beitragen.",
+                    "title2": "Als unabhängiger Partner ermöglichen wir Akteuren der Agrar- und Lebensmittelindustrie, die Gesundheit und Fruchtbarkeit von Boden und Nutzpflanzen, den Ertrag und die Rentabilität zu verbessern.",
+                    "title3": "Unsere Analyse- und Entscheidungsunterstützungsdienste sind unverzichtbare Instrumente, um den Übergang zu nachhaltigeren landwirtschaftlichen Praktiken zu erleichtern.",
+                    "title4": "Diese Dienstleistungen führen zu positiven ökologischen und sozialen Auswirkungen."
+                }
+            },
+            "waterAnalysisLab": {
+                "container1": {
+                    "description": "Umfassende Prüfungen für Trinkwasser, industrielle Anwendungen und Umweltanwendungen mit Hilfe fortschrittlicher und präziser Methoden.",
+                    "title": "Das Raymand-Wasseranalysenlabor gewährleistet Wasserqualität und -sicherheit"
+                },
+                "container2": {
+                    "title": "Unser Wasseranalyselabor bietet umfassende Prüfdienstleistungen zur Beurteilung der Wasserqualität für vielfältige Anwendungsbereiche, darunter Trinkwasser, industrielle Anwendungen und Umweltmonitoring. Mithilfe modernster Analyseverfahren liefern wir präzise und zuverlässige Ergebnisse, die zur Sicherheit, zur Einhaltung gesetzlicher Vorschriften und zu einem nachhaltigen Wassermanagement beitragen. Vertrauen Sie auf unsere Expertise und Präzision für Ihre Anforderungen an die Wasserqualität."
+                }
+            }
         },
-        "container2": {
-          "title": "Die Raymand-Gruppe möchte zur Förderung einer gesunden, nachhaltigen Landwirtschaft beitragen.",
-          "title2": "Als unabhängiger Partner ermöglichen wir Akteuren der Landwirtschafts- und Lebensmittelindustrie, die Gesundheit und Fruchtbarkeit von Böden und Produkten sowie die Leistung und Rentabilität zu verbessern.",
-          "title3": "Unsere Analysedienste und Entscheidungsunterstützung sind entscheidende Werkzeuge, um den Übergang zu nachhaltigeren landwirtschaftlichen Praktiken zu erleichtern.",
-          "title4": "Diese Dienste tragen zu positiven ökologischen und sozialen Auswirkungen bei.",
-          "service": "Weitere Dienste"
-        }
-      },
-      "waterAnalysisLab": {
-        "container1": {
-          "title": "Raymand Wasseranalyselabor — Gewährleistung von Wasserqualität und Sicherheit",
-          "description": "Umfassende Wasseranalysen für Trinkwasser, industrielle und umweltbezogene Anwendungen mit zuverlässigen, modernen Methoden."
+        "services": " Labordienstleistungen",
+        "shortCuts": {
+            "agricultureServicesLab": "Labor für landwirtschaftliche Dienstleistungen",
+            "clinicalPathologyLab": "Medizinisches Diagnostik- und Pathologielabor",
+            "collaborationRequest": "Anfrage zur Zusammenarbeit bei Bildungs- und Studentenarbeiten",
+            "concreteSteelLab": "Beton- und Bewehrungszuglabor",
+            "environmentLab": "Umweltlabor",
+            "foodIndustry": "Lebensmittelindustrie",
+            "geneticLab": "Genetiklabor",
+            "innovationLab": "Anfrage zur Zusammenarbeit bei Forschungsarbeiten",
+            "livestockLab": "Großtierlabor",
+            "petLab": "Kleintierlabor (Haustiere)",
+            "pharmaCosmeticIndustry": "Pharmazeutische und kosmetische Industrie",
+            "poultryLab": "Geflügellabor",
+            "soilLab": "Bodenkundliches Labor",
+            "waterAnalysisLab": "Wasseranalyselabor"
         },
-        "container2": {
-          "title": "Unser Wasseranalyselabor bietet umfassende Tests zur Bewertung der Wasserqualität für verschiedene Anwendungen, einschließlich Trinkwasser, industrielle Nutzung und Umweltüberwachung. Mit fortschrittlichen analytischen Techniken liefern wir präzise und zuverlässige Ergebnisse, um Sicherheit, Einhaltung gesetzlicher Vorschriften und nachhaltiges Wassermanagement zu gewährleisten. Vertrauen Sie uns, um Ihre Anforderungen an die Wasserqualität mit Genauigkeit und Fachwissen zu unterstützen."
-        }
-      },
-      "petLab": {
-        "container1": {
-          "title": "Raymand Kleintierlabor — Diagnostik für Haustiere",
-          "description": "Umfassende und zuverlässige Tests für Haustiere, die Tierärzte mit schnellen Ergebnissen und moderner Betreuung unterstützen."
-        },
-        "container2": {
-          "title": "Unser Kleintierlabor bietet umfassende diagnostische Tests, die speziell für Haustiere entwickelt wurden, und unterstützt Tierärzte bei einer präzisen und zeitnahen Versorgung. Von routinemäßigen Bluttests bis hin zu spezialisierten Analysen gewährleisten unsere modernen Einrichtungen schnelle und zuverlässige Ergebnisse und fördern die Gesundheit und das Wohlbefinden Ihrer Tiere. Wir sind engagiert, mit tierärztlichen Fachkräften zusammenzuarbeiten, um die bestmögliche Unterstützung für die medizinischen Bedürfnisse Ihrer Haustiere zu bieten."
-        }
-      },
-      "livestockLab": {
-        "container1": {
-          "title": "Raymand Großtierlabor — Spezialisierte Diagnostik für Nutztiere & Pferde",
-          "description": "Fortschrittliche Diagnostik für Großtiere mit präzisen Ergebnissen zur Unterstützung der tierärztlichen Versorgung, Herdengesundheit und landwirtschaftlichen Produktivität."
-        },
-        "container2": {
-          "title": "Unser Großtierlabor bietet spezialisierte diagnostische Tests, die auf die besonderen Bedürfnisse von Nutztieren und Pferden zugeschnitten sind. Mit modernster Technologie und einem erfahrenen Expertenteam liefern wir präzise und zeitnahe Ergebnisse zur Unterstützung der tierärztlichen Versorgung, des Herdenmanagements und der landwirtschaftlichen Produktivität. Unser Engagement für Qualität und Zuverlässigkeit trägt dazu bei, die Gesundheit und das Wohlbefinden Ihrer wertvollen Tiere zu gewährleisten."
-        }
-      },
-      "poultryLab": {
-        "container1": {
-          "title": "Raymand Geflügellabor — Präzise Diagnostik für die Geflügelgesundheit",
-          "description": "Spezialisierte Tests und Analysen für die Geflügelindustrie zur Sicherung von Krankheitsprävention, Produktivität und Lebensmittelsicherheit."
-        },
-        "container2": {
-          "title": "Unser Geflügellabor ist auf diagnostische Tests und Analysen spezialisiert, die auf die Geflügelindustrie zugeschnitten sind. Wir liefern präzise und zeitnahe Ergebnisse zur Unterstützung des Gesundheitsmanagements von Geflügel, der Krankheitsprävention und der allgemeinen Produktivität. Mit moderner Ausstattung und fachkundigem Personal helfen wir Landwirten und Tierärzten, die Fruchtbarkeit und Gesundheit des Geflügels zu erhalten und die Lebensmittelsicherheitsstandards einzuhalten."
-        }
-      },
-      "environmentalLaboratory": {
-        "container1": {
-          "title": "Raimand Labordienstleistungen für Gesundheit und Umwelt",
-          "description": "Raimand bietet spezialisierte Tests von Wasser, Luft, Boden und Abfall sowie professionelle Beratung und Überwachung, um die Gesundheit zu fördern und die Umwelt zu schützen."
-        },
-        "container2": {
-          "title": "Eine saubere und sichere Umwelt ist Voraussetzung für Gesundheit und Lebensqualität.",
-          "title2": "Raimand ist ein führender Anbieter von Labordienstleistungen auf dem Markt,",
-          "title3": "und trägt durch Überwachung und Beratung für zahlreiche Industrieunternehmen, Umweltberater, Auftragnehmer, Einzelhändler und Behörden dazu bei.",
-          "title4": "Unsere Dienstleistungen umfassen Tests von Wasser, Luft, Boden, Abfall und weiteren Produkten,",
-          "title5": "um deren Qualität und Auswirkungen auf Gesundheit und Umwelt zu bewerten."
-        }
-      },
-      "concreteSteelLab": {
-        "container1": {
-          "title": "Raymand Beton- und Bewehrungslabor — Zuverlässige Strukturprüfungen",
-          "description": "Präzise und normgerechte Tests für Beton, Bewehrungsstahl und Baumaterialien zur Sicherstellung von Sicherheit und Ingenieursgenauigkeit."
-        },
-        "container2": {
-          "title": "Das Beton- und Bewehrungslabor von Raymand bietet präzise, zuverlässige und normgerechte Tests für eine Vielzahl von Baumaterialien. Wir sind spezialisiert auf die Prüfung von Beton, Bewehrungsstahl und verwandten Materialien, um die strukturelle Integrität, Sicherheit und die Einhaltung von Industriestandards zu gewährleisten. Ob in der Planungs- oder Bauphase, unser Labor liefert genaue Daten zur Unterstützung fundierter Ingenieursentscheidungen."
-        }
-      },
-      "agricultureServicesLab": {
-        "container1": {
-          "title": "Agrarwissenschaft & Pflanzenschutz",
-          "description": "Fachgerechte Tests, Beratung und Zulassungsdienste für Pflanzengesundheit, Pflanzenschutz und Saatgutinnovation."
-        },
-        "container2": {
-          "title": "Raymand Agrarwissenschaftliche Dienste, gestützt auf Fachwissen,",
-          "title2": "bieten Tests und regulatorische Beratung für Pflanzengesundheit, Pflanzenschutz, Agrartechnik, Züchtung und Saatgut.",
-          "title3": "In einem komplexen Umfeld",
-          "title4": "unterstützen wir Kunden bei allen Schritten der Chemikalienzulassung.",
-          "title5": "Feld- und Laborstudien zu Sicherheit und Wirksamkeit stehen im Mittelpunkt,",
-          "title6": "mit Zulassungen durch unsere Fachspezialisten.",
-          "title7": "Unser nationales Expertennetzwerk",
-          "title8": "erweitert die Dienste auf Biozid- und Chemikalienhersteller",
-          "title9": "und wächst durch Wissensaustausch zwischen spezialisierten Zentren."
-        }
-      },
-      "foodIndustry": {
-        "container1": {
-          "title": "Raymand Lebensmittel- & Futtermitteltests — Qualität und Sicherheit gewährleisten",
-          "description": "Nationales Netzwerk moderner Labore mit zuverlässigen Tests zu Sicherheit, Zusammensetzung, Authentizität und Rückverfolgbarkeit."
-        },
-        "container2": {
-          "title": "Raymand ist eine führende Gruppe im Bereich Lebensmittel- und Futtermittellabore im Iran, die eine breite Palette fortschrittlicher Analysetechniken einsetzt, um die wachsenden Qualitäts- und Sicherheitsstandards ihrer Kunden zu unterstützen. Die Gruppe hat ein nationales Netzwerk von Lebensmittellaboren und Akkreditierungszentren aufgebaut, die jährlich zahlreiche Tests zur Bestimmung der Sicherheit, Zusammensetzung, Authentizität, Herkunft, Rückverfolgbarkeit und Reinheit von Lebensmitteln durchführen. Daher bietet Raymand das umfangreichste Portfolio an Lebensmitteldienstleistungen an und stellt dieses einzigartige Angebot weltweit durch optimierte Prozesse, Logistik und Informationstechnologie aus jedem seiner Labore zur Verfügung."
-        }
-      },
-      "pharmaCosmeticIndustry": {
-        "container1": {
-          "title": "Pharma-, Biotech-, Kosmetik- und Hygieneindustrie",
-          "description": "Die Strategischen Technologielabore (Raimand-Gruppe) bieten pharmazeutische, biotechnologische, kosmetische und hygienische Dienstleistungen über ein integriertes und standardisiertes Netzwerk an."
-        },
-        "container2": {
-          "title1": "Pharma-, Biotech-, Kosmetik- und Hygieneindustrie",
-          "title2": "Die pharmazeutischen, biotechnologischen, kosmetischen und hygienischen Labore des Strategischen Technologielabors (Raimand-Gruppe) sind ein erstklassiger Geschäftspartner für das Outsourcing pharmazeutischer und biotechnologischer Dienstleistungen.",
-          "title3": "Diese Labore arbeiten in Zusammenarbeit mit pharmazeutischen, chemischen, biotechnologischen, medizinischen Geräte- sowie Kosmetik- und Hygienelaboren.",
-          "title4": "Das Labornetzwerk der Raimand-Gruppe deckt die gesamte Produktionskette der entsprechenden Produkte ab.",
-          "title5": "Durch den Aufbau eines landesweiten Labornetzwerks bietet die Gruppe ein integriertes Qualitätssicherungssystem und Dienstleistungen auf hohem Standard."
-        }
-      },
-      "clinicalPathologyLab": {
-        "container1": {
-          "title": "Raymand Klinische Diagnostik — Innovation für alle Patienten",
-          "description": "Tägliche umfangreiche Tests mit modernsten Techniken für zuverlässige Diagnose, Überwachung und Therapieentscheidungen weltweit."
-        },
-        "container2": {
-          "title": "Mit Hunderttausenden klinischen Tests täglich",
-          "title2": "bemühen sich die Raymand Diagnostiklaboratorien,",
-          "title3": "dass jeder Patient, überall,",
-          "title4": "Zugang zu den spezialisiertesten und innovativsten Techniken für Diagnose, Überwachung und Therapieentscheidungen hat.",
-          "title5": "Unsere logistische Expertise und das tägliche Netzwerk für Probenabholung und -lieferung",
-          "title6": "sichern die Kontinuität der Versorgung",
-          "title7": "und gewährleisten Qualitätsstandards sowie Zugang zu Innovationen in allen Regionen, die wir bedienen."
-        }
-      },
-      "geneticLab": {
-        "container1": {
-          "title": "Raymand Genomics — Fortschrittliche DNA- & Bioinformatik-Dienste",
-          "description": "Führender Anbieter von DNA-Sequenzierung, Genotypisierung, Synthese und Bioinformatik für Pharma, Diagnostik, Lebensmittel, Landwirtschaft, Biotechnologie und Forschung."
-        },
-        "container2": {
-          "title": "Raymand Genomics vertritt die Genomik-Sparte der Raymand Scientific Group.",
-          "title2": "Mit Zentren im In- und Ausland",
-          "title3": "ist es ein international führender Anbieter von DNA-Sequenzierungsdiensten,",
-          "title4": "Genotypisierung, DNA-Syntheseprodukten",
-          "title5": "und Bioinformatik für die Märkte Pharma, Diagnostik, Lebensmittel, Landwirtschaft, Biotechnologie und Forschung."
-        }
-      }
+        "subtitle": "Raymand Group, ein führendes Unternehmen im Bereich Tests für eine bessere Lebensqualität"
     }
-  },
-  "header": {
-    "home-page": "Startseite",
-    "gpo": "Gruppeneinkaufsorganisation\n(Raymand Tajhiz GmbH)",
-    "tech-Lab": "Strategisches Technologielabor\n(Raymand System Azma GmbH)",
-    "vHospital": "Gesundheitstechnologie-Management\n(Raymand System Tajhiz GmbH)",
-    "contact_us": "Kontakt",
-    "news": "Nachrichten"
-  },
-  "common": {
-    "submit": "Senden",
-    "name&lastname": "Vor- und Nachname",
-    "email": "E-Mail",
-    "phone": "Telefon",
-    "learn-more": "Mehr erfahren ...",
-    "about_us": "Über uns",
-    "services_tests": "Dienstleistungen und Tests",
-    "lab_test_admission": "Das Labor beginnt mit der Annahme von Tests.",
-    "click": "Klicken Sie, um die Anmeldung zu starten"
-  },
-  "news": {
-    "title1": "Wir freuen uns, Sie auf der Ausstellung für Laborausrüstung mit den neuesten Produkten führender internationaler Unternehmen zu treffen.",
-    "title2": "Lernen Sie die Labordienste von Raymand in den Bereichen Boden, Wasser, Mikrobiologie, Vieh und Geflügel, Lebensmittel und Pharmazie kennen.",
-    "title3": "Bald werden die neuesten Entwicklungen und Nachrichten im Bereich Gesundheit und Medizin über diesen Abschnitt verfügbar sein.",
-    "view-all": "Alle Nachrichten ansehen",
-    "read": "Lesen"
-  },
-  "footer": {
-    "site_pages": "Seiten",
-    "social-media": "Unsere sozialen Medien",
-    "validation": {
-      "name_required": "Name ist erforderlich",
-      "email_required": "E-Mail ist erforderlich",
-      "email_invalid": "Bitte eine gültige E-Mail eingeben",
-      "phone_required": "Telefonnummer ist erforderlich",
-      "phone_length": "Die Telefonnummer muss mindestens 11 Ziffern enthalten"
-    }
-  }
 }

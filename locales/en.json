@@ -1,273 +1,266 @@
 {
-  "home_page": {
-    "hero-sec1": "A New Transformation in Laboratories and Healthcare Services Based on Strategic Technology in Raymand Holding",
-    "hero-sec2": "Raymand Group was established with the goal of creating an integrated and technology-driven ecosystem in the supply chain, management, and service delivery. At Raymand, we strive with a systematic, scientific, and value-based approach to transform the current standards of healthcare and laboratory services in the country. By leveraging advanced technologies and modern management strategies, our goal is to develop a localized model based on the world’s best practices in laboratory service management, specialized equipment supply chain, and healthcare management in Iran.",
-    "raymand1": "Raymand Tajhiz Company",
-    "raymand2": "Raymand System Azma Company",
-    "raymand3": "Raymand System Tajhiz Company",
-    "discover": {
-      "discover-text": "Holding Organizational Structure",
-      "discover-intro": "Raymand Group consists of three companies, each operating with the goal of transforming traditional systems in their field. By relying on innovative methods and modern technologies, these companies seek to provide solutions to existing challenges in industrial, research, clinical laboratories, and the healthcare sector.",
-      "raymand1-des1": "Supply, import, and production of laboratory equipment and consumables based on GPO principles and value chain",
-      "raymand1-des2": "Procurement and import arm for specialized equipment from reputable global brands",
-      "raymand1-des3": "Using the GPO model, this company enables cost reduction and increased efficiency in the supply chain of industrial, research, and clinical laboratories across the country.",
-      "raymand2-des1": "Smart management and implementation of quality assurance systems for specialized, research, and clinical laboratories",
-      "raymand2-des2": "Implementation and auditing of international standards such as ISO 17025 and ISO 15189, etc.",
-      "raymand2-des3": "Designing laboratory process structures, drafting SOPs, and training personnel",
-      "raymand2-des4": "Consulting for purchase, installation, calibration, and validation of equipment",
-      "raymand2-des5": "Resource management including human resources, consumables, and capacity planning for laboratory services",
-      "raymand2-des6": "Increasing productivity, accuracy, and efficiency in laboratory performance",
-      "raymand2-des7": "Providing laboratory, research, and educational services",
-      "raymand3-des1": "Smart management of healthcare services based on modern technologies",
-      "raymand3-des2": "Process transformation",
-      "raymand3-des3": "Providing smart solutions for all healthcare units",
-      "raymand3-des4": "Designing operational models and organizational structures",
-      "raymand3-des5": "Virtual hospital and innovative transformations in healthcare services (including Prevention, Pre-Hospital, Hospital, Post-Hospital)"
+    "common": {
+        "about_us": "About us",
+        "click": "Click to start accepting.",
+        "email": "Email",
+        "lab_test_admission": "The laboratory begins by accepting tests.",
+        "learn-more": "Learn more...",
+        "name&lastname": "First and last name",
+        "phone": "Telephone",
+        "services_tests": "Services and tests",
+        "submit": "Send"
     },
-    "blog": "Blog",
-    "update": "Latest Company Updates",
-    "newsBlog": "Stay updated with our latest news and insights",
-    "slogan1": "Accuracy in Every Test",
-    "slogan2": "Innovation in Diagnostics, Empowering Laboratories",
-    "slogan3": "Engineering the Healthcare Solutions of the Future"
-  },
-  "tech-Lab_page": {
-    "subtitle": "Raymand Group, Leading Testing for a Better Quality of Life",
-    "services": "Laboratory Services",
-    "careers": "Research & Development (R&D) Services",
-    "investors": "Educational Services",
-    "generalInfo": {
-      "vision": "Vision",
-      "visionDesc": "Raymand Group aims to become the most trusted specialized network for laboratories and healthcare services in Iran and the region; an entity that, with innovation, integration, and international standards, gains the trust of industries, universities, and society as a strategic partner in quality and health.",
-      "mission": "Mission",
-      "missionDesc": "At Raymand Group, through managing and expanding laboratory networks, providing specialized healthcare services, and supplying modern equipment, we help industries and society operate with more precision, safety, and efficiency."
+    "footer": {
+        "site_pages": "Site pages",
+        "social-media": "Our social media",
+        "validation": {
+            "email_invalid": "Enter a valid email.",
+            "email_required": "Entering an email is required.",
+            "name_required": "Entering a name is required.",
+            "phone_length": "Phone number must be at least 11 digits long.",
+            "phone_required": "Entering a phone number is required"
+        }
     },
-    "shortCuts": {
-      "soilLab": "Soil Laboratory",
-      "concreteSteelLab": "Concrete & Rebar Testing Lab",
-      "environmentLab": "Environmental Laboratory",
-      "waterAnalysisLab": "Water Analysis Laboratory",
-      "innovationLab": "Collaboration request for research activities",
-      "petLab": "Small Animal (Pet) Laboratory",
-      "livestockLab": "Large Animal Laboratory",
-      "poultryLab": "Poultry Laboratory",
-      "agricultureServicesLab": "Agricultural Services Laboratory",
-      "collaborationRequest": "Collaboration request for educational and student activities",
-      "pharmaCosmeticIndustry": "Pharmaceutical & Cosmetic Industry",
-      "foodIndustry": "Food Industry",
-      "clinicalPathologyLab": "Clinical Pathology Laboratory",
-      "geneticLab": "Genetics Laboratory"
+    "header": {
+        "contact_us": "Contact us",
+        "gpo": "Group Purchasing Organization \\n (Raymand Tajhiz Company)",
+        "home-page": "Home",
+        "news": "News",
+        "tech-Lab": "Strategic Technology Laboratory \\n (Raymand System Ezma Group)",
+        "vHospital": "Health Technology Management \\n (Raymand Equipment System Company)"
     },
-    "routes": {
-      "aboutUs": {
-        "container1": {
-          "title1": "Introducing the Laboratory Complex",
-          "title2": "Raymand Strategic Technology System Azma",
-          "description": "The Raymand Strategic Technology Laboratory Complex was founded with the mission to enhance quality, health, and safety in industries and healthcare, introducing a new concept of integrated laboratory services to the Iranian market."
+    "home_page": {
+        "blog": "Blog",
+        "discover": {
+            "discover-intro": "The Raymand Group consists of three companies, each of which aims to revolutionize traditional systems in their respective fields. These companies, relying on innovative methods and cutting-edge technologies, seek to provide solutions to the challenges facing the country's industrial, research, clinical, and healthcare laboratories.",
+            "discover-text": "Holding's organizational structure",
+            "raymand1-des1": "Supply, import and production of laboratory equipment and consumables based on GPO and value chain principles",
+            "raymand1-des2": "Supply and import arm of specialized equipment from reputable global brands",
+            "raymand1-des3": "By using the GPO model, the company enables cost reduction and increased productivity in the supply chain of industrial, research, and clinical laboratories in the country.",
+            "raymand2-des1": "Intelligent management and implementation of quality assurance systems for specialized, research and clinical laboratories",
+            "raymand2-des2": "Implementation and auditing of international standards such as ISO 17025 and ISO 15189, etc.",
+            "raymand2-des3": "Designing the structure of laboratory processes, developing SOPs and training human resources",
+            "raymand2-des4": "Consulting on purchasing, installation, calibration and validation of equipment",
+            "raymand2-des5": "Resource management including human resources, consumables, and capacity planning for the production of laboratory services",
+            "raymand2-des6": "Increasing productivity, accuracy, and efficiency in laboratory operations",
+            "raymand2-des7": " Providing laboratory, research and administrative services",
+            "raymand3-des1": "Smart management of health services based on modern technologies",
+            "raymand3-des2": "Transformation in processes",
+            "raymand3-des3": "Providing smart solutions for all health units",
+            "raymand3-des4": "Designing operating models and organizational structures",
+            "raymand3-des5": "Virtual hospital and innovative developments in health services (including prevention, pre-hospital, hospital, post-hospital)"
         },
-        "container2": {
-          "title": "Inspired by International Corporate Management Models",
-          "description": "By gathering a set of specialized laboratories in food & beverage, water & environment, soil & agriculture, petrochemicals & related industries, and healthcare, Raymand has created an innovative platform to meet the diverse needs of organizations, industries, and research centers."
+        "hero-sec1": "A new development in laboratories and health services based on strategic technology at Raymand Holding",
+        "hero-sec2": "Raymand Group was established with the aim of creating an integrated and technology-based ecosystem in the supply chain, management and service delivery. At Raymand Group, we strive to transform the current standards of health and laboratory services in the country with a systematic, scientific and value-based approach. By utilizing advanced technologies and modern management strategies, our goal is to develop a localized model of global best practices in laboratory services management, specialized equipment supply chain and health management in Iran.",
+        "newsBlog": "Stay up to date with our latest news and insights.",
+        "raymand1": "Raymand Tajhiz Company",
+        "raymand2": "Raymand System Azma Company",
+        "raymand3": "Raymand System Equipment Company",
+        "slogan1": "Accuracy in each test",
+        "slogan2": "Innovation in diagnostics, empowering laboratories",
+        "slogan3": "Engineering future health solutions",
+        "update": "Latest company updates"
+    },
+    "news": {
+        "read": "Read",
+        "title1": "We look forward to meeting you at the laboratory equipment exhibition with the latest products from major foreign companies. ",
+        "title2": "Get to know Raymand's laboratory services in the fields of soil, water, microbiology, livestock and poultry, food, and medicine.",
+        "title3": "Soon, the latest developments and news in the field of health and medicine will be available to you through this section.",
+        "view-all": "News browsing"
+    },
+    "tech-Lab_page": {
+        "careers": " Research and Development (R&D) Services",
+        "generalInfo": {
+            "mission": "Mission",
+            "missionDesc": "At Raymand Group, we help industries and society operate more accurately, healthily, and efficiently by managing and developing a network of laboratories, providing specialized health services, and supplying modern equipment.",
+            "vision": "Outlook",
+            "visionDesc": "Raymand; a leader in creating an integrated network of laboratories and health services in Iran and the region, with global standards and sustainable innovation."
         },
-        "container3": {
-          "title": "Our Key Features",
-          "item1": {
-            "title": "Integrated and Smart Management",
-            "description": "All laboratories operate as part of a cohesive network; this structure enables fast, accurate, and coordinated services."
-          },
-          "item2": {
-            "title": "Global Standards Serving Iranian Clients",
-            "description": "All processes are designed and implemented based on international standards such as ISO/IEC 17025 to ensure the highest level of global credibility and acceptance."
-          },
-          "item3": {
-            "title": "Innovation in Service Delivery",
-            "description": "Raymand is not just a laboratory service provider; with a consultative approach, we offer solutions to improve quality, reduce costs, and increase client productivity."
-          },
-          "item4": {
-            "title": "Outstanding Scientific and Managerial Team",
-            "description": "Leveraging experienced experts in various laboratory and industrial fields enables us to address complex client needs with precision and speed."
-          },
-          "item5": {
-            "title": "A Wide and Growing Network",
-            "description": "Our model is based on collaboration with reputable laboratories across the country, positioning Raymand as a national laboratory platform."
-          }
-        }
-      },
-      "soilLab": {
-        "container1": {
-          "title": "Soil Laboratory",
-          "description": "The Soil Laboratory provides precise analytical services to evaluate soil quality and fertility, offering scientific solutions for sustainable agriculture."
+        "investors": "Educational services",
+        "routes": {
+            "aboutUs": {
+                "container1": {
+                    "description": "Raymand Strategic Technology Laboratory Complex was formed with the mission of improving quality, health, and safety in the country's industries and health to introduce a new concept of integrated laboratory services to the Iranian market.",
+                    "title1": "Introduction to the laboratory complex",
+                    "title2": "Strategic Technology Raymand Azma System"
+                },
+                "container2": {
+                    "description": "By gathering a collection of specialized laboratories in the fields of food and beverage, water and environment, soil and agriculture, petrochemicals and related industries, and health, Raymand has provided an innovative platform to meet the diverse needs of organizations, industries, and research centers.",
+                    "title": "Drawing inspiration from the management model of international companies"
+                },
+                "container3": {
+                    "item1": {
+                        "description": "All laboratories operate as a coherent network; this structure enables the provision of fast, accurate, and coordinated services.",
+                        "title": "Integrated and intelligent management"
+                    },
+                    "item2": {
+                        "description": "All processes are designed and implemented based on international standards such as ISO\/IEC 17025 to ensure that the results achieve the highest level of credibility and global acceptance.",
+                        "title": "Global standards serving Iranian customers"
+                    },
+                    "item3": {
+                        "description": "Raymand is not just a laboratory service provider; rather, it offers solutions to improve quality, reduce costs, and increase customer productivity with a consultation-based approach.",
+                        "title": "Innovation in service delivery"
+                    },
+                    "item4": {
+                        "description": "Utilizing experienced experts in various laboratory and industrial fields has enabled us to respond to our customers' complex needs with accuracy and speed.",
+                        "title": "Outstanding scientific and management team"
+                    },
+                    "item5": {
+                        "description": "Our model is designed based on collaboration with reputable laboratories across the country, to transform Raymand into a national laboratory platform.",
+                        "title": "A vast and expanding network"
+                    },
+                    "title": "Our Key Features"
+                }
+            },
+            "agricultureServicesLab": {
+                "container1": {
+                    "description": "Specialized testing, consulting and registration services for plant health, crop protection and seed innovation.",
+                    "title": "Agricultural science and crop protection services"
+                },
+                "container2": {
+                    "title": "Raymand Agricultural Science Services with expert knowledge,",
+                    "title10": "And these services are developed through knowledge exchange between specialized centers in the country.",
+                    "title2": "Testing and regulatory advice to plant health product manufacturers,",
+                    "title3": "It offers crop protection, agricultural technology, plant breeding, and seeds.",
+                    "title4": "In a complex and dynamic environment,",
+                    "title5": "We support customers throughout all stages of agricultural chemical registration.",
+                    "title6": "Field and laboratory studies for the safety and effectiveness of new products,",
+                    "title7": "It is the core of our activity and registration is carried out by our team of experts.",
+                    "title8": "National Specialized Network of Raymand,",
+                    "title9": "Provides services to manufacturers of biocides and other chemicals"
+                }
+            },
+            "clinicalPathologyLab": {
+                "container1": {
+                    "description": "Performing extensive testing daily with advanced techniques for diagnosis, monitoring, and confident treatment decision-making.",
+                    "title": "Innovative, cost-effective clinical diagnostic services available to all patients"
+                },
+                "container2": {
+                    "title": "By performing hundreds of thousands of clinical diagnostic tests every day,",
+                    "title2": "Raymand Clinical Diagnostic Services Laboratories are working hard",
+                    "title3": "To ensure that every patient, everywhere,",
+                    "title4": "Have access to the most specialized and innovative techniques for diagnosis, monitoring, and treatment.",
+                    "title5": "Logistical expertise and daily sample collection and delivery network,",
+                    "title6": "Ensures complete continuity of care",
+                    "title7": "And it maintains the standard of quality and access to innovation in all regions."
+                }
+            },
+            "concreteSteelLab": {
+                "container1": {
+                    "description": "Providing concrete, rebar and building materials testing services to ensure safety and sound engineering decisions.",
+                    "title": "Raymand Concrete and Rebar Laboratory - Accurate and Standardized Tests"
+                },
+                "container2": {
+                    "title": "Raymand Concrete and Rebar Laboratory is equipped to provide accurate, reliable, and standards-compliant testing services for a wide range of construction materials. We specialize in testing concrete, reinforcing steel (rebar) and related materials to ensure structural integrity, safety, and compliance with industry specifications. Whether you are in the design phase or during construction, our laboratory provides accurate data to support sound engineering decisions."
+                }
+            },
+            "environmentalLaboratory": {
+                "container1": {
+                    "description": "Raymand helps promote health and protect the environment by providing specialized water, air, soil, and waste testing, along with professional consulting and monitoring.",
+                    "title": "Raymand Laboratory Services for Health and Environment"
+                },
+                "container2": {
+                    "title": "A clean and safe environment is a prerequisite for health and quality of life.",
+                    "title2": "Raymand, by providing market-leading laboratory services,",
+                    "title3": "Monitoring and advising a wide range of industrial companies, environmental consultants, contractors, retailers and government officials contribute to this.",
+                    "title4": "Our services include testing water, air, soil, waste and other products.",
+                    "title5": "To assess their quality and impact on health and the environment."
+                }
+            },
+            "foodIndustry": {
+                "container1": {
+                    "description": "A national network of advanced laboratories to perform food safety, composition, authenticity, and traceability tests.",
+                    "title": "Raymand Food and Feed Laboratory Quality and Safety Assurance"
+                },
+                "container2": {
+                    "title": "Raymand is a leading food and feed laboratory group in Iran, employing a wide range of advanced analytical techniques to support the increasing quality and safety standards of its customers. The group has established a national network of food laboratories and competence centers that annually conduct a large number of tests to determine the safety, composition, authenticity, origin, traceability and purity of food products. Therefore, Raymand offers the widest portfolio of food testing products and makes this unique offering available globally from each of its laboratories using optimized processes, logistics and information technology."
+                }
+            },
+            "geneticLab": {
+                "container1": {
+                    "description": "Leading provider of DNA sequencing, genotyping, synthesis and bioinformatics for pharmaceuticals, diagnostics, food, agriculture, biotechnology and research.",
+                    "title": "Raymand Genomics Advanced DNA and Bioinformatics Services"
+                },
+                "container2": {
+                    "title": "Raymand Genomics represents the genomics division of Raymand Scientific Group. With centers in Iran and abroad, Raymand Genomics is a leading international provider of DNA sequencing services, genotyping services, DNA synthesis products, and bioinformatics services for the pharmaceutical, diagnostic, food, agricultural, biotechnology, and research markets."
+                }
+            },
+            "livestockLab": {
+                "container1": {
+                    "description": "Advanced and accurate diagnostic services for large animals in support of veterinary care, herd health and agricultural productivity.",
+                    "title": "Raymand Large Animal Laboratory Specialized diagnostics for livestock and horses"
+                },
+                "container2": {
+                    "title": "Our large animal laboratory offers specialized diagnostic tests designed to meet the unique needs of large animals such as cattle and horses. Equipped with advanced technology and a staff of experienced professionals, we provide accurate, timely results to support veterinary care, herd health management, and agricultural productivity. Committed to quality and reliability, our services help ensure the health and well-being of your valuable animals."
+                }
+            },
+            "petLab": {
+                "container1": {
+                    "description": "Comprehensive and reliable pet testing with fast results to support veterinarians and the health of your beloved animals.",
+                    "title": "Raymand Small Animal Laboratory Specialized diagnostics for pets"
+                },
+                "container2": {
+                    "title": "Our small animal laboratory offers comprehensive diagnostic tests designed specifically for pets, helping veterinarians provide accurate and timely care. From routine blood tests to specialized tests, our state-of-the-art facilities ensure fast, reliable results and support the health and well-being of your beloved animals. We are committed to working with veterinary professionals to provide the best possible support for your pets' medical needs."
+                }
+            },
+            "pharmaCosmeticIndustry": {
+                "container1": {
+                    "description": "Strategic Technology Laboratories (Raymand Group) provides pharmaceutical, biological, cosmetic, and health services with an integrated and standardized network.",
+                    "title": "Pharmaceutical, biological, cosmetic and health industries"
+                },
+                "container2": {
+                    "title": "Pharmaceutical, Biological, Cosmetic and Health Laboratories Strategic Technology Laboratory (Raymand Group) is a first-tier business partner for outsourcing pharmaceutical and biological services. Raymand Group’s laboratory network services cover all the tests required in the production chain of related products, which are provided by the best and most specialized pharmaceutical, chemical, biotechnology, medical equipment and cosmetic laboratories. By creating a national laboratory network and implementing a quality assurance system, Raymand Group provides services of the highest standard in an integrated manner."
+                }
+            },
+            "poultryLab": {
+                "container1": {
+                    "description": "Specialized testing and analysis for the poultry industry to prevent disease, increase productivity, and ensure food safety.",
+                    "title": "Raymand Poultry Laboratory Accurate diagnosis for poultry health"
+                },
+                "container2": {
+                    "title": "Our poultry laboratory specializes in diagnostic testing and analysis tailored to the poultry industry. We provide accurate and timely results to support poultry health management, disease prevention and overall production efficiency. With state-of-the-art equipment and expert staff, we help poultry farmers and veterinarians maintain poultry fertility and health and ensure compliance with food safety standards."
+                }
+            },
+            "soilLab": {
+                "container1": {
+                    "description": "The Soil Science Laboratory provides accurate analytical services, assesses soil quality and fertility, and provides scientific solutions to improve sustainable agriculture.",
+                    "title": "Soil science laboratory"
+                },
+                "container2": {
+                    "service": "More services",
+                    "title": "The Raymand Group wants to contribute to healthy, sustainable and sustainable agriculture and growth.",
+                    "title2": "As an independent partner, we enable agricultural and food industry players to improve soil and crop health and fertility, performance and profitability.",
+                    "title3": "Our analytical and decision support services are vital tools to help transition to more sustainable agricultural practices.",
+                    "title4": "These services lead to positive environmental and social impact."
+                }
+            },
+            "waterAnalysisLab": {
+                "container1": {
+                    "description": "Comprehensive testing for drinking water, industrial and environmental uses using advanced and accurate methods.",
+                    "title": "Raymand Water Analysis Laboratory ensures water quality and safety"
+                },
+                "container2": {
+                    "title": "Our water analysis laboratory offers comprehensive testing services to assess water quality for a variety of applications, including drinking water, industrial uses, and environmental monitoring. Using advanced analytical techniques, we deliver accurate and reliable results to help ensure safety, compliance with regulatory standards, and sustainable water management. Trust us to support your water quality needs with precision and expertise."
+                }
+            }
         },
-        "container2": {
-          "title": "Raymand Group Aims to Support Healthy, Sustainable Agriculture and Growth.",
-          "title2": "As an independent partner, we enable players in the agricultural and food industries to improve soil and crop health, performance, and profitability.",
-          "title3": "Our analytical services and decision-support tools are vital in helping transition to more sustainable farming practices.",
-          "title4": "These services lead to positive environmental and social impacts.",
-          "service": "More Services"
-        }
-      },
-      "waterAnalysisLab": {
-        "container1": {
-          "title": "Raymand Water Analysis Laboratory — Ensuring Water Quality & Safety",
-          "description": "Comprehensive water testing for drinking, industrial, and environmental uses with reliable, advanced analysis."
+        "services": " Laboratory services",
+        "shortCuts": {
+            "agricultureServicesLab": "Agricultural Services Laboratory",
+            "clinicalPathologyLab": "Medical Diagnostic and Pathology Laboratory",
+            "collaborationRequest": "Request for cooperation for educational and student work",
+            "concreteSteelLab": "Concrete and rebar tension laboratory",
+            "environmentLab": "Environmental Laboratory",
+            "foodIndustry": "Food industry",
+            "geneticLab": "Genetics Laboratory",
+            "innovationLab": "Request for cooperation for research work",
+            "livestockLab": "Large Animal Laboratory",
+            "petLab": "Small Animal Laboratory (Pet)",
+            "pharmaCosmeticIndustry": "Pharmaceutical and cosmetic industries",
+            "poultryLab": "Poultry Laboratory",
+            "soilLab": "Soil science laboratory",
+            "waterAnalysisLab": "Water Analysis Laboratory"
         },
-        "container2": {
-          "title": "Our water analysis laboratory offers comprehensive testing services to evaluate water quality for various applications, including drinking water, industrial use, and environmental monitoring. Using advanced analytical techniques, we provide accurate and reliable results to ensure safety, regulatory compliance, and sustainable water management. Trust us to support your water quality needs with precision and expertise."
-        }
-      },
-      "petLab": {
-        "container1": {
-          "title": "Raymand Small Animal Laboratory — Dedicated Pet Diagnostics",
-          "description": "Comprehensive and reliable diagnostic tests for pets, supporting veterinarians with timely results and advanced veterinary care."
-        },
-        "container2": {
-          "title": "Our small animal laboratory provides comprehensive diagnostic tests designed specifically for pets, helping veterinarians deliver precise and timely care. From routine blood tests to advanced specialized diagnostics, our state-of-the-art facilities ensure fast and reliable results, supporting the health and well-being of your beloved animals. We are committed to working with veterinary professionals to provide the best possible support for your pets’ medical needs."
-        }
-      },
-      "livestockLab": {
-        "container1": {
-          "title": "Raymand Large Animal Laboratory — Specialized Diagnostics for Livestock & Horses",
-          "description": "Advanced diagnostic services tailored for large animals, ensuring accurate results to support veterinary care, herd health, and agricultural productivity."
-        },
-        "container2": {
-          "title": "Our large animal laboratory offers specialized diagnostic testing designed to meet the unique needs of livestock and horses. Equipped with advanced technology and a team of experienced specialists, we provide accurate and timely results to support veterinary care, herd health management, and agricultural productivity. With a commitment to quality and reliability, our services help safeguard the health and well-being of your valuable animals."
-        }
-      },
-      "poultryLab": {
-        "container1": {
-          "title": "Raymand Poultry Laboratory — Precision Diagnostics for Poultry Health",
-          "description": "Specialized testing and analysis for the poultry industry, ensuring disease prevention, productivity, and food safety."
-        },
-        "container2": {
-          "title": "Our poultry laboratory specializes in diagnostic testing and analysis tailored to the poultry industry. We provide accurate and timely results to support poultry health management, disease prevention, and overall productivity. With advanced equipment and skilled staff, we help farmers and veterinarians maintain flock health and ensure compliance with food safety standards."
-        }
-      },
-      "environmentalLaboratory": {
-        "container1": {
-          "title": "Raimand Laboratory Services for Health and Environment",
-          "description": "Raimand provides specialized testing of water, air, soil, and waste, along with professional consulting and monitoring, to improve health and protect the environment."
-        },
-        "container2": {
-          "title": "A clean and safe environment is a prerequisite for health and quality of life.",
-          "title2": "Raimand, as a leading provider of laboratory services in the market,",
-          "title3": "contributes by offering monitoring and consulting to a wide range of industrial companies, environmental consultants, contractors, retailers, and government authorities.",
-          "title4": "Our services include testing of water, air, soil, waste, and other products",
-          "title5": "to assess their quality and impact on health and the environment."
-        }
-      },
-      "concreteSteelLab": {
-        "container1": {
-          "title": "Raymand Concrete & Rebar Laboratory — Reliable Structural Testing",
-          "description": "Precise and standard-compliant testing for concrete, rebar, and construction materials to ensure safety and engineering accuracy."
-        },
-        "container2": {
-          "title": "Raymand’s Concrete and Rebar Laboratory provides precise, reliable, and standard-compliant testing for a wide range of construction materials. We specialize in testing concrete, reinforcing steel (rebar), and related materials to ensure structural integrity, safety, and compliance with industry standards. Whether during design or construction, our lab delivers accurate data to support sound engineering decisions."
-        }
-      },
-      "agricultureServicesLab": {
-        "container1": {
-          "title": "Agricultural Science & Crop Protection Services",
-          "description": "Expert testing, consulting, and registration services for plant health, crop protection, and seed innovation."
-        },
-        "container2": {
-          "title": "Raymand Agricultural Science Services, backed by expert knowledge,",
-          "title2": "offers testing and regulatory consulting for plant health, crop protection, agri-tech, breeding, and seeds.",
-          "title3": "In a complex environment,",
-          "title4": "we support clients through all stages of agrochemical registration.",
-          "title5": "Field and lab studies on safety and effectiveness are core to our work,",
-          "title6": "with registrations handled by our regulatory specialists.",
-          "title7": "Our national expert network",
-          "title8": "extends services to biocide and chemical producers",
-          "title9": "and grows through knowledge-sharing across specialized centers."
-        }
-      },
-      "foodIndustry": {
-        "container1": {
-          "title": "Raymand Food & Feed Testing — Ensuring Quality and Safety",
-          "description": "National network of advanced food laboratories delivering reliable testing for safety, composition, authenticity, and traceability."
-        },
-        "container2": {
-          "title": "Raymand is a leading group in food and feed laboratories in Iran, employing a wide range of advanced analytical techniques to support the growing quality and safety standards of its customers. The group has established a national network of food laboratories and accreditation centers, performing numerous tests each year to determine the safety, composition, authenticity, origin, traceability, and purity of food products. Therefore, Raymand offers the most extensive portfolio of food testing services, making this unique offering accessible worldwide through optimized processes, logistics, and information technology from each of its laboratories."
-        }
-      },
-      "pharmaCosmeticIndustry": {
-        "container1": {
-          "title": "Pharmaceutical, Biotech, Cosmetic and Hygiene Industries",
-          "description": "The Strategic Technology Laboratories (Raimand Group) provide pharmaceutical, biotech, cosmetic, and hygiene services through an integrated and standardized network."
-        },
-        "container2": {
-          "title1": "Pharmaceutical, Biotech, Cosmetic and Hygiene Industries",
-          "title2": "The pharmaceutical, biotech, cosmetic, and hygiene laboratories of the Strategic Technology Laboratory (Raimand Group) are a top-tier business partner for outsourcing pharmaceutical and biotech services.",
-          "title3": "These laboratories operate in collaboration with pharmaceutical, chemical, biotechnology, medical device, and cosmetic laboratories.",
-          "title4": "The Raimand Group laboratory network covers the entire production chain of related products.",
-          "title5": "By establishing a nationwide laboratory network, the group provides an integrated quality assurance system and high-standard services."
-        }
-      },
-      "clinicalPathologyLab": {
-        "container1": {
-          "title": "Raymand Clinical Diagnostics — Accessible Innovation for Every Patient",
-          "description": "Daily high-volume clinical testing with advanced techniques, ensuring reliable diagnosis, monitoring, and treatment decisions worldwide."
-        },
-        "container2": {
-          "title": "With hundreds of thousands of clinical diagnostic tests performed daily,",
-          "title2": "Raymand Clinical Diagnostics laboratories strive",
-          "title3": "to ensure that every patient, everywhere,",
-          "title4": "has access to the most specialized and innovative techniques for diagnosis, monitoring, and treatment decisions.",
-          "title5": "Our logistical expertise and daily sample collection and delivery network",
-          "title6": "guarantee continuity of care",
-          "title7": "while maintaining quality standards and access to innovation across all regions we serve."
-        }
-      },
-      "geneticLab": {
-        "container1": {
-          "title": "Raymand Genomics — Advanced DNA & Bioinformatics Services",
-          "description": "Leading provider of DNA sequencing, genotyping, synthesis, and bioinformatics for pharma, diagnostics, food, agriculture, biotech, and research."
-        },
-        "container2": {
-          "title": "Raymand Genomics represents the genomics division of the Raymand Scientific Group.",
-          "title2": "With centers inside and outside the country,",
-          "title3": "it is an international leader in DNA sequencing services,",
-          "title4": "genotyping, DNA synthesis products,",
-          "title5": "and bioinformatics for pharmaceutical, diagnostic, food, agricultural, biotech, and research markets."
-        }
-      }
+        "subtitle": "Raymand Group, a leader in testing for a better quality of life"
     }
-  },
-  "header": {
-    "home-page": "Home",
-    "gpo": "Group Purchasing Organization\n(Raymand Tajhiz Company)",
-    "tech-Lab": "Strategic Technology Laboratory\n(Raymand System Azma Group)",
-    "vHospital": "Healthcare Technology Management\n(Raymand System Tajhiz Company)",
-    "contact_us": "Contact Us",
-    "news": "News"
-  },
-  "common": {
-    "submit": "Submit",
-    "name&lastname": "Full Name",
-    "email": "Email",
-    "phone": "Phone",
-    "learn-more": "Learn More...",
-    "about_us": "About Us",
-    "services_tests": "Services and Tests",
-    "lab_test_admission": "The laboratory begins with test admission.",
-    "click": "Click to start admission"
-  },
-  "news": {
-    "title1": "We look forward to seeing you at the Laboratory Equipment Exhibition with the latest products from major international brands.",
-    "title2": "Discover Raymand’s laboratory services in soil, water, microbiology, livestock & poultry, food, and pharmaceuticals.",
-    "title3": "Soon, the latest developments and updates in healthcare and medicine will be shared through this section.",
-    "view-all": "View All News",
-    "read": "Read"
-  },
-  "footer": {
-    "site_pages": "Site Pages",
-    "social-media": "Our Social Media",
-    "validation": {
-      "name_required": "Name is required",
-      "email_required": "Email is required",
-      "email_invalid": "Enter a valid email",
-      "phone_required": "Phone number is required",
-      "phone_length": "Phone number must be at least 11 digits"
-    }
-  }
 }

@@ -7,20 +7,25 @@
     "dev": "nuxt dev",
     "generate": "nuxt generate",
     "preview": "nuxt preview",
-    "postinstall": "nuxt prepare"
+    "postinstall": "nuxt prepare",
+    "pull-lokalise": "node scripts/sync-lokalise.js",
+    "push-lokalise": "node scripts/push-lokalise.js"
   },
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^6.7.2",
     "@fortawesome/free-brands-svg-icons": "^6.7.2",
     "@fortawesome/free-solid-svg-icons": "^6.7.2",
     "@fortawesome/vue-fontawesome": "^3.0.8",
+    "@lokalise/node-api": "^14.9.1",
     "@nuxt/fonts": "^0.11.4",
     "@nuxt/image": "^1.10.0",
     "@nuxtjs/google-fonts": "^3.2.0",
     "@nuxtjs/i18n": "^9.5.6",
     "@quasar/extras": "^1.17.0",
     "@vueuse/motion": "^3.0.3",
+    "adm-zip": "^0.5.16",
     "axios": "^1.10.0",
+    "node-fetch": "^3.3.2",
     "nuxt": "^3.17.5",
     "nuxt-swiper": "^2.0.1",
     "quasar": "^2.18.1",
@@ -31,6 +36,7 @@
   },
   "devDependencies": {
     "@types/i18n": "^0.13.12",
+    "dotenv-cli": "^11.0.0",
     "nuxt-quasar-ui": "^2.1.12",
     "postcss-rtlcss": "^5.7.1",
     "sass-embedded": "^1.89.2"
