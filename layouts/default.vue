@@ -172,24 +172,19 @@
         </div>
         <div class="site-map flex column justify-center items-center">
           <span class="text-h6">{{ $t("footer.site_pages") }}</span>
-          <NuxtLink :to="localePath('index')" class="custom-link">{{
-            $t("header.home-page")
-          }}</NuxtLink>
-          <NuxtLink :to="localePath('about-us')" class="custom-link">{{
-            $t("common.about_us")
-          }}</NuxtLink>
-          <NuxtLink :to="localePath('contact-us')" class="custom-link">{{
-            $t("header.contact_us")
-          }}</NuxtLink>
-          <NuxtLink :to="localePath('gpo')" class="custom-link">{{
-            $t("header.gpo")
-          }}</NuxtLink>
-          <NuxtLink :to="localePath('tech-lab')" class="custom-link">{{
-            $t("header.tech-Lab")
-          }}</NuxtLink>
-          <NuxtLink :to="localePath('v-hospital')" class="custom-link">{{
-            $t("header.vHospital")
-          }}</NuxtLink>
+          <NuxtLink
+            v-for="value in siteMapData"
+            :to="localePath(value.route)"
+            class="custom-link"
+          >
+            <div
+              v-for="(line, i) in t(value.label).split('\\n')"
+              :key="i"
+              class="text-weight-bold"
+            >
+              {{ line }}
+            </div>
+          </NuxtLink>
         </div>
         <div class="social-media flex column items-start gap-10">
           <div class="text-h6">{{ t("footer.social-media") }}</div>
@@ -351,6 +346,14 @@ const { locales, setLocale, t, locale } = useI18n();
 const { submitForm } = useFormContact();
 const { error } = useNotify();
 
+const siteMapData = [
+  { label: "header.home-page", route: "index" },
+  { label: "common.about_us", route: "about-us" },
+  { label: "header.contact_us", route: "contact-us" },
+  { label: "header.gpo", route: "gpo" },
+  { label: "header.tech-Lab", route: "tech-lab" },
+  { label: "header.vHospital", route: "v-hospital" },
+];
 const tab = ref<string>("mails");
 const loading = ref<boolean>(false);
 const showSuccessDialog = ref(false);

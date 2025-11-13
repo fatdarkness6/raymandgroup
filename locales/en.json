@@ -10,81 +10,6 @@
         "services_tests": "Services and tests",
         "submit": "Send"
     },
-    "education": {
-        "educations": {
-            "country": {
-                "label": "Country of study",
-                "required": "Country of study is required."
-            },
-            "degree": {
-                "label": "Educational degree",
-                "required": "Degree is required."
-            },
-            "field": {
-                "label": "Field of study and specialization",
-                "required": "Field of study is required."
-            },
-            "label": "Educational background",
-            "university": {
-                "label": "University of study",
-                "required": "University of study is required."
-            },
-            "year": {
-                "label": "Year received",
-                "required": "Year is required.",
-                "typeError": "Year is required."
-            }
-        },
-        "experience": {
-            "label": "Educational work history",
-            "required": "Work and educational background is required."
-        },
-        "personal": {
-            "birthPlace": {
-                "label": "Issued by",
-                "required": "Place of birth is required."
-            },
-            "birthYear": {
-                "label": "Born in",
-                "required": "Year of birth is required.",
-                "typeError": "Year of birth is required."
-            },
-            "email": {
-                "email": "Please enter the email correctly.",
-                "label": "Email",
-                "matches": "Please enter your email.",
-                "required": "Enter email."
-            },
-            "father": {
-                "label": "Child",
-                "required": "Father's name is required."
-            },
-            "fullName": {
-                "label": "First and last name",
-                "required": "First and last name are required."
-            },
-            "idNumber": {
-                "label": "Birth certificate number",
-                "required": "ID number is required."
-            },
-            "label": "Personal details",
-            "phone": {
-                "label": "Phone number",
-                "matches": "Phone number is required.",
-                "min": "The phone number should not be less than 9 digits.",
-                "required": "Phone number is required."
-            },
-            "specialty": {
-                "label": "Expertise",
-                "required": "Expertise is required."
-            }
-        },
-        "request": {
-            "label": "Request for cooperation",
-            "min": "Enter at least 10 characters.",
-            "required": "Description of the educational cooperation request"
-        }
-    },
     "footer": {
         "site_pages": "Site pages",
         "social-media": "Our social media",
@@ -143,75 +68,83 @@
         "title3": "Soon, the latest developments and news in the field of health and medicine will be available to you through this section.",
         "view-all": "News browsing"
     },
-    "research": {
-        "additionalInfo": {
-            "label": "Additional information"
-        },
-        "education": {
-            "degree": {
-                "label": "Educational level",
-                "required": "Degree is required."
-            },
-            "field": {
-                "label": "Field of study",
-                "required": "Field of study is required."
-            },
-            "label": "Educational background",
-            "university": {
-                "label": "University of study",
-                "required": "University of study is required."
-            },
-            "year": {
-                "integer": "Year is not valid.",
-                "label": "Year of degree",
-                "required": "The year of degree is required.",
-                "typeError": "Year must be a number."
-            }
-        },
-        "personal": {
-            "email": {
-                "email": "Please enter the email correctly.",
-                "label": "Email",
-                "matches": "Please enter the email correctly.",
-                "required": "Enter email."
-            },
-            "fullName": {
-                "label": "First and last name",
-                "required": "First and last name are required."
-            },
-            "label": "Personal details",
-            "organization": {
-                "label": "Name of organization\/university",
-                "required": "Organization or university name is required."
-            },
-            "phone": {
-                "label": "Phone number",
-                "matches": "Phone number is required.",
-                "min": "The phone number should not be less than 9 digits.",
-                "required": "Phone number is required."
-            },
-            "position": {
-                "label": "Academic position\/rank",
-                "required": "Academic position or rank is required."
-            },
-            "specialty": {
-                "label": "Expertise",
-                "required": "Expertise is required."
-            }
-        },
-        "researchAreas": {
-            "label": "Areas of research collaboration",
-            "min": "Enter at least 5 characters.",
-            "required": "Areas of research collaboration are required."
-        },
-        "researchExperience": {
-            "label": "Research background",
-            "min": "Enter at least 5 characters.",
-            "required": "Research background is required."
-        }
-    },
     "tech-Lab_page": {
         "careers": " Research and Development (R&D) Services",
+        "education": {
+            "educations": {
+                "country": {
+                    "label": "Country of study",
+                    "required": "Country of study is required."
+                },
+                "degree": {
+                    "label": "Educational degree",
+                    "required": "Degree is required."
+                },
+                "field": {
+                    "label": "Field of study and specialization",
+                    "required": "Field of study is required."
+                },
+                "label": "Educational background",
+                "university": {
+                    "label": "University of study",
+                    "required": "University of study is required."
+                },
+                "year": {
+                    "label": "Year received",
+                    "required": "Year is required.",
+                    "typeError": "Year is required."
+                }
+            },
+            "experience": {
+                "label": "Educational work history",
+                "required": "Work and educational background is required."
+            },
+            "personal": {
+                "birthPlace": {
+                    "label": "Issued by",
+                    "required": "Place of birth is required."
+                },
+                "birthYear": {
+                    "label": "Born in",
+                    "required": "Year of birth is required.",
+                    "typeError": "Year of birth is required."
+                },
+                "email": {
+                    "email": "Please enter the correct email.",
+                    "label": "Email",
+                    "matches": "Please enter your email.",
+                    "required": "Enter email."
+                },
+                "father": {
+                    "label": "Child",
+                    "required": "Father's name is required."
+                },
+                "fullName": {
+                    "label": "First and last name",
+                    "required": "First and last name are required."
+                },
+                "idNumber": {
+                    "label": "Birth certificate number",
+                    "required": "ID number is required."
+                },
+                "label": "Personal details",
+                "phone": {
+                    "label": "Phone number",
+                    "matches": "Phone number is required.",
+                    "min": "The phone number must not be less than 9 digits.",
+                    "required": "Phone number is required."
+                },
+                "specialty": {
+                    "label": "Expertise",
+                    "required": "Expertise is required."
+                }
+            },
+            "request": {
+                "label": "Request for cooperation",
+                "min": "Enter at least 10 characters.",
+                "required": "Description of the educational cooperation request"
+            }
+        },
         "generalInfo": {
             "mission": "Mission",
             "missionDesc": "At Raymand Group, we help industries and society operate more accurately, healthily, and efficiently by managing and developing a network of laboratories, providing specialized health services, and supplying modern equipment.",
@@ -219,6 +152,73 @@
             "visionDesc": "Raymand; a leader in creating an integrated network of laboratories and health services in Iran and the region, with global standards and sustainable innovation."
         },
         "investors": "Educational services",
+        "research": {
+            "additionalInfo": {
+                "label": "Additional information"
+            },
+            "education": {
+                "degree": {
+                    "label": "Educational level",
+                    "required": "Degree is required."
+                },
+                "field": {
+                    "label": "Field of study",
+                    "required": "Field of study is required."
+                },
+                "label": "Educational background",
+                "university": {
+                    "label": "University of study",
+                    "required": "University of study is required."
+                },
+                "year": {
+                    "integer": "Year is not valid.",
+                    "label": "Year of degree",
+                    "required": "The year of degree is required.",
+                    "typeError": "Year must be a number."
+                }
+            },
+            "personal": {
+                "email": {
+                    "email": "Please enter the email correctly.",
+                    "label": "Email",
+                    "matches": "Please enter the email correctly.",
+                    "required": "Enter email."
+                },
+                "fullName": {
+                    "label": "First and last name",
+                    "required": "First and last name are required."
+                },
+                "label": "Personal details",
+                "organization": {
+                    "label": "Name of organization\/university",
+                    "required": "Organization or university name is required."
+                },
+                "phone": {
+                    "label": "Phone number",
+                    "matches": "Phone number is required.",
+                    "min": "The phone number must not be less than 9 digits.",
+                    "required": "Phone number is required."
+                },
+                "position": {
+                    "label": "Academic position\/rank",
+                    "required": "Academic position or rank is required."
+                },
+                "specialty": {
+                    "label": "Expertise",
+                    "required": "Expertise is required."
+                }
+            },
+            "researchAreas": {
+                "label": "Areas of research collaboration",
+                "min": "Enter at least 5 characters.",
+                "required": "Areas of research collaboration are required."
+            },
+            "researchExperience": {
+                "label": "Research background",
+                "min": "Enter at least 5 characters.",
+                "required": "Research background is required."
+            }
+        },
         "routes": {
             "aboutUs": {
                 "container1": {

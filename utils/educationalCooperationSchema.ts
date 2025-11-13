@@ -7,67 +7,78 @@ export const educationSchema = (t: (key: string) => string) => {
       .object({
         fullName: yup
           .string()
-          .required("نام و نام خانوادگی الزامی است")
-          .label("نام و نام خانوادگی"),
+          .required(t("tech-Lab_page.education.personal.fullName.required"))
+          .label(t("tech-Lab_page.education.personal.fullName.label")),
         email: yup
           .string()
-          .label("ایمیل")
-          .email("لطفا ایمیل را درست وارد کنید")
-          .matches(emailRules, { message: "لطفا ایمیل را درت وارد کنید" })
-          .required("ایمیل را وارد کنید")
+          .label(t("tech-Lab_page.education.personal.email.label"))
+          .email(t("tech-Lab_page.education.personal.email.email"))
+          .matches(emailRules, {
+            message: t("tech-Lab_page.education.personal.email.matches"),
+          })
+          .required(t("tech-Lab_page.education.personal.email.required"))
           .meta({ direction: "ltr" }),
         phone: yup
           .string()
-          .label("شماره تلفن")
-          .matches(/^[0-9]+$/, "شماره تلفن الزامی میباشد")
-          .required("شماره تلفن الزامی میباشد")
-          .min(9, "شماره تلفن کمتر از 9 رقم نباید باشد ")
+          .label(t("tech-Lab_page.education.personal.phone.label"))
+          .matches(
+            /^[0-9]+$/,
+            t("tech-Lab_page.education.personal.phone.matches")
+          )
+          .required(t("tech-Lab_page.education.personal.phone.required"))
+          .min(9, t("tech-Lab_page.education.personal.phone.min"))
           .meta({ class: "col-12", type: "number", direction: "ltr" }),
-        father: yup.string().required("نام پدر الزامی است").label("فرزند"),
+        father: yup
+          .string()
+          .required(t("tech-Lab_page.education.personal.father.required"))
+          .label(t("tech-Lab_page.education.personal.father.label")),
         idNumber: yup
           .string()
-          .required("شماره شناسنامه الزامی است")
-          .label("شماره شناسنامه"),
+          .required(t("tech-Lab_page.education.personal.idNumber.required"))
+          .label(t("tech-Lab_page.education.personal.idNumber.label")),
         birthPlace: yup
           .string()
-          .required("محل تولد الزامی است")
-          .label("صادره از"),
+          .required(t("tech-Lab_page.education.personal.birthPlace.required"))
+          .label(t("tech-Lab_page.education.personal.birthPlace.label")),
         birthYear: yup
           .number()
-          .typeError("سال تولد الزامی است")
-          .label("متولد سال")
-          .required("سال تولد الزامی است")
+          .typeError(t("tech-Lab_page.education.personal.birthYear.typeError"))
+          .label(t("tech-Lab_page.education.personal.birthYear.label"))
+          .required(t("tech-Lab_page.education.personal.birthYear.required"))
           .meta({ type: "number", direction: "ltr" }),
-        specialty: yup.string().required("تخصص الزامی است").label("تخصص"),
+        specialty: yup
+          .string()
+          .required(t("tech-Lab_page.education.personal.specialty.required"))
+          .label(t("tech-Lab_page.education.personal.specialty.label")),
       })
-      .label("مشخصات فردی")
+      .label(t("tech-Lab_page.education.personal.label"))
       .meta({ icon: "fa-solid fa-user", type: "input" }),
     educations: yup
       .object({
         degree: yup
           .string()
-          .required("درجه تحصیلی الزامی است")
-          .label("درجه تحصیلی"),
+          .required(t("tech-Lab_page.education.educations.degree.required"))
+          .label(t("tech-Lab_page.education.educations.degree.label")),
         field: yup
           .string()
-          .required("رشته تحصیلی الزامی است")
-          .label("رشته تحصیلی و تخصصی"),
+          .required(t("tech-Lab_page.education.educations.field.required"))
+          .label(t("tech-Lab_page.education.educations.field.label")),
         university: yup
           .string()
-          .required("دانشگاه محل تحصیل الزامی است")
-          .label("دانشگاه محل تحصیل"),
+          .required(t("tech-Lab_page.education.educations.university.required"))
+          .label(t("tech-Lab_page.education.educations.university.label")),
         country: yup
           .string()
-          .required("کشور محل تحصیل الزامی است")
-          .label("کشور محل تحصیل"),
+          .required(t("tech-Lab_page.education.educations.country.required"))
+          .label(t("tech-Lab_page.education.educations.country.label")),
         year: yup
           .number()
-          .typeError("سال الزامی است")
-          .label("سال دریافت")
+          .typeError(t("tech-Lab_page.education.educations.year.typeError"))
+          .label(t("tech-Lab_page.education.educations.year.label"))
           .meta({ type: "number" })
-          .required("سال الزامی است"),
+          .required(t("tech-Lab_page.education.educations.year.required")),
       })
-      .label("سوابق تحصیلی")
+      .label(t("tech-Lab_page.education.educations.year.required"))
       .meta({
         icon: "fa-solid fa-graduation-cap",
         type: "input",
@@ -76,14 +87,14 @@ export const educationSchema = (t: (key: string) => string) => {
     experience: yup
       .string()
       .nullable()
-      .label("سوابق کاری آموزشی")
-      .required("سوابق کاری و آموزشی الزامی است")
+      .label(t("tech-Lab_page.education.experience.label"))
+      .required(t("tech-Lab_page.education.experience.required"))
       .meta({ icon: "fa-solid fa-briefcase", type: "textarea" }),
     request: yup
       .string()
-      .required("شرح درخواست همکاری آموزشی")
-      .min(10, "حداقل ۱۰ کاراکتر وارد کنید")
-      .label("درخواست همکاری")
+      .required(t("tech-Lab_page.education.request.required"))
+      .min(10, t("tech-Lab_page.education.request.min"))
+      .label(t("tech-Lab_page.education.request.label"))
       .meta({ icon: "fa-solid fa-comment-dots", type: "textarea" }),
     // result: yup
     //   .string()

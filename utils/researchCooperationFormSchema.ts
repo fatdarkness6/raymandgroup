@@ -6,78 +6,86 @@ export const researchSchema = (t: (key: string) => string) => {
       .object({
         fullName: yup
           .string()
-          .required("نام و نام خانوادگی الزامی است")
-          .label("نام و نام خانوادگی"),
+          .required(t("tech-Lab_page.research.personal.fullName.required"))
+          .label(t("tech-Lab_page.research.personal.fullName.label")),
         email: yup
           .string()
-          .label("ایمیل")
-          .email("لطفا ایمیل را درست وارد کنید")
-          .matches(emailRules, { message: "لطفا ایمیل را درست وارد کنید" })
-          .required("ایمیل را وارد کنید")
+          .label(t("tech-Lab_page.research.personal.email.label"))
+          .email(t("tech-Lab_page.research.personal.email.matches"))
+          .matches(emailRules, {
+            message: t("tech-Lab_page.research.personal.email.matches"),
+          })
+          .required(t("tech-Lab_page.research.personal.email.matches"))
           .meta({ direction: "ltr" }),
         phone: yup
           .string()
-          .label("شماره تلفن")
-          .matches(/^[0-9]+$/, "شماره تلفن الزامی میباشد")
-          .required("شماره تلفن الزامی میباشد")
-          .min(9, "شماره تلفن کمتر از 9 رقم نباید باشد ")
+          .label(t("tech-Lab_page.research.personal.phone.label"))
+          .matches(
+            /^[0-9]+$/,
+            t("tech-Lab_page.research.personal.phone.matches")
+          )
+          .required(t("tech-Lab_page.research.personal.phone.required"))
+          .min(9, t("tech-Lab_page.research.personal.phone.min"))
           .meta({ class: "col-12", type: "number", direction: "ltr" }),
         organization: yup
           .string()
-          .required("نام سازمان یا دانشگاه الزامی است")
-          .label("نام سازمان / دانشگاه"),
+          .required(t("tech-Lab_page.research.personal.organization.required"))
+          .label(t("tech-Lab_page.research.personal.organization.label")),
         position: yup
           .string()
-          .required("سمت یا مرتبه علمی الزامی است")
-          .label("سمت / مرتبه علمی"),
-        specialty: yup.string().required("تخصص الزامی است").label("تخصص"),
+          .required(t("tech-Lab_page.research.personal.position.required"))
+          .label(t("tech-Lab_page.research.personal.position.label")),
+        specialty: yup
+          .string()
+          .required(t("tech-Lab_page.research.personal.specialty.required"))
+          .label(t("tech-Lab_page.research.personal.specialty.label")),
       })
-      .label("مشخصات فردی")
+      .label(t("tech-Lab_page.research.personal.label"))
       .meta({ icon: "fa-solid fa-user-tie", type: "input" }),
 
     education: yup
       .object({
         degree: yup
           .string()
-          .required("مقطع تحصیلی الزامی است")
-          .label("مقطع تحصیلی"),
+          .required(t("tech-Lab_page.research.education.degree.required"))
+          .label(t("tech-Lab_page.research.education.degree.label")),
         field: yup
           .string()
-          .required("رشته تحصیلی الزامی است")
-          .label("رشته تحصیلی"),
+          .required(t("tech-Lab_page.research.education.field.required"))
+          .label(t("tech-Lab_page.research.education.field.label")),
         university: yup
           .string()
-          .required("دانشگاه محل تحصیل الزامی است")
-          .label("دانشگاه محل تحصیل"),
+          .required(t("tech-Lab_page.research.education.university.required"))
+          .label(t("tech-Lab_page.research.education.university.label")),
         year: yup
           .number()
-          .typeError("سال باید عدد باشد")
-          .required("سال دریافت مدرک الزامی است")
-          .integer("سال معتبر نیست")
-          .label("سال دریافت مدرک")
+          .typeError(t("tech-Lab_page.research.education.year.typeError"))
+          .required(t("tech-Lab_page.research.education.year.required"))
+          .integer(t("tech-Lab_page.research.education.year.integer"))
+          .label(t("tech-Lab_page.research.education.year.label"))
           .meta({ type: "number" }),
       })
-      .label("سوابق تحصیلی")
+      .label(t("tech-Lab_page.research.education.label"))
       .meta({ icon: "fa-solid fa-graduation-cap", type: "input" }),
 
     researchAreas: yup
       .string()
-      .required("زمینه‌های همکاری تحقیقاتی الزامی است")
-      .min(5, "حداقل ۵ کاراکتر وارد کنید")
-      .label("زمینه‌های همکاری تحقیقاتی")
+      .required(t("tech-Lab_page.research.researchAreas.required"))
+      .min(5, t("tech-Lab_page.research.researchAreas.min"))
+      .label(t("tech-Lab_page.research.researchAreas.label"))
       .meta({ icon: "fa-solid fa-flask", type: "textarea" }),
 
     researchExperience: yup
       .string()
-      .required("سوابق پژوهشی الزامی است")
-      .min(5, "حداقل ۵ کاراکتر وارد کنید")
-      .label("سوابق پژوهشی")
+      .required(t("tech-Lab_page.research.researchExperience.required"))
+      .min(5, t("tech-Lab_page.research.researchExperience.min"))
+      .label(t("tech-Lab_page.research.researchExperience.label"))
       .meta({ icon: "fa-solid fa-microscope", type: "textarea" }),
 
     additionalInfo: yup
       .string()
       .nullable()
-      .label("توضیحات تکمیلی")
+      .label(t("tech-Lab_page.research.additionalInfo.label"))
       .meta({ icon: "fa-solid fa-comment", type: "textarea" }),
   });
 };
