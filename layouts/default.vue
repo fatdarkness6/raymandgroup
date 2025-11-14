@@ -19,7 +19,7 @@
         <!-- Logo -->
         <div class="logo-moon-wrapper q-mr-sm">
           <q-img
-            src="/images/logo-test.svg"
+            src="/logo.svg"
             spinner-color="primary"
             fetchpriority="high"
             style="height: 65px; width: 65px"
