@@ -10,13 +10,12 @@
       <!-- Header -->
       <q-card-section class="text-center q-mb-md">
         <div class="text-h6 text-weight-bold text-deep-purple-7">
-          فرم درخواست همکاری تحقیقاتی
+          {{ t("tech-Lab_page.research.label") }}
         </div>
         <div class="text-body2 text-grey-7">
-          لطفاً اطلاعات زیر را جهت بررسی همکاری تحقیقاتی تکمیل نمایید.
+          {{ t("tech-Lab_page.research.description") }}
         </div>
       </q-card-section>
-
       <!-- Form -->
       <CommonFormBuilder
         :sectionStructure="true"

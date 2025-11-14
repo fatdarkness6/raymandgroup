@@ -10,10 +10,10 @@
       <!-- Header -->
       <q-card-section class="text-center q-mb-md">
         <div class="text-h6 text-weight-bold text-primary">
-          فرم درخواست همکاری آموزشی
+          {{ t('tech-Lab_page.education.label') }}
         </div>
         <div class="text-body2 text-grey-7">
-          لطفاً اطلاعات خود را با دقت تکمیل و ارسال نمایید.
+          {{ t('tech-Lab_page.education.description') }}
         </div>
       </q-card-section>
 
