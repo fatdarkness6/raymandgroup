@@ -64,7 +64,7 @@
           >
         </div>
       </q-card-section>
-      <CommonDonemessage
+      <CommonFormsDoneMessage
         v-model="openDonemessage"
         title="Email has been sent successfully"
         message="Forgot password email has been snet to you email . pleas check your email"

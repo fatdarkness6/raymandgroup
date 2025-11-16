@@ -17,7 +17,7 @@
         </div>
       </q-card-section>
       <!-- Form -->
-      <CommonFormBuilder
+      <CommonFormsFormBuilder
         :sectionStructure="true"
         :schema="researchSchema(t)"
         :onSubmit="handleSubmit"
@@ -36,9 +36,9 @@
             />
           </div>
         </template>
-      </CommonFormBuilder>
+      </CommonFormsFormBuilder>
     </q-card>
-    <CommonDoneMessage
+    <CommonFormsDoneMessage
       :modelValue="openDoneMessage"
       :closePermit="true"
       persistent

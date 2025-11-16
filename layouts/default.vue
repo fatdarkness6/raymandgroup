@@ -153,7 +153,7 @@
         class="wrapper q-py-xl flex justify-between footer-content row reverse items-start"
       >
         <div class="submit-form flex column" style="width: 200px">
-          <CommonFormBuilder
+          <CommonFormsFormBuilder
             :schema="defaultLayoutSchema(t)"
             :onSubmit="submit"
             :input-props="{ color: 'white', labelColor: 'white', dark: true }"
@@ -168,7 +168,7 @@
                 type="submit"
               />
             </template>
-          </CommonFormBuilder>
+          </CommonFormsFormBuilder>
         </div>
         <div class="site-map flex column justify-center items-center">
           <span class="text-h6">{{ $t("footer.site_pages") }}</span>
@@ -292,7 +292,7 @@
               <q-icon name="fa-solid fa-user" size="30px" />
             </q-item-section>
             <q-item-section class="text-h6">
-             {{ t('header.login') }}
+              {{ t("header.login") }}
             </q-item-section>
           </q-item>
           <q-item

@@ -91,7 +91,7 @@
       :titles="setMsgForDialog"
       :errorMessage="errormessageForDialog"
     />
-    <CommonDoneMessage
+    <CommonFormsDoneMessage
       v-model="openSucssesMsg"
       title="Email Verified"
       message="You can now log in with your account."
@@ -140,8 +140,8 @@ const setMsgForDialog = ref({
 });
 const openSucssesMsg = ref<boolean>(false);
 const accountIsExistOrNot = ref({
-  message : "",
-  error : false
+  message: "",
+  error: false,
 });
 const loginOption = ref<string>("");
 const errormessageForDialog = ref({
@@ -177,7 +177,10 @@ function handleError(response: any) {
   const status: number | undefined = response?.response?.status;
 
   // === Email not verified ===
-  if (validation === false || msg.toLowerCase().includes("email not verified")) {
+  if (
+    validation === false ||
+    msg.toLowerCase().includes("email not verified")
+  ) {
     loginOption.value = "signup";
     setMsgForDialog.value = {
       title: "Verify your Email",
@@ -216,9 +219,9 @@ function handleError(response: any) {
   // === User already exists ===
   if (msg.toLowerCase().includes("user already exists")) {
     accountIsExistOrNot.value = {
-      error : true,
-      message : msg
-    }
+      error: true,
+      message: msg,
+    };
     return;
   }
 

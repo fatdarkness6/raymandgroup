@@ -10,15 +10,15 @@
       <!-- Header -->
       <q-card-section class="text-center q-mb-md">
         <div class="text-h6 text-weight-bold text-primary">
-          {{ t('tech-Lab_page.education.label') }}
+          {{ t("tech-Lab_page.education.label") }}
         </div>
         <div class="text-body2 text-grey-7">
-          {{ t('tech-Lab_page.education.description') }}
+          {{ t("tech-Lab_page.education.description") }}
         </div>
       </q-card-section>
 
       <!-- Form -->
-      <CommonFormBuilder
+      <CommonFormsFormBuilder
         :sectionStructure="true"
         :schema="educationSchema(t)"
         :onSubmit="handleSubmit"
@@ -37,9 +37,9 @@
             />
           </div>
         </template>
-      </CommonFormBuilder>
+      </CommonFormsFormBuilder>
     </q-card>
-    <CommonDoneMessage
+    <CommonFormsDoneMessage
       :modelValue="openDoneMessage"
       :closePermit="true"
       persistent

@@ -25,6 +25,7 @@
         "contact_us": "Kontaktieren Sie uns",
         "gpo": "Einkaufsgemeinschaft \\n (Raymand Tajhiz Company)",
         "home-page": "Heim",
+        "login": "Login",
         "news": "Nachricht",
         "tech-Lab": "Strategisches Technologielabor \\n (Raymand System Ezma Group)",
         "vHospital": "Health Technology Management \\n (Raymand System Equipment Company)"
@@ -71,6 +72,7 @@
     "tech-Lab_page": {
         "careers": " Forschungs- und Entwicklungsdienstleistungen (F&E)",
         "education": {
+            "description": "Bitte füllen Sie Ihre Angaben sorgfältig aus und senden Sie sie ab.",
             "educations": {
                 "country": {
                     "label": "Studienland",
@@ -99,6 +101,7 @@
                 "label": "Berufliche Laufbahn",
                 "required": "Berufliche und schulische Vorkenntnisse sind erforderlich."
             },
+            "label": "Antragsformular für Bildungskooperation",
             "personal": {
                 "birthPlace": {
                     "label": "Ausgestellt von",
@@ -156,6 +159,7 @@
             "additionalInfo": {
                 "label": "Weitere Informationen"
             },
+            "description": "Bitte füllen Sie die folgenden Angaben aus, um eine Forschungskooperation in Betracht zu ziehen.",
             "education": {
                 "degree": {
                     "label": "Bildungsniveau",
@@ -177,6 +181,7 @@
                     "typeError": "Das Jahr muss eine Zahl sein."
                 }
             },
+            "label": "Antragsformular für Forschungskooperationen",
             "personal": {
                 "email": {
                     "email": "Bitte geben Sie die E-Mail-Adresse korrekt ein.",

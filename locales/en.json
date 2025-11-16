@@ -25,6 +25,7 @@
         "contact_us": "Contact us",
         "gpo": "Group Purchasing Organization \\n (Raymand Tajhiz Company)",
         "home-page": "Home",
+        "login": "Login",
         "news": "News",
         "tech-Lab": "Strategic Technology Laboratory \\n (Raymand System Ezma Group)",
         "vHospital": "Health Technology Management \\n (Raymand Equipment System Company)"
@@ -71,6 +72,7 @@
     "tech-Lab_page": {
         "careers": " Research and Development (R&D) Services",
         "education": {
+            "description": "Please complete and submit your information carefully.",
             "educations": {
                 "country": {
                     "label": "Country of study",
@@ -99,6 +101,7 @@
                 "label": "Educational work history",
                 "required": "Work and educational background is required."
             },
+            "label": "Educational Cooperation Application Form",
             "personal": {
                 "birthPlace": {
                     "label": "Issued by",
@@ -156,6 +159,7 @@
             "additionalInfo": {
                 "label": "Additional information"
             },
+            "description": "Please complete the information below to consider research collaboration.",
             "education": {
                 "degree": {
                     "label": "Educational level",
@@ -177,6 +181,7 @@
                     "typeError": "Year must be a number."
                 }
             },
+            "label": "Research Collaboration Application Form",
             "personal": {
                 "email": {
                     "email": "Please enter the email correctly.",

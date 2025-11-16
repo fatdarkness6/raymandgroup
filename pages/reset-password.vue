@@ -67,7 +67,7 @@
             </q-btn>
           </q-form>
         </q-card-section>
-        <CommonDonemessage
+        <CommonFormsDoneMessage
           v-model="openDonemessage"
           title="Reset Password successfully"
           message="Your Password is changed successfully"
