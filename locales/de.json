@@ -2,6 +2,7 @@
     "common": {
         "about_us": "Über uns",
         "click": "Klicken Sie hier, um mit dem Akzeptieren zu beginnen.",
+        "close": "Schließen",
         "email": "E-Mail",
         "lab_test_admission": "Das Labor beginnt mit der Annahme von Proben.",
         "learn-more": "Mehr erfahren...",
@@ -407,6 +408,21 @@
             "poultryLab": "Geflügellabor",
             "soilLab": "Bodenkundliches Labor",
             "waterAnalysisLab": "Wasseranalyselabor"
+        },
+        "slugForm": {
+            "fullName": {
+                "label": "Vor- und Nachname",
+                "required": "Vor- und Nachname sind erforderlich."
+            },
+            "label": "Zulassungsantragsformular",
+            "testName": {
+                "label": "Testname",
+                "required": "Die Angabe des Testnamens ist erforderlich."
+            },
+            "testType": {
+                "label": "Testart",
+                "required": "Die Art des Tests ist erforderlich."
+            }
         },
         "subtitle": "Raymand Group, ein führendes Unternehmen im Bereich Tests für eine bessere Lebensqualität"
     },

@@ -2,6 +2,7 @@
     "common": {
         "about_us": "About us",
         "click": "Click to start accepting.",
+        "close": "Close",
         "email": "Email",
         "lab_test_admission": "The laboratory begins by accepting tests.",
         "learn-more": "Learn more...",
@@ -407,6 +408,21 @@
             "poultryLab": "Poultry Laboratory",
             "soilLab": "Soil science laboratory",
             "waterAnalysisLab": "Water Analysis Laboratory"
+        },
+        "slugForm": {
+            "fullName": {
+                "label": "First and last name",
+                "required": "First and last name are required."
+            },
+            "label": "Admission application form",
+            "testName": {
+                "label": "Test name",
+                "required": "Test name is required."
+            },
+            "testType": {
+                "label": "Test type",
+                "required": "Test type is required."
+            }
         },
         "subtitle": "Raymand Group, a leader in testing for a better quality of life"
     },
