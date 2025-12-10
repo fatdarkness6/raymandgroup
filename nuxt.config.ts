@@ -90,6 +90,7 @@ export default defineNuxtConfig({
     "@/assets/css/utilities.css",
     "@/assets/css/responsive.css",
     "@fortawesome/fontawesome-svg-core/styles.css",
+    "@/assets/css/components/card.css"
   ],
   build: {
     transpile: [
