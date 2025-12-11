@@ -1,19 +1,19 @@
 <template>
   <div class="wrapper" :dir="directionOfElement(locale)">
-    <q-parallax class="hero">
+    <div class="hero space-between-each-sections">
       <div class="hero-inner">
         <AnimationSlideOnce direction="down">
           <h1 class="hero-title">
             معرفی اجمالی گروه رایمند و شرکت رایمند تجهیز
           </h1>
         </AnimationSlideOnce>
-        <AnimationSlideOnce direction="down" delay="100">
+        <AnimationSlideOnce direction="down" :delay="100">
           <p class="hero-lead">
             راهکارهای هوشمند در تأمین، مدیریت و توسعه تجهیزات آزمایشگاهی، صنعتی
             و خدمات سلامت — نماینده‌ی خریدار شما.
           </p>
         </AnimationSlideOnce>
-        <AnimationSlideOnce delay="200">
+        <AnimationSlideOnce :delay="200">
           <div class="hero-ctas">
             <q-btn
               unelevated
@@ -30,7 +30,7 @@
           </div>
         </AnimationSlideOnce>
       </div>
-    </q-parallax>
+    </div>
 
     <!-- About -->
     <section id="about" class="section container">
@@ -47,7 +47,7 @@
               گرفت و در سال ۱۳۸۴ شرکت رایمند تجهیز تأسیس شد.
             </p>
           </AnimationSlideOnce>
-          <AnimationSlideOnce direction="right" delay="100">
+          <AnimationSlideOnce direction="right" :delay="100">
             <h3>ساختار هلدینگ</h3>
             <ul class="list-icons">
               <li>
@@ -66,7 +66,6 @@
           </AnimationSlideOnce>
         </div>
         <AnimationSlideOnce class="col-12 col-md-5">
-          <div class="">
             <q-card class="my-card q-pa-md animated-card">
               <div class="card-title">چشم‌انداز ما</div>
               <div class="card-body">
@@ -74,7 +73,6 @@
                 آزمایشگاهی و صنعتی در ایران.
               </div>
             </q-card>
-          </div>
         </AnimationSlideOnce>
       </div>
     </section>
@@ -97,7 +95,7 @@
             <q-card class="my-card q-pa-md full-height text-center">
               <q-card-section>
                 <q-icon :name="s.icon" size="34px" />
-                <h4>{{ s.title }}</h4>
+                <h4 class="q-mb-md">{{ s.title }}</h4>
               </q-card-section>
               <q-card-section>
                 <p>{{ s.text }}</p>
@@ -137,7 +135,7 @@
           :delay="i * 100"
         >
           <q-card class="my-card q-pa-md full-height">
-            <h3 class="text-center">{{ items.title }}</h3>
+            <h4 class="text-center">{{ items.title }}</h4>
             <ul>
               <li v-for="text in items.texts">
                 {{ text }}
@@ -157,19 +155,19 @@
           direction="right"
         >
           <AnimationSlideOnce
-            class="col-12 col-sm-6 col-md-4"
-            v-for="(s, i) in services"
+            class="col-12 col-sm-6 col-md-6"
+            v-for="(s, i) in services2"
             :key="i"
             :delay="i * 100"
             custom-class="full-height"
           >
             <q-card class="my-card q-pa-md full-height text-center">
               <q-card-section>
-                <q-icon :name="s.icon" size="35px"/>
-                <h4>{{ s.title }}</h4>
+                <q-icon :name="s.icon" size="35px" />
+                <h4 class="q-mb-lg">{{ s.title }}</h4>
               </q-card-section>
               <q-card-section>
-                <p>{{ s.text }}</p>
+                <p v-for="value in s.texts">{{ value }}</p>
               </q-card-section>
             </q-card>
           </AnimationSlideOnce>
@@ -179,20 +177,27 @@
 
     <!-- Advantages -->
     <section id="advantages" class="section container">
-      <h2 class="center">مزیت‌های رقابتی</h2>
-      <div class="row q-col-gutter-md q-mt-md">
-        <div
+      <h2 class="text-center">مزیت‌های رقابتی</h2>
+      <AnimationSlideOnceGroup
+        direction="right"
+        class="row q-col-gutter-md q-mt-md"
+      >
+        <AnimationSlideOnce
           class="col-12 col-sm-6 col-md-4"
           v-for="(a, i) in advantages"
           :key="i"
+          :delay="i * 100"
+          custom-class="full-height"
         >
-          <q-card class="my-card q-pa-md text-center">
-            <q-icon :name="a.icon" size="34px" class="q-mb-md" />
-            <h4>{{ a.title }}</h4>
-            <p>{{ a.text }}</p>
+          <q-card class="my-card q-pa-md text-center full-height">
+            <q-card-section>
+              <q-icon :name="a.icon" size="34px" />
+              <h5 class="q-mb-lg">{{ a.title }}</h5>
+            </q-card-section>
+              <p>{{ a.text }}</p>
           </q-card>
-        </div>
-      </div>
+        </AnimationSlideOnce>
+      </AnimationSlideOnceGroup>
     </section>
 
     <!-- Footer -->
@@ -219,24 +224,62 @@ const services = [
   },
 ];
 const services2 = [
-  
-]
+  {
+    icon: "fa-brands fa-searchengin",
+    title: "نمایندگی خریدار و مشاوره تخصصی",
+    texts: [
+      "تحلیل نیازهای واقعی مراکز و طراحی راهکار خرید اختصاصی",
+      "بررسی بازار و شناسایی بهترین تأمین‌کنندگان و قیمت‌ها",
+      "کاهش هزینه‌های غیرضروری و تضمین کیفیت خرید",
+    ],
+  },
+  {
+    icon: "fa-brands fa-searchengin",
+    title: " مدیریت خرید جمعی (G.P.O)",
+    texts: [
+      "ایجاد ساختار خرید گروهی برای آزمایشگاه‌ها و صنایع",
+      "مذاکرات متمرکز با تأمین‌کنندگان برای کاهش قیمت و بهبود شرایط قراردادی",
+      "تسهیل خرید و تحویل به صورت یکپارچه و مطمئن",
+    ],
+  },
+  {
+    icon: "fa-brands fa-searchengin",
+    title: "آموزش و پشتیبانی خرید",
+    texts: [
+      "آموزش مراکز در فرآیندهای تصمیم‌گیری خرید و انتخاب تجهیزات بهینه وارائه راهنماییهای تخصصی",
+    ],
+  },
+  {
+    icon: "fa-brands fa-searchengin",
+    title: " خدمات ارزش افزوده",
+    texts: [
+      "پیگیری سفارش‌ها و تضمین تحویل به موقع",
+      "مشاوره در مدیریت موجودی و برنامه‌ریزی خرید بلندمدت",
+      "ایجاد فرصت برای مراکز جهت بهره‌مندی از فناوری‌های نوین بدون فشار فروش",
+    ],
+  },
+];
 
 const advantages = [
   {
     icon: "fa-solid fa-users-viewfinder",
     title: "تمرکز بر نمایندگی خریدار",
-    text: "ما نقش فروشنده نداریم؛ همراه مشتری برای بهترین تصمیم خرید.",
+    text: "تمرکز کامل بر نمایندگی خریدار به جای نقش فروشنده، همراه مشتری در تمام تصمیمات خرید.",
   },
   {
     icon: "fa-solid fa-mobile-screen-button",
-    title: "خرید گروهی و صرفه‌جویی",
-    text: "ایجاد شبکه سازمان‌یافته خرید گروهی برای کاهش هزینه‌ها.",
+    title: "صرفه‌جویی و خرید گروهی",
+    text: "ایجاد شبکه سازمان‌یافته خرید گروهی برای صرفه‌جویی واقعی مالی و بهینه‌سازی فرآیندهای خرید.",
   },
   {
     icon: "fa-solid fa-user-tie",
     title: "تیم متخصص",
-    text: "تیم با دانش بازار و تجهیزات که تضمین‌کننده ارزش واقعی خرید است.",
+    text: "تیمی متخصص با دانش دقیق بازار، تجهیزات و استانداردها؛ تضمین ارزش واقعی خرید.",
+  },
+  {
+    icon: "fa-solid fa-lightbulb",
+    title: "خدمات جامع و R&D",
+    text: "مشاوره، مدیریت خرید، آموزش، پشتیبانی و بخش R&D شامل تحلیل بازار، شناسایی فناوری‌های نوین و بهبود فرایندهای خرید.",
   },
 ];
 const missionVisionValues = [
@@ -279,19 +322,12 @@ const missionVisionValues = [
   padding: 40px;
 }
 .eyebrow {
-  letter-spacing: 2px;
   opacity: 0.9;
   margin-bottom: 12px;
 }
 .hero-title {
   font-size: 34px;
   margin-bottom: 12px;
-}
-.hero-lead {
-  font-size: 18px;
-  opacity: 0.95;
-  max-width: 900px;
-  margin: 0 auto 20px;
 }
 .hero-ctas q-btn + q-btn {
   margin-left: 12px;
