@@ -4,28 +4,22 @@
       <div class="hero-inner">
         <AnimationSlideOnce direction="down">
           <h1 class="hero-title">
-            معرفی اجمالی گروه رایمند و شرکت رایمند تجهیز
+            {{ t("gpo-page.home-page.hero.heroTitle") }}
           </h1>
         </AnimationSlideOnce>
         <AnimationSlideOnce direction="down" :delay="100">
           <p class="hero-lead">
-            راهکارهای هوشمند در تأمین، مدیریت و توسعه تجهیزات آزمایشگاهی، صنعتی
-            و خدمات سلامت — نماینده‌ی خریدار شما.
+            {{ t("gpo-page.home-page.hero.heroLead") }}
           </p>
         </AnimationSlideOnce>
         <AnimationSlideOnce :delay="200">
           <div class="hero-ctas">
             <q-btn
-              unelevated
-              size="lg"
-              label="درخواست مشاوره"
-              @click="$scrollTo('#services')"
-            />
-            <q-btn
               flat
               size="lg"
-              label="بیشتر بخوانید"
-              @click="$scrollTo('#about')"
+              :label="t('gpo-page.home-page.hero.aboutUs')"
+              to="/gpo/about-us"
+              class="rounded-10"
             />
           </div>
         </AnimationSlideOnce>
@@ -37,42 +31,39 @@
       <div class="row q-col-gutter-md">
         <div class="col-12 col-md-7">
           <AnimationSlideOnce direction="right">
-            <h2>شروع فعالیت و شکل‌گیری هلدینگ</h2>
+            <h3>{{ t("gpo-page.home-page.about.h3") }}</h3>
             <p>
-              مدیریت گروه رایمند فعالیت آزمایشگاهی خود را در فیلدهای مختلف
-              آزمایشگاهی از سال ۱۳۶۹ آغاز نمود و پس از کسب تجارب مختلف
-              آزمایشگاهی، فعالیت شرکتی خود را با اخذ نمایندگی بیش از ۲۵ کمپانی
-              خارجی ادامه داد. در سال ۱۳۸۳ با هدف تحول فناوری راهبردی، هلدینگ
-              رایمند در حوزه خدمات و تجهیزات آزمایشگاهی، صنعتی و حوزه سلامت شکل
-              گرفت و در سال ۱۳۸۴ شرکت رایمند تجهیز تأسیس شد.
+              {{ t("gpo-page.home-page.about.p") }}
             </p>
           </AnimationSlideOnce>
           <AnimationSlideOnce direction="right" :delay="100">
-            <h3>ساختار هلدینگ</h3>
+            <h3>{{ t("gpo-page.home-page.about.h3-1") }}</h3>
             <ul class="list-icons">
               <li>
-                <q-icon name="fa-solid fa-flask" /> رایمند سیستم آزما — مدیریت
-                فناوری راهبردی آزمایشگاه‌ها و استانداردسازی (از جمله ISO 17025)
+                <q-icon name="fa-solid fa-flask" />
+                {{ t("gpo-page.home-page.about.li-1") }}
               </li>
               <li>
-                <q-icon name="fa-solid fa-box" /> رایمند تجهیز — واردات، تأمین و
-                توزیع تجهیزات آزمایشگاهی و صنعتی
+                <q-icon name="fa-solid fa-box" />
+                {{ t("gpo-page.home-page.about.li-2") }}
               </li>
               <li>
-                <q-icon name="fa-solid fa-hospital" /> رایمند سیستم تجهیز —
-                مدیریت مراکز خدمات بهداشتی و درمانی
+                <q-icon name="fa-solid fa-hospital" />{{
+                  t("gpo-page.home-page.about.li-3")
+                }}
               </li>
             </ul>
           </AnimationSlideOnce>
         </div>
         <AnimationSlideOnce class="col-12 col-md-5">
-            <q-card class="my-card q-pa-md animated-card">
-              <div class="card-title">چشم‌انداز ما</div>
-              <div class="card-body">
-                تبدیل شدن به مرجع اصلی نمایندگی خریدار و مدیریت خرید تجهیزات
-                آزمایشگاهی و صنعتی در ایران.
-              </div>
-            </q-card>
+          <q-card class="my-card q-pa-md animated-card">
+            <div class="card-title">
+              {{ t("gpo-page.home-page.about.outlook") }}
+            </div>
+            <div class="card-body">
+              {{ t("gpo-page.home-page.about.card-body") }}
+            </div>
+          </q-card>
         </AnimationSlideOnce>
       </div>
     </section>
@@ -80,45 +71,52 @@
     <!-- Companies / Services -->
     <section id="services" class="section alt">
       <div class="container">
-        <h2 class="text-center">فعالیت شرکت‌های زیرمجموعه و خدمات</h2>
+        <h2 class="text-center">
+          {{ t("gpo-page.home-page.services.title") }}
+        </h2>
         <AnimationSlideOnceGroup
           class="row q-col-gutter-md q-mt-md"
           direction="right"
         >
           <AnimationSlideOnce
             class="col-12 col-sm-6 col-md-4"
-            v-for="(s, i) in services"
+            v-for="(item, i) in services.companiesForMainPage"
             custom-class="full-height"
             :key="i"
             :delay="i * 200"
           >
             <q-card class="my-card q-pa-md full-height text-center">
               <q-card-section>
-                <q-icon :name="s.icon" size="34px" />
-                <h4 class="q-mb-md">{{ s.title }}</h4>
+                <q-img :src="item.image" fit="contain" width="200px"/>
+                <h4 class="q-mb-md q-mt-lg">{{ t(item.title) }}</h4>
               </q-card-section>
               <q-card-section>
-                <p>{{ s.text }}</p>
+                <q-item-label lines="2">
+                  <p style="line-height: 25px">{{ t(item.text) }}</p>
+                </q-item-label>
               </q-card-section>
             </q-card>
           </AnimationSlideOnce>
         </AnimationSlideOnceGroup>
-
+        <div class="full-width flex justify-center align-center q-mt-lg">
+          <q-btn
+            color="primary"
+            push
+            no-caps
+            padding="10px 20px"
+            to="/gpo/companies"
+          >
+            {{ t("gpo-page.home-page.services.seeMore") }}
+          </q-btn>
+        </div>
         <div class="transform q-mt-lg">
           <AnimationSlideOnce direction="right">
-            <h3>تحول در رایمند تجهیز</h3>
+            <h3>{{ t("gpo-page.home-page.transformation.title") }}</h3>
             <p>
-              رایمند تجهیز با بهره‌گیری از تجربه مدیران خود در سال ۱۳۸۴ تاسیس شد
-              و در سال ۱۴۰۳ با تغییر فلسفه کاری سیستم فروش سنتی را به سیستم
-              تأمین هوشمند، بهینه و با کمترین هزینه تبدیل کرد. در این رویکرد،
-              رایمند تجهیز نقش فروشنده ندارد و خود را همراه مشتری در مسیر
-              تصمیم‌گیری‌های خرید می‌داند.
+              {{ t("gpo-page.home-page.transformation.text1") }}
             </p>
             <p>
-              با به‌کارگیری G.P.O (Group Purchasing Organization)، امکان خرید
-              جمعی و بهینه‌سازی هزینه‌ها برای مراکز علمی و صنعتی فراهم گشته و
-              ارزش واقعی از طریق صرفه‌جویی مالی، تضمین کیفیت و بهبود فرایندهای
-              خرید ارائه می‌شود.
+              {{ t("gpo-page.home-page.transformation.text2") }}
             </p>
           </AnimationSlideOnce>
         </div>
@@ -194,7 +192,7 @@
               <q-icon :name="a.icon" size="34px" />
               <h5 class="q-mb-lg">{{ a.title }}</h5>
             </q-card-section>
-              <p>{{ a.text }}</p>
+            <p>{{ a.text }}</p>
           </q-card>
         </AnimationSlideOnce>
       </AnimationSlideOnceGroup>
@@ -205,24 +203,9 @@
 </template>
 
 <script setup>
+import { services } from "~/assets/data/pages/serviscesFromGpoCompanies";
 const { locale, t } = useI18n();
-const services = [
-  {
-    icon: "fa-brands fa-searchengin",
-    title: "رایمند سیستم آزما",
-    text: "مدیریت آزمایشگاه، استانداردسازی، خدمات فنی و مهندسی تجهیزات آزمایشگاهی و ارائه خدمات آزمایشگاهی.",
-  },
-  {
-    icon: "fa-solid fa-house-medical",
-    title: "رایمند سیستم تجهیز",
-    text: "مدیریت مراکز درمانی اعم از پیش بیمارستانی، بیمارستانی و پس بیمارستانی.",
-  },
-  {
-    icon: "fa-solid fa-boxes-stacked",
-    title: "رایمند تجهیز",
-    text: "واردات، تأمین و مدیریت هوشمند خرید تجهیزات آزمایشگاهی و صنعتی.",
-  },
-];
+
 const services2 = [
   {
     icon: "fa-brands fa-searchengin",
@@ -336,10 +319,6 @@ const missionVisionValues = [
 /* Sections */
 .section {
   padding: 60px 18px;
-}
-.container {
-  max-width: 1100px;
-  margin: 0 auto;
 }
 .section-grid {
   display: grid;

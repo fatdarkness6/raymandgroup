@@ -1,9 +1,3 @@
-@media (max-width: 1530px) {
-  .header {
-    margin-left: 20px;
-    margin-right: 20px;
-  }
-}
 @media (max-width: 1400px) {
   .res-h4 {
     font-size: 1.5rem;
@@ -13,6 +7,10 @@
   }
 }
 @media (max-width: 1330px) {
+  .header {
+    margin-left: 20px;
+    margin-right: 20px;
+  }
   .res-h1 {
     font-size: 40px;
     line-height: 3rem !important;
