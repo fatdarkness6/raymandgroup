@@ -74,30 +74,7 @@
         <h2 class="text-center">
           {{ t("gpo-page.home-page.services.title") }}
         </h2>
-        <AnimationSlideOnceGroup
-          class="row q-col-gutter-md q-mt-md"
-          direction="right"
-        >
-          <AnimationSlideOnce
-            class="col-12 col-sm-6 col-md-4"
-            v-for="(item, i) in services.companiesForMainPage"
-            custom-class="full-height"
-            :key="i"
-            :delay="i * 200"
-          >
-            <q-card class="my-card q-pa-md full-height text-center">
-              <q-card-section>
-                <q-img :src="item.image" fit="contain" width="200px"/>
-                <h4 class="q-mb-md q-mt-lg">{{ t(item.title) }}</h4>
-              </q-card-section>
-              <q-card-section>
-                <q-item-label lines="2">
-                  <p style="line-height: 25px">{{ t(item.text) }}</p>
-                </q-item-label>
-              </q-card-section>
-            </q-card>
-          </AnimationSlideOnce>
-        </AnimationSlideOnceGroup>
+        <GpoShowCompanies :data="services.companiesForMainPage"/>
         <div class="full-width flex justify-center align-center q-mt-lg">
           <q-btn
             color="primary"
@@ -203,7 +180,7 @@
 </template>
 
 <script setup>
-import { services } from "~/assets/data/pages/serviscesFromGpoCompanies";
+import { services } from "~/assets/data/pages/gpo/serviscesFromGpoCompanies";
 const { locale, t } = useI18n();
 
 const services2 = [
