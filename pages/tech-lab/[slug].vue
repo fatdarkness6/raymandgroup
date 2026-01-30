@@ -1,9 +1,9 @@
 <template>
-  <div class="dynamic-page z-max relative" v-if="pageContent">
+  <div class="dynamic-page z-top relative" v-if="pageContent">
     <div class="container1 space-between-each-sections-bottom">
       <q-img :src="pageContent.container1.image" class="bg-img" />
       <div
-        class="ab-text-center z-max text-white text-center flex column gap-20 w-80"
+        class="ab-text-center z-top text-white text-center flex column gap-20 w-80"
         :dir="directionOfElement(locale)"
       >
         <div class="text-h3">{{ t(pageContent.container1.title) }}</div>

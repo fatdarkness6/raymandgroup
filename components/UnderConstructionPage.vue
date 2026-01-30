@@ -1,5 +1,7 @@
 <template>
-  <div class="container space-between-each-sections-bottom relative z-max font-family font-size">
+  <div
+    class="container space-between-each-sections-bottom relative z-top font-family font-size"
+  >
     <div class="row justify-center">
       <div class="col-md-10 main-title text-center mt-5">
         <h1>ما در حال ساخت آینده‌ای بهتر هستیم</h1>
@@ -225,9 +227,7 @@
       <div class="text-h6 text-weight-bold q-mb-md">
         وب‌سایت ما در حال توسعه است
       </div>
-      <div class="text-subtitle2 text-grey-7">
-        ! به‌زودی دوباره سر بزنید
-      </div>
+      <div class="text-subtitle2 text-grey-7">! به‌زودی دوباره سر بزنید</div>
       <q-btn
         fa-solid
         fa-house

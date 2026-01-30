@@ -85,7 +85,7 @@
     </div>
     <div class="wrapper">
       <div
-        class="introduction flex column justify-center items-center text-center gap-20 q-mb-xl relative z-max"
+        class="introduction flex column justify-center items-center text-center gap-20 q-mb-xl relative z-top"
       >
         <AnimationSlideOnceGroup direction="up">
           <AnimationSlideOnce :delay="0">
@@ -115,7 +115,7 @@
     <div class="wrapper">
       <AnimationSlideOnceGroup
         direction="left"
-        class="row q-col-gutter-md about-3-companies justify-center relative z-max"
+        class="row q-col-gutter-md about-3-companies justify-center relative z-top"
       >
         <AnimationSlideOnce
           :delay="400"
@@ -124,7 +124,7 @@
           <q-card :bordered="true" class="custom-card my-card">
             <div class="q-px-md">
               <q-card-section
-                class="flex column gap-20 how-it-works-section-q relative z-max text-white"
+                class="flex column gap-20 how-it-works-section-q relative z-top text-white"
               >
                 <div class="text-h4 res-h4 text-weight-medium">
                   {{ t("home_page.raymand3") }}
@@ -165,7 +165,7 @@
             <div class="flex justify-between gap-20 no-wrap full-height">
               <div class="part1">
                 <q-card-section
-                  class="flex column gap-20 how-it-works-section-q full-width relative z-max text-white text-weight-md"
+                  class="flex column gap-20 how-it-works-section-q full-width relative z-top text-white text-weight-md"
                 >
                   <div class="text-h4 res-h4 text-weight-medium">
                     {{ t("home_page.raymand1") }}
@@ -205,7 +205,7 @@
           <q-card :bordered="true" class="custom-card my-card">
             <div class="q-px-md">
               <q-card-section
-                class="flex column gap-10 how-it-works-section-q full-width relative z-max text-white text-weight-md"
+                class="flex column gap-10 how-it-works-section-q full-width relative z-top text-white text-weight-md"
               >
                 <div class="text-h4 res-h4 text-weight-medium">
                   {{ t("home_page.raymand2") }}
@@ -289,7 +289,7 @@ import {
 } from "~/assets/data/pages/homePage";
 const { locale, t } = useI18n();
 
-const localePath = useLocalePath()
+const localePath = useLocalePath();
 const translateGroup = (group: typeof images) =>
   [...group, ...group].map((item) => ({
     image: item.image,

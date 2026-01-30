@@ -2,7 +2,7 @@
   <div class="gop">
     <!-- Hero Section -->
     <div class="container1 relative q-mb-lg">
-      <div class="ab-text-center relative z-max">
+      <div class="ab-text-center relative z-top">
         <div
           class="text-h3 text-white text-center"
           :dir="directionOfElement(locale)"
@@ -51,7 +51,7 @@
           style="overflow: hidden"
           class="relative w-33 elements rounded-10"
         >
-          <div class="text-hover text-white z-max q-px-xl">
+          <div class="text-hover text-white z-top q-px-xl">
             <div
               class="flex items-center gap-10"
               :dir="directionOfElement(locale)"
@@ -114,7 +114,7 @@ interface ButtonItem {
 }
 
 const arrowIcon = computed(() =>
-  locale.value === "fa" ? "fa-solid fa-angle-left" : "fa-solid fa-angle-right"
+  locale.value === "fa" ? "fa-solid fa-angle-left" : "fa-solid fa-angle-right",
 );
 
 const imgData = computed(() => [

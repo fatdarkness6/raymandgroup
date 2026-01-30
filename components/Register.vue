@@ -1,7 +1,7 @@
 <template>
   <q-card flat class="login-signUp-form-content q-pa-sm relative rounded-10">
     <q-card-section
-      class="signUp-form flex column justify-center gap-10 z-max relative"
+      class="signUp-form flex column justify-center gap-10 z-top relative"
     >
       <div class="text-h5 text-weight-medium text-center">Sign Up</div>
       <q-form

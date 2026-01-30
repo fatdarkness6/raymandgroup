@@ -3,7 +3,12 @@
     <ul class="box-area">
       <li v-for="items in 10" :key="items"></li>
     </ul>
-    <q-header elevated reveal :reveal-offset="1" class="q-pa-md wrapper header">
+    <q-header
+      elevated
+      reveal
+      :reveal-offset="1"
+      class="q-pa-md wrapper header z-max"
+    >
       <AnimationHeader />
       <div class="flex flex-row items-center justify-between">
         <!-- Mobile Burger -->
@@ -401,7 +406,7 @@ function switchLanguage(lang: any) {
 function openEmail() {
   window.open(
     "https://mail.google.com/mail/?view=cm&fs=1&to=info@raymandgroup.de",
-    "_blank"
+    "_blank",
   );
 }
 
@@ -504,7 +509,9 @@ function openTikTok() {
   border-radius: 12px;
   margin-bottom: 6px;
   padding: 10px 12px;
-  transition: background 0.3s ease, transform 0.2s ease;
+  transition:
+    background 0.3s ease,
+    transform 0.2s ease;
 }
 
 .menu-item:hover {

@@ -9,7 +9,7 @@
       </q-card-section>
 
       <!-- Form -->
-      <q-card-section class="z-max relative">
+      <q-card-section class="z-top relative">
         <q-form
           @submit.prevent="onSubmit"
           class="flex column"

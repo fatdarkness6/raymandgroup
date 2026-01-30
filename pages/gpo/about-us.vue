@@ -1,7 +1,7 @@
 <template>
   <div>
     <div class="container1 relative">
-      <div class="ab-text-center text-center z-max" style="color: white">
+      <div class="ab-text-center text-center z-top" style="color: white">
         <div class="text-h3 q-pb-md">
           {{ $t("gpo-page.about-us.container1.title") }}
         </div>
@@ -10,7 +10,7 @@
         </div>
       </div>
     </div>
-    <div class="wrapper z-max relative">
+    <div class="wrapper z-top relative">
       <div class="container2 space-between-each-sections">
         <div class="q-col-gutter-xl row justify-center items-center">
           <AnimationSlideOnce direction="left" class="col-12 col-md-6">
@@ -30,7 +30,7 @@
     </div>
     <div class="container3 space-between-each-sections relative">
       <AnimationAboutUsBackgroundForGpo />
-      <div class="wrapper z-max relative">
+      <div class="wrapper z-top relative">
         <div
           class="introduction text-center q-pt-lg"
           :dir="directionOfElement(locale)"
@@ -76,12 +76,12 @@
             custom-class="q-my-lg q-py-lg"
           >
             <q-card class="my-card" :dir="directionOfElement(locale)">
-                <q-img :src="item.image"/>
-                <q-card-section>
-                    <div class="text-h5 text-weight-bold">
-                        {{ item.name }}
-                    </div>
-                </q-card-section>
+              <q-img :src="item.image" />
+              <q-card-section>
+                <div class="text-h5 text-weight-bold">
+                  {{ item.name }}
+                </div>
+              </q-card-section>
             </q-card>
           </AnimationSlideOnce>
         </div>
