@@ -92,7 +92,7 @@ export const companies = {
     },
     container2: {
       text: "gpo-page.home-page.services.service6.text",
-      pdf: "../../public/pdf/alva.pdf",
+      pdf: "/pdf/alva.pdf",
     },
     container3: {
       images: [

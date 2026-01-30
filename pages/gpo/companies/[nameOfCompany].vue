@@ -9,7 +9,7 @@
         <q-img :src="company?.container1.icon" fit="contain" width="200px" />
       </div>
     </div>
-    <div class="wrapper">
+    <div class="wrapper relative z-max">
       <div class="container2">
         <div class="pdf"></div>
         <div
@@ -39,7 +39,6 @@ const company = computed(() => {
   if (!has(companies, param.value)) return null;
   return get(companies, param.value);
 });
-console.log(company.value);
 </script>
 <style scoped>
 .container1 {
