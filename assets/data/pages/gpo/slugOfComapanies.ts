@@ -59,7 +59,7 @@ export const companies = {
     },
     container2: {
       text: "gpo-page.home-page.services.service4.text",
-      pdf: "/public/pdf/funke-gerber.pdf",
+      pdf: "/pdf/funke-gerber.pdf",
     },
     container3: {
       images: [
@@ -78,7 +78,7 @@ export const companies = {
     },
     container2: {
       text: "gpo-page.home-page.services.service5.text",
-      pdf: "/public/pdf/astori-tecnica.pdf",
+      pdf: "/pdf/astori-tecnica.pdf",
     },
     container3: {
       images: [],
@@ -110,7 +110,7 @@ export const companies = {
     },
     container2: {
       text: "gpo-page.home-page.services.service7.text",
-      pdf: "/public/pdf/joanlab.pdf",
+      pdf: "/pdf/joanlab.pdf",
     },
     container3: {
       images: [
@@ -130,7 +130,7 @@ export const companies = {
     },
     container2: {
       text: "gpo-page.home-page.services.service8.text",
-      pdf: "/public/pdf/biobase.pdf",
+      pdf: "/pdf/biobase.pdf",
     },
     container3: {
       images: [
@@ -149,7 +149,7 @@ export const companies = {
     },
     container2: {
       text: "gpo-page.home-page.services.service9.text",
-      pdf: "/public/pdf/biobase.pdf",
+      pdf: "/pdf/biobase.pdf",
     },
     container3: {
       images: [
@@ -157,7 +157,7 @@ export const companies = {
         "/images/gpo/companies/ballya/container3-2.webp",
         "/images/gpo/companies/ballya/container3-3.webp",
         "/images/gpo/companies/ballya/container3-4.webp",
-        "/images/gpo/companies/ballya/container3-5.webp"
+        "/images/gpo/companies/ballya/container3-5.webp",
       ],
     },
   },
@@ -169,7 +169,7 @@ export const companies = {
     },
     container2: {
       text: "gpo-page.home-page.services.service10.text",
-      pdf: "/public/pdf/biobase.pdf",
+      pdf: "/pdf/biobase.pdf",
     },
     container3: {
       images: [
