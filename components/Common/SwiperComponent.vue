@@ -7,7 +7,7 @@
     :thumbs="{ swiper: thumbsSwiper }"
     :class="slideClass"
   >
-    <SwiperSlide v-for="(items, i) in props.images" :key="i">
+    <SwiperSlide v-for="(items, i) in normalizedImages" :key="i">
       <slot :image="items.image" :title="items.title" />
     </SwiperSlide>
   </Swiper>
@@ -17,7 +17,7 @@
 import { Swiper, SwiperSlide } from "swiper/vue";
 
 const props = defineProps<{
-  images: { image: string; title?: string }[];
+  images: (string | { image: string; title?: string })[];
   swiperAttrs: any;
   slideClass?: string | string[] | Record<string, boolean>;
   isMainWithThumbs?: boolean;
@@ -35,6 +35,21 @@ watch(
       thumbsSwiper.value = val;
     }
   },
-  { immediate: true }
+  { immediate: true },
+);
+const normalizedImages = computed(() =>
+  props.images.map((img) => (typeof img === "string" ? { image: img } : img)),
 );
 </script>
+<style>
+.swiper-wrapper {
+  display: flex !important;
+}
+.swiper-button-prev,
+.swiper-button-next {
+  display: none !important;
+}
+.swiper-slide {
+  width: 500px;
+}
+</style>

@@ -7,21 +7,20 @@
         class="absolute-center flex items-center column justify-center"
         style="z-index: 2"
       >
-        <q-img :src="company?.container1.icon" fit="contain" width="200px" />
         <h3 class="text-white q-mt-sm">
           {{ $t(company?.container1.title || "") }}
         </h3>
       </div>
     </div>
     <div class="wrapper relative">
-      <div class="container2">
-        <div class="pdf"></div>
+      <section class="container2">
         <div
           class="text-subtitle1 q-col-gutter-lg row justify-center"
           :dir="directionOfElement(locale)"
         >
           <div
             :class="`text-subtitle1 col-12 ${company?.container2.pdf ? 'col-md-5' : 'col-md-12'}`"
+            style="line-height: 40px"
           >
             {{ $t(company?.container2.text || "") }}
           </div>
@@ -50,7 +49,18 @@
             </q-card-section>
           </q-card>
         </div>
-      </div>
+      </section>
+      <section>
+        <CommonSwiperComponent
+          :images="company?.container3.images"
+          :swiperAttrs="mainAttrs"
+          class="swiper"
+        >
+          <template v-slot="{ image }">
+            <q-img :src="image" class="full-width full-height" />
+          </template>
+        </CommonSwiperComponent>
+      </section>
     </div>
     <q-dialog v-model="openDialog" class="z-max">
       <CommonPdfReader :src="company?.container2.pdf" />
@@ -60,6 +70,33 @@
 <script setup lang="ts">
 import { has, get } from "lodash-es";
 import { companies } from "~/assets/data/pages/gpo/slugOfComapanies";
+import {
+  Autoplay,
+  Pagination,
+  EffectCoverflow,
+  FreeMode,
+  Navigation,
+  Thumbs,
+} from "swiper/modules";
+const mainAttrs = {
+  modules: [Navigation, FreeMode, Autoplay, EffectCoverflow, Pagination],
+  navigation: true,
+  grabCursor: true,
+  autoplay: {
+    delay: 5000,
+    disableOnInteraction: false,
+  },
+  coverflowEffect: {
+    rotate: 50,
+    stretch: 0,
+    depth: 100,
+    modifier: 1,
+    slideShadows: true,
+  },
+  centeredSlides: true,
+  slidesPerView: "auto",
+  pagination: true,
+};
 
 const { locale, t } = useI18n();
 const route = useRoute();
@@ -81,6 +118,9 @@ type CompanyType = {
     text: string;
     pdf: string;
   };
+  container3: {
+    images: string;
+  };
 };
 const company = computed<CompanyType | null>(() => {
   if (!param.value) return null;
@@ -95,16 +135,5 @@ const company = computed<CompanyType | null>(() => {
   background-position: center;
   overflow: hidden;
   height: 70vh;
-}
-.black-layer {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: black;
-  opacity: 0.5;
-  z-index: 1;
 }
 </style>

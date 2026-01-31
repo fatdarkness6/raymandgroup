@@ -65,9 +65,9 @@ export default defineNuxtConfig({
     "@nuxtjs/google-fonts",
     "@nuxt/fonts",
   ],
-   app: {
-    baseURL: '/',
-    buildAssetsDir: '/_nuxt/',
+  app: {
+    baseURL: "/",
+    buildAssetsDir: "/_nuxt/",
     head: {
       htmlAttrs: { lang: "fa" },
       bodyAttrs: { class: "font-vazir" },
@@ -75,22 +75,21 @@ export default defineNuxtConfig({
   },
   nitro: {
     prerender: {
-      routes: ['/'],
+      routes: ["/"],
     },
   },
   css: [
-    // "swiper/css",
-    // "swiper/css/navigation",
-    // "swiper/css/pagination",
-    // "swiper/css/effect-coverflow",
-    // "@/assets/css/swiperStyles.css",
-    // "@/assets/css/pagination-bullet.css",
+    "swiper/css/navigation",
+    "swiper/css/pagination",
+    "swiper/css/effect-coverflow",
+    "@/assets/css/swiperStyles.css",
+    "@/assets/css/pagination-bullet.css",
     "@/assets/css/layout.css",
     "@/assets/css/base.css",
     "@/assets/css/utilities.css",
     "@/assets/css/responsive.css",
     "@fortawesome/fontawesome-svg-core/styles.css",
-    "@/assets/css/components/card.css"
+    "@/assets/css/components/card.css",
   ],
   build: {
     transpile: [

@@ -53,7 +53,7 @@
               class="my-card full-height"
               :dir="directionOfElement(locale)"
             >
-              <q-img :src="items.image" />
+              <q-img :src="items.image" style="max-height: 260px" />
               <q-card-section class="q-mt-sm">
                 <h6 class="q-my-md text-weight-bold">{{ items.title }}</h6>
                 <div class="text-subtitle1">{{ items.desc }}</div>
@@ -99,12 +99,12 @@ const companies = [
     desc: t("gpo-page.about-us.container3.companies.company1.description"),
   },
   {
-    image: "/images/gpo/about-us/container2.webp",
+    image: "/images/gpo/about-us/companies/raymand-tajhiz.webp",
     title: t("gpo-page.about-us.container3.companies.company2.title"),
     desc: t("gpo-page.about-us.container3.companies.company2.description"),
   },
   {
-    image: "/images/gpo/about-us/container2.webp",
+    image: "/images/gpo/about-us/companies/raymand-system-tajhiz.webp",
     title: t("gpo-page.about-us.container3.companies.company3.title"),
     desc: t("gpo-page.about-us.container3.companies.company3.description"),
   },
@@ -126,11 +126,13 @@ const specialists = [
 </script>
 <style scoped>
 .container1 {
-  background: url("/images/gpo/about-us/container1.webp") center / cover
-    no-repeat;
+  background: url("/images/gpo/about-us/container1.webp") no-repeat;
   width: 100%;
   height: 70vh;
   z-index: 1;
+  aspect-ratio: 16 / 9;
+  background-position: center 100%;
+  background-size: cover;
 }
 .container1:after {
   content: "";
@@ -140,7 +142,7 @@ const specialists = [
   width: 100%;
   height: 100%;
   background: black;
-  opacity: 0.3;
+  opacity: 0.4;
   z-index: 2;
 }
 .container2 .desc {

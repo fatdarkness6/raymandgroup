@@ -13,20 +13,29 @@
           </p>
         </AnimationSlideOnce>
         <AnimationSlideOnce :delay="200">
-          <div class="hero-ctas">
+          <div class="hero-ctas flex row justify-center items-center gap-10">
             <q-btn
-              flat
-              size="lg"
               :label="t('gpo-page.home-page.hero.aboutUs')"
               to="/gpo/about-us"
-              class="rounded-10"
+              color="primary"
+              push
+              no-caps
+              padding="10px 20px"
             />
+            <q-btn
+              color="primary"
+              push
+              no-caps
+              padding="10px 20px"
+              to="/gpo/contact-us"
+            >
+              {{ t("gpo-page.home-page.contact-us.click") }}
+            </q-btn>
           </div>
         </AnimationSlideOnce>
       </div>
     </div>
 
-    <!-- About -->
     <section id="about" class="section container">
       <div class="row q-col-gutter-md">
         <div class="col-12 col-md-7">
@@ -74,7 +83,7 @@
         <h2 class="text-center">
           {{ t("gpo-page.home-page.services.title") }}
         </h2>
-        <GpoShowCompanies :data="services.companiesForMainPage"/>
+        <GpoShowCompanies :data="services.companiesForMainPage" />
         <div class="full-width flex justify-center align-center q-mt-lg">
           <q-btn
             color="primary"
@@ -174,8 +183,6 @@
         </AnimationSlideOnce>
       </AnimationSlideOnceGroup>
     </section>
-
-    <!-- Footer -->
   </div>
 </template>
 
@@ -402,7 +409,9 @@ const missionVisionValues = [
 /* Animations */
 .animated-card {
   transform: translateY(6px);
-  transition: transform 0.5s ease, box-shadow 0.5s ease;
+  transition:
+    transform 0.5s ease,
+    box-shadow 0.5s ease;
 }
 .section:hover .animated-card {
   transform: translateY(-6px);
