@@ -79,9 +79,7 @@ export default defineNuxtConfig({
     },
   },
   css: [
-    "swiper/css/navigation",
-    "swiper/css/pagination",
-    "swiper/css/effect-coverflow",
+    "swiper/css/bundle",
     "@/assets/css/swiperStyles.css",
     "@/assets/css/pagination-bullet.css",
     "@/assets/css/layout.css",

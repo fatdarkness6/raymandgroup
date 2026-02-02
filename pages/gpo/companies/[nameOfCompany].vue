@@ -50,16 +50,23 @@
           </q-card>
         </div>
       </section>
-      <section>
+      <section
+        class="space-between-each-sections space-between-each-sections-bottom"
+        v-if="heroImages"
+      >
         <CommonSwiperComponent
-          :images="company?.container3.images"
-          :swiperAttrs="mainAttrs"
-          class="swiper"
-        >
-          <template v-slot="{ image }">
-            <q-img :src="image" class="full-width full-height" />
-          </template>
-        </CommonSwiperComponent>
+          rootClass="hero-swiper main-swiper"
+          :images="heroImages"
+          :modules="[
+            Navigation,
+            FreeMode,
+            Autoplay,
+            EffectCoverflow,
+            Pagination,
+            Thumbs,
+          ]"
+          :swiperProps="heroAttrs"
+        />
       </section>
     </div>
     <q-dialog v-model="openDialog" class="z-max">
@@ -78,14 +85,14 @@ import {
   Navigation,
   Thumbs,
 } from "swiper/modules";
-const mainAttrs = {
-  modules: [Navigation, FreeMode, Autoplay, EffectCoverflow, Pagination],
+const heroAttrs = {
   navigation: true,
   grabCursor: true,
-  autoplay: {
-    delay: 5000,
-    disableOnInteraction: false,
-  },
+  effect: "coverflow",
+  // autoplay: {
+  //   delay: 5000,
+  //   disableOnInteraction: false,
+  // },
   coverflowEffect: {
     rotate: 50,
     stretch: 0,
@@ -122,13 +129,19 @@ type CompanyType = {
     images: string;
   };
 };
+type ImageItem = string | { image: string; title?: string };
 const company = computed<CompanyType | null>(() => {
   if (!param.value) return null;
   if (!has(companies, param.value)) return null;
   return get(companies, param.value) as CompanyType;
 });
+const heroImages = computed<ImageItem[]>(() => {
+  const c = company.value;
+  return Array.isArray(c?.container3?.images) ? c.container3.images : [];
+});
 </script>
-<style scoped>
+<style>
+@import "@/assets/css/pages/gpo/slug/swiper";
 .container1 {
   position: relative;
   background-size: cover;

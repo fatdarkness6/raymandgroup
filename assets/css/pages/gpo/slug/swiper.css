@@ -1,0 +1,10 @@
+.hero-swiper .swiper-slide {
+  max-width: 550px;
+  max-height: 350px !important;
+}
+.hero-swiper .slide-image {
+  max-height: 350px;
+}
+.swiper-slide-shadow-coverflow {
+  border-radius: 10px;
+}
