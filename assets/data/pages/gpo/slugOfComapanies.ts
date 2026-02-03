@@ -53,7 +53,7 @@ export const companies = {
   },
   "funke-gerber": {
     container1: {
-      image: "/images/business-investors.webp",
+      image: "/images/gpo/companies/funke-gerber/container1.webp",
       title: "gpo-page.home-page.services.service4.title",
       icon: "/images/gpo/companies/funkeGerber.webp",
     },
@@ -96,9 +96,9 @@ export const companies = {
     },
     container3: {
       images: [
-        "images/gpo/companies/alva/container3-1.webp",
-        "images/gpo/companies/alva/container3-2.webp",
-        "images/gpo/companies/alva/container3-3.webp",
+        "/images/gpo/companies/alva/container3-1.webp",
+        "/images/gpo/companies/alva/container3-2.webp",
+        "/images/gpo/companies/alva/container3-3.webp",
       ],
     },
   },

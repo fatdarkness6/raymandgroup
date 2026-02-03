@@ -6,12 +6,11 @@
     @swiper="emit('swiper', $event)"
   >
     <SwiperSlide v-for="(item, i) in normalizedImages" :key="i">
-      {{ console.log(item.image) }}
       <div class="slide">
         <!-- Image -->
         <q-img
           :src="item.image"
-          class="slide-image full-height full-width rounded-10"
+          class="slide-image full-height full-width"
           fit="cover"
         />
 

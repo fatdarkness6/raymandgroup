@@ -1,14 +1,44 @@
 <template>
-  <div class="wrapper" :dir="directionOfElement(locale)">
-    <div class="hero space-between-each-sections">
-      <div class="hero-inner">
+  <div :dir="directionOfElement(locale)">
+    <div class="hero relative">
+      <div class="black-layer"></div>
+      <div class="background">
+        <ClientOnly>
+          <video
+            ref="videoRef"
+            autoplay
+            muted
+            playsinline
+            preload="auto"
+            class="bg-video"
+            @ended="switchVideo"
+          >
+            <source src="/videos/gpo/gpo-background.mp4" type="video/mp4" />
+          </video>
+          <!-- <video
+            ref="videoRef"
+            autoplay
+            muted
+            playsinline
+            preload="auto"
+            class="bg-video"
+            @ended="switchVideo"
+          >
+            <source
+              src="/videos/gpo/gpo-background-reverse-video.mp4"
+              type="video/mp4"
+            />
+          </video> -->
+        </ClientOnly>
+      </div>
+      <div class="hero-inner absolute-center z-top">
         <AnimationSlideOnce direction="down">
-          <h1 class="hero-title">
+          <h1 class="hero-title text-white text-weight-bold">
             {{ t("gpo-page.home-page.hero.heroTitle") }}
           </h1>
         </AnimationSlideOnce>
         <AnimationSlideOnce direction="down" :delay="100">
-          <p class="hero-lead">
+          <p class="hero-lead text-white">
             {{ t("gpo-page.home-page.hero.heroLead") }}
           </p>
         </AnimationSlideOnce>
@@ -35,154 +65,155 @@
         </AnimationSlideOnce>
       </div>
     </div>
-
-    <section id="about" class="section container">
-      <div class="row q-col-gutter-md">
-        <div class="col-12 col-md-7">
-          <AnimationSlideOnce direction="right">
-            <h3>{{ t("gpo-page.home-page.about.h3") }}</h3>
-            <p>
-              {{ t("gpo-page.home-page.about.p") }}
-            </p>
-          </AnimationSlideOnce>
-          <AnimationSlideOnce direction="right" :delay="100">
-            <h3>{{ t("gpo-page.home-page.about.h3-1") }}</h3>
-            <ul class="list-icons">
-              <li>
-                <q-icon name="fa-solid fa-flask" />
-                {{ t("gpo-page.home-page.about.li-1") }}
-              </li>
-              <li>
-                <q-icon name="fa-solid fa-box" />
-                {{ t("gpo-page.home-page.about.li-2") }}
-              </li>
-              <li>
-                <q-icon name="fa-solid fa-hospital" />{{
-                  t("gpo-page.home-page.about.li-3")
-                }}
-              </li>
-            </ul>
+    <div class="wrapper">
+      <section id="about" class="section container">
+        <div class="row q-col-gutter-md">
+          <div class="col-12 col-md-7">
+            <AnimationSlideOnce direction="right">
+              <h3>{{ t("gpo-page.home-page.about.h3") }}</h3>
+              <p>
+                {{ t("gpo-page.home-page.about.p") }}
+              </p>
+            </AnimationSlideOnce>
+            <AnimationSlideOnce direction="right" :delay="100">
+              <h3>{{ t("gpo-page.home-page.about.h3-1") }}</h3>
+              <ul class="list-icons">
+                <li>
+                  <q-icon name="fa-solid fa-flask" />
+                  {{ t("gpo-page.home-page.about.li-1") }}
+                </li>
+                <li>
+                  <q-icon name="fa-solid fa-box" />
+                  {{ t("gpo-page.home-page.about.li-2") }}
+                </li>
+                <li>
+                  <q-icon name="fa-solid fa-hospital" />{{
+                    t("gpo-page.home-page.about.li-3")
+                  }}
+                </li>
+              </ul>
+            </AnimationSlideOnce>
+          </div>
+          <AnimationSlideOnce class="col-12 col-md-5">
+            <q-card class="my-card q-pa-md animated-card">
+              <div class="card-title">
+                {{ t("gpo-page.home-page.about.outlook") }}
+              </div>
+              <div class="card-body">
+                {{ t("gpo-page.home-page.about.card-body") }}
+              </div>
+            </q-card>
           </AnimationSlideOnce>
         </div>
-        <AnimationSlideOnce class="col-12 col-md-5">
-          <q-card class="my-card q-pa-md animated-card">
-            <div class="card-title">
-              {{ t("gpo-page.home-page.about.outlook") }}
-            </div>
-            <div class="card-body">
-              {{ t("gpo-page.home-page.about.card-body") }}
-            </div>
-          </q-card>
-        </AnimationSlideOnce>
-      </div>
-    </section>
+      </section>
 
-    <!-- Companies / Services -->
-    <section id="services" class="section alt">
-      <div class="container">
-        <h2 class="text-center">
-          {{ t("gpo-page.home-page.services.title") }}
-        </h2>
-        <GpoShowCompanies :data="services.companiesForMainPage" />
-        <div class="full-width flex justify-center align-center q-mt-lg">
-          <q-btn
-            color="primary"
-            push
-            no-caps
-            padding="10px 20px"
-            to="/gpo/companies"
+      <!-- Companies / Services -->
+      <section id="services" class="section alt">
+        <div class="container">
+          <h2 class="text-center">
+            {{ t("gpo-page.home-page.services.title") }}
+          </h2>
+          <GpoShowCompanies :data="services.companiesForMainPage" />
+          <div class="full-width flex justify-center align-center q-mt-lg">
+            <q-btn
+              color="primary"
+              push
+              no-caps
+              padding="10px 20px"
+              to="/gpo/companies"
+            >
+              {{ t("gpo-page.home-page.services.seeMore") }}
+            </q-btn>
+          </div>
+          <div class="transform q-mt-lg">
+            <AnimationSlideOnce direction="right">
+              <h3>{{ t("gpo-page.home-page.transformation.title") }}</h3>
+              <p>
+                {{ t("gpo-page.home-page.transformation.text1") }}
+              </p>
+              <p>
+                {{ t("gpo-page.home-page.transformation.text2") }}
+              </p>
+            </AnimationSlideOnce>
+          </div>
+        </div>
+      </section>
+
+      <!-- Mission / Vision / Values -->
+      <section id="values" class="section container">
+        <AnimationSlideOnceGroup class="row q-col-gutter-md" direction="right">
+          <AnimationSlideOnce
+            v-for="(items, i) in missionVisionValues"
+            class="col-12 col-md-4"
+            custom-class="full-height"
+            :delay="i * 100"
           >
-            {{ t("gpo-page.home-page.services.seeMore") }}
-          </q-btn>
-        </div>
-        <div class="transform q-mt-lg">
-          <AnimationSlideOnce direction="right">
-            <h3>{{ t("gpo-page.home-page.transformation.title") }}</h3>
-            <p>
-              {{ t("gpo-page.home-page.transformation.text1") }}
-            </p>
-            <p>
-              {{ t("gpo-page.home-page.transformation.text2") }}
-            </p>
+            <q-card class="my-card q-pa-md full-height">
+              <h4 class="text-center">{{ items.title }}</h4>
+              <ul>
+                <li v-for="text in items.texts">
+                  {{ text }}
+                </li>
+              </ul>
+            </q-card>
           </AnimationSlideOnce>
+        </AnimationSlideOnceGroup>
+      </section>
+
+      <!-- Services detailed list -->
+      <section class="section alt">
+        <div class="container">
+          <h2 class="text-center">خدمات رایمند تجهیز</h2>
+          <AnimationSlideOnceGroup
+            class="row q-col-gutter-md q-mt-md"
+            direction="right"
+          >
+            <AnimationSlideOnce
+              class="col-12 col-sm-6 col-md-6"
+              v-for="(s, i) in services2"
+              :key="i"
+              :delay="i * 100"
+              custom-class="full-height"
+            >
+              <q-card class="my-card q-pa-md full-height text-center">
+                <q-card-section>
+                  <q-icon :name="s.icon" size="35px" />
+                  <h4 class="q-mb-lg">{{ s.title }}</h4>
+                </q-card-section>
+                <q-card-section>
+                  <p v-for="value in s.texts">{{ value }}</p>
+                </q-card-section>
+              </q-card>
+            </AnimationSlideOnce>
+          </AnimationSlideOnceGroup>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <!-- Mission / Vision / Values -->
-    <section id="values" class="section container">
-      <AnimationSlideOnceGroup class="row q-col-gutter-md" direction="right">
-        <AnimationSlideOnce
-          v-for="(items, i) in missionVisionValues"
-          class="col-12 col-md-4"
-          custom-class="full-height"
-          :delay="i * 100"
-        >
-          <q-card class="my-card q-pa-md full-height">
-            <h4 class="text-center">{{ items.title }}</h4>
-            <ul>
-              <li v-for="text in items.texts">
-                {{ text }}
-              </li>
-            </ul>
-          </q-card>
-        </AnimationSlideOnce>
-      </AnimationSlideOnceGroup>
-    </section>
-
-    <!-- Services detailed list -->
-    <section class="section alt">
-      <div class="container">
-        <h2 class="text-center">خدمات رایمند تجهیز</h2>
+      <!-- Advantages -->
+      <section id="advantages" class="section container">
+        <h2 class="text-center">مزیت‌های رقابتی</h2>
         <AnimationSlideOnceGroup
-          class="row q-col-gutter-md q-mt-md"
           direction="right"
+          class="row q-col-gutter-md q-mt-md"
         >
           <AnimationSlideOnce
-            class="col-12 col-sm-6 col-md-6"
-            v-for="(s, i) in services2"
+            class="col-12 col-sm-6 col-md-4"
+            v-for="(a, i) in advantages"
             :key="i"
             :delay="i * 100"
             custom-class="full-height"
           >
-            <q-card class="my-card q-pa-md full-height text-center">
+            <q-card class="my-card q-pa-md text-center full-height">
               <q-card-section>
-                <q-icon :name="s.icon" size="35px" />
-                <h4 class="q-mb-lg">{{ s.title }}</h4>
+                <q-icon :name="a.icon" size="34px" />
+                <h5 class="q-mb-lg">{{ a.title }}</h5>
               </q-card-section>
-              <q-card-section>
-                <p v-for="value in s.texts">{{ value }}</p>
-              </q-card-section>
+              <p>{{ a.text }}</p>
             </q-card>
           </AnimationSlideOnce>
         </AnimationSlideOnceGroup>
-      </div>
-    </section>
-
-    <!-- Advantages -->
-    <section id="advantages" class="section container">
-      <h2 class="text-center">مزیت‌های رقابتی</h2>
-      <AnimationSlideOnceGroup
-        direction="right"
-        class="row q-col-gutter-md q-mt-md"
-      >
-        <AnimationSlideOnce
-          class="col-12 col-sm-6 col-md-4"
-          v-for="(a, i) in advantages"
-          :key="i"
-          :delay="i * 100"
-          custom-class="full-height"
-        >
-          <q-card class="my-card q-pa-md text-center full-height">
-            <q-card-section>
-              <q-icon :name="a.icon" size="34px" />
-              <h5 class="q-mb-lg">{{ a.title }}</h5>
-            </q-card-section>
-            <p>{{ a.text }}</p>
-          </q-card>
-        </AnimationSlideOnce>
-      </AnimationSlideOnceGroup>
-    </section>
+      </section>
+    </div>
   </div>
 </template>
 
@@ -190,6 +221,11 @@
 import { services } from "~/assets/data/pages/gpo/serviscesFromGpoCompanies";
 const { locale, t } = useI18n();
 
+const direction = ref("forward");
+
+function switchVideo() {
+  direction.value = direction.value === "forward" ? "backward" : "forward";
+}
 const services2 = [
   {
     icon: "fa-brands fa-searchengin",
@@ -279,10 +315,21 @@ const missionVisionValues = [
 </script>
 
 <style scoped>
+.background {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+}
+.bg-video {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
 .hero {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  width: 100%;
+  height: 80vh;
 }
 .hero-inner {
   text-align: center;

@@ -13,7 +13,9 @@
       </div>
     </div>
     <div class="wrapper relative">
-      <section class="container2">
+      <section
+        :class="`container2 ${heroImages.length ? '' : 'space-between-each-sections-bottom'}`"
+      >
         <div
           class="text-subtitle1 q-col-gutter-lg row justify-center"
           :dir="directionOfElement(locale)"
@@ -44,7 +46,7 @@
                 no-caps
                 padding="10px 20px"
               >
-                Show PDF
+                {{ t("gpo-page.home-page.services.see-pdf") }}
               </q-btn>
             </q-card-section>
           </q-card>
@@ -52,8 +54,11 @@
       </section>
       <section
         class="space-between-each-sections space-between-each-sections-bottom"
-        v-if="heroImages"
+        v-if="heroImages.length"
       >
+        <h3 class="text-center">
+          {{ t("gpo-page.home-page.services.picture-intro") }}
+        </h3>
         <CommonSwiperComponent
           rootClass="hero-swiper main-swiper"
           :images="heroImages"
@@ -89,10 +94,10 @@ const heroAttrs = {
   navigation: true,
   grabCursor: true,
   effect: "coverflow",
-  // autoplay: {
-  //   delay: 5000,
-  //   disableOnInteraction: false,
-  // },
+  autoplay: {
+    delay: 5000,
+    disableOnInteraction: false,
+  },
   coverflowEffect: {
     rotate: 50,
     stretch: 0,
