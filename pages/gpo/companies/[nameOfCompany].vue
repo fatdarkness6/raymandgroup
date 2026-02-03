@@ -152,6 +152,6 @@ const heroImages = computed<ImageItem[]>(() => {
   background-size: cover;
   background-position: center;
   overflow: hidden;
-  height: 70vh;
+  height: 80vh;
 }
 </style>

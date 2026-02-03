@@ -27,7 +27,7 @@ import { services } from "~/assets/data/pages/gpo/serviscesFromGpoCompanies";
   background-size: cover;
   background-position: center;
   overflow: hidden;
-  height: 70vh;
+  height: 80vh;
 }
 .container1::after {
   content: "";

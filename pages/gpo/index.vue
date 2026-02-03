@@ -3,33 +3,18 @@
     <div class="hero relative">
       <div class="black-layer"></div>
       <div class="background">
-        <ClientOnly>
-          <video
-            ref="videoRef"
-            autoplay
-            muted
-            playsinline
-            preload="auto"
-            class="bg-video"
-            @ended="switchVideo"
-          >
-            <source src="/videos/gpo/gpo-background.mp4" type="video/mp4" />
-          </video>
-          <!-- <video
-            ref="videoRef"
-            autoplay
-            muted
-            playsinline
-            preload="auto"
-            class="bg-video"
-            @ended="switchVideo"
-          >
-            <source
-              src="/videos/gpo/gpo-background-reverse-video.mp4"
-              type="video/mp4"
-            />
-          </video> -->
-        </ClientOnly>
+        <video
+          ref="videoRef"
+          autoplay
+          muted
+          playsinline
+          preload="auto"
+          class="bg-video"
+          :autoplay="true"
+          @ended="restartVideo"
+        >
+          <source src="/videos/gpo/gpo-background.mp4" type="video/mp4" />
+        </video>
       </div>
       <div class="hero-inner absolute-center z-top">
         <AnimationSlideOnce direction="down">
@@ -220,12 +205,12 @@
 <script setup>
 import { services } from "~/assets/data/pages/gpo/serviscesFromGpoCompanies";
 const { locale, t } = useI18n();
-
-const direction = ref("forward");
-
-function switchVideo() {
-  direction.value = direction.value === "forward" ? "backward" : "forward";
-}
+const videoRef = ref(null);
+const restartVideo = () => {
+  if (!videoRef.value) return;
+  videoRef.value.currentTime = 0;
+  videoRef.value.play();
+};
 const services2 = [
   {
     icon: "fa-brands fa-searchengin",

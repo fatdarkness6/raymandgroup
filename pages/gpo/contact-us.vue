@@ -150,7 +150,7 @@ const socials = [
 .container1 {
   background: url("/images/gpo/contact-us/container1.webp") no-repeat;
   width: 100%;
-  height: 70vh;
+  height: 80vh;
   z-index: 1;
   background-position: center 50%;
   background-size: cover;

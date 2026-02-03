@@ -207,7 +207,7 @@ const con3Data = computed<ButtonItem[][]>(() => [
   background: url("/images/tech-lab/background-page.webp") center/cover
     no-repeat;
   width: 100%;
-  height: 70vh;
+  height: 80vh;
   position: relative;
 }
 .container1::after {

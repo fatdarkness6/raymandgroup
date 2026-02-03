@@ -128,7 +128,7 @@ const specialists = [
 .container1 {
   background: url("/images/gpo/about-us/container1.webp") no-repeat;
   width: 100%;
-  height: 70vh;
+  height: 80vh;
   z-index: 1;
   aspect-ratio: 16 / 9;
   background-position: center 100%;
