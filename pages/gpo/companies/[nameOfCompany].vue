@@ -52,6 +52,12 @@
           </q-card>
         </div>
       </section>
+      <section class="space-between-each-sections-bottom">
+        <h3 class="text-center">
+          <!-- {{ t("gpo-page.home-page.services.companies-info") }} -->
+          <!-- <CommonShowContactItems/> -->
+        </h3>
+      </section>
       <section
         class="space-between-each-sections space-between-each-sections-bottom"
         v-if="heroImages.length"

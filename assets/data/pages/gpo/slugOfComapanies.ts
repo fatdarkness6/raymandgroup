@@ -176,7 +176,6 @@ export const companies = {
         "/images/gpo/companies/cenlee/container3-1.webp",
         "/images/gpo/companies/cenlee/container3-2.webp",
         "/images/gpo/companies/cenlee/container3-3.webp",
-        "/images/gpo/companies/cenlee/container3-4.webp",
       ],
     },
   },

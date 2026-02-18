@@ -138,7 +138,7 @@ const con2Data = [
     desc: t("tech-Lab_page.generalInfo.visionDesc"),
   },
   {
-    image: "/images/tech-lab/misson.webp",
+    image: "/images/tech-lab/mission.webp",
     title: t("tech-Lab_page.generalInfo.mission"),
     desc: t("tech-Lab_page.generalInfo.missionDesc"),
   },
