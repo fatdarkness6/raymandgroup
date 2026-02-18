@@ -8,65 +8,25 @@
       </q-card-section>
 
       <!-- Form -->
-      <q-card-section class="z-top relative">
-        <q-form
-          @submit.prevent="onSubmit"
-          class="flex column gap-10"
-          autocomplete="off"
-          autocorrect="off"
-          autocapitalize="off"
-          spellcheck="false"
-        >
-          <!-- Email -->
-          <q-input
-            label-color="black"
-            v-model="email"
-            label="Email"
-            type="email"
-            :error="!!emailError || accountIsExistOrNot.error"
-            :error-message="emailError"
-            input-class="text-subtitle1"
-          />
 
-          <!-- Password -->
-          <q-input
-            label-color="black"
-            v-model="password"
-            :type="isPwd ? 'password' : 'text'"
-            autocomplete="new-password"
-            :error="!!passError || accountIsExistOrNot.error"
-            :error-message="passError"
-            label="Password"
-            input-class="text-subtitle1"
-          >
-            <template #append>
-              <q-icon
-                :name="isPwd ? 'fa-solid fa-eye-slash' : 'fa-solid fa-eye'"
-                class="cursor-pointer"
-                @click="isPwd = !isPwd"
-              />
-            </template>
-          </q-input>
-
-          <!-- Submit button -->
-          <div class="text-red" v-if="accountIsExistOrNot.error">
-            {{ accountIsExistOrNot.message }}
+      <CommonFormsFormBuilder
+        :schema="loginSchema"
+        :onSubmit="handleSubmit"
+        :input-props="{ color: 'primary' }"
+      >
+        <template #default>
+          <div class="full-width flex items-center justify-center">
+            <q-btn
+              :label="$t(`common.submit`)"
+              color="accent"
+              padding="10px 0"
+              type="submit"
+              class="full-width q-mt-md"
+              :loading="loading.loginBtnLoading"
+            />
           </div>
-          <q-btn
-            type="submit"
-            color="primary"
-            push
-            no-caps
-            padding="10px 20px"
-            class="full-width"
-            :loading="loading.loginBtnLoading"
-          >
-            Login
-          </q-btn>
-        </q-form>
-      </q-card-section>
-
-      <!-- Remember + Forgot -->
+        </template>
+      </CommonFormsFormBuilder>
       <q-card-section>
         <div class="remember-forgotPass flex justify-between items-center">
           <q-checkbox
@@ -108,7 +68,6 @@
   </q-card>
 </template>
 <script setup lang="ts">
-import { useForm, useField } from "vee-validate";
 import { loginSchema } from "~/utils/registerSchema";
 import useLogin from "~/composable/useLogin";
 import { useNotify } from "~/composable/useNotify";
@@ -117,13 +76,9 @@ import type { VerifyEmailType } from "~/types/registerComponent";
 const localePath = useLocalePath();
 const { login, verify2faCode, verifyEmailAddress } = useLogin();
 const { error } = useNotify();
-const { handleSubmit, resetForm } = useForm({
-  validationSchema: loginSchema,
-});
-const { value: email, errorMessage: emailError } = useField<string>("email");
-const { value: password, errorMessage: passError } =
-  useField<string>("password");
+
 const isPwd = ref(true);
+const email = ref("");
 const loginForm = ref<any>({
   rememberMe: false,
 });
@@ -150,9 +105,11 @@ const setMsgForDialog = ref({
   title: "",
   desc: "",
 });
-const onSubmit = handleSubmit((values) => {
-  loginFn(values);
-});
+
+function handleSubmit(value: any, resetForm: any) {
+  loginFn(value);
+  email.value = value.email;
+}
 function loginFn(data: any) {
   loading.value.loginBtnLoading = true;
   login(data)
@@ -164,7 +121,7 @@ function loginFn(data: any) {
       loginOption.value = "signin";
       const setData = {
         dialog: true,
-        email,
+        email: data.email,
         registerMode: true,
       };
       const setTitle = {
@@ -174,10 +131,10 @@ function loginFn(data: any) {
       setMsgForDialog.value = setTitle;
       verify2faCodeVal.value = setData;
     })
-    .catch((res) => handleError(res))
+    .catch((res) => handleError(res, data.email))
     .finally(() => (loading.value.loginBtnLoading = false));
 }
-function handleError(response: any) {
+function handleError(response: any, email: string) {
   const res = response?.response?.data || {};
   const msg = res.msg || "Something went wrong";
   const validation = res.isVerified;

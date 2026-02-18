@@ -51,7 +51,7 @@
       </div>
     </div>
     <div class="wrapper">
-      <section id="about" class="section container">
+      <section id="about" class="space-between-each-sections">
         <div class="row q-col-gutter-md">
           <div class="col-12 col-md-7">
             <AnimationSlideOnce direction="right">
@@ -93,7 +93,7 @@
       </section>
 
       <!-- Companies / Services -->
-      <section id="services" class="section alt">
+      <section id="services" class="section space-between-each-sections">
         <div class="container">
           <h2 class="text-center">
             {{ t("gpo-page.home-page.services.title") }}
@@ -125,7 +125,7 @@
       </section>
 
       <!-- Mission / Vision / Values -->
-      <section id="values" class="section container">
+      <section id="values" class="space-between-each-sections">
         <AnimationSlideOnceGroup class="row q-col-gutter-md" direction="right">
           <AnimationSlideOnce
             v-for="(items, i) in missionVisionValues"
@@ -144,9 +144,13 @@
           </AnimationSlideOnce>
         </AnimationSlideOnceGroup>
       </section>
-
+      <section class="space-between-each-sections">
+        <h2 class="text-center">
+          {{ t("gpo-page.home-page.products.introduction") }}
+        </h2>
+      </section>
       <!-- Services detailed list -->
-      <section class="section alt">
+      <section class="space-between-each-sections">
         <div class="container">
           <h2 class="text-center">خدمات رایمند تجهیز</h2>
           <AnimationSlideOnceGroup
@@ -175,7 +179,10 @@
       </section>
 
       <!-- Advantages -->
-      <section id="advantages" class="section container">
+      <section
+        id="advantages"
+        class="space-between-each-sections space-between-each-sections-bottom"
+      >
         <h2 class="text-center">مزیت‌های رقابتی</h2>
         <AnimationSlideOnceGroup
           direction="right"
@@ -204,8 +211,8 @@
 
 <script setup>
 import { services } from "~/assets/data/pages/gpo/serviscesFromGpoCompanies";
-const { locale, t } = useI18n();
 const videoRef = ref(null);
+const { t, locale } = useI18n();
 const restartVideo = () => {
   if (!videoRef.value) return;
   videoRef.value.currentTime = 0;
@@ -332,10 +339,6 @@ const missionVisionValues = [
   margin-left: 12px;
 }
 
-/* Sections */
-.section {
-  padding: 60px 18px;
-}
 .section-grid {
   display: grid;
   gap: 30px;
