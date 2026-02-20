@@ -52,11 +52,14 @@
           </q-card>
         </div>
       </section>
-      <section class="space-between-each-sections-bottom">
+      <section
+        v-if="!_.isEmpty(company?.container3)"
+        class="space-between-each-sections-bottom"
+      >
         <h3 class="text-center">
-          <!-- {{ t("gpo-page.home-page.services.companies-info") }} -->
-          <!-- <CommonShowContactItems/> -->
+          {{ t("gpo-page.home-page.services.companies-info") }}
         </h3>
+        <CommonShowContactItems :data="company?.container3 ?? []" />
       </section>
       <section
         class="space-between-each-sections space-between-each-sections-bottom"
@@ -86,8 +89,10 @@
   </div>
 </template>
 <script setup lang="ts">
+import _ from "lodash";
 import { has, get } from "lodash-es";
 import { companies } from "~/assets/data/pages/gpo/slugOfComapanies";
+import type { contactItemsType } from "~/types/contactInfoType";
 import {
   Autoplay,
   Pagination,
@@ -136,7 +141,8 @@ type CompanyType = {
     text: string;
     pdf: string;
   };
-  container3: {
+  container3: contactItemsType[];
+  container4: {
     images: string;
   };
 };
@@ -148,7 +154,7 @@ const company = computed<CompanyType | null>(() => {
 });
 const heroImages = computed<ImageItem[]>(() => {
   const c = company.value;
-  return Array.isArray(c?.container3?.images) ? c.container3.images : [];
+  return Array.isArray(c?.container4?.images) ? c.container4.images : [];
 });
 </script>
 <style>
