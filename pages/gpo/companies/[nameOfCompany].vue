@@ -53,15 +53,6 @@
         </div>
       </section>
       <section
-        v-if="!_.isEmpty(company?.container3)"
-        class="space-between-each-sections-bottom"
-      >
-        <h3 class="text-center">
-          {{ t("gpo-page.home-page.services.companies-info") }}
-        </h3>
-        <CommonShowContactItems :data="company?.container3 ?? []" />
-      </section>
-      <section
         class="space-between-each-sections space-between-each-sections-bottom"
         v-if="heroImages.length"
       >
@@ -81,6 +72,15 @@
           ]"
           :swiperProps="heroAttrs"
         />
+      </section>
+      <section
+        v-if="!_.isEmpty(company?.container3)"
+        class="space-between-each-sections-bottom"
+      >
+        <h3 class="text-center">
+          {{ t("gpo-page.home-page.services.companies-info") }}
+        </h3>
+        <CommonShowContactItems :data="company?.container3 ?? []" />
       </section>
     </div>
     <q-dialog v-model="openDialog" class="z-max">

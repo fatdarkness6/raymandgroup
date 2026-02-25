@@ -126,6 +126,7 @@ export const companies = {
         name: "Telegram",
         value: "0086-531-66592661",
         icon: "fa-brands fa-telegram",
+        color: "blue",
       },
       {
         name: "Wechat",
@@ -253,6 +254,7 @@ export const companies = {
         name: "Telegram",
         value: "+ 86 20 3947 9163",
         icon: "fa-brands fa-telegram",
+        color: "blue",
       },
       {
         name: "Website",

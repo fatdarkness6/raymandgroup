@@ -10,7 +10,7 @@
         <!-- Image -->
         <q-img
           :src="item.image"
-          class="slide-image full-height full-width"
+          class="slide-image full-height full-width rounded-10"
           fit="cover"
         />
 
