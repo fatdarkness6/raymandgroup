@@ -251,6 +251,14 @@
         </q-card>
       </q-dialog>
     </q-footer>
+    <q-page-scroller
+      position="bottom-right"
+      :scroll-offset="500"
+      :offset="[18, 18]"
+      class="z-top relative"
+    >
+      <q-btn fab icon="fa-solid fa-angle-up" color="primary" />
+    </q-page-scroller>
     <!-- Sidebar Menu -->
     <transition name="slide-left">
       <nav v-if="leftDrawerOpen" class="sidebar-menu">

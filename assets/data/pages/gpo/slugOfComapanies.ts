@@ -145,6 +145,13 @@ export const companies = {
         icon: "fa-solid fa-envelope",
         color: "red",
       },
+      {
+        name: "Website",
+        value: "https://alvainstrument.en.made-in-china.com/",
+        icon: "fa-solid fa-earth-americas",
+        color: "blue",
+        type: "website",
+      },
     ],
     container4: {
       images: [
