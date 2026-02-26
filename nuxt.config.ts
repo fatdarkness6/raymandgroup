@@ -52,9 +52,8 @@ export default defineNuxtConfig({
     ],
     defaultLocale: "fa",
     strategy: "prefix_except_default",
-    langDir: "../locales/",
+    langDir: "./locales",
     lazy: true,
-    vueI18n: "./i18n.config.ts",
   },
   modules: [
     "nuxt-quasar-ui",
@@ -64,20 +63,21 @@ export default defineNuxtConfig({
     "@vueuse/motion/nuxt",
     "@nuxtjs/google-fonts",
     "@nuxt/fonts",
+    "@nuxt/content",
   ],
   app: {
     baseURL: "/",
-    buildAssetsDir: "/_nuxt/",
+    // buildAssetsDir: "/_nuxt/",
     head: {
       htmlAttrs: { lang: "fa" },
-      bodyAttrs: { class: "font-vazir" },
+      // bodyAttrs: { class: "font-vazir" },
     },
   },
-  nitro: {
-    prerender: {
-      routes: ["/"],
-    },
-  },
+  // nitro: {
+  //   prerender: {
+  //     routes: ["/"],
+  //   },
+  // },
   css: [
     "swiper/css/bundle",
     "@/assets/css/swiperStyles.css",

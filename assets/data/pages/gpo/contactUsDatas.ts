@@ -1,24 +1,24 @@
 export const contactItems = [
   {
-    title: "gpo-page.home-page.contact-us-page.static-phone",
+    name: "gpo-page.home-page.contact-us-page.static-phone",
     value: "021-88254810",
     icon: "fa-solid fa-phone",
     color: "black",
   },
   {
-    title: "gpo-page.home-page.contact-us-page.phone",
+    name: "gpo-page.home-page.contact-us-page.phone",
     value: "+98 912 6777 451",
     icon: "fa-solid fa-mobile",
     color: "black",
   },
   {
-    title: "gpo-page.home-page.contact-us-page.email",
+    name: "gpo-page.home-page.contact-us-page.email",
     value: "zahra.kamali@raymandgroup.de",
     icon: "fa-solid fa-envelope",
     color: "red",
   },
   {
-    title: "gpo-page.home-page.contact-us-page.location",
+    name: "gpo-page.home-page.contact-us-page.location",
     value: "—",
     icon: "fa-regular fa-map",
     color: "primary",

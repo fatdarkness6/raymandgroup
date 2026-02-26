@@ -160,7 +160,7 @@
       </h5>
       <q-btn
         class="home-btn"
-        :to="localePath('index')"
+        to="/"
         color="primary"
         push
         no-caps
@@ -169,9 +169,9 @@
       >
     </div>
   </div>
+
 </template>
 <script lang="ts" setup>
-const localePath = useLocalePath();
 </script>
 <style scoped>
 @import "@/assets/css/components/Animation/404Animation.css";
