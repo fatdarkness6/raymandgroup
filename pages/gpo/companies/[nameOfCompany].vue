@@ -90,7 +90,7 @@
 </template>
 <script setup lang="ts">
 import _ from "lodash";
-import { has, get } from "lodash-es";
+
 import { companies } from "~/assets/data/pages/gpo/slugOfComapanies";
 import type { contactItemsType } from "~/types/contactInfoType";
 import {
@@ -121,6 +121,12 @@ const heroAttrs = {
   pagination: true,
 };
 
+definePageMeta({
+  validate (route) {
+    return _.has(companies, route.params.nameOfCompany)
+  },
+})
+
 const { locale, t } = useI18n();
 const route = useRoute();
 
@@ -149,8 +155,8 @@ type CompanyType = {
 type ImageItem = string | { image: string; title?: string };
 const company = computed<CompanyType | null>(() => {
   if (!param.value) return null;
-  if (!has(companies, param.value)) return null;
-  return get(companies, param.value) as CompanyType;
+  if (!_.has(companies, param.value)) return null;
+  return _.get(companies, param.value) as CompanyType;
 });
 const heroImages = computed<ImageItem[]>(() => {
   const c = company.value;
