@@ -144,11 +144,6 @@
           </AnimationSlideOnce>
         </AnimationSlideOnceGroup>
       </section>
-      <section class="space-between-each-sections">
-        <h2 class="text-center">
-          {{ t("gpo-page.home-page.products.introduction") }}
-        </h2>
-      </section>
       <!-- Services detailed list -->
       <section class="space-between-each-sections">
         <div class="container">
