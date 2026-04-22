@@ -65,7 +65,6 @@
 const siteMapData = [
   { label: "header.home-page", route: "/" },
   { label: "common.about_us", route: "/about-us" },
-  { label: "header.contact_us", route: "/contact-us" },
   { label: "header.gpo", route: "/gpo" },
   { label: "header.tech-Lab", route: "/tech-lab" },
   { label: "header.vHospital", route: "/v-hospital" },

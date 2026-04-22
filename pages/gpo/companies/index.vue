@@ -1,7 +1,9 @@
 <template>
   <div class="space-between-each-sections-bottom">
     <div class="container1">
-      <div class="ab-text-center text-white z-top text-center">
+      <div
+        class="ab-text-center text-white z-top text-center full-width q-px-md"
+      >
         <h3>
           {{ $t("gpo-page.home-page.services.companies.container1.title") }}
         </h3>

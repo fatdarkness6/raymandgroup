@@ -1,24 +1,6 @@
 export const services = {
   companiesForMainPage: [
     {
-      image: "/logo.svg",
-      title: "gpo-page.home-page.services.service1.title",
-      text: "gpo-page.home-page.services.service1.text",
-      param: "raymand-system-azma",
-    },
-    {
-      image: "/logo.svg",
-      title: "gpo-page.home-page.services.service2.title",
-      text: "gpo-page.home-page.services.service2.text",
-      param: "raymand-system-tajhiz",
-    },
-    {
-      image: "/logo.svg",
-      title: "gpo-page.home-page.services.service3.title",
-      text: "gpo-page.home-page.services.service3.text",
-      param: "raymand-tajhiz",
-    },
-    {
       image: "/images/gpo/companies/funkeGerber.webp",
       title: "gpo-page.home-page.services.service4.title",
       text: "gpo-page.home-page.services.service4.text",
@@ -38,24 +20,6 @@ export const services = {
     },
   ],
   companiesForCampaniesPage: [
-    {
-      image: "/logo.svg",
-      title: "gpo-page.home-page.services.service1.title",
-      text: "gpo-page.home-page.services.service1.text",
-      param: "raymand-system-azma",
-    },
-    {
-      image: "/logo.svg",
-      title: "gpo-page.home-page.services.service2.title",
-      text: "gpo-page.home-page.services.service2.text",
-      param: "raymand-system-tajhiz",
-    },
-    {
-      image: "/logo.svg",
-      title: "gpo-page.home-page.services.service3.title",
-      text: "gpo-page.home-page.services.service3.text",
-      param: "raymand-tajhiz",
-    },
     {
       image: "/images/gpo/companies/funkeGerber.webp",
       title: "gpo-page.home-page.services.service4.title",

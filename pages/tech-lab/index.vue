@@ -2,9 +2,9 @@
   <div class="gop">
     <!-- Hero Section -->
     <div class="container1 relative q-mb-lg">
-      <div class="ab-text-center relative z-top">
+      <div class="ab-text-center relative z-top full-width">
         <div
-          class="text-h3 text-white text-center"
+          class="text-h3 text-white text-center q-px-md"
           :dir="directionOfElement(locale)"
         >
           {{ t("tech-Lab_page.subtitle") }}
@@ -201,7 +201,6 @@ const con3Data = computed<ButtonItem[][]>(() => [
 </script>
 
 <style scoped>
-
 .container1 {
   background: url("~/public/images/tech-lab/background-page.webp") center/cover
     no-repeat;

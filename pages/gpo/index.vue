@@ -16,7 +16,7 @@
           <source src="/videos/gpo/gpo-background.mp4" type="video/mp4" />
         </video>
       </div>
-      <div class="hero-inner absolute-center z-top">
+      <div class="hero-inner absolute-center z-top full-width">
         <AnimationSlideOnce direction="down">
           <h1 class="hero-title text-white text-weight-bold">
             {{ t("gpo-page.home-page.hero.heroTitle") }}
@@ -30,10 +30,10 @@
         <AnimationSlideOnce :delay="200">
           <div class="hero-ctas flex row justify-center items-center gap-10">
             <q-btn
-              :label="t('gpo-page.home-page.hero.aboutUs')"
-              to="/gpo/about-us"
+              :label="t('gpo-page.home-page.hero.companies')"
               color="primary"
               push
+              to="/gpo/companies"
               no-caps
               padding="10px 20px"
             />
@@ -89,38 +89,6 @@
               </div>
             </q-card>
           </AnimationSlideOnce>
-        </div>
-      </section>
-
-      <!-- Companies / Services -->
-      <section id="services" class="section space-between-each-sections">
-        <div class="container">
-          <h2 class="text-center">
-            {{ t("gpo-page.home-page.services.title") }}
-          </h2>
-          <GpoShowCompanies :data="services.companiesForMainPage" />
-          <div class="full-width flex justify-center align-center q-mt-lg">
-            <q-btn
-              color="primary"
-              push
-              no-caps
-              padding="10px 20px"
-              to="/gpo/companies"
-            >
-              {{ t("gpo-page.home-page.services.seeMore") }}
-            </q-btn>
-          </div>
-          <div class="transform q-mt-lg">
-            <AnimationSlideOnce direction="right">
-              <h3>{{ t("gpo-page.home-page.transformation.title") }}</h3>
-              <p>
-                {{ t("gpo-page.home-page.transformation.text1") }}
-              </p>
-              <p>
-                {{ t("gpo-page.home-page.transformation.text2") }}
-              </p>
-            </AnimationSlideOnce>
-          </div>
         </div>
       </section>
 
@@ -326,10 +294,12 @@ const missionVisionValues = [
   opacity: 0.9;
   margin-bottom: 12px;
 }
+
 .hero-title {
-  font-size: 34px;
-  margin-bottom: 12px;
+  font-size: clamp(1.8rem, 4vw, 3rem);
+  line-height: 1.1;
 }
+
 .hero-ctas q-btn + q-btn {
   margin-left: 12px;
 }
@@ -452,12 +422,6 @@ const missionVisionValues = [
 @media (max-width: 900px) {
   .section-grid {
     grid-template-columns: 1fr;
-  }
-  .hero-title {
-    font-size: 26px;
-  }
-  .hero {
-    height: 420px;
   }
 }
 </style>
