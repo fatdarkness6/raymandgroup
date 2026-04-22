@@ -65,19 +65,11 @@ export default defineNuxtConfig({
     "@nuxt/fonts",
     "@nuxt/content",
   ],
-  app: {
-    baseURL: "/",
-    // buildAssetsDir: "/_nuxt/",
-    head: {
-      htmlAttrs: { lang: "fa" },
-      // bodyAttrs: { class: "font-vazir" },
+  nitro: {
+    prerender: {
+      routes: ["/"],
     },
   },
-  // nitro: {
-  //   prerender: {
-  //     routes: ["/"],
-  //   },
-  // },
   css: [
     "swiper/css/bundle",
     "@/assets/css/swiperStyles.css",
@@ -86,7 +78,6 @@ export default defineNuxtConfig({
     "@/assets/css/base.css",
     "@/assets/css/utilities.css",
     "@/assets/css/responsive.css",
-    "@fortawesome/fontawesome-svg-core/styles.css",
     "@/assets/css/components/card.css",
   ],
   build: {

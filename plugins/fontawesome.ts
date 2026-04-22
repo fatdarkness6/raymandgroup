@@ -1,12 +1,13 @@
-import { library, config } from '@fortawesome/fontawesome-svg-core'
-import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
-import { fas } from '@fortawesome/free-solid-svg-icons'
-import { fab } from '@fortawesome/free-brands-svg-icons'
+import { library, config } from "@fortawesome/fontawesome-svg-core";
+import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
+import { fas } from "@fortawesome/free-solid-svg-icons";
+import { fab } from "@fortawesome/free-brands-svg-icons";
+import "@fortawesome/fontawesome-svg-core/styles.css";
 
-config.autoAddCss = false
+config.autoAddCss = false;
 
-library.add(fas, fab) // ✅ all solid and brand icons
+library.add(fas, fab); // ✅ all solid and brand icons
 
-export default defineNuxtPlugin(nuxtApp => {
-  nuxtApp.vueApp.component('FontAwesomeIcon', FontAwesomeIcon)
-})
+export default defineNuxtPlugin((nuxtApp) => {
+  nuxtApp.vueApp.component("FontAwesomeIcon", FontAwesomeIcon);
+});
