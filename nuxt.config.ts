@@ -40,7 +40,7 @@ export default defineNuxtConfig({
       {
         code: "fa",
         iso: "fa-IR",
-        name: "پارسی",
+        name: "فارسی",
         file: "fa.json",
       },
       {

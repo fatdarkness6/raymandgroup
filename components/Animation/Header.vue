@@ -10,5 +10,5 @@
 </template>
 
 <style scoped>
-@import "@/assets/css/components/Animation/headerAndFooterAnimation.css";
+@import "@/assets/css/components/header.css";
 </style>
