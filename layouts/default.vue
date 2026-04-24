@@ -24,14 +24,6 @@
     <!-- Sidebar Menu -->
     <transition name="slide-left">
       <nav v-if="leftDrawerOpen" class="sidebar-menu">
-        <div class="background">
-          <span class="ball"></span>
-          <span class="ball"></span>
-          <span class="ball"></span>
-          <span class="ball"></span>
-          <span class="ball"></span>
-          <span class="ball"></span>
-        </div>
         <div class="menu-header">
           <q-btn
             flat
@@ -42,68 +34,23 @@
             @click="leftDrawerOpen = false"
           />
         </div>
-
+        <SidebarMenu />
         <!-- Menu Items -->
         <q-list class="menu-list" @click="leftDrawerOpen = false">
           <!-- Home -->
+
           <q-item
+            v-for="value in links"
             clickable
-            @click="navigateTo('/')"
+            @click="navigateTo(value.link)"
             class="menu-item flex items-center"
           >
             <q-item-section avatar>
-              <q-icon name="fa-solid fa-house" size="30px" />
+              <q-icon :name="`fa-solid ${value.icon}`" size="30px" />
             </q-item-section>
             <q-item-section class="text-h6">
-              <div>{{ $t("header.home-page") }}</div>
-            </q-item-section>
-          </q-item>
-          <q-item
-            clickable
-            @click="navigateTo('/login?form=login')"
-            class="menu-item flex items-center"
-          >
-            <q-item-section avatar>
-              <q-icon name="fa-solid fa-user" size="30px" />
-            </q-item-section>
-            <q-item-section class="text-h6">
-              {{ t("header.login") }}
-            </q-item-section>
-          </q-item>
-          <q-item
-            clickable
-            @click="navigateTo('/gpo')"
-            class="menu-item flex items-center"
-          >
-            <q-item-section avatar>
-              <q-icon name="fa-solid fa-people-roof" size="30px" />
-            </q-item-section>
-            <q-item-section class="text-h6">
-              <div>{{ $t("header.gpo") }}</div>
-            </q-item-section>
-          </q-item>
-          <q-item
-            clickable
-            @click="navigateTo('/tech-Lab')"
-            class="menu-item flex items-center"
-          >
-            <q-item-section avatar>
-              <q-icon name="fa-solid fa-microscope" size="30px" />
-            </q-item-section>
-            <q-item-section class="text-h6">
-              <div>{{ $t("header.tech-Lab") }}</div>
-            </q-item-section>
-          </q-item>
-          <q-item
-            clickable
-            @click="navigateTo('/v-hospital')"
-            class="menu-item flex items-center"
-          >
-            <q-item-section avatar>
-              <q-icon name="fa-solid fa-hospital" size="30px" />
-            </q-item-section>
-            <q-item-section class="text-h6">
-              <div>{{ $t("header.vHospital") }}</div>
+              <div v-if="!value.split">{{ $t(value.lable) }}</div>
+              <LineBreak v-else :data="value.lable" />
             </q-item-section>
           </q-item>
         </q-list>
@@ -115,14 +62,15 @@
 <script setup lang="ts">
 import Header from "./componenets/header.vue";
 import Footer from "./componenets/footer.vue";
+import SidebarMenu from "~/components/Animation/SidebarMenu.vue";
+import { links } from "~/assets/data/common/links";
+import LineBreak from "~/components/Common/LineBreak.vue";
 const { t } = useI18n();
 
 const leftDrawerOpen = ref(false);
 </script>
 
 <style scoped>
-@import "@/assets/css/components/Animation/sidebarMenu.css";
-
 .select-methodes {
   position: fixed;
   bottom: 45px;

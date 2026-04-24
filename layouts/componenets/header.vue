@@ -7,17 +7,16 @@
   >
     <AnimationHeader />
     <div class="flex flex-row items-center justify-between">
-      <!-- Mobile Burger -->
-      <q-btn
-        flat
-        dense
-        round
-        icon="fa-solid fa-bars"
-        class="lt-md ham-menu"
-        @click="handleLeftDrawerOpen"
-      />
-
-      <!-- Logo -->
+      <div class="ham-menu flex justify-center">
+        <q-btn
+          flat
+          dense
+          round
+          icon="fa-solid fa-bars"
+          class="lt-md"
+          @click="handleLeftDrawerOpen"
+        />
+      </div>
       <div class="logo-moon-wrapper q-mr-sm">
         <q-img
           src="/logo.svg"
@@ -31,8 +30,6 @@
           </template>
         </q-img>
       </div>
-
-      <!-- Tabs (desktop only) -->
       <q-tabs
         v-model="tab"
         dense
@@ -41,70 +38,28 @@
         router
         no-caps
       >
-        <q-route-tab
-          icon="fa-solid fa-house"
-          :label="$t('header.home-page')"
-          to="/"
-          class="rounded-10"
-          exact
-        />
-        <q-route-tab
-          icon="fa-solid fa-microscope"
-          to="/tech-lab"
-          class="rounded-10"
-          exact
-        >
-          <template v-slot>
-            <span
-              v-for="(line, i) in $t('header.tech-Lab').split('\\n')"
-              :key="i"
-              class="text-weight-bold"
-            >
-              {{ line }}
-            </span>
-          </template>
-        </q-route-tab>
-        <q-route-tab
-          icon="fa-solid fa-building"
-          to="/gpo"
-          class="rounded-10"
-          exact
-        >
-          <template v-slot>
-            <span
-              v-for="(line, i) in $t('header.gpo').split('\\n')"
-              :key="i"
-              class="text-weight-bold"
-            >
-              {{ line }}
-            </span>
-          </template>
-        </q-route-tab>
-        <q-route-tab
-          icon="fa-solid fa-hospital"
-          to="/v-hospital"
-          class="rounded-10"
-          exact
-        >
-          <template v-slot>
-            <span
-              v-for="(line, i) in $t('header.vHospital').split('\\n')"
-              :key="i"
-              class="text-weight-bold"
-            >
-              {{ line }}
-            </span>
-          </template>
-        </q-route-tab>
-        <q-route-tab
-          icon="fa-solid fa-newspaper"
-          to="/news"
-          class="rounded-10"
-          :label="$t('header.news')"
-        />
+        <div v-for="value in links">
+          <q-route-tab
+            v-if="!value.split"
+            :icon="`fa-solid ${value.icon}`"
+            :label="$t(value.lable)"
+            :to="value.link"
+            class="rounded-10"
+            exact
+          />
+          <q-route-tab
+            v-else
+            :icon="`fa-solid ${value.icon}`"
+            :to="value.link"
+            class="rounded-10"
+            exact
+          >
+            <template v-slot>
+              <LineBreak :data="value.lable" />
+            </template>
+          </q-route-tab>
+        </div>
       </q-tabs>
-
-      <!-- Login + Language -->
       <div class="login-button flex items-center gap-2">
         <q-btn
           class="login-btn-none"
@@ -142,6 +97,8 @@
 </template>
 <script lang="ts" setup>
 import type { AppHeader } from "~/types/appHeader";
+import { links } from "~/assets/data/common/links";
+import LineBreak from "~/components/Common/LineBreak.vue";
 const { locales, setLocale, locale } = useI18n();
 
 const props = defineProps<AppHeader>();
