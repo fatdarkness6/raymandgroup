@@ -5,27 +5,10 @@
       <div class="wave"></div>
       <div class="wave"></div>
     </div>
-    <div
-      class="wrapper q-py-xl flex justify-between footer-content row reverse items-start"
-    >
-      <div class="submit-form flex column" style="width: 200px"></div>
-      <div class="site-map flex column justify-center items-center">
-        <span class="text-h6">{{ $t("footer.site_pages") }}</span>
-        <NuxtLink
-          v-for="value in siteMapData"
-          :to="value.route"
-          class="custom-link"
-        >
-          <div
-            v-for="(line, i) in $t(value.label).split('\\n')"
-            :key="i"
-            class="text-weight-bold"
-          >
-            {{ line }}
-          </div>
-        </NuxtLink>
-      </div>
-      <div class="social-media flex column items-start gap-10">
+    <div class="wrapper reverse row q-col-gutter-xl footer-content">
+      <section
+        class="social-media flex column items-center gap-10 col-12 col-sm-6 col-md-4"
+      >
         <div class="text-h6">{{ $t("footer.social-media") }}</div>
         <a
           @click="callPhone"
@@ -41,12 +24,40 @@
           <q-icon name="fa-solid fa-envelope" class="q-pr-sm" />
           <span class="custom-text">info@raymandgroup.de</span>
         </a>
-        <a class="twitter">
-          <q-icon name="fa-brands fa-telegram" class="q-pr-sm" />
-          <span class="custom-text">Telegram</span>
-        </a>
-      </div>
+      </section>
+      <section
+        class="text-center flex column items-center gap-10 col-12 col-sm-6 col-md-4"
+      >
+        <span class="brand-text text-h6 text-weight-bold">Raymand Group</span>
+        <span
+          :dir="directionOfElement(locale)"
+          style="line-height: 2; max-width: 350px"
+          class="text-weight-medium full-width flex justify-center items-center"
+          >{{ $t("footer.gitst-of-company") }}
+        </span>
+      </section>
+      <section
+        class="site-map flex items-center column col-12 col-sm-12 col-md-4"
+      >
+        <span class="text-h6 text-weight-medium">{{
+          $t("footer.site_pages")
+        }}</span>
+        <NuxtLink
+          v-for="value in siteMapData"
+          :to="value.route"
+          class="custom-link"
+        >
+          <div
+            v-for="(line, i) in $t(value.label).split('\\n')"
+            :key="i"
+            class="text-weight-bold"
+          >
+            {{ line }}
+          </div>
+        </NuxtLink>
+      </section>
     </div>
+    <hr style="width: 80%" class="z-top relative q-mt-xl" />
     <p class="copyright-text">
       All rights reserved © {{ new Date().getFullYear() }} | Designed &
       developed by
@@ -62,6 +73,7 @@
   </q-footer>
 </template>
 <script setup lang="ts">
+const { locale } = useI18n();
 const siteMapData = [
   { label: "header.home-page", route: "/" },
   { label: "common.about_us", route: "/about-us" },
@@ -79,14 +91,6 @@ function openEmail() {
 
 function callPhone() {
   window.location.href = "tel:+98 09391858962";
-}
-
-function openInstagram() {
-  window.open("https://instagram.com/yourpage", "_blank");
-}
-
-function openTikTok() {
-  window.open("https://tiktok.com/@yourpage", "_blank");
 }
 </script>
 <style scoped>

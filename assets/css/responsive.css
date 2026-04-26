@@ -24,9 +24,6 @@
   }
 }
 @media (max-width: 1140px) {
-  .custom-footer .site-map {
-    display: none;
-  }
   .hero-section .introduction .part2 p {
     line-height: 26px;
     font-size: 14px;
@@ -123,12 +120,6 @@
   }
 }
 @media (max-width: 820px) {
-  .footer-content .submit-form {
-    width: 100% !important;
-  }
-  .footer-content .custom-button {
-    width: 50% !important;
-  }
   :is(.container-3, .container-2, .container-4 .part2.full-width) .res-img {
     height: 300px !important;
   }
@@ -141,11 +132,6 @@
   .res-h1 {
     font-size: 3rem !important;
     line-height: 3rem;
-  }
-  .footer-content {
-    flex-direction: column;
-    justify-content: center;
-    gap: 70px;
   }
 }
 @media (max-width: 720px) {

@@ -24,8 +24,6 @@
   margin-top: 20px;
   position: relative;
 }
-/* /.....................animation....................// */
-
 .animated-wave-bg {
   margin: auto;
   font-family: -apple-system, BlinkMacSystemFont, sans-serif;
@@ -46,6 +44,23 @@
   width: 100%;
   height: 100%;
 }
+.brand-text {
+  letter-spacing: 2px;
+  background: linear-gradient(
+    90deg,
+    #ffffff 0%,
+    #2f80ff 35%,
+    #8fd3ff 70%,
+    #0b1f4b 100%
+  );
+  background-size: 300% 100%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: brandGradientMove 10s ease-in-out infinite;
+  filter: drop-shadow(0 0 8px rgba(47, 128, 255, 0.25));
+}
+/* /.....................animation....................// */
 
 @keyframes gradient {
   0% {
@@ -56,5 +71,17 @@
   }
   100% {
     background-position: 0% 0%;
+  }
+}
+
+@keyframes brandGradientMove {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
   }
 }
