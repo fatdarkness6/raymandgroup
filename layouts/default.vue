@@ -65,7 +65,7 @@ import Footer from "./componenets/footer.vue";
 import SidebarMenu from "~/components/Animation/SidebarMenu.vue";
 import { links } from "~/assets/data/common/links";
 import LineBreak from "~/components/Common/LineBreak.vue";
-const { t } = useI18n();
+const { t, locale } = useI18n();
 
 const leftDrawerOpen = ref(false);
 </script>
