@@ -1,0 +1,8 @@
+html[dir="rtl"] :is(.q-field__label, .q-field__bottom, .q-field__messages) {
+  right: 0;
+  left: unset;
+}
+html[dir="rtl"] .q-field__bottom {
+  text-align: right;
+  width: 100%;
+}

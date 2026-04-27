@@ -6,8 +6,6 @@ export default defineNuxtConfig({
       recaptchaSiteKey: process.env.NUXT_PUBLIC_RECAPTCHA_SITE_KEY || "",
     },
   },
-
-  devtools: { enabled: true },
   quasar: {
     lang: "fa-IR",
     plugins: ["Notify"],
@@ -73,6 +71,7 @@ export default defineNuxtConfig({
   css: [
     "swiper/css/bundle",
     "@/assets/css/swiperStyles.css",
+    "@/assets/css/rtl.css",
     "@/assets/css/pagination-bullet.css",
     "@/assets/css/layout.css",
     "@/assets/css/base.css",
