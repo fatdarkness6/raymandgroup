@@ -14,13 +14,7 @@
   "footer": {
     "site_pages": "Site pages",
     "social-media": "Our social media",
-    "validation": {
-      "email_invalid": "Enter a valid email.",
-      "email_required": "Entering an email is required.",
-      "name_required": "Entering a name is required.",
-      "phone_length": "Phone number must be at least 11 digits long.",
-      "phone_required": "Entering a phone number is required."
-    }
+    "gitst-of-company": "Raymand Group, with a technology-driven, value-oriented, and future-focused approach, is taking steps toward improving healthcare and laboratory services across the country. Relying on knowledge, innovation, and scientific standards, the group seeks to create a smarter, more integrated, and more efficient experience in this field."
   },
   "header": {
     "contact_us": "Contact us",

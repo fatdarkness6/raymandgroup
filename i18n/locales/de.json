@@ -14,13 +14,7 @@
   "footer": {
     "site_pages": "Seiten der Website",
     "social-media": "Unsere sozialen Medien",
-    "validation": {
-      "email_invalid": "Geben Sie eine gültige E-Mail-Adresse ein.",
-      "email_required": "Die Angabe einer E-Mail-Adresse ist erforderlich.",
-      "name_required": "Die Eingabe eines Namens ist erforderlich.",
-      "phone_length": "Die Telefonnummer muss mindestens 11 Ziffern lang sein.",
-      "phone_required": "Die Angabe einer Telefonnummer ist erforderlich."
-    }
+    "gitst-of-company": "Die Raymand-Gruppe verfolgt einen technologiebasierten, werteorientierten und zukunftsgerichteten Ansatz und setzt sich für die Verbesserung der Gesundheits- und Labordienstleistungen im Land ein. Durch die Nutzung von Wissen, Innovation und wissenschaftlichen Standards strebt sie danach, ein intelligenteres, integrierteres und effizienteres Erlebnis in diesem Bereich zu schaffen."
   },
   "header": {
     "contact_us": "Kontaktieren Sie uns",
