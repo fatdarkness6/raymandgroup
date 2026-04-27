@@ -7,7 +7,7 @@
   >
     <AnimationHeader />
     <div class="flex flex-row items-center justify-between">
-      <div class="ham-menu flex justify-center">
+      <div v-if="$q.screen.lt.md" class="ham-menu flex justify-center">
         <q-btn
           flat
           dense
