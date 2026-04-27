@@ -30,7 +30,10 @@
               filled
               v-bind="inputProps"
               class="col-12 col-sm-6 styled-input"
-              :dir="field?.meta?.direction || direction || 'ltr'"
+              :dir="inputDir(field)"
+              :style="{
+                direction: inputDir(field),
+              }"
             />
           </div>
 
@@ -84,7 +87,10 @@
           :error-message="errors[key]"
           :class="field.class"
           v-bind="inputProps"
-          :dir="field.direction || direction || 'ltr'"
+          :dir="inputDir(field)"
+          :style="{
+            direction: inputDir(field),
+          }"
         />
 
         <q-input
@@ -98,7 +104,10 @@
           :error="!!errors[key]"
           :error-message="errors[key]"
           :class="['styled-input', field.class]"
-          :dir="field?.meta?.direction || direction || 'ltr'"
+          :dir="inputDir(field)"
+          :style="{
+            direction: inputDir(field),
+          }"
         />
       </template>
       <slot name="default"></slot>
@@ -128,6 +137,9 @@ const { handleSubmit, errors, values, setFieldValue, defineField, resetForm } =
 
 const openSections = reactive<Record<string, boolean>>({});
 
+const inputDir = (field: any) =>
+  field?.meta?.direction || props.direction || "ltr";
+
 const fields = computed(() => {
   const desc = props.schema.describe().fields as Record<string, any>;
   const result: Record<string, any> = {};
@@ -156,7 +168,7 @@ function sectionStructureFn(desc: any) {
     if (fields) {
       for (const [fieldKey, fieldValue] of Object.entries(fields) as [
         string,
-        any
+        any,
       ][]) {
         const fullPath = `${sectionKey}.${fieldKey}`;
         defineField(fullPath);
@@ -214,6 +226,6 @@ watch(
       }
     }
   },
-  { deep: true, immediate: true }
+  { deep: true, immediate: true },
 );
 </script>

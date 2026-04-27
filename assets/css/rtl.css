@@ -5,4 +5,8 @@ html[dir="rtl"] :is(.q-field__label, .q-field__bottom, .q-field__messages) {
 html[dir="rtl"] .q-field__bottom {
   text-align: right;
   width: 100%;
+  padding-right: 0;
+}
+html[dir="rtl"] .q-field__messages {
+  padding-right: 12px;
 }

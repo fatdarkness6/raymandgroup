@@ -7,7 +7,6 @@ export default defineNuxtConfig({
     },
   },
   quasar: {
-    lang: "fa-IR",
     plugins: ["Notify"],
     cssAddon: true,
     iconSet: "fontawesome-v6",
