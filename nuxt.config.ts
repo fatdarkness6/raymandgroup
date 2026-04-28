@@ -3,7 +3,6 @@ export default defineNuxtConfig({
   compatibilityDate: "2025-05-15",
   quasar: {
     plugins: ["Notify"],
-    cssAddon: true,
     iconSet: "fontawesome-v6",
   },
   i18n: {
@@ -42,7 +41,7 @@ export default defineNuxtConfig({
     "@nuxt/content",
   ],
   css: [
-    "swiper/css/bundle",
+    "swiper/css",
     "@/assets/css/swiperStyles.css",
     "@/assets/css/rtl.css",
     "@/assets/css/pagination-bullet.css",
@@ -51,5 +50,8 @@ export default defineNuxtConfig({
     "@/assets/css/utilities.css",
     "@/assets/css/responsive.css",
     "@/assets/css/components/card.css",
+    "quasar/dist/quasar.css",
+    "quasar/dist/quasar.addon.css",
+    "@quasar/extras/fontawesome-v6/fontawesome-v6.css",
   ],
 });
