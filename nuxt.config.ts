@@ -1,30 +1,10 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   compatibilityDate: "2025-05-15",
-  runtimeConfig: {
-    public: {
-      recaptchaSiteKey: process.env.NUXT_PUBLIC_RECAPTCHA_SITE_KEY || "",
-    },
-  },
   quasar: {
     plugins: ["Notify"],
     cssAddon: true,
     iconSet: "fontawesome-v6",
-    extras: {
-      fontIcons: ["fontawesome-v6"],
-    },
-    config: {
-      brand: {
-        primary: "#1976D2",
-        secondary: "#E3F2FD",
-        accent: "#0D47A1",
-        dark: "false",
-        positive: "#21BA45",
-        negative: "#C10015",
-        info: "#2196F3",
-        warning: "#FB8C00",
-      },
-    },
   },
   i18n: {
     locales: [
@@ -62,11 +42,6 @@ export default defineNuxtConfig({
     "@nuxt/fonts",
     "@nuxt/content",
   ],
-  nitro: {
-    prerender: {
-      routes: ["/"],
-    },
-  },
   css: [
     "swiper/css/bundle",
     "@/assets/css/swiperStyles.css",
@@ -78,12 +53,4 @@ export default defineNuxtConfig({
     "@/assets/css/responsive.css",
     "@/assets/css/components/card.css",
   ],
-  build: {
-    transpile: [
-      "@fortawesome/fontawesome-svg-core",
-      "@fortawesome/vue-fontawesome",
-      "@fortawesome/free-solid-svg-icons",
-      "@fortawesome/free-brands-svg-icons",
-    ],
-  },
 });
