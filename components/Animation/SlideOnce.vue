@@ -1,7 +1,12 @@
 <template>
   <div ref="wrapper">
-    <transition :name="transitionName" appear>
-      <div v-if="isVisible" :class="['slide-wrapper' , customClass]" :style="style">
+    <transition name="reveal" appear>
+      <div
+        v-if="isVisible"
+        class="reveal-wrapper"
+        :class="customClass"
+        :style="style"
+      >
         <slot />
       </div>
     </transition>
@@ -9,21 +14,25 @@
 </template>
 
 <script setup lang="ts">
+import { ref, inject, computed } from "vue";
+import { useIntersectionObserver } from "@vueuse/core";
+
 const props = defineProps<{
   duration?: number;
   direction?: "left" | "right" | "up" | "down";
   delay?: number;
-  customClass?:string
+  distance?: number;
+  customClass?: string;
 }>();
 
-const isVisible = ref(false);
 const wrapper = ref<HTMLElement | null>(null);
+const isVisible = ref(false);
 
-// Inject group defaults if any
+// group defaults
 const groupDuration = inject<number>("slideOnceGroupDuration", 600);
 const groupDirection = inject<"left" | "right" | "up" | "down">(
   "slideOnceGroupDirection",
-  "left"
+  "left",
 );
 const groupThreshold = inject<number>("slideOnceGroupThreshold", 0.2);
 const groupDelay = inject<number>("slideOnceGroupDelay", 0);
@@ -31,84 +40,59 @@ const groupDelay = inject<number>("slideOnceGroupDelay", 0);
 const direction = props.direction ?? groupDirection;
 const duration = props.duration ?? groupDuration;
 const delay = props.delay ?? groupDelay;
+const distance = props.distance ?? 50;
 
-const transitionName = `slide-${direction}`;
+// compute transform offset dynamically
+const offset = computed(() => {
+  switch (direction) {
+    case "left":
+      return `translateX(-${distance}px)`;
+    case "right":
+      return `translateX(${distance}px)`;
+    case "up":
+      return `translateY(${distance}px)`;
+    case "down":
+      return `translateY(-${distance}px)`;
+  }
+});
 
-// Compose style object with CSS variables and delay
 const style = computed(() => ({
-  "--duration": `${duration}ms`,
-  "transition-delay": `${delay}ms`,
+  "--reveal-duration": `${duration}ms`,
+  "--reveal-offset": offset.value,
+  transitionDelay: `${delay}ms`,
 }));
 
-onMounted(() => {
-  if (!wrapper.value) return;
-  const observer = new IntersectionObserver(
-    ([entry]) => {
-      if (entry.isIntersecting) {
-        isVisible.value = true;
-        observer.disconnect();
-      }
-    },
-    { threshold: groupThreshold }
-  );
-  observer.observe(wrapper.value);
-});
+const { stop } = useIntersectionObserver(
+  wrapper,
+  ([entry]) => {
+    if (entry?.isIntersecting) {
+      isVisible.value = true;
+      stop();
+    }
+  },
+  { threshold: groupThreshold },
+);
 </script>
 
 <style scoped>
-.slide-wrapper {
+.reveal-wrapper {
   will-change: transform, opacity;
 }
 
-/* Slide left */
-.slide-left-enter-active {
-  transition: all var(--duration) ease;
-}
-.slide-left-enter-from {
-  transform: translateX(-50px);
-  opacity: 0;
-}
-.slide-left-enter-to {
-  transform: translateX(0);
-  opacity: 1;
+/* enter animation */
+.reveal-enter-active {
+  transition:
+    transform var(--reveal-duration) ease,
+    opacity var(--reveal-duration) ease;
 }
 
-/* Slide right */
-.slide-right-enter-active {
-  transition: all var(--duration) ease;
-}
-.slide-right-enter-from {
-  transform: translateX(50px);
+.reveal-enter-from {
+  transform: var(--reveal-offset);
   opacity: 0;
-}
-.slide-right-enter-to {
-  transform: translateX(0);
-  opacity: 1;
 }
 
-/* Slide up */
-.slide-up-enter-active {
-  transition: all var(--duration) ease;
-}
-.slide-up-enter-from {
-  transform: translateY(50px);
-  opacity: 0;
-}
-.slide-up-enter-to {
-  transform: translateY(0);
-  opacity: 1;
-}
-
-/* Slide down */
-.slide-down-enter-active {
-  transition: all var(--duration) ease;
-}
-.slide-down-enter-from {
-  transform: translateY(-50px);
-  opacity: 0;
-}
-.slide-down-enter-to {
-  transform: translateY(0);
+.reveal-enter-to {
+  transform: translate(0, 0);
   opacity: 1;
 }
 </style>

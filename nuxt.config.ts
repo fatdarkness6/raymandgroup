@@ -4,6 +4,9 @@ export default defineNuxtConfig({
   quasar: {
     plugins: ["Notify"],
     iconSet: "fontawesome-v6",
+    extras: {
+      animations: "all",
+    },
   },
   i18n: {
     locales: [

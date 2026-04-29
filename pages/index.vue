@@ -15,25 +15,13 @@
               </h2>
             </div>
           </AnimationSlideOnce>
-          <AnimationSlideOnce ::delay="200">
+          <AnimationSlideOnce :delay="200">
             <div class="part2">
               <p class="text-body1 text-weight-regular">
                 {{ $t("home_page.hero-sec2") }}
               </p>
             </div>
           </AnimationSlideOnce>
-          <!-- <AnimationSlideOnce :delay="400">
-            <div class="part3">
-              <q-btn
-                :to="localePath('about-us')"
-                push
-                color="primary"
-                no-caps
-                padding="10px 20px"
-                >{{ $t("common.learn-more") }}</q-btn
-              >
-            </div>
-          </AnimationSlideOnce> -->
         </AnimationSlideOnceGroup>
       </div>
       <div
