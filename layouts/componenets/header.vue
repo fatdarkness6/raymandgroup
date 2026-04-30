@@ -72,10 +72,9 @@
           :label="locale"
           flat
           :auto-close="true"
-          content-class="z-index-2"
           style="width: 80px"
         >
-          <q-list content-class="z-index-2">
+          <q-list>
             <q-item
               v-for="loc in locales"
               :key="loc.code"

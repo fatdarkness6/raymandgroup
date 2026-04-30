@@ -45,7 +45,7 @@
               class="hero-img rounded-10"
             />
             <div
-              class="text-h6 text-weight-medium ab-text-center text-white z-index custom-text text-center full-width q-px-sm"
+              class="text-h6 text-weight-medium ab-text-center text-white z-2 custom-text text-center full-width q-px-sm"
             >
               {{ detectEvenNumber(i) ? item.title : item.slogan }}
             </div>
@@ -73,7 +73,7 @@
     </div>
     <div class="wrapper">
       <div
-        class="introduction flex column justify-center items-center text-center gap-20 q-mb-xl relative z-top"
+        class="introduction flex column justify-center items-center text-center gap-20 q-mb-xl relative z-2"
       >
         <AnimationSlideOnceGroup direction="up">
           <AnimationSlideOnce :delay="0">

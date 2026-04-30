@@ -1,16 +1,9 @@
 <template>
   <div class="gop">
-    <!-- Hero Section -->
-    <div class="container1 relative q-mb-lg">
-      <div class="ab-text-center relative z-top full-width">
-        <div
-          class="text-h3 text-white text-center q-px-md"
-          :dir="directionOfElement(locale)"
-        >
-          {{ t("tech-Lab_page.subtitle") }}
-        </div>
-      </div>
-    </div>
+    <CommonImageOverlay
+      img="/images/tech-lab/background-page.webp"
+      :text="['tech-Lab_page.subtitle']"
+    />
 
     <div class="wrapper">
       <AnimationSlideOnceGroup
@@ -42,29 +35,20 @@
       </AnimationSlideOnceGroup>
       <AnimationSlideOnceGroup
         direction="left"
-        class="container3 flex items-center gap-20 no-wrap q-my-xl"
+        class="container3 row q-col-gutter-sm"
       >
         <AnimationSlideOnce
-          v-for="(item, index) in imgData"
+          v-for="(item, index) in services"
           :key="index"
           :delay="index * 200"
           style="overflow: hidden"
-          class="relative w-33 elements rounded-10"
+          class="relative col-12 col-sm-6 col-md-4 elements rounded-10"
         >
-          <div class="text-hover text-white z-top q-px-xl">
-            <div
-              class="flex items-center gap-10"
-              :dir="directionOfElement(locale)"
-            >
-              <div class="ab-text-center">
-                <div class="text-h6 text-center">{{ item.text }}</div>
-              </div>
-            </div>
-          </div>
-          <q-img
-            :src="item.image"
-            style="max-height: 300px; height: 300px"
-            class="rounded-10"
+          <CommonImageOverlay
+            :img="item.image"
+            :text="item.text"
+            height="300px"
+            custom-class="rounded-10"
           />
         </AnimationSlideOnce>
       </AnimationSlideOnceGroup>
@@ -105,6 +89,8 @@
 </template>
 
 <script setup lang="ts">
+import { services } from "~/assets/data/pages/tech-lab/services";
+
 const { t, locale } = useI18n();
 
 interface ButtonItem {
@@ -117,20 +103,6 @@ const arrowIcon = computed(() =>
   locale.value === "fa" ? "fa-solid fa-angle-left" : "fa-solid fa-angle-right",
 );
 
-const imgData = computed(() => [
-  {
-    image: "/images/tech-lab/i-1.webp",
-    text: t("tech-Lab_page.services"),
-  },
-  {
-    image: "/images/tech-lab/research.webp",
-    text: t("tech-Lab_page.careers"),
-  },
-  {
-    image: "/images/tech-lab/university-student-in-laboratory.webp",
-    text: t("tech-Lab_page.investors"),
-  },
-]);
 const con2Data = [
   {
     image: "/images/tech-lab/vision.webp",
@@ -199,88 +171,3 @@ const con3Data = computed<ButtonItem[][]>(() => [
   ],
 ]);
 </script>
-
-<style scoped>
-.container1 {
-  background: url("~/public/images/tech-lab/background-page.webp") center/cover
-    no-repeat;
-  width: 100%;
-  height: 80vh;
-  position: relative;
-}
-.container1::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background-color: black;
-  opacity: 0.5;
-}
-
-.container3 .elements .text-hover {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  height: 100%;
-  width: 100%;
-  background: #00000052;
-  transition: all 0.2s ease;
-}
-.container3 .elements:hover .text-hover {
-  background: #00000078;
-}
-.container3 .elements .text-hover .text-h6 {
-  transform: scale(1);
-  transition: all 0.3s;
-}
-.container3 .elements:hover .text-hover .text-h6 {
-  transform: scale(1.2);
-}
-@media (max-width: 1140px) {
-  .container3 {
-    justify-content: space-between;
-    flex-wrap: wrap;
-  }
-  .container3 :is(.elements:nth-child(1), .elements:nth-child(2)) {
-    width: 45%;
-  }
-  .container3 .elements:nth-child(3) {
-    width: 100%;
-  }
-  .container3 .text {
-    font-size: 12px;
-  }
-}
-@media (max-width: 780px) {
-  .container3 :is(.elements:nth-child(1), .elements:nth-child(2)) {
-    width: 100%;
-  }
-  .container3 {
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-  .container3 :is(.div-of-btn:nth-child(1), .div-of-btn:nth-child(2)) {
-    width: 45%;
-  }
-  .container3 .div-of-btn:nth-child(3) {
-    width: 100%;
-  }
-  .container1 .text-h3 {
-    font-size: 30px;
-  }
-}
-@media (max-width: 530px) {
-  .container3
-    :is(
-      .div-of-btn:nth-child(1),
-      .div-of-btn:nth-child(2),
-      .div-of-btn:nth-child(3)
-    ) {
-    width: 100%;
-  }
-}
-@media (max-width: 400px) {
-  .container3 .text-h6 {
-    font-size: 1.1rem;
-  }
-}
-</style>

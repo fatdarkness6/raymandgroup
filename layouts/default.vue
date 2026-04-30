@@ -17,7 +17,7 @@
       position="bottom-right"
       :scroll-offset="500"
       :offset="[18, 18]"
-      class="z-top relative"
+      class="z-2 relative"
     >
       <q-btn fab icon="fa-solid fa-angle-up" color="primary" />
     </q-page-scroller>
