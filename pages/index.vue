@@ -103,7 +103,7 @@
     <div class="wrapper">
       <AnimationSlideOnceGroup
         direction="left"
-        class="row q-col-gutter-md about-3-companies justify-center relative z-top"
+        class="row q-col-gutter-md about-3-companies justify-center relative z-2"
       >
         <AnimationSlideOnce
           :delay="400"
@@ -112,7 +112,7 @@
           <q-card :bordered="true" class="custom-card my-card">
             <div class="q-px-md">
               <q-card-section
-                class="flex column gap-20 how-it-works-section-q relative z-top text-white"
+                class="flex column gap-20 how-it-works-section-q relative z-2 text-white"
               >
                 <div class="text-h4 res-h4 text-weight-medium">
                   {{ t("home_page.raymand3") }}
@@ -153,7 +153,7 @@
             <div class="flex justify-between gap-20 no-wrap full-height">
               <div class="part1">
                 <q-card-section
-                  class="flex column gap-20 how-it-works-section-q full-width relative z-top text-white text-weight-md"
+                  class="flex column gap-20 how-it-works-section-q full-width relative z-2 text-white text-weight-md"
                 >
                   <div class="text-h4 res-h4 text-weight-medium">
                     {{ t("home_page.raymand1") }}
@@ -193,7 +193,7 @@
           <q-card :bordered="true" class="custom-card my-card">
             <div class="q-px-md">
               <q-card-section
-                class="flex column gap-10 how-it-works-section-q full-width relative z-top text-white text-weight-md"
+                class="flex column gap-10 how-it-works-section-q full-width relative z-2 text-white text-weight-md"
               >
                 <div class="text-h4 res-h4 text-weight-medium">
                   {{ t("home_page.raymand2") }}

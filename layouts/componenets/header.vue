@@ -1,10 +1,5 @@
 <template>
-  <q-header
-    elevated
-    reveal
-    :reveal-offset="1"
-    class="q-pa-md wrapper header z-max"
-  >
+  <q-header elevated reveal :reveal-offset="1" class="q-pa-md wrapper header">
     <AnimationHeader />
     <div class="flex flex-row items-center justify-between">
       <div v-if="$q.screen.lt.md" class="ham-menu flex justify-center">
