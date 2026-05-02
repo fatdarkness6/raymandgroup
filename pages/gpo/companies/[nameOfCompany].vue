@@ -39,13 +39,7 @@
                 class="q-mb-lg"
                 size="100px"
               />
-              <q-btn
-                @click="openDialogFn"
-                color="red"
-                push
-                no-caps
-                padding="10px 20px"
-              >
+              <q-btn @click="openDialogFn" color="red">
                 {{ t("gpo-page.home-page.services.see-pdf") }}
               </q-btn>
             </q-card-section>
@@ -122,10 +116,10 @@ const heroAttrs = {
 };
 
 definePageMeta({
-  validate (route) {
-    return _.has(companies, route.params.nameOfCompany)
+  validate(route) {
+    return _.has(companies, route.params.nameOfCompany);
   },
-})
+});
 
 const { locale, t } = useI18n();
 const route = useRoute();

@@ -56,14 +56,7 @@
         </div>
       </q-tabs>
       <div class="login-button flex items-center gap-2">
-        <q-btn
-          class="login-btn-none"
-          to="/login"
-          color="primary"
-          push
-          no-caps
-          padding="10px 20px"
-        >
+        <q-btn class="login-btn-none" to="/login" color="primary">
           {{ $t("header.login") }}
         </q-btn>
 

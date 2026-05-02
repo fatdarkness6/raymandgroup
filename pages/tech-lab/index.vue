@@ -65,12 +65,11 @@
             <q-btn
               v-for="(item, i) in group"
               :key="i"
-              push
-              :color="item?.color || 'primary'"
+              :color="item?.color"
               :dir="directionOfElement(locale)"
               :to="`tech-lab/${item?.route}`"
-              padding="15px 30px"
-              class="text text-subtitle1 rounded-10 text-white q-my-sm"
+              padding="15px 20px"
+              class="text text-subtitle1 text-white q-my-sm"
             >
               <template #default>
                 <div class="flex items-center justify-between no-wrap">

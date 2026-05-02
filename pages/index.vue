@@ -253,13 +253,7 @@
       <News :data="allNews" />
       <div class="full-width flex justify-center items-center">
         <AnimationSlideOnce preset="slideVisibleOnceBottom">
-          <q-btn
-            :to="localePath('news')"
-            push
-            no-caps
-            padding="15px 30px"
-            class="q-mt-xl flex"
-          >
+          <q-btn :to="localePath('news')" no-caps class="q-mt-xl flex">
             {{ t("news.view-all") }}
           </q-btn>
         </AnimationSlideOnce>

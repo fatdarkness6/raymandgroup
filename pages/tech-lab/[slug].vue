@@ -71,7 +71,7 @@
                 </div>
               </q-card-section>
               <q-card-section>
-                <q-btn push color="primary" @click="handleSubmitForm(index)">
+                <q-btn @click="handleSubmitForm(index)">
                   {{
                     detectEvenNumber(index)
                       ? t("common.learn-more")

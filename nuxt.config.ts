@@ -7,6 +7,16 @@ export default defineNuxtConfig({
     extras: {
       animations: "all",
     },
+    components: {
+      defaults: {
+        QBtn: {
+          push: true,
+          noCaps: true,
+          padding: "10px 20px",
+          color: "primary",
+        },
+      },
+    },
   },
   i18n: {
     locales: [

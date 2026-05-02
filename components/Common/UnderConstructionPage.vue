@@ -228,12 +228,6 @@
         {{ $t("underConstruction-page.come-back") }}
       </div>
       <q-btn
-        fa-solid
-        fa-house
-        color="primary"
-        push
-        no-caps
-        padding="10px 20px"
         icon="fa-solid fa-house"
         :label="$t('underConstruction-page.go-home')"
         class="q-px-lg q-py-sm q-mt-md"

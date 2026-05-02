@@ -72,7 +72,6 @@
       <q-card-actions align="around">
         <q-btn
           outline
-          color="primary"
           icon="fa-solid fa-pen"
           label="Edit Profile"
           class="rounded-btn"
@@ -167,7 +166,9 @@ function onLogout() {
   border-radius: 20px;
   background: #ffffffcc;
   backdrop-filter: blur(12px);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
 }
 
 .profile-card:hover {

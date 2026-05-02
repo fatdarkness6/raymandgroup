@@ -5,9 +5,7 @@
         v-for="social in data"
         :key="social.name"
         round
-        push
         size="lg"
-        color="primary"
         :icon="social.icon"
         :href="social.link"
         target="_blank"

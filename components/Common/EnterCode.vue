@@ -27,7 +27,6 @@
             <q-btn
               :disable="cooldown > 0"
               flat
-              color="primary"
               :loading="loading.resendEmailAddressLoading"
               @click="resendEmailFn"
             >
@@ -47,7 +46,6 @@
           />
           <q-btn
             flat
-            color="primary"
             label="Verify"
             type="submit"
             :loading="prop.verifyEmailLoading"
@@ -96,7 +94,7 @@ const loading = ref({
 let timer: ReturnType<typeof setInterval> | null = null;
 
 const cooldownLabel = computed(() =>
-  cooldown.value > 0 ? `Resend in ${cooldown.value}s` : "Resend Code"
+  cooldown.value > 0 ? `Resend in ${cooldown.value}s` : "Resend Code",
 );
 
 function handleVerify() {

@@ -19,7 +19,7 @@
       :offset="[18, 18]"
       class="z-2 relative"
     >
-      <q-btn fab icon="fa-solid fa-angle-up" color="primary" />
+      <q-btn padding="15px 15px" round fab icon="fa-solid fa-angle-up" />
     </q-page-scroller>
     <MobileDrawer
       :leftDrawerOpen="leftDrawerOpen"

@@ -31,15 +31,7 @@
           <div v-if="showError.error" class="text-red text-subtitle2">
             {{ showError.message }}
           </div>
-          <q-btn
-            type="submit"
-            color="primary"
-            push
-            no-caps
-            padding="10px 20px"
-            class="full-width q-mt-md"
-            :loading="loading"
-          >
+          <q-btn type="submit" class="full-width q-mt-md" :loading="loading">
             Submit
           </q-btn>
         </q-form>

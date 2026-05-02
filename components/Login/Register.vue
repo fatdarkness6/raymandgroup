@@ -60,11 +60,6 @@
         </q-input>
         <q-btn
           class="full-width"
-          q-btn
-          color="primary"
-          push
-          no-caps
-          padding="10px 20px"
           type="submit"
           :loading="loading.registerLoading"
           >Sign Up</q-btn

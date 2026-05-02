@@ -158,21 +158,11 @@
       <h5 class="text-center error-message text404">
         Oops! The page you’re looking for doesn’t exist or has been moved.
       </h5>
-      <q-btn
-        class="home-btn"
-        to="/"
-        color="primary"
-        push
-        no-caps
-        padding="10px 20px"
-        >Go to Home</q-btn
-      >
+      <q-btn class="home-btn" to="/">Go to Home</q-btn>
     </div>
   </div>
-
 </template>
-<script lang="ts" setup>
-</script>
+<script lang="ts" setup></script>
 <style scoped>
 @import "@/assets/css/components/Animation/404Animation.css";
 .st0 {

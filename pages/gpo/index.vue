@@ -31,19 +31,9 @@
           <div class="hero-ctas flex row justify-center items-center gap-10">
             <q-btn
               :label="t('gpo-page.home-page.hero.companies')"
-              color="primary"
-              push
               to="/gpo/companies"
-              no-caps
-              padding="10px 20px"
             />
-            <q-btn
-              color="primary"
-              push
-              no-caps
-              padding="10px 20px"
-              to="/gpo/contact-us"
-            >
+            <q-btn to="/gpo/contact-us">
               {{ t("gpo-page.home-page.contact-us.click") }}
             </q-btn>
           </div>

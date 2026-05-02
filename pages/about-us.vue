@@ -6,7 +6,8 @@
         About Raymand Strategic Technology Group
       </div>
       <div class="text-subtitle1 max-w-700">
-        Pioneering innovations in soil, water, microbiology, veterinary, food, and pharmaceutical labs.
+        Pioneering innovations in soil, water, microbiology, veterinary, food,
+        and pharmaceutical labs.
       </div>
     </section>
 
@@ -17,16 +18,22 @@
           <q-icon name="mdi-target" size="48px" class="text-primary q-mb-md" />
           <div class="text-h5 text-weight-bold q-mb-sm">Our Mission</div>
           <p class="text-body1 text-grey-8">
-            Elevating laboratory testing standards with precise, reliable results that empower health, research, and industry.
+            Elevating laboratory testing standards with precise, reliable
+            results that empower health, research, and industry.
           </p>
         </q-card>
       </div>
       <div class="col-12 col-md-6">
         <q-card class="info-card">
-          <q-icon name="mdi-eye-outline" size="48px" class="text-primary q-mb-md" />
+          <q-icon
+            name="mdi-eye-outline"
+            size="48px"
+            class="text-primary q-mb-md"
+          />
           <div class="text-h5 text-weight-bold q-mb-sm">Our Vision</div>
           <p class="text-body1 text-grey-8">
-            Driving a future where innovation and technology ensure safety, sustainability, and global progress in laboratories.
+            Driving a future where innovation and technology ensure safety,
+            sustainability, and global progress in laboratories.
           </p>
         </q-card>
       </div>
@@ -34,21 +41,28 @@
 
     <!-- Team Section -->
     <section class="team-section q-mt-xl">
-      <div class="text-h4 text-weight-bold text-center q-mb-xl">Meet Our Team</div>
+      <div class="text-h4 text-weight-bold text-center q-mb-xl">
+        Meet Our Team
+      </div>
       <div class="row q-col-gutter-lg q-row-gutter-lg justify-center">
-        <div v-for="member in team" :key="member.id" class="col-12 col-sm-6 col-md-3">
+        <div
+          v-for="member in team"
+          :key="member.id"
+          class="col-12 col-sm-6 col-md-3"
+        >
           <q-card class="team-card column items-center text-center">
             <q-avatar size="140px" class="q-mb-md shadow-3">
               <img :src="member.photo" alt="team member" />
             </q-avatar>
             <div class="text-h6 text-weight-bold">{{ member.name }}</div>
-            <div class="text-body2 text-grey-7 q-mb-sm">{{ member.position }}</div>
+            <div class="text-body2 text-grey-7 q-mb-sm">
+              {{ member.position }}
+            </div>
             <q-btn
               v-if="member.linkedin"
               flat
               round
               icon="mdi-linkedin"
-              color="primary"
               :href="member.linkedin"
               target="_blank"
             />
@@ -61,9 +75,10 @@
     <section class="contact-section column flex-center text-center">
       <div class="text-h5 text-weight-bold q-mb-sm">Get in Touch</div>
       <div class="text-body1 text-grey-8 q-mb-md max-w-600">
-        Have questions or want to collaborate? Reach out to us and let’s build the future together.
+        Have questions or want to collaborate? Reach out to us and let’s build
+        the future together.
       </div>
-      <q-btn label="Contact Us" color="primary" rounded size="lg" :to="'/contact'" />
+      <q-btn label="Contact Us" rounded size="lg" :to="'/contact'" />
     </section>
   </div>
 </template>
