@@ -4,78 +4,78 @@
       img="/images/tech-lab/background-page.webp"
       :text="['tech-Lab_page.subtitle']"
     />
-
     <div class="wrapper">
-      <AnimationSlideOnceGroup
-        direction="left"
-        class="container2 row q-col-gutter-md justify-between items-start items-stretch q-my-xl"
-      >
-        <AnimationSlideOnce
-          v-for="(value, index) in con2Data"
-          :delay="index * 200"
-          class="col-xl-6 col-md-6 col-sm-6 col-12"
-          custom-class="full-height"
+      <section class="section-p-20">
+        <AnimationSlideOnceGroup
+          direction="left"
+          class="container2 row q-col-gutter-md justify-between items-start items-stretch q-my-xl"
         >
-          <q-card class="my-card full-height">
-            <q-img :src="value.image" style="max-height: 300px" />
-            <q-card-section class="text-center">
-              <div class="text-h6 ellipsis-lines" :style="{ '--lines': 2 }">
-                {{ value.title }}
-              </div>
-            </q-card-section>
-            <div :dir="directionOfElement(locale)">
-              <q-card-section>
-                <div class="text-body1">
-                  {{ value.desc }}
+          <AnimationSlideOnce
+            v-for="(value, index) in con2Data"
+            :delay="index * 200"
+            class="col-xl-6 col-md-6 col-sm-6 col-12"
+            custom-class="full-height"
+          >
+            <q-card class="my-card full-height">
+              <q-img :src="value.image" style="max-height: 300px" />
+              <q-card-section class="text-center">
+                <div class="text-h6 ellipsis-lines" :style="{ '--lines': 2 }">
+                  {{ value.title }}
                 </div>
               </q-card-section>
-            </div>
-          </q-card>
-        </AnimationSlideOnce>
-      </AnimationSlideOnceGroup>
-      <AnimationSlideOnceGroup
-        direction="left"
-        class="container3 row q-col-gutter-sm"
-      >
-        <AnimationSlideOnce
-          v-for="(item, index) in services"
-          :key="index"
-          :delay="index * 200"
-          style="overflow: hidden"
-          class="relative col-12 col-sm-6 col-md-4 elements rounded-10"
+              <div :dir="directionOfElement(locale)">
+                <q-card-section>
+                  <div class="text-body1">
+                    {{ value.desc }}
+                  </div>
+                </q-card-section>
+              </div>
+            </q-card>
+          </AnimationSlideOnce>
+        </AnimationSlideOnceGroup>
+      </section>
+      <section class="section-p-20">
+        <AnimationSlideOnceGroup
+          direction="left"
+          class="container3 row q-col-gutter-sm"
         >
-          <CommonImageOverlay
-            :img="item.image"
-            :text="item.text"
-            height="300px"
-            custom-class="rounded-10"
-          />
-        </AnimationSlideOnce>
-      </AnimationSlideOnceGroup>
-      <!-- Buttons Section -->
-      <div
-        class="container3 q-my-xl flex items-center justify-between gap-30 no-wrap"
-      >
+          <AnimationSlideOnce
+            v-for="(item, index) in services"
+            :key="index"
+            :delay="index * 200"
+            style="overflow: hidden"
+            class="relative col-12 col-sm-6 col-md-4 elements rounded-10"
+          >
+            <CommonImageOverlay
+              :img="item.image"
+              :text="item.text"
+              height="300px"
+              custom-class="rounded-10"
+            />
+          </AnimationSlideOnce>
+        </AnimationSlideOnceGroup>
+      </section>
+      <section class="row q-col-gutter-md justify-center section-p-20">
         <div
-          v-for="(group, index) in con3Data"
-          :key="index"
-          class="w-33 div-of-btn"
+          v-for="(group, i) in techLabLinks"
+          :key="i"
+          class="col-12 col-sm-6 col-md-4"
         >
-          <div class="texts flex column gap-10">
+          <div class="column">
             <q-btn
-              v-for="(label, i) in group"
+              v-for="(item, i) in group"
               :key="i"
               push
-              :color="label.color || 'primary'"
+              :color="item?.color || 'primary'"
               :dir="directionOfElement(locale)"
-              :to="`tech-lab/${label.route}`"
+              :to="`tech-lab/${item?.route}`"
               padding="15px 30px"
-              class="text text-subtitle1 rounded-10 text-white"
+              class="text text-subtitle1 rounded-10 text-white q-my-sm"
             >
               <template #default>
                 <div class="flex items-center justify-between no-wrap">
                   <div class="ellipsis-lines" :style="{ '--lines': 1 }">
-                    {{ label.title }}
+                    {{ $t(item?.label) }}
                   </div>
                   <q-icon :name="arrowIcon" size="20px" />
                 </div>
@@ -83,21 +83,19 @@
             </q-btn>
           </div>
         </div>
-      </div>
+      </section>
     </div>
   </div>
 </template>
 
 <script setup lang="ts">
 import { services } from "~/assets/data/pages/tech-lab/services";
+import { ButtonLinks } from "~/assets/data/pages/tech-lab/links";
+import type { Links } from "~/types/linksInTechLab";
+
+const techLabLinks = ref<Links>(ButtonLinks);
 
 const { t, locale } = useI18n();
-
-interface ButtonItem {
-  title: string;
-  route?: string;
-  color?: string;
-}
 
 const arrowIcon = computed(() =>
   locale.value === "fa" ? "fa-solid fa-angle-left" : "fa-solid fa-angle-right",
@@ -115,59 +113,4 @@ const con2Data = [
     desc: t("tech-Lab_page.generalInfo.missionDesc"),
   },
 ];
-const con3Data = computed<ButtonItem[][]>(() => [
-  [
-    { title: t("common.about_us"), route: "about-us", color: "red" },
-    { title: t("tech-Lab_page.shortCuts.soilLab"), route: "soil-lab" },
-    {
-      title: t("tech-Lab_page.shortCuts.concreteSteelLab"),
-      route: "concrete-steel-lab",
-    },
-    {
-      title: t("tech-Lab_page.shortCuts.environmentLab"),
-      route: "environment-lab",
-    },
-    {
-      title: t("tech-Lab_page.shortCuts.waterAnalysisLab"),
-      route: "water-analysis-lab",
-    },
-  ],
-  [
-    {
-      title: t("tech-Lab_page.shortCuts.innovationLab"),
-      route: "research-cooperation-form",
-      color: "red",
-    },
-    { title: t("tech-Lab_page.shortCuts.petLab"), route: "pet-lab" },
-    {
-      title: t("tech-Lab_page.shortCuts.livestockLab"),
-      route: "livestock-lab",
-    },
-    { title: t("tech-Lab_page.shortCuts.poultryLab"), route: "poultry-lab" },
-    {
-      title: t("tech-Lab_page.shortCuts.agricultureServicesLab"),
-      route: "agriculture-services-lab",
-    },
-  ],
-  [
-    {
-      title: t("tech-Lab_page.shortCuts.collaborationRequest"),
-      route: "educational-cooperation",
-      color: "red",
-    },
-    {
-      title: t("tech-Lab_page.shortCuts.pharmaCosmeticIndustry"),
-      route: "pharma-cosmetic-industry",
-    },
-    {
-      title: t("tech-Lab_page.shortCuts.foodIndustry"),
-      route: "food-industry",
-    },
-    {
-      title: t("tech-Lab_page.shortCuts.clinicalPathologyLab"),
-      route: "clinical-pathology-lab",
-    },
-    { title: t("tech-Lab_page.shortCuts.geneticLab"), route: "genetic-lab" },
-  ],
-]);
 </script>
