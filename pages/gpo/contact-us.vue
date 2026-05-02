@@ -2,7 +2,7 @@
   <q-page class="space-between-each-sections-bottom">
     <div class="container1 space-between-each-sections-bottom relative">
       <div class="black-layer"></div>
-      <div :delay="100" class="ab-text-center z-top text-white">
+      <div :delay="100" class="ab-text-center z-2 text-white">
         <div class="contact-hero text-center q-mb-xl">
           <h2 class="q-mb-md">
             {{ t("gpo-page.home-page.contact-us-page.introduction") }}

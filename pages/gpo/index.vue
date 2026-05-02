@@ -16,7 +16,7 @@
           <source src="/videos/gpo/gpo-background.mp4" type="video/mp4" />
         </video>
       </div>
-      <div class="hero-inner absolute-center z-top full-width">
+      <div class="hero-inner absolute-center z-2 full-width">
         <AnimationSlideOnce direction="down">
           <h1 class="hero-title text-white text-weight-bold">
             {{ t("gpo-page.home-page.hero.heroTitle") }}

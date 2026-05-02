@@ -57,7 +57,7 @@
         </NuxtLink>
       </section>
     </div>
-    <hr style="width: 80%" class="z-top relative q-mt-xl" />
+    <hr style="width: 80%" class="z-2 relative q-mt-xl" />
     <p class="copyright-text">
       All rights reserved © {{ new Date().getFullYear() }} | Designed &
       developed by

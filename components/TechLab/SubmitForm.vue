@@ -1,5 +1,5 @@
 <template>
-  <q-dialog v-model="model" :persistent="true" class="z-top relative">
+  <q-dialog v-model="model" :persistent="true" class="z-2 relative">
     <q-card class="q-pa-lg q-ma-md shadow-3 rounded-borders submit-dialog">
       <q-card-section class="text-center">
         <div class="text-h5 text-weight-bold">
