@@ -1,11 +1,11 @@
 <template>
   <div
-    class="container space-between-each-sections-bottom relative z-top font-family font-size"
+    class="container space-between-each-sections-bottom relative z-2 font-family font-size"
   >
     <div class="row justify-center">
       <div class="col-md-10 main-title text-center mt-5">
-        <h1>ما در حال ساخت آینده‌ای بهتر هستیم</h1>
-        <h2>به‌زودی با ظاهری تازه بازمی‌گردیم</h2>
+        <h1>{{ $t("underConstruction-page.title") }}</h1>
+        <h2>{{ $t("underConstruction-page.anouncemt") }}</h2>
       </div>
     </div>
 
@@ -225,9 +225,8 @@
     </div>
     <div class="col-sm-10 col-md-6 col-lg-6 text-center">
       <div class="text-h6 text-weight-bold q-mb-md">
-        وب‌سایت ما در حال توسعه است
+        {{ $t("underConstruction-page.come-back") }}
       </div>
-      <div class="text-subtitle2 text-grey-7">! به‌زودی دوباره سر بزنید</div>
       <q-btn
         fa-solid
         fa-house
@@ -236,7 +235,7 @@
         no-caps
         padding="10px 20px"
         icon="fa-solid fa-house"
-        label="بازگشت به خانه"
+        :label="$t('underConstruction-page.go-home')"
         class="q-px-lg q-py-sm q-mt-md"
         to="/"
       />

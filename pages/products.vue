@@ -1,3 +1,3 @@
 <template>
-    <UnderConstructionPage/>
+  <CommonUnderConstructionPage />
 </template>

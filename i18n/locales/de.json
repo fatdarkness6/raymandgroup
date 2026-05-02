@@ -420,6 +420,12 @@
     },
     "subtitle": "Raymand Group, ein führendes Unternehmen im Bereich Tests für eine bessere Lebensqualität"
   },
+  "underConstruction-page": {
+    "title": "Wir bauen eine bessere Zukunft",
+    "anouncemt": "Wir sind bald mit einem neuen Look zurück",
+    "come-back": "Schauen Sie bald wieder vorbei!",
+    "go-home": "Zurück zur Startseite"
+  },
   "validation": {
     "email_invalid": "Geben Sie eine gültige E-Mail-Adresse ein.",
     "email_required": "Die Angabe einer E-Mail-Adresse ist erforderlich.",

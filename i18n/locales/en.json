@@ -420,6 +420,12 @@
     },
     "subtitle": "Raymand Group, a leader in testing for a better quality of life"
   },
+  "underConstruction-page": {
+    "title": "We are building a better future",
+    "anouncemt": "We’ll be back soon with a fresh new look",
+    "come-back": "Check back soon!",
+    "go-home": "Back to Home"
+  },
   "validation": {
     "email_invalid": "Enter a valid email.",
     "email_required": "Entering an email is required.",

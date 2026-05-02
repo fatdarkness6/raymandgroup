@@ -1,5 +1,4 @@
 <template>
-    <UnderConstructionPage/>
+  <CommonUnderConstructionPage />
 </template>
-<script lang="ts">
-</script>
+<script lang="ts"></script>
