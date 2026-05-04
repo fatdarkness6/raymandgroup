@@ -1,28 +1,7 @@
-.info {
-  width: 50%;
-}
-.infor {
-  position: relative;
-}
-.infor::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.3);
-  z-index: 1;
-  border-radius: 10px;
-}
 .hero-section {
   height: auto;
   overflow: hidden;
   position: relative;
-}
-.animation-img {
-  height: 900px;
-  overflow: hidden;
 }
 .hero-section :is(.introduction, .img) {
   width: 50%;
@@ -33,10 +12,6 @@
 }
 .hero-section .introduction .part2 p {
   line-height: 30px;
-}
-.hero-section .hero-img {
-  width: 200px;
-  height: 250px;
 }
 .how-it-works-section {
   position: relative;
@@ -154,55 +129,4 @@
 }
 .mobile-v {
   display: none;
-}
-.hero-section .animation-img {
-  mask-image: linear-gradient(
-    180deg,
-    transparent 0%,
-    rgba(0, 0, 0, 1) 0%,
-    rgba(0, 0, 0, 1) 70%,
-    transparent 95%
-  );
-  mask-size: 100% 100%;
-  mask-repeat: no-repeat;
-  mask-position: bottom;
-  -webkit-mask-image: linear-gradient(
-    180deg,
-    transparent 0%,
-    rgba(0, 0, 0, 1) 0%,
-    rgba(0, 0, 0, 1) 70%,
-    transparent 95%
-  );
-  -webkit-mask-size: 100% 100%;
-  -webkit-mask-repeat: no-repeat;
-  -webkit-mask-position: bottom;
-}
-@keyframes scrollUp {
-  0% {
-    transform: translateY(0%);
-  }
-  100% {
-    transform: translateY(-50%);
-  }
-}
-
-@keyframes scrollDown {
-  0% {
-    transform: translateY(-50%);
-  }
-  100% {
-    transform: translateY(0%);
-  }
-}
-.scroll-animation {
-  animation: scrollUp 40s linear infinite;
-}
-
-.scroll-animation-reverse {
-  animation: scrollDown 40s linear infinite;
-}
-
-.hero-section .scroll-animation:hover,
-.hero-section .scroll-animation-reverse:hover {
-  animation-play-state: paused;
 }

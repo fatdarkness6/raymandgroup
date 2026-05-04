@@ -1,26 +1,13 @@
 @media (max-width: 1400px) {
+  .header {
+    margin-left: 20px;
+    margin-right: 20px;
+  }
   .res-h4 {
     font-size: 1.5rem;
   }
   .res-h6 {
     font-size: 0.9rem;
-  }
-}
-@media (max-width: 1330px) {
-  .header {
-    margin-left: 20px;
-    margin-right: 20px;
-  }
-  .res-h1 {
-    font-size: 40px;
-    line-height: 3rem !important;
-  }
-  .hero-section .hero-img {
-    width: 160px !important;
-    height: 200px !important;
-  }
-  .hero-section .custom-text {
-    font-size: 15px;
   }
 }
 @media (max-width: 1140px) {
@@ -38,10 +25,6 @@
   .container-6 .w-32:nth-child(3) {
     width: 48%;
   }
-  .hero-section .hero-img {
-    width: 135px !important;
-    height: 160px !important;
-  }
 }
 @media (max-width: 1023px) {
   .login-btn-none {
@@ -52,57 +35,9 @@
     width: 80px;
   }
 }
-@media (max-width: 935px) {
-  .hero-section {
-    flex-direction: column;
-    align-items: center;
-    gap: 50px;
-  }
-  .hero-section
-    :is(.part1, .part2, .part3):is(
-      .scroll-animation,
-      .scroll-animation-reverse
-    ) {
-    flex-direction: row;
-    flex-wrap: nowrap;
-  }
-  .hero-section :is(.part1, .part3).scroll-animation {
-    animation: scroll-animation 20s linear infinite;
-    position: relative;
-  }
-  .hero-section .animation-img {
-    -webkit-mask-image: linear-gradient(
-      90deg,
-      transparent 0%,
-      rgba(0, 0, 0, 1) 6%,
-      rgba(0, 0, 0, 1) 94%,
-      transparent 100%
-    ) !important;
-  }
-  .hero-section .part2.scroll-animation-reverse {
-    animation: scroll-animation-reverse 30s linear infinite;
-  }
-  .hero-section :is(.introduction, .img) {
-    width: 100% !important;
-  }
-  .hero-section .animation-img {
-    justify-content: unset !important;
-    height: 300px !important;
-  }
-  .hero-section .hero-img {
-    width: 140px !important;
-    height: 90px !important;
-  }
-  .hero-section .scroll-animation:hover,
-  .hero-section .scroll-animation-reverse:hover {
-    animation-play-state: paused;
-  }
+@media (max-width: 1023px) {
   .how-it-works-section .introduction {
     text-align: center;
-  }
-  .res-h1 {
-    font-size: 5rem !important;
-    line-height: 5rem !important;
   }
 }
 @media (max-width: 880px) {
@@ -128,10 +63,6 @@
   }
   .v-pc {
     display: none !important;
-  }
-  .res-h1 {
-    font-size: 3rem !important;
-    line-height: 3rem;
   }
 }
 @media (max-width: 720px) {
@@ -176,16 +107,12 @@
     flex-direction: column;
     gap: 40px;
   }
-  .res-h1 {
-    font-size: 2rem !important;
-    line-height: 3rem !important;
-  }
 }
 @media (max-width: 450px) {
 }
 
 /* ------------------animation----------------- */
-
+/* 
 @keyframes scroll-animation {
   0% {
     transform: translateX(0);
@@ -201,4 +128,4 @@
   100% {
     transform: translateX(0);
   }
-}
+} */

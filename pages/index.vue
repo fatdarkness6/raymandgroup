@@ -1,9 +1,10 @@
 <template>
   <div class="wrapper">
-    <div class="hero-section flex q-mt-xl" :dir="directionOfElement(locale)">
-      <div
-        class="introduction space-between-each-sections q-pt-sm flex column gap-20"
-      >
+    <div
+      class="hero-section row items-center q-col-gutter-md"
+      :dir="directionOfElement(locale)"
+    >
+      <div class="space-between-each-sections column col-12 col-sm-12 col-md-6">
         <AnimationSlideOnceGroup direction="left">
           <AnimationSlideOnce :delay="0">
             <div class="part1">
@@ -24,34 +25,7 @@
           </AnimationSlideOnce>
         </AnimationSlideOnceGroup>
       </div>
-      <div
-        class="img flex justify-center items-center gap-10 overflow-hidden animation-img relative"
-        dir="ltr"
-      >
-        <div
-          v-for="(_, index) in 3"
-          :class="`part${
-            index + 1
-          } flex column justify-center items-center gap-15 ${
-            detectEvenNumber(index)
-              ? 'scroll-animation'
-              : 'scroll-animation-reverse'
-          } `"
-        >
-          <div class="infor rounded-10" v-for="(item, i) in allImages[index]">
-            <q-img
-              :key="'part1-' + index"
-              :src="item.image"
-              class="hero-img rounded-10"
-            />
-            <div
-              class="text-h6 text-weight-medium ab-text-center text-white z-2 custom-text text-center full-width q-px-sm"
-            >
-              {{ detectEvenNumber(i) ? item.title : item.slogan }}
-            </div>
-          </div>
-        </div>
-      </div>
+      <HomePageImageAnimation />
     </div>
   </div>
   <div
@@ -262,28 +236,10 @@
   </div>
 </template>
 <script setup lang="ts">
-import {
-  images,
-  images2,
-  images3,
-  loopOnTexts,
-  loopOnTexts2,
-} from "~/assets/data/pages/homePage";
+import { loopOnTexts, loopOnTexts2 } from "~/assets/data/pages/homePage";
 const { locale, t } = useI18n();
 
 const localePath = useLocalePath();
-const translateGroup = (group: typeof images) =>
-  [...group, ...group].map((item) => ({
-    image: item.image,
-    title: t(item.title),
-    slogan: t(item.slogan),
-  }));
-
-const allImages = [
-  translateGroup(images),
-  translateGroup(images2),
-  translateGroup(images3),
-];
 
 const allNews = [
   {
