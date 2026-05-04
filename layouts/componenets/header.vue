@@ -7,6 +7,7 @@
           flat
           dense
           round
+          color="white"
           icon="fa-solid fa-bars"
           class="lt-md"
           @click="handleLeftDrawerOpen"
