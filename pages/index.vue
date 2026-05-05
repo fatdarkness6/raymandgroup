@@ -25,7 +25,7 @@
           </AnimationSlideOnce>
         </AnimationSlideOnceGroup>
       </div>
-      <HomePageImageAnimation />
+      <HomePageImageAnimation :data="[images, images2, images3]" />
     </div>
   </div>
   <div
@@ -236,7 +236,13 @@
   </div>
 </template>
 <script setup lang="ts">
-import { loopOnTexts, loopOnTexts2 } from "~/assets/data/pages/homePage";
+import {
+  loopOnTexts,
+  loopOnTexts2,
+  images,
+  images2,
+  images3,
+} from "~/assets/data/pages/homePage";
 const { locale, t } = useI18n();
 
 const localePath = useLocalePath();

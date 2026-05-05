@@ -27,19 +27,18 @@
   </div>
 </template>
 <script lang="ts" setup>
-import { images, images2, images3 } from "~/assets/data/pages/homePage";
-const translateGroup = (group: typeof images) =>
-  [...group, ...group].map((item) => ({
-    image: item.image,
-    title: item.title,
-    slogan: item.slogan,
-  }));
+import type {
+  HomePageImageGroups,
+  HomePageImages,
+} from "~/types/imageAnimation";
+const props = defineProps<{
+  data: HomePageImageGroups;
+}>();
+const translateGroup = (group: HomePageImages) => [...group, ...group];
 
-const allImages = [
-  translateGroup(images),
-  translateGroup(images2),
-  translateGroup(images3),
-];
+const allImages = computed(() =>
+  props.data.map((item) => translateGroup(item)),
+);
 </script>
 <style scoped>
 @import "@/assets/css/pages/imageAnimation.css";
