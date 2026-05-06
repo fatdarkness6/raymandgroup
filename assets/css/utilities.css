@@ -10,7 +10,24 @@
 .ltr {
   direction: ltr;
 }
-
+.gap-10 {
+  gap: 10px;
+}
+.gap-15 {
+  gap: 10px;
+}
+.gap-20 {
+  gap: 20px;
+}
+.gap-30 {
+  gap: 30px;
+}
+.gap-40 {
+  gap: 40px;
+}
+.gap-90 {
+  gap: 90px;
+}
 .space-between-each-sections {
   margin-top: 120px;
 }
