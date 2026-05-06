@@ -78,7 +78,6 @@
         Have questions or want to collaborate? Reach out to us and let’s build
         the future together.
       </div>
-      <q-btn label="Contact Us" rounded size="lg" :to="'/contact'" />
     </section>
   </div>
 </template>
