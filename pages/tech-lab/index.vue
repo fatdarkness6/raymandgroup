@@ -11,26 +11,26 @@
           class="container2 row q-col-gutter-md justify-between items-start items-stretch q-my-xl"
         >
           <AnimationSlideOnce
-            v-for="(value, index) in con2Data"
+            v-for="(value, index) in overview"
             :delay="index * 200"
             class="col-xl-6 col-md-6 col-sm-6 col-12"
             custom-class="full-height"
           >
-            <q-card class="my-card full-height">
+            <CommonCard class="my-card full-height">
               <q-img :src="value.image" style="max-height: 300px" />
               <q-card-section class="text-center">
                 <div class="text-h6 ellipsis-lines" :style="{ '--lines': 2 }">
-                  {{ value.title }}
+                  {{ $t(value.title) }}
                 </div>
               </q-card-section>
               <div :dir="directionOfElement(locale)">
                 <q-card-section>
                   <div class="text-body1">
-                    {{ value.desc }}
+                    {{ $t(value.desc) }}
                   </div>
                 </q-card-section>
               </div>
-            </q-card>
+            </CommonCard>
           </AnimationSlideOnce>
         </AnimationSlideOnceGroup>
       </section>
@@ -91,25 +91,13 @@
 import { services } from "~/assets/data/pages/tech-lab/services";
 import { ButtonLinks } from "~/assets/data/pages/tech-lab/links";
 import type { Links } from "~/types/linksInTechLab";
+import { overview } from "~/assets/data/pages/tech-lab/overview";
 
 const techLabLinks = ref<Links>(ButtonLinks);
 
-const { t, locale } = useI18n();
+const { locale } = useI18n();
 
 const arrowIcon = computed(() =>
   locale.value === "fa" ? "fa-solid fa-angle-left" : "fa-solid fa-angle-right",
 );
-
-const con2Data = [
-  {
-    image: "/images/tech-lab/vision.webp",
-    title: t("tech-Lab_page.generalInfo.vision"),
-    desc: t("tech-Lab_page.generalInfo.visionDesc"),
-  },
-  {
-    image: "/images/tech-lab/mission.webp",
-    title: t("tech-Lab_page.generalInfo.mission"),
-    desc: t("tech-Lab_page.generalInfo.missionDesc"),
-  },
-];
 </script>

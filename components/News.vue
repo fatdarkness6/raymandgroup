@@ -21,30 +21,25 @@
       direction="left"
     >
       <AnimationSlideOnce
-        v-for="item in data"
+        v-for="item in newsData"
         :key="item.id"
         :delay="item.id * 200"
         class="col-xl-4 col-md-4 col-sm-6 col-12"
       >
-        <q-card
-          flat
-          bordered
-          class="my-card full-height column"
-          :dir="directionOfElement(locale)"
-        >
+        <CommonCard>
           <q-img :src="item.image" :ratio="16 / 9" :alt="item.title" />
           <q-card-section class="q-pt-md column justify-between">
             <div
               class="text-subtitle1 text-weight-medium q-mb-xs ellipsis-lines"
               :style="{ '--lines': 2 }"
             >
-              {{ item.subject }}
+              {{ $t(item.subject) }}
             </div>
             <div
               class="text-body2 text-grey-8 q-mb-sm ellipsis-lines"
               :style="{ '--lines': 2 }"
             >
-              {{ item.title }}
+              {{ $t(item.title) }}
             </div>
             <div class="row items-center justify-between">
               <q-badge :label="item.category" outline />
@@ -60,10 +55,10 @@
               :label="$t('news.read')"
               icon="fa-brands fa-readme"
               class="rounded-10"
-              :to="localePath({ name: 'news-slug', params: { slug: item.slug } })"
+              :to="item.slug"
             />
           </q-card-actions>
-        </q-card>
+        </CommonCard>
       </AnimationSlideOnce>
     </AnimationSlideOnceGroup>
   </div>
@@ -79,13 +74,13 @@ interface NewsItem {
   slug: string;
   subject: string;
 }
-const { locale } = useI18n();
-defineProps<{
+const props = defineProps<{
   data: NewsItem[];
 }>();
 
+const newsData = computed(() => props.data);
+
 const loading = ref(true);
-const localePath = useLocalePath()
 onMounted(() => {
   setTimeout(() => {
     loading.value = false;

@@ -70,14 +70,14 @@
             </AnimationSlideOnce>
           </div>
           <AnimationSlideOnce class="col-12 col-md-5">
-            <q-card class="my-card q-pa-md animated-card">
+            <CommonCard custom-class="q-pa-md animated-card">
               <div class="card-title">
                 {{ t("gpo-page.home-page.about.outlook") }}
               </div>
               <div class="card-body">
                 {{ t("gpo-page.home-page.about.card-body") }}
               </div>
-            </q-card>
+            </CommonCard>
           </AnimationSlideOnce>
         </div>
       </section>
@@ -91,14 +91,14 @@
             custom-class="full-height"
             :delay="i * 100"
           >
-            <q-card class="my-card q-pa-md full-height">
+            <CommonCard custom-class=" q-pa-md full-height">
               <h4 class="text-center">{{ items.title }}</h4>
               <ul>
                 <li v-for="text in items.texts">
                   {{ text }}
                 </li>
               </ul>
-            </q-card>
+            </CommonCard>
           </AnimationSlideOnce>
         </AnimationSlideOnceGroup>
       </section>
@@ -117,7 +117,7 @@
               :delay="i * 100"
               custom-class="full-height"
             >
-              <q-card class="my-card q-pa-md full-height text-center">
+              <CommonCard custom-class="q-pa-md full-height text-center">
                 <q-card-section>
                   <q-icon :name="s.icon" size="35px" />
                   <h4 class="q-mb-lg">{{ s.title }}</h4>
@@ -125,7 +125,7 @@
                 <q-card-section>
                   <p v-for="value in s.texts">{{ value }}</p>
                 </q-card-section>
-              </q-card>
+              </CommonCard>
             </AnimationSlideOnce>
           </AnimationSlideOnceGroup>
         </div>
@@ -148,13 +148,13 @@
             :delay="i * 100"
             custom-class="full-height"
           >
-            <q-card class="my-card q-pa-md text-center full-height">
+            <CommonCard custom-class=" q-pa-md text-center full-height">
               <q-card-section>
                 <q-icon :name="a.icon" size="34px" />
                 <h5 class="q-mb-lg">{{ a.title }}</h5>
               </q-card-section>
               <p>{{ a.text }}</p>
-            </q-card>
+            </CommonCard>
           </AnimationSlideOnce>
         </AnimationSlideOnceGroup>
       </section>

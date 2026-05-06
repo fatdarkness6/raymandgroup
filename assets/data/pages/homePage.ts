@@ -127,21 +127,3 @@ export const images3 = [
     slogan: "home_page.slogan3",
   },
 ];
-
-export const loopOnTexts = [
-  "home_page.discover.raymand2-des1",
-  "home_page.discover.raymand2-des2",
-  "home_page.discover.raymand2-des3",
-  "home_page.discover.raymand2-des4",
-  "home_page.discover.raymand2-des5",
-  "home_page.discover.raymand2-des6",
-  "home_page.discover.raymand2-des7",
-];
-
-export const loopOnTexts2 = [
-  "home_page.discover.raymand3-des1",
-  "home_page.discover.raymand3-des2",
-  "home_page.discover.raymand3-des3",
-  "home_page.discover.raymand3-des4",
-  "home_page.discover.raymand3-des5",
-];

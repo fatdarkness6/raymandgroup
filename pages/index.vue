@@ -80,122 +80,31 @@
         class="row q-col-gutter-md about-3-companies justify-center relative z-2"
       >
         <AnimationSlideOnce
-          :delay="400"
-          class="col-xl-3 col-md-3 col-sm-6 col-12 about-3"
+          v-for="(item, i) in companiesIntroduction"
+          :delay="i * 200"
+          class="col-12 col-sm-6 col-md-4"
+          custom-class="full-height"
         >
-          <q-card :bordered="true" class="custom-card my-card">
-            <div class="q-px-md">
-              <q-card-section
-                class="flex column gap-20 how-it-works-section-q relative z-2 text-white"
-              >
-                <div class="text-h4 res-h4 text-weight-medium">
-                  {{ t("home_page.raymand3") }}
-                </div>
-                <div
-                  v-for="(text, index) in loopOnTexts2"
-                  :key="index"
-                  class="text-caption"
-                >
-                  {{ t(text) }}
-                </div>
-                <div
-                  @click="`/v-hospital`"
-                  class="learn-more flex items-center gap-10 pointer"
-                >
-                  <div class="text-body1 res-h6 text-weight-bold">
-                    {{ t("common.learn-more") }}
-                  </div>
-                  <q-icon
-                    v-if="locale !== 'fa'"
-                    name="fa-solid fa-angle-right"
-                    size="20px"
-                  />
-                </div>
-              </q-card-section>
-            </div>
-            <q-img
-              src="/images/Smart-Health-Services.webp"
-              class="custom-img2"
-            />
-          </q-card>
-        </AnimationSlideOnce>
-        <AnimationSlideOnce
-          :delay="200"
-          class="col-xl-3 col-md-3 col-sm-6 col-12 about-1"
-        >
-          <q-card class="custom-card q-pl-sm my-card" :bordered="true">
-            <div class="flex justify-between gap-20 no-wrap full-height">
-              <div class="part1">
-                <q-card-section
-                  class="flex column gap-20 how-it-works-section-q full-width relative z-2 text-white text-weight-md"
-                >
-                  <div class="text-h4 res-h4 text-weight-medium">
-                    {{ t("home_page.raymand1") }}
-                  </div>
-                  <div class="text-caption">
-                    {{ t("home_page.discover.raymand1-des1") }}
-                  </div>
-                  <div class="text-caption">
-                    {{ t("home_page.discover.raymand1-des2") }}
-                  </div>
-                  <div class="text-caption">
-                    {{ t("home_page.discover.raymand1-des3") }}
-                  </div>
-                  <div
-                    @click="navigateTo(`/gpo`)"
-                    class="learn-more flex items-center gap-10 pointer"
-                  >
-                    <div class="text-body1 res-h6 text-weight-bold">
-                      {{ t("common.learn-more") }}
-                    </div>
-                    <q-icon
-                      v-if="locale !== 'fa'"
-                      name="fa-solid fa-angle-right"
-                      size="20px"
-                    />
-                  </div>
-                </q-card-section>
+          <CommonCard custom-class="full-height">
+            <q-img :src="item.image" class="custom-img2" />
+            <q-card-section
+              class="flex column gap-20 how-it-works-section-q relative z-2 text-white"
+            >
+              <div class="text-h4 res-h4 text-weight-medium">
+                {{ $t(item.name) }}
               </div>
-              <q-img src="/images/gpo/i-11.webp" class="custom-img2" />
-            </div>
-          </q-card>
-        </AnimationSlideOnce>
-        <AnimationSlideOnce
-          :delay="0"
-          class="col-xl-6 col-md-6 col-sm-6 col-12 about-2"
-        >
-          <q-card :bordered="true" class="custom-card my-card">
-            <div class="q-px-md">
-              <q-card-section
-                class="flex column gap-10 how-it-works-section-q full-width relative z-2 text-white text-weight-md"
+              <div
+                v-for="(text, index) in item.title"
+                :key="index"
+                class="text-caption"
               >
-                <div class="text-h4 res-h4 text-weight-medium">
-                  {{ t("home_page.raymand2") }}
-                </div>
-                <div
-                  v-for="(text, index) in loopOnTexts"
-                  :key="index"
-                  class="text-caption"
-                >
-                  {{ t(text) }}
-                </div>
-                <div
-                  @click="navigateTo(`/tech-lab`)"
-                  class="learn-more flex items-center gap-10 pointer"
-                >
-                  <div class="text-body1 res-h6 text-weight-bold">
-                    {{ t("common.learn-more") }}
-                  </div>
-                  <q-icon
-                    v-if="locale !== 'fa'"
-                    name="fa-solid fa-angle-right"
-                    size="20px"
-                  />
-                </div>
-              </q-card-section>
-            </div>
-            <q-img src="/images/tech-lab/i-4.webp" class="custom-img2" />
-          </q-card>
+                {{ t(text) }}
+              </div>
+              <q-btn flat color="white" align="left" :to="item.link">
+                {{ $t(item.buttonText) }}
+              </q-btn>
+            </q-card-section>
+          </CommonCard>
         </AnimationSlideOnce>
       </AnimationSlideOnceGroup>
     </div>
@@ -224,7 +133,7 @@
           </AnimationSlideOnce>
         </AnimationSlideOnceGroup>
       </div>
-      <News :data="allNews" />
+      <News :data="newsData" />
       <div class="full-width flex justify-center items-center">
         <AnimationSlideOnce preset="slideVisibleOnceBottom">
           <q-btn :to="localePath('news')" no-caps class="q-mt-xl flex">
@@ -236,54 +145,13 @@
   </div>
 </template>
 <script setup lang="ts">
-import {
-  loopOnTexts,
-  loopOnTexts2,
-  images,
-  images2,
-  images3,
-} from "~/assets/data/pages/homePage";
+import { images, images2, images3 } from "~/assets/data/pages/homePage";
+import { companiesIntroduction } from "~/assets/data/pages/home/companiesIntroduction";
+import { newsData } from "~/assets/data/pages/news/newsData";
 const { locale, t } = useI18n();
 
 const localePath = useLocalePath();
-
-const allNews = [
-  {
-    id: 1,
-    subject: t("home_page.raymand2"),
-    title: t("news.title2"),
-    summary:
-      "Our medical division unveiled the UltraCare device with improved accuracy and compact design for clinics.",
-    image: "/images/news/exhibition.webp",
-    category: "Company",
-    publishedAt: "2025-08-29T10:00:00.000Z",
-    slug: "product-launch-ultracare",
-  },
-  {
-    id: 2,
-    subject: t("home_page.raymand1"),
-    title: t("news.title1"),
-    summary:
-      "Key takeaways from the annual summit including AI diagnostics, remote monitoring, and interoperability.",
-    image: "/images/news/exhibition.webp",
-    category: "Events",
-    publishedAt: "2025-08-21T12:00:00.000Z",
-    slug: "conference-recap-healthtech-summit-2025",
-  },
-  {
-    id: 3,
-    subject: t("home_page.raymand3"),
-    title: t("news.title3"),
-    summary:
-      "We are proud to announce certification aligning our quality management system with international standards.",
-    image: "/images/news/i-3.webp",
-    category: "Awards",
-    publishedAt: "2025-07-31T08:00:00.000Z",
-    slug: "iso-13485-certification-achieved",
-  },
-];
 </script>
 <style lang="css" scoped>
-@import "@/assets/css/components/card.css";
 @import "@/assets/css/pages/homePage.css";
 </style>
