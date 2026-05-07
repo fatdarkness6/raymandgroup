@@ -2,7 +2,7 @@
   <span
     v-for="(line, i) in $t(data).split('\n')"
     :key="i"
-    :class="`text-weight-bold ${customClass}`"
+    :class="`text-weight-bold ${customClass || ''}`"
   >
     {{ line }}
   </span>

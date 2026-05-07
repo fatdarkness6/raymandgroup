@@ -38,7 +38,7 @@
           </span>
         </section>
         <section
-          class="site-map flex items-center column col-12 col-sm-12 col-md-4"
+          class="site-map column justify-center items-center col-12 col-sm-12 col-md-4"
         >
           <span class="text-h6 text-weight-medium">{{
             $t("footer.site_pages")
@@ -46,9 +46,9 @@
           <NuxtLink
             v-for="value in siteMapData"
             :to="value.route"
-            class="custom-link"
+            class="custom-link column justify-center items-center"
           >
-            <CommonLineBreak :data="value.label" />
+            <CommonLineBreak :data="value.label" custom-class="block" />
           </NuxtLink>
         </section>
       </div>
