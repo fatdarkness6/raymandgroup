@@ -1,6 +1,8 @@
 <template>
   <q-dialog v-model="model" :persistent="true" class="z-2 relative">
-    <q-card class="q-pa-lg q-ma-md shadow-3 rounded-borders submit-dialog">
+    <CommonCard
+      custom-class="q-pa-lg q-ma-md shadow-3 rounded-borders submit-dialog"
+    >
       <q-card-section class="text-center">
         <div class="text-h5 text-weight-bold">
           {{ t("tech-Lab_page.slugForm.label") }}
@@ -28,7 +30,7 @@
           </template>
         </CommonFormsFormBuilder>
       </q-card-section>
-    </q-card>
+    </CommonCard>
   </q-dialog>
 </template>
 <script setup lang="ts">

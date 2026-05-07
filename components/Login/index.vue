@@ -1,5 +1,8 @@
 <template>
-  <q-card flat class="login-signUp-form-content q-pa-sm rounded-10 relative">
+  <CommonCard
+    flat
+    custom-class="login-signUp-form-content q-pa-sm rounded-10 relative"
+  >
     <div class="relative" style="z-index: 2">
       <q-card-section>
         <div class="text-h5 text-weight-medium text-center text-black">
@@ -65,7 +68,7 @@
       :titles="setMsgForDialog"
       :errorMessage="errormessageForDialog"
     />
-  </q-card>
+  </CommonCard>
 </template>
 <script setup lang="ts">
 import { loginSchema } from "~/utils/registerSchema";

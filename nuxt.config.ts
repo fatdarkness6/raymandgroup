@@ -62,6 +62,5 @@ export default defineNuxtConfig({
     "@/assets/css/base.css",
     "@/assets/css/utilities.css",
     "@/assets/css/responsive.css",
-    "@/assets/css/components/card.css",
   ],
 });

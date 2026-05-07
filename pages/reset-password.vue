@@ -1,9 +1,9 @@
 <template>
   <div class="f-height">
-    <q-card
+    <CommonCard
       flat
       style="max-width: 400px"
-      class="reset-password full-width space-between-each-sections space-between-each-sections-bottom q-pa-sm rounded-10 relative"
+      custom-class="reset-password full-width space-between-each-sections space-between-each-sections-bottom q-pa-sm rounded-10 relative"
     >
       <div class="relative" style="z-index: 2">
         <q-card-section class="text-center flex column items-center gap-10">
@@ -69,7 +69,7 @@
           :closePermit="false"
         />
       </div>
-    </q-card>
+    </CommonCard>
   </div>
 </template>
 <script setup lang="ts">

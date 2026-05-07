@@ -1,5 +1,8 @@
 <template>
-  <q-card flat class="forgot-password-content q-pa-sm rounded-10 relative">
+  <CommonCard
+    flat
+    custom-class="forgot-password-content q-pa-sm rounded-10 relative"
+  >
     <div class="relative" style="z-index: 2">
       <q-card-section class="text-center flex column items-center gap-10">
         <div class="text-h5 text-weight-medium text-black">Forgot Password</div>
@@ -66,7 +69,7 @@
         :closePermit="true"
       />
     </div>
-  </q-card>
+  </CommonCard>
 </template>
 <script setup lang="ts">
 import { useForm, useField } from "vee-validate";

@@ -58,8 +58,8 @@
             custom-class="full-height"
             :delay="index * 200"
           >
-            <q-card
-              class="my-card full-height text-center"
+            <CommonCard
+              custom-class=" full-height text-center"
               :dir="directionOfElement(locale)"
             >
               <q-card-section>
@@ -79,7 +79,7 @@
                   }}</q-btn
                 >
               </q-card-section>
-            </q-card>
+            </CommonCard>
           </AnimationSlideOnce>
         </AnimationSlideOnceGroup>
       </div>
@@ -117,7 +117,6 @@ const renderButtonDatas = [
 </script>
 <style scoped>
 @import "@/assets/css/pages/slug.css";
-@import "@/assets/css/components/card.css";
 
 .ab-btn {
   position: absolute;

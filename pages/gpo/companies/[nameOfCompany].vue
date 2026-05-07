@@ -17,7 +17,7 @@
         :class="`container2 ${heroImages.length ? '' : 'space-between-each-sections-bottom'}`"
       >
         <div
-          class="text-subtitle1 q-col-gutter-lg row justify-center"
+          class="text-subtitle1 q-gutter-lg row justify-center"
           :dir="directionOfElement(locale)"
         >
           <div
@@ -27,8 +27,8 @@
             {{ $t(company?.container2.text || "") }}
           </div>
 
-          <q-card
-            class="col-12 col-md-5 my-card relative flex flex-center"
+          <CommonCard
+            custom-class="col-12 col-md-5 relative flex flex-center"
             v-if="company?.container2.pdf"
             style="min-height: 300px"
           >
@@ -43,7 +43,7 @@
                 {{ t("gpo-page.home-page.services.see-pdf") }}
               </q-btn>
             </q-card-section>
-          </q-card>
+          </CommonCard>
         </div>
       </section>
       <section

@@ -2,7 +2,7 @@
   <div class="news-part">
     <div v-if="loading" class="row q-col-gutter-lg">
       <div v-for="n in 3" :key="n" class="col-12 col-sm-6 col-md-4">
-        <q-card flat bordered class="my-card">
+        <CommonCard flat bordered>
           <q-skeleton height="180px" square />
           <q-card-section>
             <q-skeleton type="text" class="q-mb-sm" />
@@ -12,7 +12,7 @@
               <q-skeleton type="text" width="40%" />
             </div>
           </q-card-section>
-        </q-card>
+        </CommonCard>
       </div>
     </div>
     <AnimationSlideOnceGroup
@@ -87,6 +87,3 @@ onMounted(() => {
   }, 100);
 });
 </script>
-<style scoped>
-@import "@/assets/css/components/card.css";
-</style>

@@ -63,9 +63,9 @@ const contactItems = [
         :key="index"
         class="col-12 col-sm-6 col-md-4 fade-in"
       >
-        <q-card
+        <CommonCard
           :bordered="true"
-          class="custom-card my-card hover-card q-pa-lg text-center"
+          custom-class="custom-card hover-card q-pa-lg text-center"
         >
           <q-icon
             :name="item.icon"
@@ -75,14 +75,17 @@ const contactItems = [
           />
           <h3 class="text-h6 text-weight-bold">{{ item.title }}</h3>
           <p class="text-body2 text-grey-7">{{ item.text }}</p>
-        </q-card>
+        </CommonCard>
       </div>
     </section>
 
     <!-- Map + Extra Info -->
     <section class="q-pa-xl q-mt-xl row justify-center q-col-gutter-xl">
       <div class="col-12 col-md-6 fade-in">
-        <q-card :bordered="true" class="custom-card my-card hover-card q-pa-lg">
+        <CommonCard
+          :bordered="true"
+          custom-class="custom-card hover-card q-pa-lg"
+        >
           <h4 class="text-h6 text-weight-bold q-mb-md">Our Location</h4>
           <q-img
             src="/images/map-placeholder.png"
@@ -90,10 +93,10 @@ const contactItems = [
             class="rounded-borders"
             style="height: 300px"
           />
-        </q-card>
+        </CommonCard>
       </div>
       <div class="col-12 col-md-6 fade-in delay-1">
-        <q-card :bordered="true" class="custom-card my-card hover-card q-pa-lg">
+        <CommonCard :bordered="true" class="custom-card hover-card q-pa-lg">
           <h4 class="text-h6 text-weight-bold q-mb-md">Get in Touch</h4>
           <p class="text-body1 q-mb-sm">
             We are here to answer any questions you may have. Reach out to us
@@ -104,7 +107,7 @@ const contactItems = [
             <li><strong>Email:</strong> info@company.com</li>
             <li><strong>Address:</strong> 123 Main Street, City, Country</li>
           </ul>
-        </q-card>
+        </CommonCard>
       </div>
     </section>
   </div>
@@ -112,7 +115,8 @@ const contactItems = [
 
 <style scoped>
 .hero-section {
-  background: linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)),
+  background:
+    linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)),
     url("/images/contact-hero.jpg") center/cover no-repeat;
   min-height: 60vh;
   display: flex;
@@ -152,7 +156,9 @@ const contactItems = [
 }
 
 .hover-card {
-  transition: transform 0.3s, box-shadow 0.3s;
+  transition:
+    transform 0.3s,
+    box-shadow 0.3s;
   border-radius: 16px;
 }
 .hover-card:hover {

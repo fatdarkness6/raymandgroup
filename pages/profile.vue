@@ -1,9 +1,9 @@
 <template>
   <q-page class="q-pa-md flex flex-center space-between-each-sections">
-    <q-card
+    <CommonCard
       flat
       bordered
-      class="q-pa-lg shadow-4xl my-card"
+      custom-class="q-pa-lg shadow-4xl"
       style="max-width: 413px"
     >
       <!-- Avatar -->
@@ -86,7 +86,7 @@
           @click="onLogout"
         />
       </q-card-actions>
-    </q-card>
+    </CommonCard>
   </q-page>
 </template>
 
@@ -154,7 +154,6 @@ function onLogout() {
 </script>
 
 <style scoped>
-@import "@/assets/css/components/card.css";
 .bg-gradient {
   background: linear-gradient(135deg, #eef2f3, #d9e4f5);
   min-height: 100vh;

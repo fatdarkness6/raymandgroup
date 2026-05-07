@@ -6,7 +6,7 @@
       class="col-12 col-md-4"
       :delay="i * 120"
     >
-      <q-card class="my-card q-pa-lg full-height">
+      <CommonCard custom-class="q-pa-lg full-height">
         <div class="text-center">
           <q-icon
             :name="item.icon"
@@ -29,7 +29,7 @@
             {{ item.value }}
           </p>
         </div>
-      </q-card>
+      </CommonCard>
     </AnimationSlideOnce>
   </AnimationSlideOnceGroup>
 </template>

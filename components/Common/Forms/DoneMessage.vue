@@ -1,6 +1,8 @@
 <template>
   <q-dialog v-model="model" :persistent="!closePermit">
-    <q-card class="q-pa-lg q-ma-md shadow-3 rounded-borders done-dialog">
+    <CommonCard
+      custom-class="q-pa-lg q-ma-md shadow-3 rounded-borders done-dialog"
+    >
       <div class="flex flex-center column q-gutter-md">
         <!-- Icon -->
         <q-icon :name="icon" :color="color" size="64px" class="q-mb-sm" />
@@ -22,11 +24,13 @@
           @click="handleAction"
         />
       </div>
-    </q-card>
+    </CommonCard>
   </q-dialog>
 </template>
 
 <script setup lang="ts">
+import { CommonCard } from "#components";
+
 interface Props {
   modelValue: boolean;
   title?: string;
@@ -34,7 +38,7 @@ interface Props {
   icon?: string;
   color?: string;
   buttonLabel?: string;
-  closePermit:boolean
+  closePermit: boolean;
 }
 
 const props = withDefaults(defineProps<Props>(), {
@@ -56,7 +60,7 @@ const model = ref<boolean>(props.modelValue);
 
 watch(
   () => props.modelValue,
-  (val) => (model.value = val)
+  (val) => (model.value = val),
 );
 watch(model, (val) => emit("update:modelValue", val));
 

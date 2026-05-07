@@ -17,7 +17,7 @@
     <div class="wrapper">
       <CommonShowContactItems :data="contactItems" />
       <AnimationSlideOnce>
-        <q-card class="my-card q-pa-lg q-mb-xl">
+        <CommonCard custom-class="q-pa-lg q-mb-xl">
           <div class="row items-center q-col-gutter-lg">
             <div class="col-12 col-md-6">
               <h5 class="q-mb-md">
@@ -34,18 +34,18 @@
               </p>
             </div>
           </div>
-        </q-card>
+        </CommonCard>
       </AnimationSlideOnce>
 
       <!-- SOCIAL MEDIA -->
       <AnimationSlideOnce :delay="200">
-        <q-card class="my-card q-pa-lg">
+        <CommonCard custom-class=" q-pa-lg">
           <h5 class="text-center q-mb-lg">
             {{ t("gpo-page.home-page.contact-us-page.follow-us") }}
           </h5>
 
           <CommonShowSocialMedia :data="socials" :delay="300" />
-        </q-card>
+        </CommonCard>
       </AnimationSlideOnce>
     </div>
   </q-page>

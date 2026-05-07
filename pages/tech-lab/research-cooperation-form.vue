@@ -2,7 +2,7 @@
   <q-page
     class="flex flex-center q-pa-md bg-gradient space-between-each-sections"
   >
-    <q-card
+    <CommonCard
       flat
       bordered
       class="shadow-4xl dynamic-form-card q-pa-md animate-card"
@@ -37,7 +37,7 @@
           </div>
         </template>
       </CommonFormsFormBuilder>
-    </q-card>
+    </CommonCard>
     <CommonFormsDoneMessage
       :modelValue="openDoneMessage"
       :closePermit="true"

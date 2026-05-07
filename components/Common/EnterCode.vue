@@ -1,6 +1,6 @@
 <template>
   <q-dialog v-model="openDialog.dialog" persistent>
-    <q-card class="q-pa-md" style="max-width: 400px">
+    <CommonCard custom-class="q-pa-md" style="max-width: 400px">
       <!-- Title / Message -->
       <q-card-section class="text-h6 text-center">
         {{ titles.title }}
@@ -52,11 +52,12 @@
           />
         </q-card-section>
       </q-form>
-    </q-card>
+    </CommonCard>
   </q-dialog>
 </template>
 
 <script lang="ts" setup>
+import { CommonCard } from "#components";
 import useLogin from "~/composable/useLogin";
 const emit = defineEmits<{
   (e: "successfullyEmailVerified"): void;

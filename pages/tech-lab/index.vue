@@ -16,7 +16,7 @@
             class="col-xl-6 col-md-6 col-sm-6 col-12"
             custom-class="full-height"
           >
-            <CommonCard class="my-card full-height">
+            <CommonCard custom-class="full-height">
               <q-img :src="value.image" style="max-height: 300px" />
               <q-card-section class="text-center">
                 <div class="text-h6 ellipsis-lines" :style="{ '--lines': 2 }">

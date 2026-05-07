@@ -1,5 +1,8 @@
 <template>
-  <q-card flat class="login-signUp-form-content q-pa-sm relative rounded-10">
+  <CommonCard
+    flat
+    custom-class="login-signUp-form-content q-pa-sm relative rounded-10"
+  >
     <q-card-section
       class="signUp-form flex column justify-center gap-10 z-2 relative"
     >
@@ -96,7 +99,7 @@
       @action="makeEmptyQuery"
       :closePermit="true"
     />
-  </q-card>
+  </CommonCard>
 </template>
 <script lang="ts" setup>
 import { useForm, useField } from "vee-validate";

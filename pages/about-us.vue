@@ -14,17 +14,17 @@
     <!-- Mission & Vision -->
     <section class="row q-col-gutter-lg q-px-md">
       <div class="col-12 col-md-6">
-        <q-card class="info-card">
+        <CommonCard custom-class="info-card">
           <q-icon name="mdi-target" size="48px" class="text-primary q-mb-md" />
           <div class="text-h5 text-weight-bold q-mb-sm">Our Mission</div>
           <p class="text-body1 text-grey-8">
             Elevating laboratory testing standards with precise, reliable
             results that empower health, research, and industry.
           </p>
-        </q-card>
+        </CommonCard>
       </div>
       <div class="col-12 col-md-6">
-        <q-card class="info-card">
+        <CommonCard custom-class="info-card">
           <q-icon
             name="mdi-eye-outline"
             size="48px"
@@ -35,7 +35,7 @@
             Driving a future where innovation and technology ensure safety,
             sustainability, and global progress in laboratories.
           </p>
-        </q-card>
+        </CommonCard>
       </div>
     </section>
 
@@ -50,7 +50,7 @@
           :key="member.id"
           class="col-12 col-sm-6 col-md-3"
         >
-          <q-card class="team-card column items-center text-center">
+          <CommonCard custom-class="team-card column items-center text-center">
             <q-avatar size="140px" class="q-mb-md shadow-3">
               <img :src="member.photo" alt="team member" />
             </q-avatar>
@@ -66,7 +66,7 @@
               :href="member.linkedin"
               target="_blank"
             />
-          </q-card>
+          </CommonCard>
         </div>
       </div>
     </section>
@@ -83,6 +83,8 @@
 </template>
 
 <script setup lang="ts">
+import { CommonCard } from "#components";
+
 interface TeamMember {
   id: number;
   name: string;
