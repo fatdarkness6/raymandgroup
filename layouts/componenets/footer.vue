@@ -48,13 +48,7 @@
             :to="value.route"
             class="custom-link"
           >
-            <div
-              v-for="(line, i) in $t(value.label).split('\\n')"
-              :key="i"
-              class="text-weight-bold"
-            >
-              {{ line }}
-            </div>
+            <CommonLineBreak :data="value.label" />
           </NuxtLink>
         </section>
       </div>
