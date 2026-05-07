@@ -1,5 +1,5 @@
 <template>
-  <q-footer class="custom-footer">
+  <q-footer class="custom-footer z-1">
     <div class="animated-wave-bg" aria-hidden="true">
       <div class="wave"></div>
       <div class="wave"></div>
