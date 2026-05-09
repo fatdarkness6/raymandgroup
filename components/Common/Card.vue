@@ -1,5 +1,5 @@
 <template>
-  <q-card :bordered="true" :class="`${customClass} my-card`">
+  <q-card :bordered="true" :class="`${customClass} ${$attrs.class} my-card`">
     <slot></slot>
   </q-card>
 </template>

@@ -1,11 +1,11 @@
 <template>
   <div
-    :class="`${$q.screen.sm || $q.screen.xs ? 'column' : 'row'} q-col-gutter-sm q-mt-xl overflow-hidden animation-img relative col-12 col-sm-12 col-md-6`"
+    :class="`${$q.screen.lt.md ? 'column' : 'row'} q-col-gutter-sm q-mt-xl overflow-hidden animation-img relative col-12 col-sm-12 col-md-6`"
     dir="ltr"
   >
     <div
       v-for="(data, index) in allImages"
-      :class="`part${index + 1} ${$q.screen.sm || $q.screen.xs ? 'row' : 'column col'} q-gutter-sm  no-wrap ${
+      :class="`part${index + 1} ${$q.screen.lt.md ? 'row' : 'column col'} q-gutter-sm  no-wrap ${
         detectEvenNumber(index)
           ? 'scroll-animation'
           : 'scroll-animation-reverse'
