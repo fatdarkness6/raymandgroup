@@ -34,38 +34,11 @@
     </div>
   </div>
   <div class="wrapper">
-    <div class="container-6 q-my-xl q-py-xl">
-      <div style="text-align: center">
-        <AnimationSlideOnceGroup
-          class="introduction flex column justify-center items-center q-my-xl q-py-xl gap-20"
-          preset="slideVisibleOnceTop"
-        >
-          <AnimationSlideOnce>
-            <div class="text-subtitle1 text-weight-bolder">
-              {{ t("home_page.blog") }}
-            </div>
-          </AnimationSlideOnce>
-          <AnimationSlideOnce :delay="200">
-            <div class="text-h2 text-weight-medium res-h2">
-              {{ t("home_page.update") }}
-            </div>
-          </AnimationSlideOnce>
-          <AnimationSlideOnce :delay="400">
-            <div class="text-body1 text-weight-medium">
-              {{ t("home_page.newsBlog") }}
-            </div>
-          </AnimationSlideOnce>
-        </AnimationSlideOnceGroup>
-      </div>
-      <News :data="newsData" />
-      <div class="full-width flex justify-center items-center">
-        <AnimationSlideOnce preset="slideVisibleOnceBottom">
-          <q-btn :to="localePath('news')" no-caps class="q-mt-xl flex">
-            {{ t("news.view-all") }}
-          </q-btn>
-        </AnimationSlideOnce>
-      </div>
-    </div>
+    <CommonAsyncBlock
+      :loading="loading"
+      :component="HomePageContentSectionNews"
+      :skeleton="HomePageContentSectionNewsSkeleton"
+    />
   </div>
 </template>
 <script setup lang="ts">
@@ -74,14 +47,14 @@ import {
   HomePageHeroSectionSkeleton,
   HomePageContentSectionIntroduction,
   HomePageContentSectionIntroductionSkeleton,
+  HomePageContentSectionNews,
+  HomePageContentSectionNewsSkeleton,
 } from "#components";
-import { newsData } from "~/assets/data/pages/news/newsData";
-const { locale, t } = useI18n();
 
-const localePath = useLocalePath();
+const { locale } = useI18n();
 const loading = ref(true);
 
-onMounted(async () => {
+onMounted(() => {
   loading.value = false;
 });
 </script>
