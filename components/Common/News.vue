@@ -54,6 +54,4 @@ const props = defineProps<{
 }>();
 
 const newsData = computed(() => props.data);
-
-console.log(newsData);
 </script>
