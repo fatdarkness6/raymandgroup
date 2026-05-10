@@ -1,10 +1,6 @@
 <template>
-  <q-footer class="custom-footer z-1">
-    <div class="animated-wave-bg" aria-hidden="true">
-      <div class="wave"></div>
-      <div class="wave"></div>
-      <div class="wave"></div>
-    </div>
+  <q-footer class="custom-footer relative z-1">
+    <AnimationFooter />
     <div class="wrapper relative z-1">
       <div class="row q-col-gutter-xl justify-center q-mt-md">
         <section

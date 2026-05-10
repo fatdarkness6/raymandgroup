@@ -7,11 +7,9 @@
       :leftDrawerOpen="leftDrawerOpen"
       @update:value="(x: any) => (leftDrawerOpen = x)"
     />
-    <q-page-container class="container-spacing">
-      <main>
-        <slot />
-      </main>
-    </q-page-container>
+    <main>
+      <slot />
+    </main>
     <Footer />
     <q-page-scroller
       position="bottom-right"
@@ -37,6 +35,6 @@ const leftDrawerOpen = ref(false);
 
 <style scoped>
 .container-spacing {
-  padding-top: 0 !important;
+  padding: 0 !important;
 }
 </style>
