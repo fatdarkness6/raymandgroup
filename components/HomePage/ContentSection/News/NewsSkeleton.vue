@@ -7,11 +7,9 @@
           <q-skeleton type="text" width="80%" />
         </div>
       </template>
-      <template>
-        <div class="full-width flex justify-center items-center q-mt-md">
-          <q-skeleton type="QBtn" />
-        </div>
-      </template>
+      <div class="full-width flex justify-center items-center q-mt-md">
+        <q-skeleton type="QBtn" />
+      </div>
     </CommonSkeletonCardSkeleton>
   </div>
 </template>

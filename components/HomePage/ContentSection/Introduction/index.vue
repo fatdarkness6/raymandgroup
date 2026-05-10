@@ -1,5 +1,19 @@
 <template>
-  <div>
+  <div class="space-between-each-sections q-py-xl relative">
+    <div class="v-bg wrapper-tricker">
+      <div class="black-layer"></div>
+      <video class="desktop-only" autoplay muted loop playsinline>
+        <source src="/public/videos/background-video.mp4" type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
+      <video class="mobile-only" autoplay muted loop playsinline>
+        <source
+          src="/public/videos/background-video-mobile.mp4"
+          type="video/mp4"
+        />
+        Your browser does not support the video tag.
+      </video>
+    </div>
     <div
       class="introduction flex column justify-center items-center text-center gap-20 q-mb-xl relative z-2"
     >
@@ -38,7 +52,8 @@
         custom-class="full-height"
       >
         <CommonCard custom-class="full-height">
-          <q-img :src="item.image" class="custom-img2" />
+          <q-img :src="item.image" class="absolute-full" />
+          <div class="black-layer"></div>
           <q-card-section
             class="flex column gap-20 how-it-works-section-q relative z-2 text-white"
           >
@@ -65,23 +80,3 @@
 import { companiesIntroduction } from "~/assets/data/pages/home/companiesIntroduction";
 const { locale } = useI18n();
 </script>
-<style scoped>
-.custom-img2 {
-  position: absolute;
-  top: 0;
-  right: 0;
-  width: 100%;
-  height: 100%;
-}
-.custom-img2::after {
-  content: "";
-  background-color: black;
-  opacity: 0.4;
-  z-index: 1;
-  position: absolute;
-  top: 0;
-  right: 0;
-  width: 100%;
-  height: 100%;
-}
-</style>

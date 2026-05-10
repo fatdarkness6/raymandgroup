@@ -75,3 +75,7 @@
 .section-p-20 {
   padding: 20px 0;
 }
+.wrapper-tricker {
+  width: 100vw;
+  margin-left: calc(50% - 50vw);
+}

@@ -3,9 +3,10 @@
     <slot name="introduction"></slot>
     <div class="row q-col-gutter-md items-center justify-center">
       <div
-        v-for="_ in count"
+        v-for="(_, i) in count"
         :class="`col-12 col-sm-6 col-md-${12 / count}`"
         style="height: 300px"
+        :key="i"
       >
         <CommonCard class="full-height">
           <q-card-section class="column justify-center full-height">
