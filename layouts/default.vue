@@ -1,8 +1,6 @@
 <template>
   <q-layout view="hHh lpR fff" style="overflow: hidden">
-    <ul class="box-area" style="z-index: -1">
-      <li v-for="items in 10" :key="items"></li>
-    </ul>
+    <AnimationLayout />
     <Header
       :leftDrawerOpen="leftDrawerOpen"
       @update:value="(x: any) => (leftDrawerOpen = x)"
