@@ -1,22 +1,6 @@
 <template>
   <div class="news-part">
-    <div v-if="loading" class="row q-col-gutter-lg">
-      <div v-for="n in 3" :key="n" class="col-12 col-sm-6 col-md-4">
-        <CommonCard flat bordered>
-          <q-skeleton height="180px" square />
-          <q-card-section>
-            <q-skeleton type="text" class="q-mb-sm" />
-            <q-skeleton type="text" width="70%" class="q-mb-md" />
-            <div class="row items-center justify-between">
-              <q-skeleton type="QChip" />
-              <q-skeleton type="text" width="40%" />
-            </div>
-          </q-card-section>
-        </CommonCard>
-      </div>
-    </div>
     <AnimationSlideOnceGroup
-      v-else
       class="row q-col-gutter-lg items-stretch items-start justify-center"
       direction="left"
     >
@@ -49,15 +33,6 @@
             </div>
           </q-card-section>
           <q-separator />
-          <q-card-actions>
-            <q-btn
-              flat
-              :label="$t('news.read')"
-              icon="fa-brands fa-readme"
-              class="rounded-10"
-              :to="item.slug"
-            />
-          </q-card-actions>
         </CommonCard>
       </AnimationSlideOnce>
     </AnimationSlideOnceGroup>
@@ -80,10 +55,5 @@ const props = defineProps<{
 
 const newsData = computed(() => props.data);
 
-const loading = ref(true);
-onMounted(() => {
-  setTimeout(() => {
-    loading.value = false;
-  }, 100);
-});
+console.log(newsData);
 </script>
