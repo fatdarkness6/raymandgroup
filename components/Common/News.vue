@@ -14,13 +14,13 @@
           <q-img :src="item.image" :ratio="16 / 9" :alt="item.title" />
           <q-card-section class="q-pt-md column justify-between">
             <div
-              class="text-subtitle1 text-weight-medium q-mb-xs ellipsis-lines"
+              class="app-card-title text-weight-medium q-mb-sm ellipsis-lines"
               :style="{ '--lines': 2 }"
             >
               {{ $t(item.subject) }}
             </div>
             <div
-              class="text-body2 text-grey-8 q-mb-sm ellipsis-lines"
+              class="app-description q-mb-sm ellipsis-lines"
               :style="{ '--lines': 2 }"
             >
               {{ $t(item.title) }}

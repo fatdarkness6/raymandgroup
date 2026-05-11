@@ -1,22 +1,17 @@
 <template>
-  <div class="container-6 q-my-xl q-py-xl">
+  <section class="section-p-40">
     <div style="text-align: center">
       <AnimationSlideOnceGroup
-        class="introduction flex column justify-center items-center q-my-xl q-py-xl gap-20"
+        class="column justify-center items-center gap-20 q-py-lg"
         preset="slideVisibleOnceTop"
       >
-        <AnimationSlideOnce>
-          <div class="text-subtitle1 text-weight-bolder">
-            {{ $t("home_page.blog") }}
-          </div>
-        </AnimationSlideOnce>
         <AnimationSlideOnce :delay="200">
-          <div class="text-h2 text-weight-medium res-h2">
+          <div class="app-title text-weight-medium">
             {{ $t("home_page.update") }}
           </div>
         </AnimationSlideOnce>
         <AnimationSlideOnce :delay="400">
-          <div class="text-body1 text-weight-medium">
+          <div class="app-description text-weight-medium">
             {{ $t("home_page.newsBlog") }}
           </div>
         </AnimationSlideOnce>
@@ -30,7 +25,7 @@
         </q-btn>
       </AnimationSlideOnce>
     </div>
-  </div>
+  </section>
 </template>
 <script setup lang="ts">
 import { newsData } from "~/assets/data/pages/news/newsData";

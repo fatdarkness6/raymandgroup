@@ -14,13 +14,13 @@
           v-if="$_.isArray(text)"
           v-for="(txt, i) in text"
           :key="i"
-          class="text-white text-h5 text-weight-medium text-responsive z-2"
+          class="text-white text-h5 text-weight-medium app-title z-2"
         >
           {{ $t(txt) }}
         </div>
         <div
           v-else
-          class="text-white text-h5 text-weight-medium text-responsive z-2"
+          class="text-white text-h5 text-weight-medium app-card-title z-2"
         >
           {{ $t(text) }}
         </div>
@@ -49,9 +49,6 @@ const props = defineProps<{
   background-size: cover;
   background-position: center;
   height: var(--hero-height, 80vh);
-}
-.text-responsive {
-  font-size: clamp(1.1rem, 2vw, 2rem);
 }
 .bg-opacity-5 {
   opacity: 0.5;

@@ -17,11 +17,11 @@
       >
         <q-card-section>
           <q-img :src="item.image" fit="contain" width="200px" />
-          <h4 class="q-mb-md q-mt-lg">{{ t(item.title) }}</h4>
+          <div class="app-card-title">{{ t(item.title) }}</div>
         </q-card-section>
         <q-card-section>
           <q-item-label lines="2">
-            <p style="line-height: 25px">{{ t(item.text) }}</p>
+            <div class="app-description">{{ t(item.text) }}</div>
           </q-item-label>
         </q-card-section>
       </CommonCard>

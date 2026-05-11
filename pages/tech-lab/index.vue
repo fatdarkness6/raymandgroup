@@ -19,13 +19,16 @@
             <CommonCard custom-class="full-height">
               <q-img :src="value.image" style="max-height: 300px" />
               <q-card-section class="text-center">
-                <div class="text-h6 ellipsis-lines" :style="{ '--lines': 2 }">
+                <div
+                  class="app-card-title ellipsis-lines"
+                  :style="{ '--lines': 2 }"
+                >
                   {{ $t(value.title) }}
                 </div>
               </q-card-section>
               <div :dir="directionOfElement(locale)">
                 <q-card-section>
-                  <div class="text-body1">
+                  <div class="app-description">
                     {{ $t(value.desc) }}
                   </div>
                 </q-card-section>

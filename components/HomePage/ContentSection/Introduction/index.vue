@@ -17,24 +17,14 @@
     <div
       class="introduction flex column justify-center items-center text-center gap-20 q-mb-xl relative z-2"
     >
-      <AnimationSlideOnceGroup direction="up">
-        <AnimationSlideOnce :delay="0">
-          <div
-            v-if="locale !== 'fa'"
-            class="text-subtitle1 text-weight-bolder text-white"
-          >
-            Explore
-          </div>
-        </AnimationSlideOnce>
-        <AnimationSlideOnce :delay="200">
-          <div class="text-h2 text-weight-medium res-h2 text-white">
-            {{ $t("home_page.discover.discover-text") }}
-          </div>
-        </AnimationSlideOnce>
-      </AnimationSlideOnceGroup>
+      <AnimationSlideOnce direction="up">
+        <div class="app-title text-weight-medium text-white">
+          {{ $t("home_page.discover.discover-text") }}
+        </div>
+      </AnimationSlideOnce>
       <AnimationSlideOnce direction="up" :delay="400">
         <div
-          class="text-body1 text-weight-medium text-white"
+          class="app-description text-weight-medium text-white"
           style="max-width: 1500px; width: 100%"
         >
           {{ $t("home_page.discover.discover-intro") }}
@@ -57,13 +47,13 @@
           <q-card-section
             class="flex column gap-20 how-it-works-section-q relative z-2 text-white"
           >
-            <div class="text-h4 res-h4 text-weight-medium">
+            <div class="app-card-title text-weight-medium">
               {{ $t(item.name) }}
             </div>
             <div
               v-for="(text, index) in item.title"
               :key="index"
-              class="text-caption"
+              class="app-description"
             >
               {{ $t(text) }}
             </div>
@@ -78,5 +68,4 @@
 </template>
 <script setup lang="ts">
 import { companiesIntroduction } from "~/assets/data/pages/home/companiesIntroduction";
-const { locale } = useI18n();
 </script>

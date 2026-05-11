@@ -13,19 +13,19 @@
           :autoplay="true"
           @ended="restartVideo"
         >
-          <source src="/videos/gpo/gpo-background.mp4" type="video/mp4" />
+          <source src="public/videos/gpo/gpo-background.mp4" type="video/mp4" />
         </video>
       </div>
       <div class="hero-inner absolute-center z-2 full-width">
         <AnimationSlideOnce direction="down">
-          <h1 class="hero-title text-white text-weight-bold">
+          <div class="app-title text-white">
             {{ t("gpo-page.home-page.hero.heroTitle") }}
-          </h1>
+          </div>
         </AnimationSlideOnce>
         <AnimationSlideOnce direction="down" :delay="100">
-          <p class="hero-lead text-white">
+          <div class="app-description text-white">
             {{ t("gpo-page.home-page.hero.heroLead") }}
-          </p>
+          </div>
         </AnimationSlideOnce>
         <AnimationSlideOnce :delay="200">
           <div class="hero-ctas flex row justify-center items-center gap-10">
@@ -45,13 +45,17 @@
         <div class="row q-col-gutter-md">
           <div class="col-12 col-md-7">
             <AnimationSlideOnce direction="right">
-              <h3>{{ t("gpo-page.home-page.about.h3") }}</h3>
-              <p>
+              <div class="app-title">
+                {{ t("gpo-page.home-page.about.h3") }}
+              </div>
+              <div class="app-description">
                 {{ t("gpo-page.home-page.about.p") }}
-              </p>
+              </div>
             </AnimationSlideOnce>
             <AnimationSlideOnce direction="right" :delay="100">
-              <h3>{{ t("gpo-page.home-page.about.h3-1") }}</h3>
+              <div class="app-title">
+                {{ t("gpo-page.home-page.about.h3-1") }}
+              </div>
               <ul class="list-icons">
                 <li>
                   <q-icon name="fa-solid fa-flask" />
@@ -71,10 +75,10 @@
           </div>
           <AnimationSlideOnce class="col-12 col-md-5">
             <CommonCard custom-class="q-pa-md animated-card">
-              <div class="card-title">
+              <div class="app-card-title">
                 {{ t("gpo-page.home-page.about.outlook") }}
               </div>
-              <div class="card-body">
+              <div class="app-description">
                 {{ t("gpo-page.home-page.about.card-body") }}
               </div>
             </CommonCard>
@@ -92,9 +96,9 @@
             :delay="i * 100"
           >
             <CommonCard custom-class=" q-pa-md full-height">
-              <h4 class="text-center">{{ items.title }}</h4>
+              <h4 class="text-center app-card-title">{{ items.title }}</h4>
               <ul>
-                <li v-for="text in items.texts">
+                <li v-for="text in items.texts" class="app-description">
                   {{ text }}
                 </li>
               </ul>
@@ -105,7 +109,7 @@
       <!-- Services detailed list -->
       <section class="space-between-each-sections">
         <div class="container">
-          <h2 class="text-center">خدمات رایمند تجهیز</h2>
+          <div class="text-center app-title">خدمات رایمند تجهیز</div>
           <AnimationSlideOnceGroup
             class="row q-col-gutter-md q-mt-md"
             direction="right"
@@ -120,10 +124,10 @@
               <CommonCard custom-class="q-pa-md full-height text-center">
                 <q-card-section>
                   <q-icon :name="s.icon" size="35px" />
-                  <h4 class="q-mb-lg">{{ s.title }}</h4>
+                  <div class="q-mb-lg app-card-title">{{ s.title }}</div>
                 </q-card-section>
                 <q-card-section>
-                  <p v-for="value in s.texts">{{ value }}</p>
+                  <div v-for="value in s.texts">{{ value }}</div>
                 </q-card-section>
               </CommonCard>
             </AnimationSlideOnce>
@@ -136,7 +140,7 @@
         id="advantages"
         class="space-between-each-sections space-between-each-sections-bottom"
       >
-        <h2 class="text-center">مزیت‌های رقابتی</h2>
+        <div class="text-center app-title">مزیت‌های رقابتی</div>
         <AnimationSlideOnceGroup
           direction="right"
           class="row q-col-gutter-md q-mt-md"
@@ -151,9 +155,9 @@
             <CommonCard custom-class=" q-pa-md text-center full-height">
               <q-card-section>
                 <q-icon :name="a.icon" size="34px" />
-                <h5 class="q-mb-lg">{{ a.title }}</h5>
+                <div class="q-mb-lg app-card-title">{{ a.title }}</div>
               </q-card-section>
-              <p>{{ a.text }}</p>
+              <div class="app-description">{{ a.text }}</div>
             </CommonCard>
           </AnimationSlideOnce>
         </AnimationSlideOnceGroup>
@@ -163,7 +167,6 @@
 </template>
 
 <script setup>
-import { services } from "~/assets/data/pages/gpo/serviscesFromGpoCompanies";
 const videoRef = ref(null);
 const { t, locale } = useI18n();
 const restartVideo = () => {

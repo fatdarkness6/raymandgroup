@@ -7,9 +7,9 @@
         class="absolute-center flex items-center column justify-center"
         style="z-index: 2"
       >
-        <h3 class="text-white q-mt-sm">
+        <div class="text-white q-mt-sm app-title">
           {{ $t(company?.container1.title || "") }}
-        </h3>
+        </div>
       </div>
     </div>
     <div class="wrapper relative">
@@ -17,11 +17,11 @@
         :class="`container2 ${heroImages.length ? '' : 'space-between-each-sections-bottom'}`"
       >
         <div
-          class="text-subtitle1 q-gutter-lg row justify-center"
+          class="app-description q-gutter-lg row justify-center"
           :dir="directionOfElement(locale)"
         >
           <div
-            :class="`text-subtitle1 col-12 ${company?.container2.pdf ? 'col-md-5' : 'col-md-12'}`"
+            :class="` col-12 ${company?.container2.pdf ? 'col-md-5' : 'col-md-12'}`"
             style="line-height: 40px"
           >
             {{ $t(company?.container2.text || "") }}
@@ -50,9 +50,9 @@
         class="space-between-each-sections space-between-each-sections-bottom"
         v-if="heroImages.length"
       >
-        <h3 class="text-center">
+        <div class="text-center app-title q-pb-md">
           {{ t("gpo-page.home-page.services.picture-intro") }}
-        </h3>
+        </div>
         <CommonSwiperComponent
           rootClass="hero-swiper main-swiper"
           :images="heroImages"
@@ -71,9 +71,9 @@
         v-if="!_.isEmpty(company?.container3)"
         class="space-between-each-sections-bottom"
       >
-        <h3 class="text-center">
+        <div class="text-center app-title q-pb-md">
           {{ t("gpo-page.home-page.services.companies-info") }}
-        </h3>
+        </div>
         <CommonShowContactItems :data="company?.container3 ?? []" />
       </section>
     </div>

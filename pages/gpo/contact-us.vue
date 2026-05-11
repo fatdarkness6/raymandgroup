@@ -1,15 +1,15 @@
 <template>
-  <q-page class="space-between-each-sections-bottom">
+  <div class="space-between-each-sections-bottom">
     <div class="container1 space-between-each-sections-bottom relative">
       <div class="black-layer"></div>
       <div :delay="100" class="ab-text-center z-2 text-white">
         <div class="contact-hero text-center q-mb-xl">
-          <h2 class="q-mb-md">
+          <div class="q-mb-md app-title">
             {{ t("gpo-page.home-page.contact-us-page.introduction") }}
-          </h2>
-          <p dir="rtl">
+          </div>
+          <div dir="rtl" class="app-description">
             {{ t("gpo-page.home-page.contact-us-page.overview") }}
-          </p>
+          </div>
         </div>
       </div>
     </div>
@@ -48,7 +48,7 @@
         </CommonCard>
       </AnimationSlideOnce>
     </div>
-  </q-page>
+  </div>
 </template>
 
 <script setup>

@@ -14,18 +14,18 @@
             class="q-mb-md"
             :color="item.color"
           />
-          <h6 class="q-mb-sm q-mt-md">{{ $t(item.name) }}</h6>
+          <div class="q-mb-sm q-mt-md app-card-title">{{ $t(item.name) }}</div>
           <NuxtLink
             v-if="item.type === 'website'"
             class="link text-grey-7"
             target="_blank"
             :to="item.value"
           >
-            <p class="text-grey-7">
+            <p class="text-grey-7 app-description">
               {{ item.value }}
             </p>
           </NuxtLink>
-          <p v-else class="text-grey-7">
+          <p v-else class="text-grey-7 app-description">
             {{ item.value }}
           </p>
         </div>
