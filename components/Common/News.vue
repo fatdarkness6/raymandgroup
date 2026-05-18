@@ -9,8 +9,9 @@
         :key="item.id"
         :delay="item.id * 200"
         class="col-xl-4 col-md-4 col-sm-6 col-12"
+        custom-class="full-height"
       >
-        <CommonCard>
+        <CommonCard class="full-height">
           <q-img :src="item.image" :ratio="16 / 9" :alt="item.title" />
           <q-card-section class="q-pt-md column justify-between">
             <div
