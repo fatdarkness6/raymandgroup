@@ -4,7 +4,6 @@ import { useLocaleDirHead } from "./composable/useLocaleDirHead";
 useHead({
   link: [{ rel: "icon", type: "image/png", sizes: "32x32", href: "/logo.svg" }],
 });
-
 const { head } = useLocaleDirHead();
 
 useHead(() => head.value);
