@@ -31,9 +31,9 @@
           <div class="hero-ctas flex row justify-center items-center gap-10">
             <q-btn
               :label="t('gpo-page.home-page.hero.companies')"
-              to="/gpo/companies"
+              :to="$localePath('/gpo/companies')"
             />
-            <q-btn to="/gpo/contact-us">
+            <q-btn :to="$localePath('/gpo/contact-us')">
               {{ t("gpo-page.home-page.contact-us.click") }}
             </q-btn>
           </div>

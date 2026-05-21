@@ -20,7 +20,7 @@
     <CommonNews :data="newsData" />
     <div class="full-width flex justify-center items-center">
       <AnimationSlideOnce preset="slideVisibleOnceBottom">
-        <q-btn :to="'news'" no-caps class="q-mt-xl flex">
+        <q-btn :to="$localePath('news')" no-caps class="q-mt-xl flex">
           {{ $t("news.view-all") }}
         </q-btn>
       </AnimationSlideOnce>

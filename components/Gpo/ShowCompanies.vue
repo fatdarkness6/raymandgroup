@@ -17,11 +17,11 @@
       >
         <q-card-section>
           <q-img :src="item.image" fit="contain" width="200px" />
-          <div class="app-card-title">{{ t(item.title) }}</div>
+          <div class="app-card-title">{{ $t(item.title) }}</div>
         </q-card-section>
         <q-card-section>
           <q-item-label lines="2">
-            <div class="app-description">{{ t(item.text) }}</div>
+            <div class="app-description">{{ $t(item.text) }}</div>
           </q-item-label>
         </q-card-section>
       </CommonCard>
@@ -29,7 +29,8 @@
   </AnimationSlideOnceGroup>
 </template>
 <script setup lang="ts">
-const { locale, t } = useI18n();
+const { locale } = useI18n();
+const localePath = useLocalePath();
 interface ServicesType {
   image: string;
   title: string;
@@ -40,9 +41,11 @@ const props = defineProps<{
   data: ServicesType[];
 }>();
 
-const router = useRouter();
-
 function navigateToTheirOwnComapnies(nameOfCompany: string) {
-  router.push(`/gpo/companies/${nameOfCompany}`);
+  const route = localePath({
+    name: "gpo-companies-nameOfCompany",
+    params: { nameOfCompany },
+  });
+  navigateTo(route);
 }
 </script>
