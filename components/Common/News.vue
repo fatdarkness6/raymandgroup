@@ -33,7 +33,6 @@
               </div>
             </div>
           </q-card-section>
-          <q-separator />
         </CommonCard>
       </AnimationSlideOnce>
     </AnimationSlideOnceGroup>
