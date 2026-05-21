@@ -1,16 +1,16 @@
 <template>
-  <q-dialog v-model="model" :persistent="true" class="z-2 relative">
+  <q-dialog v-model="model" :persistent="false" class="z-2 relative">
     <CommonCard
       custom-class="q-pa-lg q-ma-md shadow-3 rounded-borders submit-dialog"
     >
       <q-card-section class="text-center">
         <div class="text-h5 text-weight-bold">
-          {{ t("tech-Lab_page.slugForm.label") }}
+          {{ $t("tech-Lab_page.slugForm.label") }}
         </div>
       </q-card-section>
       <q-card-section>
         <CommonFormsFormBuilder
-          :schema="techLabSlugSubmitFormSchema(t)"
+          :schema="techLabSlugSubmitFormSchema($t)"
           :onSubmit="submit"
           :direction="directionOfElement(locale)"
           custom-class="q-gutter-md"
@@ -24,7 +24,7 @@
                 :color="value.color"
                 class="q-mt-md"
                 :type="value.action"
-                @click="value.action === 'close' && closeDialog()"
+                @click="value.action === 'close' ? (model = false) : ''"
               />
             </div>
           </template>
@@ -34,7 +34,7 @@
   </q-dialog>
 </template>
 <script setup lang="ts">
-const { t, locale } = useI18n();
+const { locale } = useI18n();
 const props = defineProps<{
   modelValue: boolean;
   renderButton: any;
@@ -42,18 +42,13 @@ const props = defineProps<{
 
 const emit = defineEmits<{
   (e: "update:modelValue", value: boolean): void;
-  (e: "action"): void;
 }>();
-const model = ref<boolean>(props.modelValue);
-watch(
-  () => props.modelValue,
-  (val) => (model.value = val),
-);
-watch(model, (val) => emit("update:modelValue", val));
 
-function closeDialog() {
-  emit("action");
-}
+const model = computed({
+  get: () => props.modelValue,
+  set: (val) => emit("update:modelValue", val),
+});
+
 function submit(value: any) {
   console.log(value);
 }

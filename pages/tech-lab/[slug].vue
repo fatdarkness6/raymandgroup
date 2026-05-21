@@ -31,7 +31,7 @@
               class="text-body1 q-mb-md"
               style="line-height: 40px"
               v-for="(item, index) in pageContent.container2.texts"
-              :delay="index * 100"
+              :delay="Number(index) * 100"
             >
               {{ $t(item) }}
             </AnimationSlideOnce>
@@ -56,7 +56,7 @@
             ]"
             class="col-xl-6 col-md-6 col-sm-6 col-12"
             custom-class="full-height"
-            :delay="index * 200"
+            :delay="Number(index) * 200"
           >
             <CommonCard
               custom-class=" full-height text-center"
@@ -71,9 +71,9 @@
                 </div>
               </q-card-section>
               <q-card-section>
-                <q-btn @click="handleSubmitForm(index)">
+                <q-btn @click="handleSubmitForm(Number(index))">
                   {{
-                    detectEvenNumber(index)
+                    detectEvenNumber(Number(index))
                       ? t("common.learn-more")
                       : t("common.click")
                   }}</q-btn
@@ -87,7 +87,7 @@
     <TechLabSubmitForm
       :modelValue="openDialog"
       :render-button="renderButtonDatas"
-      @action="() => (openDialog = false)"
+      @update:modelValue="(val: boolean) => (openDialog = val)"
     />
   </div>
 </template>
