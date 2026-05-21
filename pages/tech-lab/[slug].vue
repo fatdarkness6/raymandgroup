@@ -6,8 +6,8 @@
         class="ab-text-center z-2 text-white text-center flex column gap-20 w-80"
         :dir="directionOfElement(locale)"
       >
-        <div class="text-h3">{{ t(pageContent.container1.title) }}</div>
-        <div class="text-body1">{{ t(pageContent.container1.desc) }}</div>
+        <div class="text-h3">{{ $t(pageContent.container1.title) }}</div>
+        <div class="text-body1">{{ $t(pageContent.container1.desc) }}</div>
       </div>
     </div>
     <div class="wrapper">
@@ -20,7 +20,7 @@
             <q-img
               :src="pageContent.container2.image"
               class="rounded-10"
-              style="max-height: 500px"
+              style="height: 400px"
             />
           </AnimationSlideOnce>
           <AnimationSlideOnceGroup
@@ -33,7 +33,7 @@
               v-for="(item, index) in pageContent.container2.texts"
               :delay="index * 100"
             >
-              {{ t(item) }}
+              {{ $t(item) }}
             </AnimationSlideOnce>
           </AnimationSlideOnceGroup>
         </div>
@@ -43,7 +43,7 @@
       >
         <AnimationSlideOnce direction="left">
           <div class="text-h4 text-center q-mb-xl">
-            {{ t("common.services_tests") }}
+            {{ $t("common.services_tests") }}
           </div>
         </AnimationSlideOnce>
         <AnimationSlideOnceGroup
@@ -67,7 +67,7 @@
               </q-card-section>
               <q-card-section>
                 <div class="text-subtitle1 text-bold">
-                  {{ t(item.name) }}
+                  {{ $t(item.name) }}
                 </div>
               </q-card-section>
               <q-card-section>

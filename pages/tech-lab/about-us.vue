@@ -1,5 +1,5 @@
 <template>
-  <q-page
+  <div
     class="q-pa-lg space-between-each-sections"
     :dir="directionOfElement(locale)"
   >
@@ -63,7 +63,7 @@
         </AnimationSlideOnceGroup>
       </q-card-section>
     </CommonCard>
-  </q-page>
+  </div>
 </template>
 
 <script setup>
