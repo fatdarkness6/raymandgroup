@@ -1,5 +1,5 @@
 body {
-  font-family: "Vazir", sans-serif;
+  font-family: "app-font", sans-serif;
   overflow-x: hidden;
   background-color: #3b82f62b;
 }
@@ -29,4 +29,11 @@ input::-webkit-inner-spin-button {
 }
 .link {
   text-decoration: none;
+}
+.numeric {
+  font-family:
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    sans-serif;
 }

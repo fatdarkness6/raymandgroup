@@ -60,6 +60,7 @@ export default defineNuxtConfig({
     "@/assets/css/pagination-bullet.css",
     "@/assets/css/layout.css",
     "@/assets/css/base.css",
+    "@/assets/css/fonts.css",
     "@/assets/css/utilities.css",
     "@/assets/css/responsive.css",
     "@/assets/css/typography.css",

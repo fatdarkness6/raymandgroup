@@ -15,7 +15,7 @@
             style="text-decoration: none"
           >
             <q-icon name="fa-brands fa-whatsapp" class="q-pr-sm" />
-            <span class="custom-text text-white">09391858962</span>
+            <span class="custom-text text-white numeric">09391858962</span>
           </a>
           <a @click="openEmail" class="pointer">
             <q-icon name="fa-solid fa-envelope" class="q-pr-sm" />
@@ -51,7 +51,7 @@
     </div>
     <hr style="width: 80%" class="z-2 relative q-mt-xl" />
     <section>
-      <p class="copyright-text">
+      <p class="copyright-text numeric">
         All rights reserved © {{ new Date().getFullYear() }} | Designed &
         developed by
         <a

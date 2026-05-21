@@ -28,7 +28,7 @@
             </div>
             <div class="row items-center justify-between">
               <q-badge :label="item.category" outline />
-              <div class="text-caption text-grey-7">
+              <div class="text-caption text-grey-7 numeric">
                 {{ formatDate(item.publishedAt) }}
               </div>
             </div>
