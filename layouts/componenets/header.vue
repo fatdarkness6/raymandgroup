@@ -39,14 +39,14 @@
             v-if="!value.split"
             :icon="`fa-solid ${value.icon}`"
             :label="$t(value.lable)"
-            :to="value.link"
+            :to="$localePath(value.link)"
             class="rounded-10"
             exact
           />
           <q-route-tab
             v-else
             :icon="`fa-solid ${value.icon}`"
-            :to="value.link"
+            :to="$localePath(value.link)"
             class="rounded-10"
             exact
           >
@@ -57,9 +57,9 @@
         </div>
       </q-tabs>
       <div class="login-button flex items-center gap-2">
-        <q-btn class="login-btn-none" to="/login" color="primary">
+        <!-- <q-btn class="login-btn-none" to="/login" color="primary">
           {{ $t("header.login") }}
-        </q-btn>
+        </q-btn> -->
 
         <q-btn-dropdown
           color="white"

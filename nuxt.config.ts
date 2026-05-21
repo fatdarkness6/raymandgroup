@@ -44,15 +44,7 @@ export default defineNuxtConfig({
     langDir: "./locales",
     lazy: true,
   },
-  modules: [
-    "nuxt-quasar-ui",
-    "nuxt-swiper",
-    "@nuxt/image",
-    "@nuxtjs/i18n",
-    "@nuxtjs/google-fonts",
-    "@nuxt/fonts",
-    "@nuxt/content",
-  ],
+  modules: ["nuxt-quasar-ui", "nuxt-swiper", "@nuxt/image", "@nuxtjs/i18n"],
   css: [
     "swiper/css",
     "@/assets/css/swiperStyles.css",
