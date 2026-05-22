@@ -41,10 +41,10 @@
       </div>
     </div>
     <div class="wrapper">
-      <section id="about" class="space-between-each-sections">
+      <section id="about" class="section-p-40">
         <div class="row q-col-gutter-md">
-          <div class="col-12 col-md-7">
-            <AnimationSlideOnce direction="right">
+          <div class="col-12">
+            <AnimationSlideOnce direction="right" custom-class="text-center">
               <div class="app-title">
                 {{ t("gpo-page.home-page.about.h3") }}
               </div>
@@ -52,42 +52,12 @@
                 {{ t("gpo-page.home-page.about.p") }}
               </div>
             </AnimationSlideOnce>
-            <AnimationSlideOnce direction="right" :delay="100">
-              <div class="app-title">
-                {{ t("gpo-page.home-page.about.h3-1") }}
-              </div>
-              <ul class="list-icons">
-                <li>
-                  <q-icon name="fa-solid fa-flask" />
-                  {{ t("gpo-page.home-page.about.li-1") }}
-                </li>
-                <li>
-                  <q-icon name="fa-solid fa-box" />
-                  {{ t("gpo-page.home-page.about.li-2") }}
-                </li>
-                <li>
-                  <q-icon name="fa-solid fa-hospital" />{{
-                    t("gpo-page.home-page.about.li-3")
-                  }}
-                </li>
-              </ul>
-            </AnimationSlideOnce>
           </div>
-          <AnimationSlideOnce class="col-12 col-md-5">
-            <CommonCard custom-class="q-pa-md animated-card">
-              <div class="app-card-title">
-                {{ t("gpo-page.home-page.about.outlook") }}
-              </div>
-              <div class="app-description">
-                {{ t("gpo-page.home-page.about.card-body") }}
-              </div>
-            </CommonCard>
-          </AnimationSlideOnce>
         </div>
       </section>
 
       <!-- Mission / Vision / Values -->
-      <section id="values" class="space-between-each-sections">
+      <section id="values" class="section-p-40">
         <AnimationSlideOnceGroup class="row q-col-gutter-md" direction="right">
           <AnimationSlideOnce
             v-for="(items, i) in missionVisionValues"
@@ -107,7 +77,7 @@
         </AnimationSlideOnceGroup>
       </section>
       <!-- Services detailed list -->
-      <section class="space-between-each-sections">
+      <section class="section-p-40">
         <div class="container">
           <div class="text-center app-title">خدمات رایمند تجهیز</div>
           <AnimationSlideOnceGroup
@@ -136,10 +106,7 @@
       </section>
 
       <!-- Advantages -->
-      <section
-        id="advantages"
-        class="space-between-each-sections space-between-each-sections-bottom"
-      >
+      <section id="advantages" class="section-p-40">
         <div class="text-center app-title">مزیت‌های رقابتی</div>
         <AnimationSlideOnceGroup
           direction="right"
