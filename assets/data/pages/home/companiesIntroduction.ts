@@ -12,7 +12,7 @@ export const companiesIntroduction = [
     ],
     buttonText: "common.learn-more",
     image: "/images/Smart-Health-Services.webp",
-    link: "/v-hospital",
+    link: "v-hospital",
   },
   {
     name: "home_page.raymand1",
@@ -23,7 +23,7 @@ export const companiesIntroduction = [
     ],
     buttonText: "common.learn-more",
     image: "/images/gpo/i-11.webp",
-    link: "/gpo",
+    link: "gpo",
   },
   {
     name: "home_page.raymand2",
@@ -36,6 +36,6 @@ export const companiesIntroduction = [
     ],
     buttonText: "common.learn-more",
     image: "/images/tech-lab/i-4.webp",
-    link: "/tech-lab",
+    link: "tech-lab",
   },
 ];

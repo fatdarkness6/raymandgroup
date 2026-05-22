@@ -41,7 +41,10 @@
         class="col-12 col-sm-6 col-md-4"
         custom-class="full-height"
       >
-        <CommonCard custom-class="full-height">
+        <CommonCard
+          custom-class="full-height pointer"
+          @click="navigateTo($localePath(item.link))"
+        >
           <q-img :src="item.image" class="absolute-full" />
           <div class="black-layer"></div>
           <q-card-section
