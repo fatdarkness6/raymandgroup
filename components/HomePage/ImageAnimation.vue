@@ -11,7 +11,11 @@
           : 'scroll-animation-reverse'
       } `"
     >
-      <div class="infor rounded-10 relative" v-for="(item, i) in data">
+      <div
+        class="infor rounded-10 relative pointer"
+        v-for="(item, i) in data"
+        @click="navigateTo($localePath(item.link))"
+      >
         <q-img
           :key="'part1-' + index"
           :src="item.image"
