@@ -49,6 +49,8 @@
 <script setup lang="ts">
 import { links } from "~/assets/data/common/links";
 
+const localePath = useLocalePath();
+
 const props = defineProps<{
   leftDrawerOpen: boolean;
 }>();
@@ -64,6 +66,7 @@ const drawer = computed({
 
 function handleNavigate(link: string) {
   drawer.value = false;
-  navigateTo(link);
+
+  navigateTo(localePath(link));
 }
 </script>
