@@ -96,6 +96,11 @@ import { ButtonLinks } from "~/assets/data/pages/tech-lab/links";
 import type { Links } from "~/types/linksInTechLab";
 import { overview } from "~/assets/data/pages/tech-lab/overview";
 
+definePageMeta({
+  layout: "default",
+  noMainPadding: true,
+});
+
 const techLabLinks = ref<Links>(ButtonLinks);
 
 const { locale } = useI18n();

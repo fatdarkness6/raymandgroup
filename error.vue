@@ -158,7 +158,7 @@
       <h5 class="text-center error-message text404">
         Oops! The page you’re looking for doesn’t exist or has been moved.
       </h5>
-      <q-btn class="home-btn" to="/">Go to Home</q-btn>
+      <q-btn class="home-btn" :to="$localePath('/')">Go to Home</q-btn>
     </div>
   </div>
 </template>

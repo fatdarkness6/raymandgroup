@@ -231,7 +231,7 @@
         icon="fa-solid fa-house"
         :label="$t('underConstruction-page.go-home')"
         class="q-px-lg q-py-sm q-mt-md"
-        to="/"
+        :to="$localePath('/')"
       />
     </div>
   </div>

@@ -54,6 +54,11 @@
 <script setup>
 import { contactItems, socials } from "~/assets/data/pages/gpo/contactUsDatas";
 const { t } = useI18n();
+
+definePageMeta({
+  layout: "default",
+  noMainPadding: true,
+});
 </script>
 <style scoped>
 .container1 {

@@ -5,7 +5,7 @@
       :leftDrawerOpen="leftDrawerOpen"
       @update:value="(x: any) => (leftDrawerOpen = x)"
     />
-    <main>
+    <main :class="mainClass">
       <slot />
     </main>
     <Footer />
@@ -29,6 +29,18 @@ import Header from "./componenets/header.vue";
 import Footer from "./componenets/footer.vue";
 
 const leftDrawerOpen = ref(false);
+
+const route = useRoute();
+
+const mainClass = computed(() => {
+  const base = ["space-between-each-sections q-pt-xl"];
+
+  if (route.meta?.noMainPadding) {
+    return [];
+  }
+
+  return base;
+});
 </script>
 
 <style scoped>

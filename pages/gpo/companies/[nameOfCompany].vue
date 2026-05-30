@@ -95,6 +95,7 @@ import {
   Navigation,
   Thumbs,
 } from "swiper/modules";
+
 const heroAttrs = {
   navigation: true,
   grabCursor: true,
@@ -114,11 +115,12 @@ const heroAttrs = {
   slidesPerView: "auto",
   pagination: true,
 };
-
 definePageMeta({
   validate(route) {
     return _.has(companies, route.params.nameOfCompany);
   },
+  noMainPadding: true,
+  layout: "default",
 });
 
 const { locale, t } = useI18n();

@@ -97,6 +97,12 @@ const router = useRouter();
 const { t, locale } = useI18n();
 import { labs } from "~/assets/data/pages/slugOfTechLab";
 
+definePageMeta({
+  layout: "default",
+  noMainPadding: true,
+});
+
+const localePath = useLocalePath();
 const slug = route.params.slug as string;
 const openDialog = ref<boolean>(false);
 
@@ -105,7 +111,7 @@ if (!labs[slug]) {
 }
 function handleSubmitForm(index: number) {
   detectEvenNumber(index)
-    ? router.push("/products")
+    ? navigateTo(localePath("products"))
     : (openDialog.value = true);
 }
 const pageContent = computed(() => labs[slug]);

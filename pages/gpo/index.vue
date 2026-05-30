@@ -134,6 +134,10 @@
 </template>
 
 <script setup>
+definePageMeta({
+  layout: "default",
+  noMainPadding: true,
+});
 const videoRef = ref(null);
 const { t, locale } = useI18n();
 const restartVideo = () => {

@@ -35,7 +35,6 @@
         no-caps
       >
         <div v-for="value in links">
-          {{ console.log($localePath(value.link)) }}
           <q-route-tab
             v-if="!value.split"
             :icon="`fa-solid ${value.icon}`"

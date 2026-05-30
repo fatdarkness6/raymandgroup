@@ -1,6 +1,6 @@
 <template>
   <div
-    :class="`${$q.screen.lt.md ? 'column' : 'row'} q-col-gutter-sm q-mt-xl overflow-hidden animation-img relative col-12 col-sm-12 col-md-6`"
+    :class="`${$q.screen.lt.md ? 'column' : 'row'} q-col-gutter-sm  overflow-hidden animation-img relative col-12 col-sm-12 col-md-6`"
     dir="ltr"
   >
     <div

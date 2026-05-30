@@ -19,6 +19,11 @@
 </template>
 <script setup lang="ts">
 import { services } from "~/assets/data/pages/gpo/serviscesFromGpoCompanies";
+
+definePageMeta({
+  layout: "default",
+  noMainPadding: true,
+});
 </script>
 <style scoped>
 .container1 {

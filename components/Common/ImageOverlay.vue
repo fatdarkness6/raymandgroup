@@ -56,7 +56,7 @@ const props = defineProps<{
 
 @media (max-width: 768px) {
   .image-overlay {
-    height: 50vh;
+    height: 60vh;
   }
 }
 </style>

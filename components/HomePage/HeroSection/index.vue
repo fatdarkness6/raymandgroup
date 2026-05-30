@@ -2,8 +2,9 @@
   <section
     class="hero-section row items-center q-col-gutter-md section-p-40"
     :dir="directionOfElement(locale)"
+    style="padding-top: 0"
   >
-    <div class="space-between-each-sections column col-12 col-sm-12 col-md-6">
+    <div class="column col-12 col-sm-12 col-md-6">
       <AnimationSlideOnceGroup direction="left">
         <AnimationSlideOnce :delay="0">
           <div class="app-title q-mb-md">
