@@ -35,6 +35,10 @@ const componentsRenderDatas = [
   },
 ];
 
+definePageMeta({
+  noPadding: true,
+});
+
 onMounted(() => {
   loading.value = false;
 });

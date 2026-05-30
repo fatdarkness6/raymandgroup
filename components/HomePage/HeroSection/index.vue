@@ -1,8 +1,7 @@
 <template>
   <section
-    class="hero-section row items-center q-col-gutter-md section-p-40"
+    :class="`hero-section row items-center q-col-gutter-md section-p-40 ${$q.screen.lt.md && 'q-pt-xl'}`"
     :dir="directionOfElement(locale)"
-    style="padding-top: 0"
   >
     <div class="column col-12 col-sm-12 col-md-6">
       <AnimationSlideOnceGroup direction="left">

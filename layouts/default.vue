@@ -37,6 +37,8 @@ const mainClass = computed(() => {
 
   if (route.meta?.noMainPadding) {
     return [];
+  } else if (route.meta?.noPadding) {
+    return ["space-between-each-sections"];
   }
 
   return base;
