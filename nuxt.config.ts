@@ -1,6 +1,11 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   compatibilityDate: "2025-05-15",
+  runtimeConfig: {
+    public: {
+      NUXT_PUBLIC_STRAPI_URL: "http://localhost:1337",
+    },
+  },
   quasar: {
     plugins: ["Notify"],
     iconSet: "fontawesome-v6",

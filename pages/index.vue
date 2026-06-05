@@ -1,12 +1,13 @@
 <template>
   <div class="wrapper">
     <CommonAsyncBlock
-      v-for="(value, i) in componentsRenderDatas"
+      v-for="value in componentsRenderDatas"
       :loading="loading"
       :component="value.component"
       :skeleton="value.skeleton"
       :dir="directionOfElement(locale)"
-      :key="i"
+      :key="homePageData.id"
+      :data="homePageData.data"
     />
   </div>
 </template>
@@ -19,9 +20,12 @@ import {
   HomePageContentSectionNews,
   HomePageContentSectionNewsSkeleton,
 } from "#components";
+import { useCms } from "~/composable/useCms";
 
 const { locale } = useI18n();
 const loading = ref(true);
+const { homePage } = useCms();
+const homePageData = ref<any>({});
 
 const componentsRenderDatas = [
   { component: HomePageHeroSection, skeleton: HomePageHeroSectionSkeleton },
@@ -35,12 +39,23 @@ const componentsRenderDatas = [
   },
 ];
 
+function getData() {
+  loading.value = true;
+
+  homePage()
+    .then((response) => {
+      homePageData.value = response.data;
+    })
+    .catch((err) => {
+      console.error(err);
+    })
+    .finally(() => {
+      loading.value = false;
+    });
+}
+getData();
 definePageMeta({
   noPadding: true,
-});
-
-onMounted(() => {
-  loading.value = false;
 });
 </script>
 <style lang="css" scoped>

@@ -7,17 +7,17 @@
       >
         <AnimationSlideOnce :delay="200">
           <div class="app-title text-weight-medium">
-            {{ $t("home_page.update") }}
+            {{ data.Sections[2].IntroductionForNews.title }}
           </div>
         </AnimationSlideOnce>
         <AnimationSlideOnce :delay="400">
           <div class="app-description text-weight-medium">
-            {{ $t("home_page.newsBlog") }}
+            {{ data.Sections[2].IntroductionForNews.description }}
           </div>
         </AnimationSlideOnce>
       </AnimationSlideOnceGroup>
     </div>
-    <CommonNews :data="newsData" />
+    <CommonNews :data="data.Sections[2].NewsCard" />
     <div class="full-width flex justify-center items-center">
       <AnimationSlideOnce preset="slideVisibleOnceBottom">
         <q-btn :to="$localePath('news')" no-caps class="q-mt-xl flex">
@@ -29,4 +29,8 @@
 </template>
 <script setup lang="ts">
 import { newsData } from "~/assets/data/pages/news/newsData";
+
+defineProps<{
+  data: any;
+}>();
 </script>

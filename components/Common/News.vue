@@ -5,31 +5,35 @@
       direction="left"
     >
       <AnimationSlideOnce
-        v-for="item in newsData"
+        v-for="(item, i) in newsData"
         :key="item.id"
-        :delay="item.id * 200"
+        :delay="Number(i) * 200"
         class="col-xl-4 col-md-4 col-sm-6 col-12"
         custom-class="full-height"
       >
         <CommonCard class="full-height">
-          <q-img :src="item.image" :ratio="16 / 9" :alt="item.title" />
+          <q-img
+            :src="`${config.public.NUXT_PUBLIC_STRAPI_URL}${item.image.url}`"
+            :ratio="16 / 9"
+            :alt="item.title || 'image'"
+          />
           <q-card-section class="q-pt-md column justify-between">
             <div
               class="app-card-title text-weight-medium q-mb-sm ellipsis-lines"
               :style="{ '--lines': 2 }"
             >
-              {{ $t(item.subject) }}
+              {{ item.Intro.title }}
             </div>
             <div
               class="app-description q-mb-sm ellipsis-lines"
               :style="{ '--lines': 2 }"
             >
-              {{ $t(item.title) }}
+              {{ item.Intro.description }}
             </div>
             <div class="row items-center justify-between">
               <q-badge :label="item.category" outline />
               <div class="text-caption text-grey-7 numeric">
-                {{ formatDate(item.publishedAt) }}
+                {{ formatDate(item.date) }}
               </div>
             </div>
           </q-card-section>
@@ -39,18 +43,9 @@
   </div>
 </template>
 <script setup lang="ts">
-interface NewsItem {
-  id: number;
-  title: string;
-  summary: string;
-  image: string;
-  category: string;
-  publishedAt: string;
-  slug: string;
-  subject: string;
-}
+const config = useRuntimeConfig();
 const props = defineProps<{
-  data: NewsItem[];
+  data: any;
 }>();
 
 const newsData = computed(() => props.data);

@@ -13,7 +13,7 @@
           :autoplay="true"
           @ended="restartVideo"
         >
-          <source src="public/videos/gpo/gpo-background.mp4" type="video/mp4" />
+          <source src="/videos/gpo/gpo-background.mp4" type="video/mp4" />
         </video>
       </div>
       <div class="hero-inner absolute-center z-2 full-width">
