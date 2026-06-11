@@ -20,9 +20,8 @@ import {
   HomePageContentSectionNews,
   HomePageContentSectionNewsSkeleton,
 } from "#components";
-import { useCms } from "~/composables/useCms";
 
-const { t } = useI18n();
+const { t, locale } = useI18n();
 const loading = ref(true);
 const { homePage } = useCms();
 const homePageData = ref<any>({});
@@ -40,10 +39,15 @@ const componentsRenderDatas = [
   },
 ];
 
-function getData() {
+// watch(locale, (data) => {
+//   console.log(data);
+//   getData(data);
+// });
+
+function getData(data?: any) {
   loading.value = true;
 
-  homePage()
+  homePage(data)
     .then((response) => {
       homePageData.value = response.data;
     })
@@ -54,7 +58,7 @@ function getData() {
       loading.value = false;
     });
 }
-getData();
+getData(locale.value);
 definePageMeta({
   noPadding: true,
 });
