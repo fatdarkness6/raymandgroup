@@ -1,7 +1,5 @@
 <template>
-  <q-page
-    class="flex flex-center q-pa-md bg-gradient space-between-each-sections"
-  >
+  <section class="flex flex-center q-pa-md bg-gradient">
     <CommonCard
       flat
       bordered
@@ -48,13 +46,10 @@
       button-label="بستن"
       @action="closeDialog"
     />
-  </q-page>
+  </section>
 </template>
 
 <script setup lang="ts">
-import { useNotify } from "~/composable/useNotify";
-import { useRequestForm } from "~/composable/useRequestForm";
-
 const { locale, t } = useI18n();
 const { research } = useRequestForm();
 const { error } = useNotify();
@@ -71,7 +66,7 @@ function handleSubmit(values: any, resetForm: any) {
       openDoneMessage.value = true;
       resetForm();
     })
-    .catch((res) => error(res.response.data.message))
+    .catch((res) => error(t("error.try-again")))
     .finally(() => {
       loading.value = false;
     });

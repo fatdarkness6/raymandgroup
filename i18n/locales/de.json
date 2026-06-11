@@ -432,5 +432,8 @@
     "name_required": "Die Eingabe eines Namens ist erforderlich.",
     "phone_length": "Die Telefonnummer muss mindestens 11 Ziffern lang sein.",
     "phone_required": "Die Angabe einer Telefonnummer ist erforderlich."
+  },
+  "error": {
+    "try-again": "Leider ist ein Fehler aufgetreten. Bitte versuchen Sie es erneut."
   }
 }

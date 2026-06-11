@@ -7,7 +7,7 @@
         :loading="loading"
         :component="CommonNews"
         :skeleton="PagesNewsSkeleton"
-        :dir="directionOfElement(locale)"
+        :dir="directionOfElement($i18n.locale)"
         :data="newsPageData.news"
       />
     </div>
@@ -16,12 +16,12 @@
 
 <script lang="ts" setup>
 import { CommonNews, PagesNewsSkeleton } from "#components";
-import { useCms } from "~/composable/useCms";
 
-const { locale } = useI18n();
+const { t } = useI18n();
 const { newsPage } = useCms();
 const loading = ref(true);
 const newsPageData = ref<any>([]);
+const { error } = useNotify();
 
 function getData() {
   loading.value = true;
@@ -31,7 +31,7 @@ function getData() {
       newsPageData.value = response.data.data;
     })
     .catch((err) => {
-      console.error(err);
+      error(t("error.try-again"));
     })
     .finally(() => {
       loading.value = false;

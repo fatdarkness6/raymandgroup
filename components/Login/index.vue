@@ -72,8 +72,8 @@
 </template>
 <script setup lang="ts">
 import { loginSchema } from "~/utils/registerSchema";
-import useLogin from "~/composable/useLogin";
-import { useNotify } from "~/composable/useNotify";
+import useLogin from "~/composables/useLogin";
+import { useNotify } from "~/composables/useNotify";
 import type { VerifyEmailType } from "~/types/registerComponent";
 
 const localePath = useLocalePath();

@@ -74,8 +74,8 @@
 </template>
 <script setup lang="ts">
 import { useForm, useField } from "vee-validate";
-import useLogin from "~/composable/useLogin";
-import { useNotify } from "~/composable/useNotify";
+import useLogin from "~/composables/useLogin";
+import { useNotify } from "~/composables/useNotify";
 
 definePageMeta({ layout: false });
 

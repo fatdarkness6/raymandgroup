@@ -58,7 +58,7 @@
 
 <script lang="ts" setup>
 import { CommonCard } from "#components";
-import useLogin from "~/composable/useLogin";
+import useLogin from "~/composables/useLogin";
 const emit = defineEmits<{
   (e: "successfullyEmailVerified"): void;
   (e: "code", data: string): void;

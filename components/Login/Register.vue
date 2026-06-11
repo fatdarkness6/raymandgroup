@@ -103,9 +103,9 @@
 </template>
 <script lang="ts" setup>
 import { useForm, useField } from "vee-validate";
-import useLogin from "~/composable/useLogin";
+import useLogin from "~/composables/useLogin";
 import { registerSchema } from "~/utils/registerSchema";
-import { useNotify } from "~/composable/useNotify";
+import { useNotify } from "~/composables/useNotify";
 import type { VerifyEmailType } from "~/types/registerComponent";
 
 const { handleSubmit, resetForm } = useForm({

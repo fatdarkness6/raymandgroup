@@ -5,7 +5,7 @@
       :loading="loading"
       :component="value.component"
       :skeleton="value.skeleton"
-      :dir="directionOfElement(locale)"
+      :dir="directionOfElement($i18n.locale)"
       :key="homePageData.id"
       :data="homePageData.data"
     />
@@ -20,12 +20,13 @@ import {
   HomePageContentSectionNews,
   HomePageContentSectionNewsSkeleton,
 } from "#components";
-import { useCms } from "~/composable/useCms";
+import { useCms } from "~/composables/useCms";
 
-const { locale } = useI18n();
+const { t } = useI18n();
 const loading = ref(true);
 const { homePage } = useCms();
 const homePageData = ref<any>({});
+const { error } = useNotify();
 
 const componentsRenderDatas = [
   { component: HomePageHeroSection, skeleton: HomePageHeroSectionSkeleton },
@@ -47,7 +48,7 @@ function getData() {
       homePageData.value = response.data;
     })
     .catch((err) => {
-      console.error(err);
+      error(t("error.try-again"));
     })
     .finally(() => {
       loading.value = false;

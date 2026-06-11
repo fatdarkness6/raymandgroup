@@ -92,8 +92,8 @@
 
 <script setup lang="ts">
 import { ref, onMounted } from "vue";
-import useLogin from "~/composable/useLogin";
-import { useNotify } from "~/composable/useNotify";
+import useLogin from "~/composables/useLogin";
+import { useNotify } from "~/composables/useNotify";
 
 const { profile } = useLogin();
 const { error } = useNotify();

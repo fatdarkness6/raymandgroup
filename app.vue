@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { useLocaleDirHead } from "./composable/useLocaleDirHead";
+import { useLocaleDirHead } from "./composables/useLocaleDirHead";
 
 useHead({
   link: [{ rel: "icon", type: "image/png", sizes: "32x32", href: "/logo.svg" }],

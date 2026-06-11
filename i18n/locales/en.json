@@ -432,5 +432,8 @@
     "name_required": "Entering a name is required.",
     "phone_length": "Phone number must be at least 11 digits long.",
     "phone_required": "Entering a phone number is required."
+  },
+  "error": {
+    "try-again": "Unfortunatly An error has occurred , Try Again"
   }
 }
