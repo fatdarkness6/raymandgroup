@@ -39,11 +39,6 @@ const componentsRenderDatas = [
   },
 ];
 
-// watch(locale, (data) => {
-//   console.log(data);
-//   getData(data);
-// });
-
 function getData(data?: any) {
   loading.value = true;
 

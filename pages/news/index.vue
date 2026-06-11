@@ -17,16 +17,16 @@
 <script lang="ts" setup>
 import { CommonNews, PagesNewsSkeleton } from "#components";
 
-const { t } = useI18n();
+const { t, locale } = useI18n();
 const { newsPage } = useCms();
 const loading = ref(true);
 const newsPageData = ref<any>([]);
 const { error } = useNotify();
 
-function getData() {
+function getData(locale: any) {
   loading.value = true;
 
-  newsPage()
+  newsPage(locale)
     .then((response) => {
       newsPageData.value = response.data.data;
     })
@@ -37,5 +37,5 @@ function getData() {
       loading.value = false;
     });
 }
-getData();
+getData(locale.value);
 </script>
