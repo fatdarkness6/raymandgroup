@@ -5,8 +5,12 @@ export function useCms() {
   function homePage() {
     return axios.get(`${config.public.NUXT_PUBLIC_STRAPI_URL}/api/home-page`);
   }
+  function newsPage() {
+    return axios.get(`${config.public.NUXT_PUBLIC_STRAPI_URL}/api/news-page`);
+  }
 
   return {
     homePage,
+    newsPage,
   };
 }
