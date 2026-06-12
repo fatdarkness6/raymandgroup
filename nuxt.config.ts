@@ -49,7 +49,13 @@ export default defineNuxtConfig({
     langDir: "./locales",
     lazy: true,
   },
-  modules: ["nuxt-quasar-ui", "nuxt-swiper", "@nuxt/image", "@nuxtjs/i18n"],
+  modules: [
+    "nuxt-quasar-ui",
+    "nuxt-swiper",
+    "@nuxt/image",
+    "@nuxtjs/i18n",
+    "@pinia/nuxt",
+  ],
   css: [
     "swiper/css",
     "@/assets/css/swiperStyles.css",

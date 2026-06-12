@@ -7,7 +7,7 @@
       :skeleton="value.skeleton"
       :dir="directionOfElement($i18n.locale)"
       :key="homePageData.id"
-      :data="homePageData.data"
+      :data="homePageData"
     />
   </div>
 </template>
@@ -20,12 +20,13 @@ import {
   HomePageContentSectionNews,
   HomePageContentSectionNewsSkeleton,
 } from "#components";
+import { useCmsStore } from "~/stores/cms";
 
 const { t, locale } = useI18n();
 const loading = ref(true);
-const { homePage } = useCms();
 const homePageData = ref<any>({});
 const { error } = useNotify();
+const cmsStore = useCmsStore();
 
 const componentsRenderDatas = [
   { component: HomePageHeroSection, skeleton: HomePageHeroSectionSkeleton },
@@ -39,10 +40,11 @@ const componentsRenderDatas = [
   },
 ];
 
-function getData(data?: any) {
+async function getData(data?: any) {
   loading.value = true;
 
-  homePage(data)
+  await cmsStore
+    .fetchPage("homePage", locale.value)
     .then((response) => {
       homePageData.value = response.data;
     })
@@ -53,7 +55,7 @@ function getData(data?: any) {
       loading.value = false;
     });
 }
-getData(locale.value);
+getData();
 definePageMeta({
   noPadding: true,
 });

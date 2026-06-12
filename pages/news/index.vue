@@ -16,19 +16,21 @@
 
 <script lang="ts" setup>
 import { CommonNews, PagesNewsSkeleton } from "#components";
+import { useCmsStore } from "#imports";
 
 const { t, locale } = useI18n();
-const { newsPage } = useCms();
 const loading = ref(true);
 const newsPageData = ref<any>([]);
 const { error } = useNotify();
+const cmsStore = useCmsStore();
 
-function getData(locale: any) {
+async function getData() {
   loading.value = true;
 
-  newsPage(locale)
+  await cmsStore
+    .fetchPage("newsPage", locale.value)
     .then((response) => {
-      newsPageData.value = response.data.data;
+      newsPageData.value = response.data;
     })
     .catch((err) => {
       error(t("error.try-again"));
@@ -37,5 +39,5 @@ function getData(locale: any) {
       loading.value = false;
     });
 }
-getData(locale.value);
+getData();
 </script>
